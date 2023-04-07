@@ -2,8 +2,7 @@ import { Route, Routes } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-import PageNotFound from "./pages/PageNotFound";
-import Tournaments from "./pages/Tournaments";
+import TournamentsContainer from "./pages/TorunamentsContainer";
 import Teams from "./pages/Teams";
 import Series from "./pages/Series";
 import Jugadores from "./pages/Jugadores";
@@ -12,8 +11,7 @@ import ClubesRanking from "./pages/ClubesRanking";
 import ClubesDetail from "./pages/ClubesDetail";
 import JugadoresRanking from "./pages/JugadoresRanking";
 import Reglamento from "./pages/Reglamento";
-
-import React from "react";
+import PageNotFound from "./pages/PageNotFound";
 
 const Sections = () => {
   return (
@@ -23,7 +21,7 @@ const Sections = () => {
       </header>
       <main className="container mx-auto px-5 max-w-6xl">
         <Routes>
-          <Route path="/torneos/:id" element={<Tournaments />} />
+          <Route path="/torneos/:id" element={<TournamentsContainer />} />
           <Route path="/equipos/:id" element={<Teams />} />
           <Route path="/series/:id" element={<Series />} />
           <Route path="/jugadores/:id" element={<Jugadores />} />

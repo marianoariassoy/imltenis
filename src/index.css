@@ -39,7 +39,13 @@ tbody tr td,
 tbody tr th {
   background-color: transparent !important;
   border-bottom: 1px solid var(--color-gray-1);
+  border-color: var(--color-gray-1) !important;
 }
+
+/* tbody tr:last-child td {
+  border-bottom: none;
+} */
+
 tfoot tr th {
   background-color: transparent !important;
 }

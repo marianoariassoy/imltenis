@@ -1,15 +1,26 @@
 import { NavLink, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import BeatLoader from "react-spinners/BeatLoader";
+import useFetch from "../hooks/useFetch";
 import Logo from "../assets/iml-primary.svg";
+let season_name = null;
 
 const Welcome = () => {
+  const { data, loading, error } = useFetch("http://localhost/sites/imlfixture/API/tournaments/season/1");
+
+  if (error) {
+    return <div>Ha ocurrido un error: {error.message}</div>;
+  }
+
+  loading ? (season_name = null) : (season_name = data[0].season_name);
+
   return (
     <>
       <Helmet>
         <title>IML Tenis Liga de clubes de Zona Norte y Oeste de Buenos Aires</title>
         <meta name="description" content="Liga de clubes de tenis de Zona Norte y Oeste de Buenos Aires, Argentina." />
         <meta name="title" content="IML Tenis Liga de clubes de Zona Norte y Oeste de Buenos Aires, Argentina." />
-        <meta property="og:title" content="IML Tenis" />
+        <meta property="og:title" content="IML Tenis Apertura 2023" />
         <meta property="og:url" content="https://imltenis.com.ar/" />
         <meta property="og:image" content="https://imltenis.com.ar/fixture/assets/iml.jpg" />
         <meta property="og:image:alt" content="IML Tenis" />
@@ -42,7 +53,7 @@ const Welcome = () => {
                   <NavLink to="/reglamento">Reglamento</NavLink>
                 </li>
                 <li>
-                  <a href="#" target="_blank">
+                  <a href="./assets/Planilla_de_Carga_2Dobles_1Single.pdf" target="_blank">
                     Planilla de carga
                   </a>
                 </li>
@@ -64,52 +75,48 @@ const Welcome = () => {
         </div>
       </header>
 
-      <div className="row w-full h-screen flex flex-col justify-center px-6 text-center">
-        <div className="row max-w-4xl mx-auto">
-          <h1 className="mb-3 text-primary" id="title-home">
-            Apertura
-            <br />
-            2023
-          </h1>
-          <Link to="/torneos/1" className="btn btn-outline btn-error md:btn-lg m-2 btn-category normal-case">
-            Segunda Libre
-          </Link>
-          <Link to="/torneos/2" className="btn btn-outline btn-error md:btn-lg m-2 btn-category normal-case">
-            Tercera Libre
-          </Link>
-          <Link to="/torneos/3" className="btn btn-outline btn-error md:btn-lg m-2 btn-category normal-case">
-            Cuarta Libre
-          </Link>
-        </div>
-
-        <div>
-          <div className="row w-full text-center text-sm">
-            <h2 className="font-semibold text-primary">
-              Nos acompañan
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#f34643" width="14" className="inline ml-2">
-                <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
-              </svg>
-            </h2>
-
-            <a href="https://www.instagram.com/yuka_ant/" className="icon-sponsor hover:opacity-60" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/sponsors/yuka-primary.svg" alt="Logo Yuka" />
-            </a>
-            <a href="https://www.instagram.com/typdeportes/" className="icon-sponsor hover:opacity-60" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/sponsors/typ-primary.svg" alt="Logo TyP" />
-            </a>
-            <a href="https://www.instagram.com/tiendavinica/" className="icon-sponsor hover:opacity-60" target="_blank" rel="noopener noreferrer">
-              <img src="../assets/sponsors/vinica-primary.svg" alt="Logo Tienda Vinica" />
-            </a>
+      {loading ? (
+        <BeatLoader />
+      ) : (
+        <main className="row w-full h-screen flex flex-col justify-center px-6 text-center">
+          <div className="row max-w-3xl mx-auto mb-2">
+            <h1 className="text-primary mb-2" id="title-home">
+              {season_name}
+            </h1>
+            {data.map((item) => (
+              <Link to={`/torneos/${item.id}`} className="btn btn-outline btn-error md:btn-lg m-2 btn-category normal-case" key={item.id}>
+                {item.name}
+              </Link>
+            ))}
           </div>
-          <p className="text-sm text-gray-500">
-            Liga de clubes IML Tenis 2023 &copy; Buenos Aires, Argentina.
-            <br />
-            <a href="mailto:hola@imltenis.com.ar" className="link-hover">
-              hola@imltenis.com.ar
-            </a>
-          </p>
-        </div>
-      </div>
+          <div>
+            <div className="row w-full text-center text-sm">
+              <h2 className="font-semibold text-primary">
+                Nos acompañan
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#f34643" width="14" className="inline ml-2">
+                  <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                </svg>
+              </h2>
+              <a href="https://www.instagram.com/yuka_ant/" className="icon-sponsor hover:opacity-60" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/sponsors/yuka-primary.svg" alt="Logo Yuka" />
+              </a>
+              <a href="https://www.instagram.com/typdeportes/" className="icon-sponsor hover:opacity-60" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/sponsors/typ-primary.svg" alt="Logo TyP" />
+              </a>
+              <a href="https://www.instagram.com/tiendavinica/" className="icon-sponsor hover:opacity-60" target="_blank" rel="noopener noreferrer">
+                <img src="../assets/sponsors/vinica-primary.svg" alt="Logo Tienda Vinica" />
+              </a>
+            </div>
+            <p className="text-sm text-gray-500">
+              Liga de clubes IML Tenis 2023 &copy; Buenos Aires, Argentina.
+              <br />
+              <a href="mailto:hola@imltenis.com.ar" className="link-hover">
+                hola@imltenis.com.ar
+              </a>
+            </p>
+          </div>
+        </main>
+      )}
 
       <div className="video-background">
         <video autoPlay playsInline muted loop id="myVideo">

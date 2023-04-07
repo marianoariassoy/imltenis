@@ -17,9 +17,7 @@ const Jugadores = () => {
         <div className="row text-center mb-6">
           <div className="avatar mb-3">
             <div className="w-32 rounded-full bg-base-300">
-              <Link to="/clubes/1" className="hover:opacity-70">
-                <img src="../assets/images/test.jpg" />
-              </Link>
+              <img src="../assets/images/test.jpg" />
             </div>
           </div>
           <h1 className="text-2xl font-bold text-error">Juan Perez</h1>
@@ -29,16 +27,16 @@ const Jugadores = () => {
 
       <section id="lista-single">
         <div className="row text-center mb-6">
-          <h1 className="text-2xl font-bold text-error">Historial 👈</h1>
+          <h1 className="text-xl font-bold text-error">Historial 👈</h1>
         </div>
 
-        <h1 className="text-xl text-primary text-center mb-3">Singles</h1>
+        <h1 className="text-xl text-center mb-3">Singles</h1>
 
         <div className="overflow-x-auto mb-3">
           <table className="table w-full">
             <thead>
               <tr>
-                <th>Fecha</th>
+                <th width="50">Fecha</th>
                 <th>Oponente</th>
                 <th>Resultado</th>
                 <th>G/P</th>
@@ -81,13 +79,13 @@ const Jugadores = () => {
       </section>
 
       <section id="lista-dobles">
-        <h1 className="text-xl text-primary text-center mb-3">Dobles</h1>
+        <h1 className="text-xl text-center mb-3">Dobles</h1>
 
         <div className="overflow-x-auto mb-3">
           <table className="table w-full">
             <thead>
               <tr>
-                <th>Fecha</th>
+                <th width="50">Fecha</th>
                 <th>Oponentes</th>
                 <th>Pareja</th>
                 <th>Resultado</th>
@@ -135,14 +133,14 @@ const Jugadores = () => {
         </div>
       </section>
 
-      <section id="equipos">
-        <h1 className="text-xl text-primary text-center mb-3">Equipos Integrados</h1>
+      <section className="mb-12" id="equipos">
+        <h1 className="text-xl text-center mb-3">Equipos Integrados</h1>
 
-        <div className="overflow-x-auto mb-3">
+        <div className="overflow-x-auto">
           <table className="table w-full">
             <thead>
               <tr>
-                <th width="18">#</th>
+                <th width="20">#</th>
                 <th>Equipo</th>
                 <th>Club</th>
                 <th>Competencia</th>

@@ -24,7 +24,7 @@ const ClubesDetail = () => {
                     <img src="../assets/images/test.jpg" />
                   </div>
                 </div>
-                <h1 className="text-2xl font-bold text-primary mb-1">San Miguel</h1>
+                <h1 className="text-xl font-bold text-primary mb-1">San Miguel</h1>
                 <p>
                   <span className="font-semibold">Juan Díaz de Solís 1030, José C. Paz, Buenos Aires</span> <br />
                   Tel. 11 2727 5153
@@ -92,7 +92,7 @@ const ClubesDetail = () => {
       <section>
         <div className="container mx-auto px-5 max-w-6xl mb-3">
           <div className="row text-center mb-6">
-            <h1 className="text-error text-2xl font-bold">Equipos</h1>
+            <h1 className="text-error text-xl md:text-2xl font-bold">Equipos</h1>
           </div>
 
           <div className="overflow-x-auto mb-6">

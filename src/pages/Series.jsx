@@ -17,7 +17,7 @@ const Series = () => {
         <div className="row text-center mb-12">
           <h1 className="text-2xl font-bold text-error mb-3">Domingo 26 de Marzo 2023 9:00 hs.</h1>
           <h2 className="text-xl">
-            <Link to="/torneos/1" className="link-hover">
+            <Link to="/torneos/1" className="link-hover text-gray-500">
               Segunda Libre Apertura 2023
             </Link>
           </h2>
@@ -64,7 +64,7 @@ const Series = () => {
       </section>
 
       <section id="serie">
-        <div className="overflow-x-auto mb-6">
+        <div className="overflow-x-auto mb-12">
           <table className="table w-full">
             <thead>
               <tr>

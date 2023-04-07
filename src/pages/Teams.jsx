@@ -9,14 +9,14 @@ const Teams = () => {
         <div className="row text-center mb-2">
           <div className="avatar mb-3">
             <div className="w-32 rounded-full bg-base-300">
-              <Link to="/clubes/1" className="opacity-hover">
-                {/* <img src="#" /> */}
+              <Link to="/clubes/1" className="hover:opacity-70">
+                <img src="../assets/images/test.jpg" />
               </Link>
             </div>
           </div>
           <h1 className="text-2xl font-bold text-error">Club Italiano</h1>
           <h2>
-            <Link to="/torneos/1" className="link-hover">
+            <Link to="/torneos/1" className="link-hover ">
               Segunda Libre Apertura 2023
             </Link>
           </h2>
@@ -39,8 +39,8 @@ const Teams = () => {
 
       <section id="lista">
         <div className="row text-center mb-6">
-          <h1 className="text-2xl font-bold text-primary">Lista de buena fe 😉</h1>
-          <h1>Federico Lobelle (Capitán)</h1>
+          <h1 className="text-xl md:text-2xl font-bold text-primary">Lista de buena fe 😉</h1>
+          <h1 className="text-gray-500">Federico Lobelle (Capitán)</h1>
         </div>
 
         <div className="overflow-x-auto mb-6">
