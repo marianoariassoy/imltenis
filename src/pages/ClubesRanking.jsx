@@ -1,8 +1,18 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ClubesRanking = () => {
   return (
     <>
+      <Helmet>
+        <title>Ranking de Clubes IML Tenis</title>
+        <meta name="description" content="Ranking de Clubes de la liga IML Tenis 2023" />
+        <meta property="og:title" content="Ranking de Clubes IML Tenis" />
+        <meta property="og:url" content="https://imltenis.com.ar/clubes-ranking" />
+        <meta property="og:image" content="https://imltenis.com.ar/fixture/assets/iml.jpg" />
+        <meta property="og:image:alt" content="IML Tenis" />
+      </Helmet>
+
       <section id="presentacion">
         <div className="row text-center mb-6">
           <h1 className="text-2xl font-bold text-error mb-1">Ranking Anual de Clubes</h1>

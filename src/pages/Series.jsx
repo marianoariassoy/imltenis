@@ -1,9 +1,18 @@
-//Dependencies
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Series = () => {
   return (
     <>
+      <Helmet>
+        <title>Serie Domingo 26 de Marzo 2023 9:00 hs.</title>
+        <meta name="description" content="Serie disputada el Domingo 26 de Marzo 2023 9:00 hs. de la liga IML Tenis" />
+        <meta property="og:title" content="Serie Domingo 26 de Marzo 2023 9:00 hs." />
+        <meta property="og:url" content="https://imltenis.com.ar/series/1" />
+        <meta property="og:image" content="https://imltenis.com.ar/fixture/assets/iml.jpg" />
+        <meta property="og:image:alt" content="IML Tenis" />
+      </Helmet>
+
       <section id="presentacion">
         <div className="row text-center mb-12">
           <h1 className="text-2xl font-bold text-error mb-3">Domingo 26 de Marzo 2023 9:00 hs.</h1>

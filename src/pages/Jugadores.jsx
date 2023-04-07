@@ -1,8 +1,18 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Jugadores = () => {
   return (
     <>
+      <Helmet>
+        <title>Juan Perez IML Tenis</title>
+        <meta name="description" content="Estadísticas e historial de Juan Perez en la liga IML Tenis" />
+        <meta property="og:title" content="Juan Perez IML Tenis" />
+        <meta property="og:url" content="https://imltenis.com.ar/jugadores/1" />
+        <meta property="og:image" content="https://imltenis.com.ar/fixture/images/1" />
+        <meta property="og:image:alt" content="Juan Perez" />
+      </Helmet>
+
       <section className="mb-6" id="presentacion">
         <div className="row text-center mb-6">
           <div className="avatar mb-3">

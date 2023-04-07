@@ -1,6 +1,17 @@
+import { Helmet } from "react-helmet";
+
 const Reglamento = () => {
   return (
     <>
+      <Helmet>
+        <title>Reglamento IML Tenis 2023</title>
+        <meta name="description" content="Reglamento de la liga de clubes IML Tenis 2023" />
+        <meta property="og:title" content="Reglamento IML Tenis 2023" />
+        <meta property="og:url" content="https://imltenis.com.ar/reglamento" />
+        <meta property="og:image" content="https://imltenis.com.ar/fixture/assets/iml.jpg" />
+        <meta property="og:image:alt" content="IML Tenis" />
+      </Helmet>
+
       <h1 class="text-2xl font-bold mb-3 text-center text-error">Reglamento IML Tenis 2023</h1>
       <h1 class="text-2xl mb-6 text-center">🤝</h1>
 

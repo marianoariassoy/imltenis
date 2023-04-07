@@ -1,9 +1,21 @@
 import { NavLink, Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Logo from "../assets/iml-primary.svg";
 
 const Welcome = () => {
   return (
     <>
+      <Helmet>
+        <title>IML Tenis Liga de clubes de Zona Norte y Oeste de Buenos Aires</title>
+        <meta name="description" content="Liga de clubes de tenis de Zona Norte y Oeste de Buenos Aires, Argentina." />
+        <meta name="title" content="IML Tenis Liga de clubes de Zona Norte y Oeste de Buenos Aires, Argentina." />
+        <meta property="og:title" content="IML Tenis" />
+        <meta property="og:url" content="https://imltenis.com.ar/" />
+        <meta property="og:image" content="https://imltenis.com.ar/fixture/assets/iml.jpg" />
+        <meta property="og:image:alt" content="IML Tenis" />
+        <link rel="canonical" href="https://imltenis.com.ar" />
+      </Helmet>
+
       <header className="header-home">
         <div className="navbar mb-6">
           <div className="navbar-start">

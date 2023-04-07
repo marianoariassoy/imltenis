@@ -1,8 +1,18 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ClubesDetail = () => {
   return (
     <>
+      <Helmet>
+        <title>Cuarta Libre Apertura 2023</title>
+        <meta name="description" content="IML Tenis categoría Cuarta Libre Apertura 2023" />
+        <meta property="og:title" content="IML Tenis" />
+        <meta property="og:url" content="https://imltenis.com.ar/torneos/1" />
+        <meta property="og:image" content="https://imltenis.com.ar/fixture/clubes/1" />
+        <meta property="og:image:alt" content="IML Tenis" />
+      </Helmet>
+
       <section>
         <div className="hero min-h-screen">
           <div className="hero-overlay bg-opacity-50"></div>

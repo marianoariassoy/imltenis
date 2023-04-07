@@ -1,8 +1,19 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const JugadoresRanking = () => {
   return (
     <>
+      <Helmet>
+        <title>Ranking de jugadores Apertura 2023</title>
+        <meta name="description" content="Ranking de jugadores de la liga IML Tenis Apertura 2023" />
+        <meta property="og:title" content="Ranking de jugadores Apertura 2023" />
+        <meta property="og:url" content="https://imltenis.com.ar/jugadores/ranking" />
+        <meta property="og:image" content="https://imltenis.com.ar/fixture/assets/iml.jpg" />
+        <meta property="og:image:alt" content="IML Tenis" />
+        <link rel="canonical" href="https://imltenis.com.ar" />
+      </Helmet>
+
       <section id="presentacion">
         <div className="row text-center mb-6">
           <h1 className="text-2xl font-bold text-error mb-1">Ranking de Jugadores</h1>
