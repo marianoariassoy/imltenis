@@ -5,7 +5,7 @@ const Group = () => {
   return (
     <section id="grupo">
       <div className="row text-center mb-6">
-        <h1 className="mb-1 ">
+        <h1 className="mb-1">
           <a href="#" className="text-2xl font-bold link-hover link-error">
             Zona Única
           </a>
@@ -13,7 +13,7 @@ const Group = () => {
         <h2 className="text-xl">Posiciones 💪</h2>
       </div>
 
-      <div className="overflow-x-auto mb-6 shadow-lg rounded-2xl">
+      <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
             <tr>
@@ -29,17 +29,19 @@ const Group = () => {
           </thead>
           <tbody>
             <tr>
-              <th> 1 </th>
+              <td>
+                <span className="font-semibold">1</span>
+              </td>
               <td>
                 <div className="flex items-center">
                   <div className="avatar mr-3">
                     <div className="w-8 rounded-full">
-                      <Link to="/equipos/1" className="opacity-hover">
-                        <img src="#" />
+                      <Link to="/equipos/1" className="hover:opacity-70">
+                        <img src="../assets/images/test.jpg" />
                       </Link>
                     </div>
                   </div>
-                  <Link to="/equipos/1" href="#" className="link-hover font-bold">
+                  <Link to="/equipos/1" href="#" className="link-hover font-semibold text-primary">
                     Club Italiano
                   </Link>
                 </div>
@@ -49,7 +51,7 @@ const Group = () => {
               <td>0</td>
               <td>0</td>
               <td>0</td>
-              <td className="font-bold">0</td>
+              <td className="font-semibold text-primary">0</td>
             </tr>
           </tbody>
           <tfoot>

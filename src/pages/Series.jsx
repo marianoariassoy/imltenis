@@ -6,7 +6,7 @@ const Series = () => {
     <>
       <section id="presentacion">
         <div className="row text-center mb-12">
-          <h1 className="text-2xl font-bold text-error mb-3"> Domingo 26 de Marzo 2023 9:00 hs.</h1>
+          <h1 className="text-2xl font-bold text-error mb-3">Domingo 26 de Marzo 2023 9:00 hs.</h1>
           <h2 className="text-xl">
             <Link to="/torneos/1" className="link-hover">
               Segunda Libre Apertura 2023
@@ -21,12 +21,12 @@ const Series = () => {
             <div className="flex flex-col items-center w-2/5">
               <div className="avatar mb-3">
                 <div className="w-20 rounded-full">
-                  <Link to="/equipos/1" className="opacity-hover">
-                    <img src="#" />
+                  <Link to="/equipos/1" className="hover:opacity-70">
+                    <img src="../assets/images/test.jpg" />
                   </Link>
                 </div>
               </div>
-              <Link to="/equipos/1" className="link-hover link-error font-bold">
+              <Link to="/equipos/1" className="link-hover link-error font-semibold">
                 San Miguel
               </Link>
               Local
@@ -40,12 +40,12 @@ const Series = () => {
             <div className="flex flex-col items-center w-2/5">
               <div className="avatar mb-3">
                 <div className="w-20 rounded-full">
-                  <Link href="/equipos/1" className="opacity-hover">
-                    <img src="#>" />
+                  <Link to="/equipos/1" className="hover:opacity-70">
+                    <img src="../assets/images/test.jpg" />
                   </Link>
                 </div>
               </div>
-              <Link to="/equipos/1" className="link-hover link-error font-bold">
+              <Link to="/equipos/1" className="link-hover link-error font-semibold">
                 Club Italiano
               </Link>
               Visitante
@@ -55,7 +55,7 @@ const Series = () => {
       </section>
 
       <section id="serie">
-        <div className="overflow-x-auto mb-16 shadow-lg rounded-2xl">
+        <div className="overflow-x-auto mb-6">
           <table className="table w-full">
             <thead>
               <tr>
@@ -68,19 +68,21 @@ const Series = () => {
             </thead>
             <tbody>
               <tr>
-                <th>Single</th>
                 <td>
-                  <Link to="/jugadores/1" className="link-error link-hover">
+                  <span className="font-semibold">Single</span>
+                </td>
+                <td>
+                  <Link to="/jugadores/1" className="link-error link-hover font-semibold">
                     Juan Perez
                   </Link>
                   &nbsp;vs.&nbsp;
-                  <Link to="/jugadores/1" className="link-error link-hover">
+                  <Link to="/jugadores/1" className="link-error link-hover font-semibold">
                     Juan Perez
                   </Link>
                 </td>
                 <td>6-0 6-0</td>
                 <td>
-                  <span className="bg-error text-black btn-sm rounded-full">L</span>{" "}
+                  <span className="circle text-primary">L</span>
                 </td>
                 <td>
                   <div className="badge">Finalizado</div>

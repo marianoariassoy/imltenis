@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 :root {
+  --color-primary: #f34643;
+  --color-secondary: #666;
+  --color-gray-1: #34363c;
   --color-bg: #1f2023;
   --color-bg-secondary: #27282e;
 }
@@ -10,26 +13,81 @@ html,
 body {
   color: #b5b5b5;
 }
-
+.text-gray-500 {
+  color: var(--color-secondary);
+}
+.bg-base-300 {
+  background-color: var(--color-bg-secondary) !important;
+}
 #title-home {
-  font-size: clamp(1rem, 19vw, 10rem);
+  font-size: clamp(1rem, 19vw, 8rem);
   line-height: 1;
 }
 .btn-category {
   width: 43%;
 }
 .svg-primary-hover:hover svg {
-  fill: #f87272;
+  fill: var(--color-primary);
+}
+
+thead tr th {
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--color-gray-1);
+  color: var(--color-secondary);
 }
 tbody tr td,
 tbody tr th {
-  background-color: var(--color-bg-secondary) !important;
-  border-bottom: 1px solid #34363c !important;
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--color-gray-1);
 }
-thead tr th {
-  background-color: var(--color-bg-secondary) !important;
-  padding-top: 1.8rem !important;
-}
+
 tfoot tr th {
-  background-color: var(--color-bg-secondary) !important;
+  background-color: transparent !important;
+}
+
+.icon-sponsor {
+  display: inline-block;
+  margin: 0 0.8rem;
+}
+.icon-sponsor img {
+  height: 50px;
+  object-fit: cover;
+  object-position: center;
+  width: auto;
+}
+.circle {
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  display: block;
+  display: grid;
+  height: 1.6rem;
+  line-height: 1;
+  place-items: center;
+  width: 1.6rem;
+}
+
+.svg-hover-white:hover svg {
+  fill: #fff;
+}
+
+.header-home {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.video-background {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.video-background video {
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  width: 100%;
 }
