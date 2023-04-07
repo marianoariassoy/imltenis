@@ -47,7 +47,7 @@ const Group = ({ group_id, name, description, winners }) => {
                     <div className="avatar mr-3">
                       <div className="w-8 rounded-full">
                         <Link to={`/equipos/${item.id}`} className="hover:opacity-70">
-                          <img src={`../assets/images/${item.image ? item.image : item.club_image}`} />
+                          <img src={`https://imltenis.com.ar/fixture/images/${item.image ? item.image : item.club_image}`} />
                         </Link>
                       </div>
                     </div>
