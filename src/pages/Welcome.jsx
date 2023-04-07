@@ -1,26 +1,28 @@
 import { NavLink, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import BeatLoader from "react-spinners/BeatLoader";
+import Loader from "../components/Loader";
 import useFetch from "../hooks/useFetch";
 import Logo from "../assets/iml-primary.svg";
 let season_name = null;
 
 const Welcome = () => {
-  const { data, loading, error } = useFetch("http://localhost/sites/imlfixture/API/tournaments/season/1");
-
-  if (error) {
-    return <div>Ha ocurrido un error: {error.message}</div>;
-  }
+  let id = 1;
+  const { data, loading, error } = useFetch(`https://imltenis.com.ar/fixture/api/seasons/tournaments/${id}`);
+  if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
 
   loading ? (season_name = null) : (season_name = data[0].season_name);
+
+  let meta_title = "IML Tenis Liga de clubes de Zona Norte y Oeste de Buenos Aires";
+  let meta_description = "Liga de clubes de tenis de Zona Norte y Oeste de Buenos Aires, Argentina";
 
   return (
     <>
       <Helmet>
-        <title>IML Tenis Liga de clubes de Zona Norte y Oeste de Buenos Aires</title>
-        <meta name="description" content="Liga de clubes de tenis de Zona Norte y Oeste de Buenos Aires, Argentina." />
-        <meta name="title" content="IML Tenis Liga de clubes de Zona Norte y Oeste de Buenos Aires, Argentina." />
-        <meta property="og:title" content="IML Tenis Apertura 2023" />
+        <title>{meta_title}</title>
+        <meta name="description" content={meta_description} />
+        <meta name="title" content={meta_title} />
+        <meta property="og:title" content={meta_title} />
+        <meta property="og:description" content={meta_description} />
         <meta property="og:url" content="https://imltenis.com.ar/" />
         <meta property="og:image" content="https://imltenis.com.ar/fixture/assets/iml.jpg" />
         <meta property="og:image:alt" content="IML Tenis" />
@@ -76,7 +78,7 @@ const Welcome = () => {
       </header>
 
       {loading ? (
-        <BeatLoader />
+        <Loader />
       ) : (
         <main className="row w-full h-screen flex flex-col justify-center px-6 text-center">
           <div className="row max-w-3xl mx-auto mb-2">
