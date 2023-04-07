@@ -6,7 +6,7 @@ import useFetch from "../hooks/useFetch";
 
 const TournamentsContainer = () => {
   let { id } = useParams();
-  const { data, loading, error } = useFetch(`http://imltenis.com.ar/fixture/api/tournaments/groups/${id}`);
+  const { data, loading, error } = useFetch(`https://imltenis.com.ar/fixture/api/tournaments/groups/${id}`);
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
 
