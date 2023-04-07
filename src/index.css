@@ -21,6 +21,7 @@ body {
 }
 #title-home {
   font-size: clamp(1rem, 19vw, 8rem);
+  font-weight: 900;
   line-height: 1;
 }
 .btn-category {
@@ -29,7 +30,6 @@ body {
 .svg-primary-hover:hover svg {
   fill: var(--color-primary);
 }
-
 thead tr th {
   background-color: transparent !important;
   border-bottom: 1px solid var(--color-gray-1);
@@ -40,17 +40,15 @@ tbody tr th {
   background-color: transparent !important;
   border-bottom: 1px solid var(--color-gray-1);
 }
-
 tfoot tr th {
   background-color: transparent !important;
 }
-
 .icon-sponsor {
   display: inline-block;
   margin: 0 0.8rem;
 }
 .icon-sponsor img {
-  height: 50px;
+  height: 55px;
   object-fit: cover;
   object-position: center;
   width: auto;
@@ -65,11 +63,9 @@ tfoot tr th {
   place-items: center;
   width: 1.6rem;
 }
-
 .svg-hover-white:hover svg {
   fill: #fff;
 }
-
 .header-home {
   position: fixed;
   top: 0;

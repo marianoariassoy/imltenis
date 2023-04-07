@@ -65,8 +65,8 @@ const Welcome = () => {
       </header>
 
       <div className="row w-full h-screen flex flex-col justify-center px-6 text-center">
-        <div className="row max-w-4xl mx-auto mb-2">
-          <h1 className="font-bold mb-3 text-primary" id="title-home">
+        <div className="row max-w-4xl mx-auto">
+          <h1 className="mb-3 text-primary" id="title-home">
             Apertura
             <br />
             2023
@@ -83,7 +83,7 @@ const Welcome = () => {
         </div>
 
         <div>
-          <div className="row w-full text-center mb-3 text-sm">
+          <div className="row w-full text-center text-sm">
             <h2 className="font-semibold text-primary">
               Nos acompañan
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#f34643" width="14" className="inline ml-2">
