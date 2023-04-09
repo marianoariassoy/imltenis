@@ -40,9 +40,9 @@ const JugadoresContainer = () => {
         </div>
       </section>
 
-      <section>
+      {/* <section>
         <h1 className="text-xl font-semibold text-error text-center mb-6">Historial 👈</h1>
-      </section>
+      </section> */}
 
       <JugadoresSingles player_id={data[0].id} />
       <JugadoresDobles player_id={data[0].id} />

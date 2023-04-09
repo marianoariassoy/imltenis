@@ -41,10 +41,6 @@ tbody tr th {
   border-bottom: 1px solid var(--color-gray-1);
   border-color: var(--color-gray-1) !important;
 }
-.border-bottom-primary td {
-  background-color: var(--color-bg-secondary) !important;
-  border-color: var(--color-bg) !important;
-}
 tfoot tr th {
   background-color: transparent !important;
 }

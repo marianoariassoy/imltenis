@@ -51,7 +51,7 @@ const JugadoresDobles = ({ player_id }) => {
                 </td>
                 <td>{item.score}</td>
                 <td>
-                  <span className="circle text-primary">P</span>
+                  <span className="circle text-primary">{item.result}</span>
                 </td>
                 <td>
                   <Link to={`/torneos/${item.tournament_id}`} className="link-hover link-error">

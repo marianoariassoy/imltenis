@@ -38,7 +38,7 @@ const Teams = () => {
       </Helmet>
 
       <section className="mb-3" id="presentacion">
-        <div className="row text-center mb-3">
+        <div className="row text-center mb-2">
           <div className="avatar mb-3">
             <div className="w-32 rounded-full bg-base-300">
               <Link to={`/clubes/${club_id}`} className="hover:opacity-70">

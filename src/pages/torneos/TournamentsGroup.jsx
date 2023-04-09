@@ -9,7 +9,7 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
 
   return (
     <section id="grupo">
-      <div className="row text-center mb-6" id="presentacion">
+      <div className="row text-center mb-4" id="presentacion">
         <h1>
           <a href="#" className="text-2xl font-semibold link-hover link-error">
             {name}
@@ -23,13 +23,13 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
           <thead>
             <tr>
               <th>Equipo</th>
+              <th width="100">Ptos</th>
               <th width="100">Series</th>
               <th width="100">Ganadas</th>
               <th width="100">Parciales</th>
               <th width="100">Dif. Sets</th>
               <th width="100">Dif. Games</th>
-              <th width="100">Ptos</th>
-              <th width="20">Pos</th>
+              <th width="20">#</th>
             </tr>
           </thead>
           <tbody>
@@ -56,12 +56,14 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
                     </Link>
                   </div>
                 </td>
+                <td>
+                  <span className={`font-semibold ${index < winners ? "text-primary" : ""} `}>{item.points}</span>
+                </td>
                 <td>{item.series_total}</td>
                 <td>{item.series_won}</td>
                 <td>{item.match_won}</td>
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
-                <td>{item.points}</td>
                 <td>
                   <span className="font-semibold">{index + 1}</span>
                 </td>

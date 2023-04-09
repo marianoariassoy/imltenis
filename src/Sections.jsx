@@ -20,7 +20,7 @@ const Sections = () => {
       <header>
         <NavBar />
       </header>
-      <main className="container mx-auto px-5 max-w-6xl">
+      <main className="container mx-auto px-6 max-w-6xl">
         <Routes>
           <Route path="/torneos/:id" element={<TournamentsContainer />} />
           <Route path="/jugadores/:id" element={<JugadoresContainer />} />
