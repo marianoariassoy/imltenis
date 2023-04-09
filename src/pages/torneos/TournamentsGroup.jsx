@@ -22,7 +22,8 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
         <table className="table w-full">
           <thead>
             <tr>
-              <th>Equipo</th>
+              <th></th>
+              <th className="pl-0">Equipo</th>
               <th width="100">Ptos</th>
               <th width="100">Series</th>
               <th width="100">Ganadas</th>
@@ -35,7 +36,16 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
           <tbody>
             {data.map((item, index) => (
               <tr key={item.id}>
-                <td>
+                <td className="p-0">
+                  {index < winners ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="8" fill="#f34643" className="inline ml-2">
+                      <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
+                    </svg>
+                  ) : (
+                    ""
+                  )}
+                </td>
+                <td className="pl-0">
                   <div className="flex items-center">
                     <div className="avatar mr-3">
                       <div className="w-9 rounded-full">
@@ -46,18 +56,11 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
                     </div>
                     <Link to={`/equipos/${item.id}`} className="link-hover font-semibold">
                       {item.name}
-                      {index < winners ? (
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="8" fill="#f34643" className="inline ml-2">
-                          <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
-                        </svg>
-                      ) : (
-                        ""
-                      )}
                     </Link>
                   </div>
                 </td>
                 <td>
-                  <span className={`font-semibold ${index < winners ? "text-primary" : ""} `}>{item.points}</span>
+                  <span className="font-semibold">{item.points}</span>
                 </td>
                 <td>{item.series_total}</td>
                 <td>{item.series_won}</td>
@@ -65,7 +68,7 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
                 <td>
-                  <span className="font-semibold">{index + 1}</span>
+                  <span className={`font-semibold ${index < winners ? "text-primary" : ""} `}>{index + 1}</span>
                 </td>
               </tr>
             ))}

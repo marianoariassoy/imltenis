@@ -33,19 +33,28 @@ const ClubesRanking = () => {
           <table className="table w-full">
             <thead>
               <tr>
-                <th>Club</th>
-
+                <th></th>
+                <th className="pl-0">Club</th>
+                <th width="100">Ptos</th>
                 <th width="100">Series</th>
                 <th width="100">Ganadas</th>
                 <th width="100">Parciales</th>
-                <th width="100">Ptos</th>
                 <th width="100">#</th>
               </tr>
             </thead>
             <tbody>
               {data.map((item, index) => (
-                <tr key={item.id} className={index === 0 ? "text-primary" : ""}>
-                  <td>
+                <tr key={item.id}>
+                  <td className="p-0">
+                    {index === 0 ? (
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="8" fill="#f34643" className="inline ml-2">
+                        <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
+                      </svg>
+                    ) : (
+                      ""
+                    )}
+                  </td>
+                  <td className="pl-0">
                     <div className="flex items-center">
                       <div className="avatar mr-3">
                         <div className="w-9 rounded-full">
@@ -59,13 +68,14 @@ const ClubesRanking = () => {
                       </Link>
                     </div>
                   </td>
-
+                  <td>
+                    <span className="font-semibold">{item.points}</span>
+                  </td>
                   <td>{item.series_total}</td>
                   <td>{item.series_won}</td>
                   <td>{item.matches_won}</td>
-                  <td>{item.points}</td>
                   <td>
-                    <span className="font-semibold">{index + 1}</span>
+                    <span className={`font-semibold ${index === 0 ? "text-primary" : ""}`}>{index + 1}</span>
                   </td>
                 </tr>
               ))}

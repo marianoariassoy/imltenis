@@ -3,11 +3,13 @@ import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import TournamentsContainer from "./pages/torneos/TorunamentsContainer";
+
 import JugadoresRanking from "./pages/jugadores/JugadoresRanking";
 import JugadoresContainer from "./pages/jugadores/JugadoresContainer";
 
 import TeamsContainer from "./pages/equipos/TeamsContainer";
-import Series from "./pages/Series";
+import SeriesContainer from "./pages/series/SeriesContainer";
+
 import ClubesRanking from "./pages/clubes/ClubesRanking";
 import ClubesDetail from "./pages/clubes/ClubesDetail";
 
@@ -27,7 +29,7 @@ const Sections = () => {
           <Route path="/jugadores/ranking" element={<JugadoresRanking />} />
 
           <Route path="/equipos/:id" element={<TeamsContainer />} />
-          <Route path="/series/:id" element={<Series />} />
+          <Route path="/series/:id" element={<SeriesContainer />} />
 
           <Route path="/clubes/ranking" element={<ClubesRanking />} />
           <Route path="/clubes/:id" element={<ClubesDetail />} />

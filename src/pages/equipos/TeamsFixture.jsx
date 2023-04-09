@@ -21,7 +21,8 @@ const TeamsFixture = ({ team_id }) => {
         <table className="table w-full">
           <thead>
             <tr>
-              <th width="60">Fecha</th>
+              <th></th>
+              <th className="pl-0">Fecha</th>
               <th>Hora</th>
               <th>Local</th>
               <th>Score</th>
@@ -32,7 +33,16 @@ const TeamsFixture = ({ team_id }) => {
           <tbody>
             {data.map((item) => (
               <tr key={item.id} className={item.winner ? " " : "opacity-50"}>
-                <td>
+                <td className="p-0">
+                  {item.winner ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="8" fill="#666" className="inline ml-2">
+                      <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
+                    </svg>
+                  ) : (
+                    ""
+                  )}
+                </td>
+                <td className="pl-0">
                   <span className="font-semibold">{item.date}</span>
                 </td>
                 <td>{item.hour}</td>
