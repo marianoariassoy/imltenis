@@ -14,8 +14,8 @@ const ClubesRanking = () => {
         <title>Ranking de Clubes IML Tenis</title>
         <meta name="description" content="Ranking de Clubes de la liga IML Tenis 2023" />
         <meta property="og:title" content="Ranking de Clubes IML Tenis" />
-        <meta property="og:url" content="https://imltenis.com.ar/clubes-ranking" />
-        <meta property="og:image" content="https://imltenis.com.ar/fixture/assets/iml.jpg" />
+        <meta property="og:url" content="https://imltenis.com.ar/clubes/ranking" />
+        <meta property="og:image" content="https://imltenis.com.ar/assets/iml.jpg" />
         <meta property="og:image:alt" content="IML Tenis" />
       </Helmet>
 

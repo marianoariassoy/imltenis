@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/Loader";
@@ -11,6 +11,7 @@ const JugadoresContainer = () => {
   const { data, loading, error } = useFetch(`/players/${id}`);
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
+  if (!data) return <Navigate to="/404" />;
 
   let player_name = data[0].name;
   let meta_description = `Estadísticas e historial de ${player_name} en la liga IML Tenis`;
@@ -21,11 +22,11 @@ const JugadoresContainer = () => {
         <title>{player_name}</title>
         <meta name="description" content={meta_description} />
         <meta property="og:title" content={player_name} />
-        <meta property="og:url" content={`https://imltenis.com.ar/fixture/jugadores/${id}`} />
+        <meta property="og:url" content={`https://imltenis.com.ar/jugadores/${id}`} />
         <meta property="og:description" content={meta_description} />
-        <meta property="og:image" content={`https://imltenis.com.ar/fixture/images/${data[0].image}`} />
+        <meta property="og:image" content={`https://imltenis.com.ar/images/${data[0].image}`} />
         <meta property="og:image:alt" content={player_name} />
-        <link rel="canonical" href={`https://imltenis.com.ar/fixture/jugadores/${id}`} />
+        <link rel="canonical" href={`https://imltenis.com.ar/jugadores/${id}`} />
       </Helmet>
 
       <section className="mb-6" id="presentacion">

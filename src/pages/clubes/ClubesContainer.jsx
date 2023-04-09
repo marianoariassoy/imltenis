@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/Loader";
@@ -9,7 +9,7 @@ const ClubesContainer = () => {
   const { data, loading, error } = useFetch(`/clubes/${id}`);
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
-  if (!data) return null;
+  if (!data) return <Navigate to="/404" />;
 
   const club_name = data[0].name + " IML Tenis";
 
@@ -17,13 +17,13 @@ const ClubesContainer = () => {
     <>
       <Helmet>
         <title>{club_name}</title>
-        <meta name="description" content={`Equipos e información de ${club_name}`} />
+        <meta name="description" content={`Equipos participantes e información de ${club_name}`} />
         <meta property="og:title" content={club_name} />
-        <meta property="og:url" content={`https://imltenis.com.ar/fixture/clubes/${id}`} />
+        <meta property="og:url" content={`https://imltenis.com.ar/clubes/${id}`} />
         <meta property="og:description" content={`Equipos e información de ${club_name}`} />
         <meta property="og:image" content={data[0].image} />
         <meta property="og:image:alt" content={club_name} />
-        <link rel="canonical" href={`https://imltenis.com.ar/fixture/clubes/${id}`} />
+        <link rel="canonical" href={`https://imltenis.com.ar/clubes/${id}`} />
       </Helmet>
 
       <section>

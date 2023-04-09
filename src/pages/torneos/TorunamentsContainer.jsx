@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Loader from "../../components/Loader";
 import Tournaments from "./Tournaments";
@@ -9,6 +9,7 @@ const TournamentsContainer = () => {
   const { data, loading, error } = useFetch(`/tournaments/groups/${id}`);
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
+  if (!data) return <Navigate to="/404" />;
 
   let meta_title = data[0].tournament_name + " " + data[0].season_name;
   let meta_description = `Liga IML Tenis categoría ${meta_title}`;
@@ -21,7 +22,7 @@ const TournamentsContainer = () => {
         <meta property="og:title" content={meta_title} />
         <meta property="og:url" content={`https://imltenis.com.ar/torneos/${id}`} />
         <meta property="og:description" content={meta_description} />
-        <meta property="og:image" content="https://imltenis.com.ar/fixture/assets/iml.jpg" />
+        <meta property="og:image" content="https://imltenis.com.ar/assets/iml.jpg" />
         <meta property="og:image:alt" content="IML Tenis" />
         <link rel="canonical" href={`https://imltenis.com.ar/torneos/${id}`} />
       </Helmet>

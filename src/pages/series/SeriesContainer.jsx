@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/Loader";
@@ -9,6 +9,7 @@ const Series = () => {
   const { data, loading, error } = useFetch(`/series/${id}`);
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
+  if (!data) return <Navigate to="/404" />;
 
   let title = data[0].date + " " + data[0].hour;
   let description = `Serie disputada el ${title} en la liga IML Tenis`;
@@ -20,10 +21,10 @@ const Series = () => {
         <meta name="description" content={description} />
         <meta property="og:title" content={`Serie ${title}`} />
         <meta property="og:description" content={description} />
-        <meta property="og:url" content={`https://imltenis.com.ar/fixture/series/${id}`} />
-        <meta property="og:image" content="https://imltenis.com.ar/fixture/assets/iml.jpg" />
+        <meta property="og:url" content={`https://imltenis.com.ar/series/${id}`} />
+        <meta property="og:image" content="https://imltenis.com.ar/assets/iml.jpg" />
         <meta property="og:image:alt" content="IML Tenis" />
-        <link rel="canonical" href={`https://imltenis.com.ar/fixture/series/${id}`} />
+        <link rel="canonical" href={`https://imltenis.com.ar/series/${id}`} />
       </Helmet>
 
       <section id="presentacion">
@@ -53,11 +54,16 @@ const Series = () => {
               </Link>
               Local
             </div>
-            <div className="w-1/5">
-              <h1 className="text-xl md:text-2xl font-bold">
-                Score
-                <br /> {data[0].score}
-              </h1>
+            <div className="w-1/5 flex items-center justify-center">
+              {data[0].winner > 0 ? (
+                <h1 className="text-xl font-semibold">
+                  Score
+                  <br />
+                  {data[0].score}
+                </h1>
+              ) : (
+                <h1 className="text-xl font-semibold">Vs.</h1>
+              )}
             </div>
             <div className="flex flex-col items-center w-2/5">
               <div className="avatar mb-3">
@@ -75,8 +81,7 @@ const Series = () => {
           </div>
         </div>
       </section>
-
-      <SeriesMatches serie_id={id} />
+      {data[0].winner > 0 && <SeriesMatches serie_id={id} />}
     </>
   );
 };

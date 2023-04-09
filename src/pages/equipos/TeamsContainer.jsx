@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import useFetch from "../../hooks/useFetch";
@@ -11,7 +11,7 @@ const Teams = () => {
   const { data, loading, error } = useFetch(`/teams/${id}`);
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
-  if (!data) return null;
+  if (!data) return <Navigate to="/404" />;
 
   const team_name = data[0].name;
   const image = data[0].image;
@@ -30,11 +30,11 @@ const Teams = () => {
         <title>{title}</title>
         <meta name="description" content={meta_description} />
         <meta property="og:title" content={title} />
-        <meta property="og:url" content={`https://imltenis.com.ar/fixture/equipos/${id}`} />
+        <meta property="og:url" content={`https://imltenis.com.ar/equipos/${id}`} />
         <meta property="og:description" content={meta_description} />
         <meta property="og:image" content={image} />
         <meta property="og:image:alt" content={title} />
-        <link rel="canonical" href={`https://imltenis.com.ar/fixture/equipos/${id}`} />
+        <link rel="canonical" href={`https://imltenis.com.ar/equipos/${id}`} />
       </Helmet>
 
       <section className="mb-3" id="presentacion">

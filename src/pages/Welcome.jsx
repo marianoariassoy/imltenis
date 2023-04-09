@@ -23,7 +23,7 @@ const Welcome = () => {
         <meta property="og:title" content={meta_title} />
         <meta property="og:description" content={meta_description} />
         <meta property="og:url" content="https://imltenis.com.ar/" />
-        <meta property="og:image" content="https://imltenis.com.ar/fixture/assets/iml.jpg" />
+        <meta property="og:image" content="https://imltenis.com.ar/assets/iml.jpg" />
         <meta property="og:image:alt" content="IML Tenis" />
         <link rel="canonical" href="https://imltenis.com.ar" />
       </Helmet>
@@ -113,7 +113,6 @@ const Welcome = () => {
           </div>
         </main>
       )}
-
       <div className="video-background">
         <video autoPlay playsInline muted loop id="myVideo">
           <source src="./assets/video720.mp4" type="video/mp4" />
