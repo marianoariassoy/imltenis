@@ -1,6 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import Loader from "../components/Loader";
 import useFetch from "../hooks/useFetch";
 import Logo from "../assets/iml-primary.svg";
 let season_name = null;
@@ -43,13 +42,10 @@ const Welcome = () => {
                   <NavLink to="/">Torneos</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/clubes-ranking">Ranking Clubes</NavLink>
+                  <NavLink to="/clubes/ranking">Ranking Clubes</NavLink>
                 </li>
                 <li>
                   <NavLink to="/jugadores/ranking">Ranking Jugadores</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/clubes">Clubes</NavLink>
                 </li>
                 <li>
                   <NavLink to="/reglamento">Reglamento</NavLink>
@@ -77,9 +73,7 @@ const Welcome = () => {
         </div>
       </header>
 
-      {loading ? (
-        <Loader />
-      ) : (
+      {data && (
         <main className="row w-full h-screen flex flex-col justify-center px-6 text-center">
           <div className="row max-w-3xl mx-auto mb-2">
             <h1 className="text-primary mb-2" id="title-home">

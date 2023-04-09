@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import Loader from "../components/Loader";
+import Loader from "../../components/Loader";
 import Tournaments from "./Tournaments";
-import useFetch from "../hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 
 const TournamentsContainer = () => {
   let { id } = useParams();
@@ -29,9 +29,9 @@ const TournamentsContainer = () => {
       <section id="presentacion">
         <div className="row text-center mb-8">
           <h1 className="text-2xl text-error mb-1">
-            <span className="font-bold">{data[0].tournament_name}</span> {data[0].season_name}
+            <span className="font-bold">{data[0].tournament_name}</span> <span className="hidden md:inline">{data[0].season_name}</span>
           </h1>
-          <h1 className="text-3xl text-center">🏆</h1>
+          <h1 className="text-2xl text-center">🏆</h1>
         </div>
       </section>
 

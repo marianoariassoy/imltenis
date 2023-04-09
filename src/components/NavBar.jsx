@@ -16,13 +16,10 @@ const NavBar = () => {
               <NavLink to="/">Torneos</NavLink>
             </li>
             <li>
-              <NavLink to="/clubes-ranking">Ranking Clubes</NavLink>
+              <NavLink to="/clubes/ranking">Ranking Clubes</NavLink>
             </li>
             <li>
               <NavLink to="/jugadores/ranking">Ranking Jugadores</NavLink>
-            </li>
-            <li>
-              <NavLink to="/clubes">Clubes</NavLink>
             </li>
             <li>
               <NavLink to="/reglamento">Reglamento</NavLink>
