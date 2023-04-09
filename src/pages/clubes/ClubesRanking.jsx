@@ -4,11 +4,10 @@ import Loader from "../../components/Loader";
 import useFetch from "../../hooks/useFetch";
 
 const ClubesRanking = () => {
-  const { data, loading, error } = useFetch(`https://imltenis.com.ar/fixture/api/clubes/ranking`);
+  const { data, loading, error } = useFetch(`/clubes/ranking`);
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
 
-  console.log(data);
   return (
     <>
       <Helmet>
@@ -33,8 +32,7 @@ const ClubesRanking = () => {
           <table className="table w-full">
             <thead>
               <tr>
-                <th></th>
-                <th className="pl-0">Club</th>
+                <th>Club</th>
                 <th width="100">Ptos</th>
                 <th width="100">Series</th>
                 <th width="100">Ganadas</th>
@@ -44,17 +42,8 @@ const ClubesRanking = () => {
             </thead>
             <tbody>
               {data.map((item, index) => (
-                <tr key={item.id}>
-                  <td className="p-0">
-                    {index === 0 ? (
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="8" fill="#f34643" className="inline ml-2">
-                        <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
-                      </svg>
-                    ) : (
-                      ""
-                    )}
-                  </td>
-                  <td className="pl-0">
+                <tr key={item.id} className={`font-semibold ${index === 0 ? "text-primary" : ""}`}>
+                  <td>
                     <div className="flex items-center">
                       <div className="avatar mr-3">
                         <div className="w-9 rounded-full">
@@ -75,7 +64,7 @@ const ClubesRanking = () => {
                   <td>{item.series_won}</td>
                   <td>{item.matches_won}</td>
                   <td>
-                    <span className={`font-semibold ${index === 0 ? "text-primary" : ""}`}>{index + 1}</span>
+                    <span className="font-semibold">{index + 1}</span>
                   </td>
                 </tr>
               ))}

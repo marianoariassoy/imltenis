@@ -8,7 +8,7 @@ import TeamsFixture from "./TeamsFixture";
 
 const Teams = () => {
   let { id } = useParams();
-  const { data, loading, error } = useFetch(`https://imltenis.com.ar/fixture/api/teams/${id}`);
+  const { data, loading, error } = useFetch(`/teams/${id}`);
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
   if (!data) return null;
@@ -32,7 +32,7 @@ const Teams = () => {
         <meta property="og:title" content={title} />
         <meta property="og:url" content={`https://imltenis.com.ar/fixture/equipos/${id}`} />
         <meta property="og:description" content={meta_description} />
-        <meta property="og:image" content={`https://imltenis.com.ar/fixture/images/${image}`} />
+        <meta property="og:image" content={image} />
         <meta property="og:image:alt" content={title} />
         <link rel="canonical" href={`https://imltenis.com.ar/fixture/equipos/${id}`} />
       </Helmet>

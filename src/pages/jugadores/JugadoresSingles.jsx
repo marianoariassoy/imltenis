@@ -3,12 +3,11 @@ import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/Loader";
 
 const JugadoresSingles = ({ player_id }) => {
-  const { data, loading, error } = useFetch(`https://imltenis.com.ar/fixture/api/players/${player_id}/singles`);
+  const { data, loading, error } = useFetch(`/players/${player_id}/singles`);
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
   if (!data) return null;
 
-  console.log(data);
   return (
     <section id="lista-single">
       <h1 className="text-center mb-3 font-semibold">Singles</h1>

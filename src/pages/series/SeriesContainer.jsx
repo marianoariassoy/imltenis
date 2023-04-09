@@ -6,7 +6,7 @@ import SeriesMatches from "./SeriesMatches";
 
 const Series = () => {
   let { id } = useParams();
-  const { data, loading, error } = useFetch(`https://imltenis.com.ar/fixture/api/series/${id}`);
+  const { data, loading, error } = useFetch(`/series/${id}`);
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
 
@@ -28,8 +28,8 @@ const Series = () => {
 
       <section id="presentacion">
         <div className="row text-center mb-12">
-          <h1 className="text-2xl font-semibold text-error mb-2">{title}</h1>
-          <h2 className="text-xl">
+          <h1 className="text-xl md:text-2xl font-semibold text-error mb-2">{title}</h1>
+          <h2 className="md:text-xl">
             <Link to={`/torneos/${data[0].tournament_id}`} className="link-hover text-gray-500">
               {data[0].tournament_name}
             </Link>
@@ -54,7 +54,7 @@ const Series = () => {
               Local
             </div>
             <div className="w-1/5">
-              <h1 className="text-2xl font-bold">
+              <h1 className="text-xl md:text-2xl font-bold">
                 Score
                 <br /> {data[0].score}
               </h1>

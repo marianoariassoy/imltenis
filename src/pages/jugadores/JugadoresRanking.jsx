@@ -4,7 +4,7 @@ import Loader from "../../components/Loader";
 import useFetch from "../../hooks/useFetch";
 
 const JugadoresRanking = () => {
-  const { data, loading, error } = useFetch(`https://imltenis.com.ar/fixture/api/players/ranking`);
+  const { data, loading, error } = useFetch(`/players/ranking`);
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
 
@@ -33,8 +33,7 @@ const JugadoresRanking = () => {
           <table className="table w-full">
             <thead>
               <tr>
-                <th></th>
-                <th className="pl-0">Nombre</th>
+                <th>Nombre</th>
                 <th>Equipo</th>
                 <th>Torneo</th>
                 <th width="100">Series</th>
@@ -46,17 +45,8 @@ const JugadoresRanking = () => {
             </thead>
             <tbody>
               {data.map((item, index) => (
-                <tr key={item.id}>
-                  <td className="p-0">
-                    {index === 0 ? (
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="8" fill="#f34643" className="inline ml-2">
-                        <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
-                      </svg>
-                    ) : (
-                      ""
-                    )}
-                  </td>
-                  <td className="pl-0">
+                <tr key={item.id} className={`font-semibold ${index === 0 ? "text-primary" : ""}`}>
+                  <td>
                     <div className="flex items-center">
                       <div className="avatar mr-3">
                         <div className="w-9 rounded-full">
@@ -85,7 +75,7 @@ const JugadoresRanking = () => {
                   <td>{item.sets}</td>
                   <td>{item.games}</td>
                   <td>
-                    <span className={`font-semibold ${index === 0 ? "text-primary" : ""}`}>{index + 1}</span>
+                    <span className="font-semibold">{index + 1}</span>
                   </td>
                 </tr>
               ))}

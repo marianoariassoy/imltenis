@@ -6,7 +6,7 @@ let season_name = null;
 
 const Welcome = () => {
   let id = 1;
-  const { data, loading, error } = useFetch(`https://imltenis.com.ar/fixture/api/seasons/tournaments/${id}`);
+  const { data, loading, error } = useFetch(`/seasons/tournaments/${id}`);
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
 
   loading ? (season_name = null) : (season_name = data[0].season_name);
@@ -74,7 +74,7 @@ const Welcome = () => {
       </header>
 
       {data && (
-        <main className="row w-full h-screen flex flex-col justify-center px-6 text-center">
+        <main className="row w-full h-screen flex flex-col justify-center px-6 text-center fade-in">
           <div className="row max-w-3xl mx-auto mb-2">
             <h1 className="text-primary mb-2" id="title-home">
               {season_name}

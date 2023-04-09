@@ -8,7 +8,7 @@ import JugadoresEquipos from "./JugadoresEquipos";
 
 const JugadoresContainer = () => {
   let { id } = useParams();
-  const { data, loading, error } = useFetch(`https://imltenis.com.ar/fixture/api/players/${id}`);
+  const { data, loading, error } = useFetch(`/players/${id}`);
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
 

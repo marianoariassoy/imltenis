@@ -3,7 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/Loader";
 
 const JugadoresDobles = ({ player_id }) => {
-  const { data, loading, error } = useFetch(`https://imltenis.com.ar/fixture/api/players/${player_id}/doubles`);
+  const { data, loading, error } = useFetch(`/players/${player_id}/doubles`);
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
   if (!data) return null;

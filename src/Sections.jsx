@@ -11,7 +11,7 @@ import TeamsContainer from "./pages/equipos/TeamsContainer";
 import SeriesContainer from "./pages/series/SeriesContainer";
 
 import ClubesRanking from "./pages/clubes/ClubesRanking";
-import ClubesDetail from "./pages/clubes/ClubesDetail";
+import ClubesContainer from "./pages/clubes/ClubesContainer";
 
 import Reglamento from "./pages/Reglamento";
 import PageNotFound from "./pages/PageNotFound";
@@ -32,7 +32,7 @@ const Sections = () => {
           <Route path="/series/:id" element={<SeriesContainer />} />
 
           <Route path="/clubes/ranking" element={<ClubesRanking />} />
-          <Route path="/clubes/:id" element={<ClubesDetail />} />
+          <Route path="/clubes/:id" element={<ClubesContainer />} />
           <Route path="/reglamento" element={<Reglamento />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

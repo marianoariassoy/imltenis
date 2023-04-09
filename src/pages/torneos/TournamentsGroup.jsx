@@ -3,7 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/Loader";
 
 const TournamentsGroup = ({ group_id, name, description, winners }) => {
-  const { data, loading, error } = useFetch(`https://imltenis.com.ar/fixture/api/groups/teams/${group_id}`);
+  const { data, loading, error } = useFetch(`/groups/teams/${group_id}`);
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
 

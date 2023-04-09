@@ -3,13 +3,13 @@ import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/Loader";
 
 const TeamsFixture = ({ team_id }) => {
-  const { data, loading, error } = useFetch(`https://imltenis.com.ar/fixture/api/teams/${team_id}/fixture`);
+  const { data, loading, error } = useFetch(`/teams/${team_id}/fixture`);
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
   if (!data) return null;
 
   return (
-    <section id="fixture">
+    <section className="mb-12" id="fixture">
       <div className="row text-center mb-6">
         <h1>
           <a href="#" className="text-xl font-semibold link-hover link-error">
@@ -17,7 +17,7 @@ const TeamsFixture = ({ team_id }) => {
           </a>
         </h1>
       </div>
-      <div className="overflow-x-auto mb-12">
+      <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
             <tr>

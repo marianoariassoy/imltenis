@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+const apiUrl = "https://imltenis.com.ar/fixture/api";
 
 function useFetch(url) {
   const [data, setData] = useState(null);
@@ -8,7 +9,8 @@ function useFetch(url) {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch(url);
+        const urlOk = apiUrl + url;
+        const response = await fetch(urlOk);
         const json = await response.json();
         setData(json);
       } catch (error) {
