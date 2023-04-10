@@ -46,7 +46,7 @@ const Teams = () => {
               </Link>
             </div>
           </div>
-          <h1 className="text-xl font-bold text-error">{team_name}</h1>
+          <h1 className="text-2xl font-bold text-error">{team_name}</h1>
           <h2>
             <Link to={`/torneos/${tournament_id}`} className="link-hover text-gray-500 font-semibold">
               {tournament_name}
@@ -70,7 +70,7 @@ const Teams = () => {
 
         <div className="row text-center mb-6">
           <h1 className="text-xl text-primary font-semibold">Lista de buena fe 😉</h1>
-          <h1 className="font-semibold">{captain} (Capitán)</h1>
+          <h1 className="font-semibold text-gray-500">{captain} (Capitán)</h1>
         </div>
       </section>
 

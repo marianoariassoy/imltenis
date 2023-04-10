@@ -15,7 +15,7 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
             {name}
           </a>
         </h1>
-        <h2 className="text-xl">Posiciones 💪</h2>
+        <h2 className="text-xl text-gray-500">Posiciones 💪</h2>
       </div>
 
       <div className="overflow-x-auto">
