@@ -32,7 +32,7 @@ const TeamsFixture = ({ team_id }) => {
           </thead>
           <tbody>
             {data.map((item) => (
-              <tr key={item.id} className={item.winner ? " " : "opacity-50"}>
+              <tr key={item.id} className={item.winner ? "opacity-50" : ""}>
                 <td className="p-0">
                   {item.winner ? (
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="8" fill="#666" className="inline ml-2">
