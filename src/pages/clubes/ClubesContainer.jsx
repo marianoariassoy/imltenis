@@ -28,7 +28,7 @@ const ClubesContainer = () => {
 
       <section>
         <div className="hero min-h-screen" style={{ backgroundImage: `url("${data[0].bgimage}")` }}>
-          <div className="hero-overlay bg-opacity-60"></div>
+          <div className="hero-overlay bg-opacity-50"></div>
           <div className="hero-content text-center text-neutral-content">
             <div className="max-w-md">
               <div className="row text-center mb-5">

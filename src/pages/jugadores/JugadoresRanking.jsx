@@ -28,8 +28,8 @@ const JugadoresRanking = () => {
         </div>
       </section>
 
-      <section id="grupo">
-        <div className="overflow-x-auto mb-6">
+      <section className="mb-12" id="grupo">
+        <div className="overflow-x-auto">
           <table className="table w-full">
             <thead>
               <tr>

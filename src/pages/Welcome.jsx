@@ -18,14 +18,14 @@ const Welcome = () => {
     <>
       <Helmet>
         <title>{meta_title}</title>
-        <meta name="description" content={meta_description} />
-        <meta name="title" content={meta_title} />
-        <meta property="og:title" content={meta_title} />
-        <meta property="og:description" content={meta_description} />
         <meta property="og:url" content="https://imltenis.com.ar/" />
         <meta property="og:image" content="https://imltenis.com.ar/assets/iml.jpg" />
         <meta property="og:image:alt" content="IML Tenis" />
         <link rel="canonical" href="https://imltenis.com.ar" />
+        <meta name="description" content={meta_description} />
+        <meta name="title" content={meta_title} />
+        <meta property="og:title" content={meta_title} />
+        <meta property="og:description" content={meta_description} />
       </Helmet>
 
       <header className="header-home">
@@ -74,7 +74,7 @@ const Welcome = () => {
       </header>
 
       {data && (
-        <main className="row w-full h-screen flex flex-col justify-center px-6 text-center fade-in">
+        <main className="fade-in row w-full h-screen flex flex-col justify-center px-6 text-center">
           <div className="row max-w-3xl mx-auto mb-2">
             <h1 className="text-primary mb-2" id="title-home">
               {season_name}
@@ -115,7 +115,7 @@ const Welcome = () => {
       )}
       <div className="video-background">
         <video autoPlay playsInline muted loop id="myVideo">
-          <source src="./assets/video720.mp4" type="video/mp4" />
+          <source src="./assets/videos/video720.mp4" type="video/mp4" />
         </video>
       </div>
     </>

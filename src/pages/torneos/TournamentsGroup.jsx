@@ -35,7 +35,7 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
           </thead>
           <tbody>
             {data.map((item, index) => (
-              <tr key={item.id}>
+              <tr key={item.id} className={`font-semibold ${index < winners ? "text-primary" : ""} `}>
                 <td className="p-0">
                   {index < winners ? (
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="8" fill="#f34643" className="inline ml-2">
@@ -68,7 +68,7 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
                 <td>
-                  <span className={`font-semibold ${index < winners ? "text-primary" : ""} `}>{index + 1}</span>
+                  <span className="font-semibold">{index + 1}</span>
                 </td>
               </tr>
             ))}

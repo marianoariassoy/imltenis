@@ -19,7 +19,7 @@ const JugadoresContainer = () => {
   return (
     <>
       <Helmet>
-        <title>{player_name}</title>
+        <title>{player_name} IML Tenis</title>
         <meta name="description" content={meta_description} />
         <meta property="og:title" content={player_name} />
         <meta property="og:url" content={`https://imltenis.com.ar/jugadores/${id}`} />
@@ -40,10 +40,6 @@ const JugadoresContainer = () => {
           <h2 className="text-gray-500">{data[0].age}</h2>
         </div>
       </section>
-
-      {/* <section>
-        <h1 className="text-xl font-semibold text-error text-center mb-6">Historial 👈</h1>
-      </section> */}
 
       <JugadoresSingles player_id={data[0].id} />
       <JugadoresDobles player_id={data[0].id} />

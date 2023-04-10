@@ -1,8 +1,8 @@
 import { useParams, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/Loader";
 import Tournaments from "./Tournaments";
-import useFetch from "../../hooks/useFetch";
 
 const TournamentsContainer = () => {
   let { id } = useParams();
@@ -10,6 +10,7 @@ const TournamentsContainer = () => {
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
   if (!data) return <Navigate to="/404" />;
+  if (loading) return <Loader />;
 
   let meta_title = data[0].tournament_name + " " + data[0].season_name;
   let meta_description = `Liga IML Tenis categoría ${meta_title}`;

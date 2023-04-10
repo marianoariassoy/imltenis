@@ -25,7 +25,7 @@ const NavBar = () => {
               <NavLink to="/reglamento">Reglamento</NavLink>
             </li>
             <li>
-              <a href="./assets/Planilla_de_Carga_2Dobles_1Single.pdf" target="_blank">
+              <a href="./assets/docs/Planilla_de_Carga_2Dobles_1Single.pdf" target="_blank">
                 Planilla de carga
               </a>
             </li>
