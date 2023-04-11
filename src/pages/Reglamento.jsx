@@ -12,8 +12,8 @@ const Reglamento = () => {
         <meta property="og:image:alt" content="IML Tenis" />
       </Helmet>
 
-      <h1 class="text-xl font-bold mb-1 text-center text-primary">Reglamento IML Tenis 2023</h1>
-      <h1 class="text-xl mb-6 text-center">🤝</h1>
+      <h1 className="text-xl font-bold mb-1 text-center text-primary">Reglamento IML Tenis 2023</h1>
+      <h1 className="text-xl mb-6 text-center">🤝</h1>
 
       <p className="md:columns-2">
         <strong className="text-error">Formación:</strong> En todas las categorías se juegan 1 single y 2 dobles, de los 5 jugadores convocados para el día del partido, al single puede ir cualquiera de ellos. De los 4 restantes, el jugador que esté

@@ -1,5 +1,4 @@
-import { useParams, Navigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, Navigate, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/Loader";

@@ -21,17 +21,27 @@ body {
 #root main {
   width: 100vw;
 }
+.video-background {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+.video-background video {
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  width: 100%;
+}
 
 .text-gray-500 {
   color: var(--color-secondary);
 }
 .bg-base-300 {
   background-color: var(--color-bg-secondary);
-}
-#title-home {
-  font-size: clamp(1rem, 19vw, 8rem);
-  font-weight: 900;
-  line-height: 1;
 }
 .btn-category {
   width: 43%;
@@ -80,21 +90,15 @@ tfoot tr th {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000;
 }
-.video-background {
-  height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
+#title-home {
+  font-size: clamp(1rem, 19vw, 8rem);
+  font-weight: 900;
+  line-height: 1;
 }
-.video-background video {
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.4;
-  width: 100%;
+.main-home {
+  position: fixed;
 }
 .fade-in {
   animation: fadeIn 1s ease;

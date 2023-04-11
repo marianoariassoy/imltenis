@@ -77,7 +77,7 @@ const Welcome = () => {
       </header>
 
       {data && (
-        <main className="fade-in row w-full h-screen flex flex-col justify-center px-6 text-center">
+        <main className="fade-in row w-full h-screen flex flex-col justify-center px-6 text-center main-home">
           <div className="row max-w-3xl mx-auto mb-2">
             <h1 className="text-primary mb-2" id="title-home">
               {season_name}
@@ -116,6 +116,7 @@ const Welcome = () => {
           </div>
         </main>
       )}
+      <footer></footer>
       <div className="video-background">
         <video autoPlay playsInline muted loop id="myVideo">
           <source src="./assets/videos/video720.mp4" type="video/mp4" />

@@ -9,7 +9,7 @@ const ClubesTeams = ({ club_id }) => {
   if (!data) return null;
   return (
     <section className="mb-12">
-      <div className="container mx-auto px-5 max-w-6xl mb-3">
+      <div className="container mx-auto max-w-6xl mb-3">
         <div className="row text-center mb-6">
           <h1 className="text-error text-xl font-bold">Equipos</h1>
         </div>
