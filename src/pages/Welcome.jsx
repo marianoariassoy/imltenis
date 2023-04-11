@@ -51,6 +51,9 @@ const Welcome = () => {
                   <NavLink to="/reglamento">Reglamento</NavLink>
                 </li>
                 <li>
+                  <NavLink to="/nosotros">Nosotros</NavLink>
+                </li>
+                <li>
                   <a href="./assets/Planilla_de_Carga_2Dobles_1Single.pdf" target="_blank">
                     Planilla de carga
                   </a>
