@@ -2,14 +2,11 @@ import { NavLink, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import useFetch from "../hooks/useFetch";
 import Logo from "../assets/iml-primary.svg";
-let season_name = null;
 
 const Welcome = () => {
   let id = 1;
   const { data, loading, error } = useFetch(`/seasons/tournaments/${id}`);
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
-
-  loading ? (season_name = null) : (season_name = data[0].season_name);
 
   let meta_title = "IML Tenis Liga de clubes de Zona Norte y Oeste de Buenos Aires";
   let meta_description = "Liga de clubes de tenis de Zona Norte y Oeste de Buenos Aires, Argentina";
@@ -54,7 +51,7 @@ const Welcome = () => {
                   <NavLink to="/nosotros">Nosotros</NavLink>
                 </li>
                 <li>
-                  <a href="./assets/Planilla_de_Carga_2Dobles_1Single.pdf" target="_blank">
+                  <a href="https://imltenis.com.ar/assets/docs/planilla_de_carga_iml_tenis.pdf" target="_blank">
                     Planilla de carga
                   </a>
                 </li>
@@ -80,7 +77,7 @@ const Welcome = () => {
         <main className="fade-in row w-full h-screen flex flex-col justify-center px-6 text-center main-home">
           <div className="row max-w-3xl mx-auto mb-2">
             <h1 className="text-primary mb-2" id="title-home">
-              {season_name}
+              Apertura 2023
             </h1>
             {data.map((item) => (
               <Link to={`/torneos/${item.id}`} className="btn btn-outline btn-error md:btn-lg m-2 btn-category normal-case" key={item.id}>
@@ -116,7 +113,6 @@ const Welcome = () => {
           </div>
         </main>
       )}
-      <footer></footer>
       <div className="video-background">
         <video autoPlay playsInline muted loop id="myVideo">
           <source src="./assets/videos/video720.mp4" type="video/mp4" />

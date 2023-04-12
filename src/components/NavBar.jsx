@@ -28,7 +28,7 @@ const NavBar = () => {
               <NavLink to="/nosotros">Nosotros</NavLink>
             </li>
             <li>
-              <a href="./assets/docs/Planilla_de_Carga_2Dobles_1Single.pdf" target="_blank">
+              <a href="https://imltenis.com.ar/assets/docs/planilla_de_carga_iml_tenis.pdf" target="_blank">
                 Planilla de carga
               </a>
             </li>

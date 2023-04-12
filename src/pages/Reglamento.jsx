@@ -15,7 +15,7 @@ const Reglamento = () => {
       <h1 className="text-xl font-bold mb-1 text-center text-primary">Reglamento IML Tenis 2023</h1>
       <h1 className="text-xl mb-6 text-center">🤝</h1>
 
-      <p className="md:columns-2">
+      <p className="md:columns-2 mb-12">
         <strong className="text-error">Formación:</strong> En todas las categorías se juegan 1 single y 2 dobles, de los 5 jugadores convocados para el día del partido, al single puede ir cualquiera de ellos. De los 4 restantes, el jugador que esté
         más arriba en la lista de buena fe para ese día deberá jugar si o si el doble 1, con cualquiera de sus compañeros. Al doble 2 irán los restantes jugadores. <br />
         <br />
@@ -93,9 +93,9 @@ const Reglamento = () => {
         continuación o el comienzo de algún otro torneo que no sea de IML Tenis, se considerará ese partido como abandono del equipo local. Se computará el resultado hasta ese momento y abandono local.
         <br />
         <br />
-        <strong className="text-error">Obr/ar de buena fe:</strong> Aquel capitán que haya incorporado algún jugador nuevo a su lista, sin conocer su nivel de juego, podrá de buena fe informar a la organización que el mismo fue anotado en una
-        posición no acorde a su nivel de juego al comienzo del torneo. Dicha información será analizada, y de ser correcta, será removido al orden que corresponda en la lista de buena fe. Esta regla, tendrá validez solo hasta el primer partido jugado
-        por dicho jugador nuevo. Si el mencionado ya participo de más partido y no fue informado, no se podrá realizar el cambio y se aplicará la sanción correspondiente.
+        <strong className="text-error">Obrar de buena fe:</strong> Aquel capitán que haya incorporado algún jugador nuevo a su lista, sin conocer su nivel de juego, podrá de buena fe informar a la organización que el mismo fue anotado en una posición
+        no acorde a su nivel de juego al comienzo del torneo. Dicha información será analizada, y de ser correcta, será removido al orden que corresponda en la lista de buena fe. Esta regla, tendrá validez solo hasta el primer partido jugado por
+        dicho jugador nuevo. Si el mencionado ya participo de más partido y no fue informado, no se podrá realizar el cambio y se aplicará la sanción correspondiente.
         <br />
         <br />
         <strong className="text-error">Auditoria de lista de buena fe rivales:</strong> Cada capitán podrá objetar la ubicación de algún jugador rival en la lista de algún equipo rival. Para tal fin deberá informarlo por mail a hola@imltenis.com.ar,
