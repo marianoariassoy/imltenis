@@ -21,8 +21,8 @@ const ClubesRanking = () => {
 
       <section id="presentacion">
         <div className="row text-center mb-6">
-          <h1 className="text-2xl font-bold text-error mb-1">Ranking Anual de Clubes</h1>
-          <h1 className="text-2xl mb-1">2023</h1>
+          <h1 className="text-2xl font-bold text-error">Ranking Anual de Clubes</h1>
+          <h1 className="text-2xl">2023</h1>
           <h1 className="text-2xl">👑</h1>
         </div>
       </section>
@@ -32,17 +32,22 @@ const ClubesRanking = () => {
           <table className="table w-full">
             <thead>
               <tr>
+                <th className="pr-2" width="50">
+                  #
+                </th>
                 <th>Club</th>
                 <th width="100">Ptos</th>
                 <th width="100">Series</th>
                 <th width="100">Ganadas</th>
                 <th width="100">Parciales</th>
-                <th width="100">#</th>
               </tr>
             </thead>
             <tbody>
               {data.map((item, index) => (
                 <tr key={item.id} className={`font-semibold ${index === 0 ? "text-primary" : ""}`}>
+                  <td className="pr-2" width="50">
+                    <span className="font-semibold">{index + 1}</span>
+                  </td>
                   <td>
                     <div className="flex items-center">
                       <div className="avatar mr-3">
@@ -63,9 +68,6 @@ const ClubesRanking = () => {
                   <td>{item.series_total}</td>
                   <td>{item.series_won}</td>
                   <td>{item.matches_won}</td>
-                  <td>
-                    <span className="font-semibold">{index + 1}</span>
-                  </td>
                 </tr>
               ))}
             </tbody>
