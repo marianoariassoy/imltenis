@@ -8,7 +8,7 @@ const Reglamento = () => {
         <meta name="description" content="Reglamento de la liga de clubes IML Tenis 2023" />
         <meta property="og:title" content="Reglamento IML Tenis 2023" />
         <meta property="og:url" content="https://imltenis.com.ar/reglamento" />
-        <meta property="og:image" content="https://imltenis.com.ar/fixture/assets/iml.jpg" />
+        <meta property="og:image" content="https://imltenis.com.ar/assets/iml.jpg" />
         <meta property="og:image:alt" content="IML Tenis" />
       </Helmet>
 
@@ -35,19 +35,18 @@ const Reglamento = () => {
         rival podrá pedir W.O.
         <br />
         <br />
-        <strong className="text-error">Horarios y Días:</strong> Se deberá elegir una hora de localia entre las 9hs y 17hs de los días Domingos, en lo preferible fija a lo largo del torneo para beneficio de ambas partes. <br />
-        <br />
-        <strong className="text-error">Cambios de la hora de localía: </strong> deberán ser aprobados por IML Tenis informándolos a más tardar el día martes de la misma semana de la fecha, debiendo el equipo visitante ajustarse al nuevo horario.
-        Pasado dicho plazo, queda a la buena voluntad del equipo visitante acceder al cambio de horario. De no poder respetar el horario del fixture, el equipo local perderá los 3 puntos por WO
+        <strong className="text-error">Hora y Día:</strong> Se deberá elegir una hora de localia entre las 9hs y 17hs de los días Domingos, en lo preferible fija a lo largo del torneo, de no ser así se debe anunciar la hora antes del día miércoles a
+        la noche de la semana de la serie, de lo contrario el equipo recibirá una advertencia por cada día de atraso, desde la segunda advertencia se procedera a la quita de 1 punto de la serie a jugarse.
         <br />
         <br />
         <strong className="text-error">Modalidad de los Partidos: </strong> Todos los partidos se disputarán al mejor de tres (3) sets, con tie break. El tercer set es Super Tie break a 10 con diferencia de dos.
         <br />
         <br />
-        <strong className="text-error">Resultados y Formación:</strong>
-        Es obligatorio el envío de la planilla de carga de resultados al chat de capitanes de WhatsApp por parte del capitan del equipo ganador en el transcurso del día de la fecha. <br />
+        <strong className="text-error">Resultados y Formación:</strong> Es obligatorio el envío de la planilla de resultados o los resultados y formaciones al chat de capitanes de WhatsApp por parte del capitan del equipo ganador en el transcurso del
+        día de la serie.
+        <br />
         <a href="https://imltenis.com.ar/assets/docs/planilla_de_carga_iml_tenis.pdf" className="link link-error" target="_blank" rel="noopener noreferrer">
-          Descargar Planilla de carga
+          Descargar la planilla
         </a>
         <br />
         <br />

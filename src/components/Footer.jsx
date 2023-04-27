@@ -21,7 +21,7 @@ const Footer = () => {
 
       <div className="row w-full text-sm">
         <p>
-          Liga de Interclubes IML Tenis 2023 &copy; Buenos Aires, Argentina.&nbsp;
+          <span className="font-semibold"> Liga de Interclubes IML Tenis &copy; 2023</span> Buenos Aires, Argentina.&nbsp;
           <a href="mailto:hola@imltenis.com.ar" className="link-hover">
             hola@imltenis.com.ar
           </a>

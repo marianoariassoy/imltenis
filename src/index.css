@@ -73,6 +73,7 @@ tfoot tr th {
   object-position: center;
   width: auto;
 }
+
 .circle {
   border: 1px solid var(--color-primary);
   border-radius: 50%;
@@ -87,7 +88,7 @@ tfoot tr th {
   fill: #fff;
 }
 #title-home {
-  font-size: clamp(1rem, 19vw, 8rem);
+  font-size: clamp(1rem, 18vw, 7rem);
   font-weight: 900;
   line-height: 1;
 }

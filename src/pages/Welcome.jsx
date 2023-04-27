@@ -91,48 +91,54 @@ const Welcome = () => {
 
         <main className="fade-in flex flex-col justify-center p-6 text-center max-w-4xl m-auto">
           <h1 className="text-primary mb-2" id="title-home">
-            Apertura 2023
+            Apertura <br />
+            2023
           </h1>
           <h2 className="text-4xl ">🏆</h2>
-          <ul className="tournaments-list mb-2">
+          <ul className="tournaments-list mb-2 text-primary font-bold text-5xl">
             <li>
-              <Link to="/torneos/15" className="text-primary font-bold text-5xl link-hover">
-                1era /
+              <Link to="/torneos/15" className="link-hover">
+                1era
               </Link>
             </li>
+            <li>/</li>
             <li>
-              <Link to="/torneos/14" className="text-primary font-bold text-5xl link-hover">
+              <Link to="/torneos/14" className="link-hover">
                 2da
               </Link>
             </li>
             <br />
             <li>
-              <Link to="/torneos/13" className="text-primary font-bold text-5xl link-hover">
-                3ra /
+              <Link to="/torneos/13" className="link-hover">
+                3ra
               </Link>
             </li>
+            <li>/</li>
             <li>
-              <Link to="/torneos/12" className="text-primary font-bold text-5xl link-hover">
+              <Link to="/torneos/12" className="link-hover">
                 4ta
               </Link>
             </li>
           </ul>
         </main>
 
-        <footer className="text-center pb-6 text-sm p-4">
+        <footer className="text-center text-primary pb-6 text-sm p-4">
           <div>
-            <a href="https://www.instagram.com/yuka_ant/" className="icon-sponsor hover:opacity-60" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/yuka_ant/" className="icon-sponsor icon-sponsor-home hover:opacity-60" target="_blank" rel="noopener noreferrer">
               <img src="../assets/sponsors/yuka-primary.svg" alt="Logo Yuka" />
             </a>
-            <a href="https://www.instagram.com/typdeportes/" className="icon-sponsor hover:opacity-60" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/typdeportes/" className="icon-sponsor icon-sponsor-home hover:opacity-60" target="_blank" rel="noopener noreferrer">
               <img src="../assets/sponsors/typ-primary.svg" alt="Logo TyP" />
             </a>
-            <a href="https://www.instagram.com/tiendavinica/" className="icon-sponsor hover:opacity-60" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/tiendavinica/" className="icon-sponsor icon-sponsor-home hover:opacity-60" target="_blank" rel="noopener noreferrer">
               <img src="../assets/sponsors/vinica-primary.svg" alt="Logo Tienda Vinica" />
             </a>
           </div>
           <div>
-            <p className=" text-gray-500">Liga de clubes IML Tenis 2023 &copy; Buenos Aires, Argentina.</p>
+            <p>
+              <span className="font-semibold"> Liga de clubes IML Tenis &copy; 2023</span>
+              <br /> Buenos Aires, Argentina.
+            </p>
           </div>
         </footer>
       </div>
