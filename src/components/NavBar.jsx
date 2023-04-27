@@ -13,8 +13,29 @@ const NavBar = () => {
           </label>
           <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 rounded-box w-52 font-bold shadow-xl bg-base-300">
             <li>
-              <NavLink to="/">Torneos</NavLink>
+              <NavLink to="/">Apertura 2023</NavLink>
             </li>
+            <li>
+              <NavLink to="/torneos/15" className="text-primary">
+                Primera Libre
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/torneos/14" className="text-primary">
+                Segunda Libre
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/torneos/13" className="text-primary">
+                Tercera Libre
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/torneos/12" className="text-primary">
+                Cuarta Libre
+              </NavLink>
+            </li>
+
             <li>
               <NavLink to="/clubes/ranking">Ranking Clubes</NavLink>
             </li>

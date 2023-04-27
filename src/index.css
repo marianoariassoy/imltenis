@@ -86,19 +86,10 @@ tfoot tr th {
 .svg-hover-white:hover svg {
   fill: #fff;
 }
-.header-home {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
 #title-home {
   font-size: clamp(1rem, 19vw, 8rem);
   font-weight: 900;
   line-height: 1;
-}
-.main-home {
-  position: fixed;
 }
 .fade-in {
   animation: fadeIn 1s ease;
@@ -110,4 +101,11 @@ tfoot tr th {
   100% {
     opacity: 1;
   }
+}
+.active {
+  color: white;
+}
+.tournaments-list li {
+  display: inline-block;
+  margin: 0.25rem 0.5rem;
 }
