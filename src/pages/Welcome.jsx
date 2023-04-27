@@ -39,6 +39,18 @@ const Welcome = () => {
                   <NavLink to="/">Torneos</NavLink>
                 </li>
                 <li>
+                  <NavLink to="/torneos/15">Primera Libre</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/torneos/14">Segunda Libre</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/torneos/13">Tercera Libre</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/torneos/12">Cuarta Libre</NavLink>
+                </li>
+                <li>
                   <NavLink to="/clubes/ranking">Ranking Clubes</NavLink>
                 </li>
                 <li>
@@ -79,8 +91,9 @@ const Welcome = () => {
             <h1 className="text-primary mb-2" id="title-home">
               Apertura 2023
             </h1>
+
             {data.map((item) => (
-              <Link to={`/torneos/${item.id}`} className="btn btn-outline btn-error md:btn-lg m-2 btn-category normal-case" key={item.id}>
+              <Link to={`/torneos/${item.id}`} className="btn btn-outline btn-error md:btn-lg m-2 btn-category normal-case font-bold" key={item.id}>
                 {item.name}
               </Link>
             ))}
@@ -104,11 +117,8 @@ const Welcome = () => {
               </a>
             </div>
             <p className="text-sm text-gray-500">
-              Liga de clubes IML Tenis 2023 &copy; Buenos Aires, Argentina.
-              <br />
-              <a href="mailto:hola@imltenis.com.ar" className="link-hover">
-                hola@imltenis.com.ar
-              </a>
+              Liga de clubes IML Tenis 2023 &copy;
+              <br /> Buenos Aires, Argentina.
             </p>
           </div>
         </main>
