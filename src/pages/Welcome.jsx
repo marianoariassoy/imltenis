@@ -1,6 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import Logo from "../assets/iml-primary.svg";
+import Logo from "../assets/iml.svg";
 
 const Welcome = () => {
   let meta_title = "IML Tenis Liga de clubes de Zona Norte y Oeste de Buenos Aires";
@@ -76,7 +76,7 @@ const Welcome = () => {
             </div>
             <div className="navbar-center mt-3">
               <Link to={"/"} className="btn btn-ghost svg-primary-hover">
-                <img src={Logo} alt="Logo IML" width="90" />
+                <img src={Logo} alt="Logo IML" width="130" />
               </Link>
             </div>
             <div className="navbar-end">
@@ -90,12 +90,12 @@ const Welcome = () => {
         </header>
 
         <main className="fade-in flex flex-col justify-center p-6 text-center max-w-4xl m-auto">
-          <h1 className="text-primary mb-2" id="title-home">
+          <h1 className="text-primary" id="title-home">
             Apertura <br />
             2023
           </h1>
-          <h2 className="text-4xl ">🏆</h2>
-          <ul className="tournaments-list mb-2 text-primary font-bold text-5xl">
+
+          <ul className="tournaments-list mb-3 text-primary font-bold text-5xl">
             <li>
               <Link to="/torneos/15" className="link-hover">
                 1era
@@ -120,6 +120,7 @@ const Welcome = () => {
               </Link>
             </li>
           </ul>
+          <h2 className="text-4xl">🏆</h2>
         </main>
 
         <footer className="text-center text-primary pb-6 text-sm p-4">
