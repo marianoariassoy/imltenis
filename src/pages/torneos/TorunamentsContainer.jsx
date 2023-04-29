@@ -33,7 +33,7 @@ const TournamentsContainer = () => {
           <h1 className="text-2xl text-error mb-1">
             <span className="font-bold">{data[0].tournament_name}</span> <span className="hidden md:inline">{data[0].season_name}</span>
           </h1>
-          <h1 className="text-2xl text-center">🏆</h1>
+          <h1 className="text-2xl text-center"></h1>
         </div>
       </section>
 

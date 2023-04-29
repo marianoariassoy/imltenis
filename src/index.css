@@ -21,44 +21,25 @@ body {
 #root main {
   width: 100vw;
 }
-.video-background {
-  height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-}
-.video-background video {
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.4;
-  width: 100%;
-}
-
 .text-gray-500 {
   color: var(--color-secondary);
 }
 .bg-base-300 {
   background-color: var(--color-bg-secondary);
 }
-.btn-category {
-  width: 43%;
-}
 .svg-primary-hover:hover svg {
   fill: var(--color-primary);
 }
 thead tr th {
   background-color: transparent !important;
-  border-bottom: 1px solid var(--color-gray-1);
+  border-bottom: 1px solid #ffffff09;
   color: var(--color-secondary);
 }
 tbody tr td,
 tbody tr th {
   background-color: transparent !important;
-  border-bottom: 1px solid var(--color-gray-1);
-  border-color: var(--color-gray-1) !important;
+  border-bottom: 1px solid #ffffff09;
+  border-color: #ffffff09 !important;
 }
 tfoot tr th {
   background-color: transparent !important;
@@ -68,12 +49,11 @@ tfoot tr th {
   margin: 0 0.6rem;
 }
 .icon-sponsor img {
-  height: 55px;
+  height: 54px;
   object-fit: cover;
   object-position: center;
   width: auto;
 }
-
 .circle {
   border: 1px solid var(--color-primary);
   border-radius: 50%;
@@ -88,12 +68,12 @@ tfoot tr th {
   fill: #fff;
 }
 #title-home {
-  font-size: clamp(1rem, 18vw, 7rem);
+  /* font-size: clamp(1rem, 18vw, 7rem); */
   font-weight: 900;
   line-height: 1;
 }
 .fade-in {
-  animation: fadeIn 1s ease;
+  animation: fadeIn 1.4s ease forwards;
 }
 @keyframes fadeIn {
   0% {
@@ -104,9 +84,16 @@ tfoot tr th {
   }
 }
 .active {
-  color: white;
+  color: #34363c;
 }
 .tournaments-list li {
   display: inline-block;
+  line-height: 1;
   margin: 0.25rem 0.5rem;
+}
+.text-6xl {
+  font-size: 5rem;
+}
+.text-5xl {
+  font-size: 3.5rem;
 }
