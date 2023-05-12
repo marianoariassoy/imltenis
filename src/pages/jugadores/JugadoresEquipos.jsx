@@ -29,7 +29,7 @@ const JugadoresEquipos = ({ player_id }) => {
                     <div className="avatar mr-4">
                       <div className="w-9 rounded-full">
                         <Link to={`/equipos/${item.team_id}`} className="hover:opacity-70">
-                          <img src={item.image} />
+                          <img src={item.image} width="36" height="36" alt={item.team_name} />
                         </Link>
                       </div>
                     </div>

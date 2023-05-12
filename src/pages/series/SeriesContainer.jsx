@@ -29,8 +29,8 @@ const Series = () => {
 
       <section id="presentacion">
         <div className="row text-center mb-12">
-          <h1 className="text-xl md:text-2xl font-semibold text-error mb-2">{title}</h1>
-          <h2 className="md:text-xl">
+          <h1 className="text-xl font-semibold text-error">{title}</h1>
+          <h2 className="font-semibold">
             <Link to={`/torneos/${data[0].tournament_id}`} className="link-hover text-gray-500">
               {data[0].tournament_name}
             </Link>
@@ -41,11 +41,11 @@ const Series = () => {
       <section id="score">
         <div className="row flex justify-center mb-8">
           <div className="flex text-center w-full max-w-sm">
-            <div className="flex flex-col items-center w-2/5">
+            <div className="flex flex-col items-center w-2/5 text-gray-500">
               <div className="avatar mb-3">
                 <div className="w-20 rounded-full">
                   <Link to={`/equipos/${data[0].home_id}`} className="hover:opacity-70">
-                    <img src={data[0].home_image} />
+                    <img src={data[0].home_image} width="80" height="80" alt={data[0].home_name} />
                   </Link>
                 </div>
               </div>
@@ -65,11 +65,11 @@ const Series = () => {
                 <h1 className="text-xl font-semibold">Vs.</h1>
               )}
             </div>
-            <div className="flex flex-col items-center w-2/5">
+            <div className="flex flex-col items-center w-2/5 text-gray-500">
               <div className="avatar mb-3">
                 <div className="w-20 rounded-full">
                   <Link to={`/equipos/${data[0].away_id}`} className="hover:opacity-70">
-                    <img src={data[0].away_image} />
+                    <img src={data[0].away_image} width="80" height="80" alt={data[0].away_name} />
                   </Link>
                 </div>
               </div>

@@ -32,14 +32,14 @@ body {
 }
 thead tr th {
   background-color: transparent !important;
-  border-bottom: 1px solid #ffffff09;
+  border-bottom: 1px solid #ffffff10;
   color: var(--color-secondary);
 }
 tbody tr td,
 tbody tr th {
   background-color: transparent !important;
-  border-bottom: 1px solid #ffffff09;
-  border-color: #ffffff09 !important;
+  border-bottom: 1px solid #ffffff10;
+  border-color: #ffffff10 !important;
 }
 tfoot tr th {
   background-color: transparent !important;
@@ -84,12 +84,18 @@ tfoot tr th {
   }
 }
 .active {
-  color: #34363c;
+  color: #eee;
 }
 .tournaments-list li {
   display: inline-block;
   line-height: 1;
   margin: 0.25rem 0.5rem;
+}
+.tournaments-list li::after {
+  content: " / ";
+}
+.tournaments-list li:last-child::after {
+  content: "";
 }
 .text-6xl {
   font-size: 5rem;

@@ -32,12 +32,12 @@ const JugadoresContainer = () => {
       <section className="mb-6" id="presentacion">
         <div className="row text-center mb-6">
           <div className="avatar mb-3">
-            <div className="w-32 rounded-full bg-base-300">
-              <img src={data[0].image} />
+            <div className="w-28 rounded-full bg-base-300">
+              <img src={data[0].image} alt={data[0].name} width="128" height="128" />
             </div>
           </div>
           <h1 className="text-xl font-bold text-error">{player_name}</h1>
-          <h2 className="text-gray-500">{data[0].age}</h2>
+          <h2 className="text-gray-500 ">{data[0].age}</h2>
         </div>
       </section>
 

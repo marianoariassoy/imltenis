@@ -11,26 +11,25 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
     <section id="grupo">
       <div className="row text-center mb-4" id="presentacion">
         <h1>
-          <a href="#" className="text-2xl font-semibold link-hover link-error">
+          <a href="#" className="text-xl font-bold link-hover link-error">
             {name}
           </a>
         </h1>
-        <h2 className="text-xl text-gray-500">Posiciones 💪</h2>
+        <h2 className=" text-gray-500 font-semibold">Posiciones 💪</h2>
       </div>
 
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
             <tr>
-              <th></th>
+              <th width="30"></th>
               <th className="pl-0">Equipo</th>
-              <th width="100">Ptos</th>
-              <th width="100">Series</th>
-              <th width="100">Ganadas</th>
-              <th width="100">Parciales</th>
-              <th width="100">Dif. Sets</th>
-              <th width="100">Dif. Games</th>
-              <th width="20">#</th>
+              <th width="100">SJ</th>
+              <th width="100">SG</th>
+              <th width="100">P</th>
+              <th width="100">DS</th>
+              <th width="100">DG</th>
+              <th width="100">Pts</th>
             </tr>
           </thead>
           <tbody>
@@ -45,22 +44,18 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
                     ""
                   )}
                 </td>
-                <td className="pl-0">
-                  <div className="flex items-center">
-                    <div className="avatar mr-3">
-                      <div className="w-9 rounded-full">
-                        <Link to={`/equipos/${item.id}`} className="hover:opacity-70">
-                          <img src={`https://imltenis.com.ar/fixture/images/${item.image ? item.image : item.club_image}`} />
-                        </Link>
-                      </div>
+                <td className="pl-0 flex items-center gap-3">
+                  <span className="font-semibold">{index + 1}</span>
+                  <div className="avatar">
+                    <div className="w-9 rounded-full">
+                      <Link to={`/equipos/${item.id}`} className="hover:opacity-70">
+                        <img src={`https://imltenis.com.ar/fixture/images/${item.image ? item.image : item.club_image}`} width="36" height="36" alt={item.name} />
+                      </Link>
                     </div>
-                    <Link to={`/equipos/${item.id}`} className="link-hover font-semibold">
-                      {item.name}
-                    </Link>
                   </div>
-                </td>
-                <td>
-                  <span className="font-semibold">{item.points}</span>
+                  <Link to={`/equipos/${item.id}`} className="link-hover font-semibold">
+                    {item.name}
+                  </Link>
                 </td>
                 <td>{item.series_total}</td>
                 <td>{item.series_won}</td>
@@ -68,7 +63,7 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
                 <td>
-                  <span className="font-semibold">{index + 1}</span>
+                  <span className="font-bold">{item.points}</span>
                 </td>
               </tr>
             ))}
@@ -81,10 +76,21 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
         </table>
       </div>
 
-      <div className="row flex justify-center w-100">
-        <div className="flex mb-12 items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current flex-shrink-0 w-6 h-6 text-error mr-2">
+      <div className="row flex justify-center w-100 mb-4 text-gray-500 text-sm">
+        <div className="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current flex-shrink-0 w-6 h-6 text-error">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <div>
+            <strong>SJ:</strong> Series Jugadas <strong>SG:</strong> Series Ganadas <strong>P:</strong> Parciales Ganados <strong>DS:</strong> Diferencia de Sets <strong>DG:</strong> Diferencia de Games
+          </div>
+        </div>
+      </div>
+
+      <div className="row flex justify-center w-100">
+        <div className="flex mb-12 items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <span className="text-gray-500 text-sm">{description}</span>
         </div>

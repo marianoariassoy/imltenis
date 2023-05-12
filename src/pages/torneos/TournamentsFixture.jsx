@@ -11,7 +11,7 @@ const TournamentsFixture = ({ group_id }) => {
     <section className="mb-12" id="fixture">
       <div className="row text-center mb-6">
         <h1>
-          <a href="#" className="text-2xl font-semibold link-hover link-error">
+          <a href="#" className="text-xl font-bold link-hover link-error">
             Fixture 👈
           </a>
         </h1>
@@ -20,9 +20,11 @@ const TournamentsFixture = ({ group_id }) => {
         <table className="table w-full">
           <thead>
             <tr>
-              <th></th>
-              <th className="pl-0">Fecha</th>
-              <th>Hora</th>
+              <th width="30"></th>
+              <th className="pl-0" width="30">
+                Fecha
+              </th>
+              <th width="30">Hora</th>
               <th>Local</th>
               <th>Score</th>
               <th>Visitante</th>
@@ -50,7 +52,7 @@ const TournamentsFixture = ({ group_id }) => {
                     <div className="avatar mr-4">
                       <div className="w-9 rounded-full">
                         <Link to={`/equipos/${item.home_id}`} className="hover:opacity-70">
-                          <img src={item.home_image} />
+                          <img src={item.home_image} width="36" height="36" alt={item.home_name} />
                         </Link>
                       </div>
                     </div>
@@ -69,7 +71,7 @@ const TournamentsFixture = ({ group_id }) => {
                     <div className="avatar mr-4">
                       <div className="w-9 rounded-full">
                         <Link to={`/equipos/${item.away_id}`} className="hover:opacity-70">
-                          <img src={item.away_image} />
+                          <img src={item.away_image} width="36" height="36" alt={item.away_name} />
                         </Link>
                       </div>
                     </div>

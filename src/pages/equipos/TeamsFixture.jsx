@@ -11,18 +11,16 @@ const TeamsFixture = ({ team_id }) => {
   return (
     <section className="mb-12" id="fixture">
       <div className="row text-center mb-6">
-        <h1>
-          <a href="#" className="text-xl font-semibold link-hover link-error">
-            Fixture 👈
-          </a>
-        </h1>
+        <h1 className="text-xl font-semibold text-primary">Fixture 👈</h1>
       </div>
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
             <tr>
-              <th></th>
-              <th className="pl-0">Fecha</th>
+              <th width="30"></th>
+              <th className="pl-0" width="30">
+                Fecha
+              </th>
               <th>Hora</th>
               <th>Local</th>
               <th>Score</th>

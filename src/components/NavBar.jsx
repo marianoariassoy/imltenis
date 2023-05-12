@@ -2,6 +2,17 @@ import { NavLink, Link } from "react-router-dom";
 import Logo from "../assets/iml-primary.svg";
 
 const NavBar = () => {
+  const links = [
+    { name: "Primera Libre Yuka", url: "/torneos/15", style: "text-primary" },
+    { name: "Segunda Libre", url: "/torneos/14", style: "text-primary" },
+    { name: "Tercera Libre", url: "/torneos/13", style: "text-primary" },
+    { name: "Cuarta Libre", url: "/torneos/12", style: "text-primary" },
+    { name: "Ranking Urban Kicks", url: "/jugadores/ranking", style: "" },
+    { name: "Ranking Clubes", url: "/clubes/ranking", style: "" },
+    { name: "Reglamento", url: "/reglamento", style: "" },
+    { name: "Nosotros", url: "/nosotros", style: "" },
+  ];
+
   return (
     <div className="navbar mb-4">
       <div className="navbar-start">
@@ -13,40 +24,15 @@ const NavBar = () => {
           </label>
           <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 rounded-box w-52 font-bold shadow-xl bg-base-300">
             <li>
-              <NavLink to="/">Apertura 2023</NavLink>
+              <Link to="/">Apertura 2023</Link>
             </li>
-            <li>
-              <NavLink to="/torneos/15" className="text-primary">
-                Primera Libre
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/torneos/14" className="text-primary">
-                Segunda Libre
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/torneos/13" className="text-primary">
-                Tercera Libre
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/torneos/12" className="text-primary">
-                Cuarta Libre
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/clubes/ranking">Ranking Clubes</NavLink>
-            </li>
-            <li>
-              <NavLink to="/jugadores/ranking">Ranking Jugadores</NavLink>
-            </li>
-            <li>
-              <NavLink to="/reglamento">Reglamento</NavLink>
-            </li>
-            <li>
-              <NavLink to="/nosotros">Nosotros</NavLink>
-            </li>
+            {links.map((item, index) => (
+              <li key={index}>
+                <NavLink to={item.url} className={item.style}>
+                  {item.name}
+                </NavLink>
+              </li>
+            ))}
             <li>
               <a href="https://imltenis.com.ar/assets/docs/planilla_de_carga_iml_tenis.pdf" target="_blank">
                 Planilla de carga

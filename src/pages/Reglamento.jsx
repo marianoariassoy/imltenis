@@ -35,8 +35,9 @@ const Reglamento = () => {
         rival podrá pedir W.O.
         <br />
         <br />
-        <strong className="text-error">Hora y Día:</strong> Se deberá elegir una hora de localia entre las 9hs y 17hs de los días Domingos, en lo preferible fija a lo largo del torneo, de no ser así se debe anunciar la hora antes del día miércoles a
-        la noche de la semana de la serie, de lo contrario el equipo recibirá una advertencia por cada día de atraso, desde la segunda advertencia se procedera a la quita de 1 punto de la serie a jugarse.
+        <strong className="text-error">Horarios y Día:</strong> Los capitanes deberán elegir la hora a disputarse las series entre las 9hs y 17hs de los días Domingos, en lo preferible fija a lo largo del torneo, de no ser así se debe anunciar la
+        hora ANTES DEL MEDIODIA DEL JUEVES de la semana de la serie en el grupo de capitanes de WhatsApp, de lo contrario el capitan recibirá una advertencia, de persisitir al día siguiente se procedera a la quita de 1 punto de la serie a disputarse
+        por día de atraso, en caso de la quita de 1 punto no se jugará el dobles 2.
         <br />
         <br />
         <strong className="text-error">Modalidad de los Partidos: </strong> Todos los partidos se disputarán al mejor de tres (3) sets, con tie break. El tercer set es Super Tie break a 10 con diferencia de dos.
