@@ -23,7 +23,7 @@ const Footer = () => {
         ))}
       </div>
 
-      <p className="row w-full text-sm">
+      <p className="row w-full text-sm mt-4">
         <span className="font-semibold"> Liga de Interclubes IML Tenis &copy; 2023</span> Buenos Aires, Argentina.
       </p>
     </div>

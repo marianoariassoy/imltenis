@@ -1,18 +1,50 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../../components/Loader";
 
 const TeamsFixture = ({ team_id }) => {
+  const [filters, setFilters] = useState("all");
   const { data, loading, error } = useFetch(`/teams/${team_id}/fixture`);
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
   if (!data) return null;
+
+  const filterData = (data) => {
+    return data.filter((item) => {
+      return item.winner === filters || filters === "all";
+    });
+  };
+
+  const filteredData = filterData(data);
+
+  const handlerFilter = (e, filter) => {
+    setFilters(filter);
+    const btns = document.querySelectorAll(".btn-filter");
+    btns.forEach((item) => item.classList.remove("text-primary"));
+    e.target.classList.add("text-primary");
+  };
 
   return (
     <section className="mb-12" id="fixture">
       <div className="row text-center mb-6">
         <h1 className="text-xl font-semibold text-primary">Fixture 👈</h1>
       </div>
+
+      <div id="filtros">
+        <div className="row flex gap-4 justify-center mb-6 text-gray-500">
+          <button className="btn-filter text-primary" onClick={(e) => handlerFilter(e, "all")}>
+            Todos
+          </button>
+          <button className="btn-filter" onClick={(e) => handlerFilter(e, false)}>
+            Por Jugar
+          </button>
+          <button className="btn-filter" onClick={(e) => handlerFilter(e, true)}>
+            Jugados
+          </button>
+        </div>
+      </div>
+
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
@@ -21,15 +53,15 @@ const TeamsFixture = ({ team_id }) => {
               <th className="pl-0" width="30">
                 Fecha
               </th>
-              <th>Hora</th>
-              <th>Local</th>
-              <th>Score</th>
-              <th>Visitante</th>
+              <th width="30">Hora</th>
+              <th width="308">Local</th>
+              <th className="text-center">Score</th>
+              <th width="308">Visitante</th>
               <th>Serie</th>
             </tr>
           </thead>
           <tbody>
-            {data.map((item) => (
+            {filteredData.map((item) => (
               <tr key={item.id} className={item.winner ? "opacity-50" : ""}>
                 <td className="p-0">
                   {item.winner ? (
@@ -58,7 +90,7 @@ const TeamsFixture = ({ team_id }) => {
                     </Link>
                   </div>
                 </td>
-                <td>
+                <td className="text-center">
                   <Link to={`/series/${item.id}`} className="link-hover mr-1 font-semibold">
                     {item.score_home}-{item.score_away}
                   </Link>

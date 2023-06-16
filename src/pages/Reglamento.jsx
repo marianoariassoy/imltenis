@@ -102,8 +102,8 @@ const Reglamento = () => {
         <strong className="text-error">El límite de integrantes de la lista de buena fe</strong> es de 20 jugadores.
         <br />
         <br />
-        <strong className="text-error">Los equipos que participen por primera</strong> vez podrán anotarse en la categoría que crean que es la adecuada a su nivel de juego. Esta asociación podrá descalificar o cambiar de categoría al equipo si
-        considera que no es la correcta para su nivel de juego. No es requisito para participar por primera vez anotarse en la categoría más baja. <br />
+        <strong className="text-error">Los equipos que participen por primera</strong> vez podrán anotarse en la categoría que crean que es la adecuada a su nivel de juego. Esta asociación podrá descalificar o cambiar de categoría al equipo y/o
+        jugador si considera que no es la correcta para su nivel de juego. No es requisito para participar por primera vez anotarse en la categoría más baja. <br />
         <br />
         <strong className="text-error">Los Jugadores Profesionales, Exjugadores Profesionales,</strong> solo podrán competir en la categoría 1era.
         <br />
@@ -118,8 +118,8 @@ const Reglamento = () => {
         <br />
         <br />
         <strong className="text-error">Suplentes Naturales:</strong> Cuando un equipo quede incompleto debido a ausencia de algún o algunos jugadores, podrá auxiliarlo, mediante el reemplazo por otros jugadores de sus divisiones inferiores. Dicho
-        jugador si ganara 1 partido en la categoría superior y vuelve a jugar, gane o pierda en la categoría superior, pasara a integrar la lista de buena fe del equipo de la categoría superior, no pudiendo jugar en la categoría inferior en la que
-        fue inscripto en un principio. <br />
+        jugador si ganara 1 partido en la categoría superior, al siguiente partido jugado pasará a integrar la lista de buena fe del equipo de la categoría superior, no pudiendo jugar en la categoría inferior en la que fue inscripto en un principio.
+        <br />
         <br />
         <strong className="text-error">Reglas del Juego de Tenis:</strong> Los partidos se regirán por las reglas de juego aprobadas por la Federación Internacional de Tenis (ITF), la Asociación Argentina de Tenis (AAT) y este Reglamento. El Circuito
         de tenis se iniciará en todas sus categorías y divisiones en las fechas que anualmente se establezcan. <br /> <br />

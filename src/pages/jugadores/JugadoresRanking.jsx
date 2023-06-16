@@ -1,12 +1,30 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Loader from "../../components/Loader";
 import useFetch from "../../hooks/useFetch";
 
 const JugadoresRanking = () => {
+  const [filters, setFilters] = useState(0);
   const { data, loading, error } = useFetch(`/players/ranking`);
+
   if (loading) return <Loader />;
   if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
+
+  const filterData = (data) => {
+    return data.filter((item) => {
+      return +item.tournament_id === filters || filters === 0;
+    });
+  };
+
+  const filteredData = filterData(data);
+
+  const filterRanking = (e, num) => {
+    setFilters(num);
+    const btns = document.querySelectorAll(".btn-filter");
+    btns.forEach((item) => item.classList.remove("text-primary"));
+    e.target.classList.add("text-primary");
+  };
 
   return (
     <>
@@ -28,6 +46,26 @@ const JugadoresRanking = () => {
         </div>
       </section>
 
+      <section id="filtros">
+        <div className="row flex gap-4 justify-center mb-6 text-gray-500">
+          <button className="btn-filter text-primary" onClick={(e) => filterRanking(e, 0)}>
+            Todos
+          </button>
+          <button className="btn-filter" onClick={(e) => filterRanking(e, 15)}>
+            1era
+          </button>
+          <button className="btn-filter" onClick={(e) => filterRanking(e, 14)}>
+            2da
+          </button>
+          <button className="btn-filter" onClick={(e) => filterRanking(e, 13)}>
+            3ra
+          </button>
+          <button className="btn-filter" onClick={(e) => filterRanking(e, 12)}>
+            4ta
+          </button>
+        </div>
+      </section>
+
       <section className="mb-12" id="grupo">
         <div className="overflow-x-auto">
           <table className="table w-full">
@@ -44,7 +82,7 @@ const JugadoresRanking = () => {
               </tr>
             </thead>
             <tbody>
-              {data.map((item, index) => (
+              {filteredData.map((item, index) => (
                 <tr key={item.id} className={`font-semibold ${index === 0 ? "text-primary" : ""}`}>
                   <td className="p-0">
                     {index === 0 ? (
@@ -95,7 +133,7 @@ const JugadoresRanking = () => {
         </div>
 
         <div className="row flex justify-center w-100 mb-4 text-gray-500 text-sm">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current flex-shrink-0 w-6 h-6 text-error">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
