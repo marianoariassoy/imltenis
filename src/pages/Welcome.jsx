@@ -42,8 +42,8 @@ const Welcome = () => {
       </section>
 
       <div className="video-background fixed h-screen w-screen left-0 top-0 -z-10">
-        <video autoPlay playsInline muted loop className="opacity-40 h-full w-full object-cover">
-          <source src="./assets/videos/video720.mp4" type="video/mp4" />
+        <video autoPlay playsInline muted loop className="opacity-50 h-full w-full object-cover">
+          <source src="./assets/videos/video-final.mp4" type="video/mp4" />
         </video>
       </div>
     </>
