@@ -11,7 +11,7 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
     <section id="grupo">
       <div className="row text-center mb-4" id="presentacion">
         <h1>
-          <a href="#" className="text-xl font-bold link-hover link-error">
+          <a href="#" className="font-bold link-hover link-error">
             {name}
           </a>
         </h1>

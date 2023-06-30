@@ -22,8 +22,8 @@ const ClubesRanking = () => {
       <section id="presentacion">
         <div className="row text-center mb-6">
           <h1 className="text-xl font-bold text-error">Ranking Anual de Clubes</h1>
-          <h1 className="text-xl text-gray-500">2023</h1>
-          <h1 className="text-xl">🏆</h1>
+          <h1 className="text-medium text-gray-500">2023</h1>
+          <h1>🏆</h1>
         </div>
       </section>
 

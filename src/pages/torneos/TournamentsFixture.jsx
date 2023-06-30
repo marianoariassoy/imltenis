@@ -28,7 +28,7 @@ const TournamentsFixture = ({ group_id, type }) => {
     <section className="mb-12" id="fixture">
       <div className="row text-center mb-6">
         {type != 1 && (
-          <a href="#" className="text-xl font-bold link-hover link-error">
+          <a href="#" className="font-bold link-hover link-error">
             Fixture 👈
           </a>
         )}
