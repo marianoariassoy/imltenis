@@ -45,9 +45,9 @@ const Teams = () => {
               </Link>
             </div>
           </div>
-          <h1 className="text-xl font-bold text-primary">{team_name}</h1>
+          <h1 className="text-xl font-semibold text-primary">{team_name}</h1>
           <h2 className="mb-3">
-            <Link to={`/torneos/${tournament_id}`} className="link-hover text-gray-500 font-semibold">
+            <Link to={`/torneos/${tournament_id}`} className="link-hover text-gray-500">
               {tournament_name}
             </Link>
           </h2>
@@ -68,8 +68,8 @@ const Teams = () => {
         </div>
 
         <div className="row text-center mb-6">
-          <h1 className="text-xl text-primary font-semibold">Lista de buena fe 😉</h1>
-          <h1 className=" text-gray-500">{captain} (Capitán)</h1>
+          <h1 className="text-primary font-semibold">Lista de buena fe 😉</h1>
+          <h1 className="text-gray-500">{captain} (Capitán)</h1>
         </div>
       </section>
 

@@ -33,7 +33,7 @@ const JugadoresEquipos = ({ player_id }) => {
                         </Link>
                       </div>
                     </div>
-                    <Link to={`/equipos/${item.team_id}`} className="link-hover font-semibold">
+                    <Link to={`/equipos/${item.team_id}`} className="link-hover font-medium">
                       {item.team_name}
                     </Link>
                   </div>

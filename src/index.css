@@ -12,6 +12,7 @@
 html,
 body {
   color: #9d9c9c;
+  font-size: 14px;
 }
 #root {
   display: grid;
@@ -49,7 +50,7 @@ tfoot tr th {
   margin: 0 0.6rem;
 }
 .icon-sponsor img {
-  height: 54px;
+  height: 40px;
   object-fit: cover;
   object-position: center;
   width: auto;
@@ -101,5 +102,8 @@ tfoot tr th {
   font-size: 5rem;
 }
 .text-5xl {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
+}
+.text-7xl {
+  font-size: 4rem;
 }

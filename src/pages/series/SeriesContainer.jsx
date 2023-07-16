@@ -29,12 +29,11 @@ const Series = () => {
 
       <section id="presentacion">
         <div className="row text-center mb-12">
-          <h1 className="text-xl font-semibold text-error">{title}</h1>
-          <h2 className="font-semibold">
-            <Link to={`/torneos/${data[0].tournament_id}`} className="link-hover text-gray-500">
-              {data[0].tournament_name}
-            </Link>
-          </h2>
+          <h1 className="font-semibold text-error">{title}</h1>
+
+          <Link to={`/torneos/${data[0].tournament_id}`} className="link-hover text-gray-500">
+            {data[0].tournament_name}
+          </Link>
         </div>
       </section>
 

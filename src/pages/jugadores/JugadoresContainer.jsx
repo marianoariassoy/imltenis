@@ -36,8 +36,8 @@ const JugadoresContainer = () => {
               <img src={data[0].image} alt={data[0].name} width="128" height="128" />
             </div>
           </div>
-          <h1 className="text-xl font-bold text-error">{player_name}</h1>
-          <h2 className="text-gray-500 ">{data[0].age}</h2>
+          <h1 className="text-xl font-semibold text-error">{player_name}</h1>
+          <h2 className="text-gray-500">{data[0].age}</h2>
         </div>
       </section>
 

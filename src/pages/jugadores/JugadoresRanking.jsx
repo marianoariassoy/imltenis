@@ -40,8 +40,8 @@ const JugadoresRanking = () => {
 
       <section id="presentacion">
         <div className="row text-center mb-6">
-          <h1 className="text-xl font-bold text-error">Ranking Urban Kicks</h1>
-          <h1 className="text-medium text-gray-500">Apertura 2023</h1>
+          <h1 className="text-xl font-semibold text-error">Ranking Urban Kicks</h1>
+          <h1 className=" text-gray-500">Apertura 2023</h1>
           <h1>👑</h1>
         </div>
       </section>
@@ -83,7 +83,7 @@ const JugadoresRanking = () => {
             </thead>
             <tbody>
               {filteredData.map((item, index) => (
-                <tr key={item.id} className={`font-semibold ${index === 0 ? "text-primary" : ""}`}>
+                <tr key={item.id} className={`${index === 0 ? "text-primary" : ""}`}>
                   <td className="p-0">
                     {index === 0 ? (
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="8" fill="#f34643" className="inline ml-2">
@@ -102,7 +102,7 @@ const JugadoresRanking = () => {
                         </Link>
                       </div>
                     </div>
-                    <Link to={`/jugadores/${item.id}`} className="link-hover font-semibold">
+                    <Link to={`/jugadores/${item.id}`} className="link-hover">
                       {item.name}
                     </Link>
                   </td>

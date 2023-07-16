@@ -6,15 +6,15 @@ const TornamentsChampion = ({ data }) => {
     <>
       <Confetti recycle={true} run={true} numberOfPieces={50} />
       <div className="row text-center mb-12">
-        <h1 className="font-bold mb-4 text-primary">Campéon</h1>
-        <div className="avatar mb-3">
+        <h1 className="font-semibold mb-4 text-primary">Campéon 🎉</h1>
+        <div className="avatar mb-2">
           <div className="w-20 rounded-full">
             <Link to={`/equipos/${data[0].team_champion_id}`} className="hover:opacity-70">
               <img src={data[0].team_champion_image} width="128" height="128" alt={data[0].team_champion} />
             </Link>
           </div>
         </div>
-        <h1 className="font-semibold mb-2">{data[0].team_champion}</h1>
+        <h1 className="mb-2">{data[0].team_champion}</h1>
       </div>
     </>
   );

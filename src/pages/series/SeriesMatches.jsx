@@ -28,19 +28,19 @@ const SeriesMatches = ({ serie_id }) => {
                   <span className="font-semibold">{item.type}</span>
                 </td>
                 <td>
-                  <Link to={`/jugadores/${item.playerhome1_id}`} className="link-error link-hover font-semibold">
+                  <Link to={`/jugadores/${item.playerhome1_id}`} className="link-error link-hover ">
                     {item.playerhome1_name}
                   </Link>
                   {item.playerhome2_id > 0 ? " y " : ""}
-                  <Link to={`/jugadores/${item.playerhome2_id}`} className="link-error link-hover font-semibold">
+                  <Link to={`/jugadores/${item.playerhome2_id}`} className="link-error link-hover ">
                     {item.playerhome2_name}
                   </Link>
                   &nbsp;vs.&nbsp;
-                  <Link to={`/jugadores/${item.playeraway1_id}`} className="link-error link-hover font-semibold">
+                  <Link to={`/jugadores/${item.playeraway1_id}`} className="link-error link-hover ">
                     {item.playeraway1_name}
                   </Link>
                   {item.playeraway2_id > 0 ? " y " : ""}
-                  <Link to={`/jugadores/${item.playeraway2_id}`} className="link-error link-hover font-semibold">
+                  <Link to={`/jugadores/${item.playeraway2_id}`} className="link-error link-hover ">
                     {item.playeraway2_name}
                   </Link>
                 </td>

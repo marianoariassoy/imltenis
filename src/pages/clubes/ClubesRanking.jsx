@@ -21,9 +21,9 @@ const ClubesRanking = () => {
 
       <section id="presentacion">
         <div className="row text-center mb-6">
-          <h1 className="text-xl font-bold text-error">Ranking Anual de Clubes</h1>
-          <h1 className="text-medium text-gray-500">2023</h1>
-          <h1>🏆</h1>
+          <h1 className="text-xl font-semibold text-error">Ranking Anual de Clubes</h1>
+          <h1 className="text-xl text-gray-500">2023</h1>
+          <h1 className="text-xl">🏆</h1>
         </div>
       </section>
 
@@ -42,7 +42,7 @@ const ClubesRanking = () => {
             </thead>
             <tbody>
               {data.map((item, index) => (
-                <tr key={item.id} className={`font-semibold ${index === 0 ? "text-primary" : ""}`}>
+                <tr key={item.id} className={` ${index === 0 ? "text-primary" : ""}`}>
                   <td className="p-0">
                     {index === 0 ? (
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="8" fill="#f34643" className="inline ml-2">
@@ -53,7 +53,7 @@ const ClubesRanking = () => {
                     )}
                   </td>
                   <td className="pl-0 flex items-center gap-3">
-                    {index + 1}
+                    <span className="font-semibold">{index + 1}</span>
                     <div className="avatar">
                       <div className="w-9 rounded-full">
                         <Link to={`/clubes/${item.id}`} className="hover:opacity-70">
@@ -61,7 +61,7 @@ const ClubesRanking = () => {
                         </Link>
                       </div>
                     </div>
-                    <Link to={`/clubes/${item.id}`} className="link-hover font-semibold">
+                    <Link to={`/clubes/${item.id}`} className="link-hover">
                       {item.name}
                     </Link>
                   </td>
@@ -69,7 +69,7 @@ const ClubesRanking = () => {
                   <td>{item.series_won}</td>
                   <td>{item.matches_won}</td>
                   <td>
-                    <span className="font-bold">{item.points}</span>
+                    <span className="font-semibold">{item.points}</span>
                   </td>
                 </tr>
               ))}

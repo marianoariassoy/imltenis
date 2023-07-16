@@ -31,7 +31,7 @@ const TeamsPlayers = ({ team_id }) => {
                       </Link>
                     </div>
                   </div>
-                  <Link to={`/jugadores/${item.id}`} className="link-hover font-semibold">
+                  <Link to={`/jugadores/${item.id}`} className="link-hover">
                     {item.name}
                   </Link>
                 </td>

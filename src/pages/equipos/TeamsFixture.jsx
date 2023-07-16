@@ -28,7 +28,7 @@ const TeamsFixture = ({ team_id }) => {
   return (
     <section className="mb-12" id="fixture">
       <div className="row text-center mb-6">
-        <h1 className="text-xl font-semibold text-primary">Fixture 👈</h1>
+        <h1 className="font-semibold text-primary">Fixture 👈</h1>
       </div>
 
       <div id="filtros">
@@ -85,7 +85,7 @@ const TeamsFixture = ({ team_id }) => {
                         </Link>
                       </div>
                     </div>
-                    <Link to={`/equipos/${item.home_id}`} className="link-hover font-semibold">
+                    <Link to={`/equipos/${item.home_id}`} className="link-hover ">
                       {item.home_name}
                     </Link>
                   </div>
@@ -99,12 +99,12 @@ const TeamsFixture = ({ team_id }) => {
                   <div className="flex items-center">
                     <div className="avatar mr-4">
                       <div className="w-9 rounded-full">
-                        <Link to={`/equipos/${item.away_id}`} className="hover:opacity-70">
+                        <Link to={`/equipos/${item.away_id}`} className="hover:opacity-70 ">
                           <img src={item.away_image} />
                         </Link>
                       </div>
                     </div>
-                    <Link to={`/equipos/${item.away_id}`} className="link-hover font-semibold">
+                    <Link to={`/equipos/${item.away_id}`} className="link-hover ">
                       {item.away_name}
                     </Link>
                   </div>

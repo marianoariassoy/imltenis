@@ -26,13 +26,7 @@ const TournamentsFixture = ({ group_id, type }) => {
 
   return (
     <section className="mb-12" id="fixture">
-      <div className="row text-center mb-6">
-        {type != 1 && (
-          <a href="#" className="font-bold link-hover link-error">
-            Fixture 👈
-          </a>
-        )}
-      </div>
+      <div className="row text-center mb-6">{type != 1 && <h1 className="font-semibold link-hover link-error">Fixture 👈</h1>}</div>
 
       {type != 1 && (
         <div id="filtros">
@@ -67,7 +61,7 @@ const TournamentsFixture = ({ group_id, type }) => {
           </thead>
           <tbody>
             {filteredData.map((item) => (
-              <tr key={item.id} className={item.winner ? "opacity-50" : ""}>
+              <tr key={item.id} className={item.winner && "opacity-50"}>
                 <td className="p-0">
                   {item.winner ? (
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="8" fill="#666" className="inline ml-2">
@@ -90,7 +84,7 @@ const TournamentsFixture = ({ group_id, type }) => {
                         </Link>
                       </div>
                     </div>
-                    <Link to={`/equipos/${item.home_id}`} className="link-hover font-semibold">
+                    <Link to={`/equipos/${item.home_id}`} className="link-hover ">
                       {item.home_name}
                     </Link>
                   </div>
@@ -109,7 +103,7 @@ const TournamentsFixture = ({ group_id, type }) => {
                         </Link>
                       </div>
                     </div>
-                    <Link to={`/equipos/${item.away_id}`} className="link-hover font-semibold">
+                    <Link to={`/equipos/${item.away_id}`} className="link-hover">
                       {item.away_name}
                     </Link>
                   </div>

@@ -27,15 +27,13 @@ const JugadoresDobles = ({ player_id }) => {
           <tbody>
             {data.map((item) => (
               <tr key={item.id}>
+                <td>{item.date}</td>
                 <td>
-                  <span className="font-semibold">{item.date}</span>
-                </td>
-                <td>
-                  <Link to={`/jugadores/${item.oponent1_id}`} className="link-hover link-error font-semibold">
+                  <Link to={`/jugadores/${item.oponent1_id}`} className="link-hover link-error">
                     {item.oponent1_name}
                   </Link>
                   &nbsp;/&nbsp;
-                  <Link to={`/jugadores/${item.oponent2_id}`} className="link-hover link-error font-semibold">
+                  <Link to={`/jugadores/${item.oponent2_id}`} className="link-hover link-error">
                     {item.oponent2_name}
                   </Link>
                   &nbsp;(
@@ -45,7 +43,7 @@ const JugadoresDobles = ({ player_id }) => {
                   )
                 </td>
                 <td>
-                  <Link to={`/jugadores/${item.partner_id}`} className="link-hover link-error font-semibold">
+                  <Link to={`/jugadores/${item.partner_id}`} className="link-hover link-error">
                     {item.partner_name}
                   </Link>
                 </td>

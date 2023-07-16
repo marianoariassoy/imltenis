@@ -2,7 +2,9 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: "Montserrat, sans-serif",
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
@@ -13,7 +15,7 @@ module.exports = {
           secondary: "#D926AA",
           accent: "#1FB2A5",
           neutral: "#2e2f36",
-          "base-100": "#1f2023",
+          "base-100": "#1f1f22",
           info: "#3ABFF8",
           success: "#36D399",
           warning: "#FBBD23",

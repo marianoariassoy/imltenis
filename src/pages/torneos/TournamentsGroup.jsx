@@ -10,12 +10,8 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
   return (
     <section id="grupo">
       <div className="row text-center mb-4" id="presentacion">
-        <h1>
-          <a href="#" className="font-bold link-hover link-error">
-            {name}
-          </a>
-        </h1>
-        <h2 className=" text-gray-500 font-semibold">Posiciones 💪</h2>
+        <h1 className="font-semibold text-primary">{name}</h1>
+        <h2 className="text-gray-500">Posiciones 💪</h2>
       </div>
 
       <div className="overflow-x-auto">
@@ -34,14 +30,12 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
           </thead>
           <tbody>
             {data.map((item, index) => (
-              <tr key={item.id} className={`font-semibold ${index < winners ? "text-primary" : ""} `}>
+              <tr key={item.id} className={` ${index < winners ? "text-primary" : ""} `}>
                 <td className="p-0">
-                  {index < winners ? (
+                  {index < winners && (
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="8" fill="#f34643" className="inline ml-2">
                       <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
                     </svg>
-                  ) : (
-                    ""
                   )}
                 </td>
                 <td className="pl-0 flex items-center gap-3">
@@ -53,7 +47,7 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
                       </Link>
                     </div>
                   </div>
-                  <Link to={`/equipos/${item.id}`} className="link-hover font-semibold">
+                  <Link to={`/equipos/${item.id}`} className="link-hover">
                     {item.name}
                   </Link>
                 </td>
@@ -63,7 +57,7 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
                 <td>
-                  <span className="font-bold">{item.points}</span>
+                  <span className="font-semibold">{item.points}</span>
                 </td>
               </tr>
             ))}

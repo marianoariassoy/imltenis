@@ -32,11 +32,12 @@ const TournamentsContainer = () => {
       </Helmet>
 
       <section id="presentacion">
-        <div className="row text-center mb-6">
-          <h1 className="text-xl text-error mb-1">
-            <span className="font-bold">{dataTournament[0].name}</span> {dataTournament[0].season}
+        <div className="row text-center text-xl mb-6">
+          <h1 className="text-error mb-1">
+            <span className="font-semibold">{dataTournament[0].name}</span>
+            {/* {dataTournament[0].season} */}
           </h1>
-          <h1 className="text-xl">🏆</h1>
+          <h1>🏆</h1>
         </div>
       </section>
 
