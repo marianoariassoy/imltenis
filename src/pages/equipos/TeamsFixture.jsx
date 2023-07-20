@@ -28,7 +28,7 @@ const TeamsFixture = ({ team_id }) => {
   return (
     <section className="mb-12" id="fixture">
       <div className="row text-center mb-6">
-        <h1 className="font-semibold text-primary">Fixture 👈</h1>
+        <h1 className="font-semibold text-primary text-xl">Fixture</h1>
       </div>
 
       <div id="filtros">
@@ -64,12 +64,10 @@ const TeamsFixture = ({ team_id }) => {
             {filteredData.map((item) => (
               <tr key={item.id} className={item.winner ? "opacity-50" : ""}>
                 <td className="p-0">
-                  {item.winner ? (
+                  {item.winner && (
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="8" fill="#666" className="inline ml-2">
                       <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
                     </svg>
-                  ) : (
-                    ""
                   )}
                 </td>
                 <td className="pl-0">
@@ -85,7 +83,7 @@ const TeamsFixture = ({ team_id }) => {
                         </Link>
                       </div>
                     </div>
-                    <Link to={`/equipos/${item.home_id}`} className="link-hover ">
+                    <Link to={`/equipos/${item.home_id}`} className="link-hover font-semibold">
                       {item.home_name}
                     </Link>
                   </div>
@@ -104,7 +102,7 @@ const TeamsFixture = ({ team_id }) => {
                         </Link>
                       </div>
                     </div>
-                    <Link to={`/equipos/${item.away_id}`} className="link-hover ">
+                    <Link to={`/equipos/${item.away_id}`} className="link-hover font-semibold">
                       {item.away_name}
                     </Link>
                   </div>

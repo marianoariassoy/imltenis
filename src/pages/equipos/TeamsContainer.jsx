@@ -46,7 +46,7 @@ const Teams = () => {
             </div>
           </div>
           <h1 className="text-xl font-semibold text-primary">{team_name}</h1>
-          <h2 className="mb-3">
+          <h2 className="mb-3 font-semibold">
             <Link to={`/torneos/${tournament_id}`} className="link-hover text-gray-500">
               {tournament_name}
             </Link>

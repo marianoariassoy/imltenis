@@ -6,7 +6,7 @@ const TornamentsChampion = ({ data }) => {
     <>
       <Confetti recycle={true} run={true} numberOfPieces={50} />
       <div className="row text-center mb-12">
-        <h1 className="font-semibold mb-4 text-primary">Campéon 🎉</h1>
+        <h1 className="font-semibold mb-4 text-primary text-xl">Campéon</h1>
         <div className="avatar mb-2">
           <div className="w-20 rounded-full">
             <Link to={`/equipos/${data[0].team_champion_id}`} className="hover:opacity-70">

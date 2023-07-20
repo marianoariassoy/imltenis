@@ -10,7 +10,7 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
   return (
     <section id="grupo">
       <div className="row text-center mb-4" id="presentacion">
-        <h1 className="font-semibold text-primary">{name}</h1>
+        <h1 className="font-semibold text-primary text-xl">{name}</h1>
         <h2 className="text-gray-500">Posiciones 💪</h2>
       </div>
 
@@ -47,7 +47,7 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
                       </Link>
                     </div>
                   </div>
-                  <Link to={`/equipos/${item.id}`} className="link-hover">
+                  <Link to={`/equipos/${item.id}`} className="link-hover font-semibold">
                     {item.name}
                   </Link>
                 </td>
@@ -70,25 +70,11 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
         </table>
       </div>
 
-      <div className="row flex justify-center w-100 text-gray-500 text-sm mb-2">
-        <div className="flex items-center gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current flex-shrink-0 w-6 h-6 text-error">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-          </svg>
-          <div>
-            <strong>SJ:</strong> Series Jugadas <strong>SG:</strong> Series Ganadas <strong>P:</strong> Parciales Ganados <strong>DS:</strong> Diferencia de Sets <strong>DG:</strong> Diferencia de Games
-          </div>
-        </div>
+      <div className="text-center w-100 text-gray-500 mb-2 text-sm">
+        <strong>SJ:</strong> Series Jugadas <strong>SG:</strong> Series Ganadas <strong>P:</strong> Parciales Ganados <strong>DS:</strong> Diferencia de Sets <strong>DG:</strong> Diferencia de Games
       </div>
 
-      <div className="row flex justify-center w-100">
-        <div className="flex mb-12 items-center gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span className="text-gray-500 text-sm">{description}</span>
-        </div>
-      </div>
+      <div className="text-center w-100 text-gray-500 mb-10 text-sm">🥇 {description}</div>
     </section>
   );
 };

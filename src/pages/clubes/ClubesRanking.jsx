@@ -61,7 +61,7 @@ const ClubesRanking = () => {
                         </Link>
                       </div>
                     </div>
-                    <Link to={`/clubes/${item.id}`} className="link-hover">
+                    <Link to={`/clubes/${item.id}`} className="link-hover font-semibold">
                       {item.name}
                     </Link>
                   </td>
@@ -82,15 +82,8 @@ const ClubesRanking = () => {
           </table>
         </div>
 
-        <div className="row flex justify-center w-100 mb-4 text-gray-500 text-sm">
-          <div className="flex items-center gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current flex-shrink-0 w-6 h-6 text-error">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <div>
-              <strong>SJ:</strong> Series Jugadas <strong>SG:</strong> Series Ganadas <strong>PG:</strong> Parciales Ganados
-            </div>
-          </div>
+        <div className="w-full text-center mb-4 text-gray-500 text-sm">
+          <strong>SJ:</strong> Series Jugadas <strong>SG:</strong> Series Ganadas <strong>PG:</strong> Parciales Ganados
         </div>
       </section>
     </>

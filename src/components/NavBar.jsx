@@ -1,20 +1,10 @@
 import { NavLink, Link } from "react-router-dom";
 import Logo from "../assets/iml-primary.svg";
+import { menu } from "../data/data";
 
 const NavBar = () => {
-  const links = [
-    { name: "Primera Libre Yuka", url: "/torneos/15", style: "text-primary" },
-    { name: "Segunda Libre", url: "/torneos/14", style: "text-primary" },
-    { name: "Tercera Libre", url: "/torneos/13", style: "text-primary" },
-    { name: "Cuarta Libre", url: "/torneos/12", style: "text-primary" },
-    { name: "Ranking Urban Kicks", url: "/jugadores/ranking", style: "" },
-    { name: "Ranking Clubes", url: "/clubes/ranking", style: "" },
-    { name: "Reglamento", url: "/reglamento", style: "" },
-    { name: "Nosotros", url: "/nosotros", style: "" },
-  ];
-
   return (
-    <div className="navbar mb-4">
+    <div className="navbar mb-8">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -22,11 +12,11 @@ const NavBar = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />
             </svg>
           </label>
-          <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 rounded-box w-52 font-bold shadow-xl bg-base-300">
+          <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 rounded-box w-52 font-bold shadow-xl bg-base-300 ">
             <li>
               <Link to="/">Apertura 2023</Link>
             </li>
-            {links.map((item, index) => (
+            {menu.map((item, index) => (
               <li key={index}>
                 <NavLink to={item.url} className={item.style}>
                   {item.name}

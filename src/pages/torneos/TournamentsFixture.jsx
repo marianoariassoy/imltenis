@@ -26,7 +26,7 @@ const TournamentsFixture = ({ group_id, type }) => {
 
   return (
     <section className="mb-12" id="fixture">
-      <div className="row text-center mb-6">{type != 1 && <h1 className="font-semibold link-hover link-error">Fixture 👈</h1>}</div>
+      <div className="row text-center mb-6">{type != 1 && <h1 className="font-semibold text-primary text-xl">Fixture </h1>}</div>
 
       {type != 1 && (
         <div id="filtros">
@@ -84,7 +84,7 @@ const TournamentsFixture = ({ group_id, type }) => {
                         </Link>
                       </div>
                     </div>
-                    <Link to={`/equipos/${item.home_id}`} className="link-hover ">
+                    <Link to={`/equipos/${item.home_id}`} className="link-hover font-semibold">
                       {item.home_name}
                     </Link>
                   </div>
@@ -103,7 +103,7 @@ const TournamentsFixture = ({ group_id, type }) => {
                         </Link>
                       </div>
                     </div>
-                    <Link to={`/equipos/${item.away_id}`} className="link-hover">
+                    <Link to={`/equipos/${item.away_id}`} className="link-hover font-semibold">
                       {item.away_name}
                     </Link>
                   </div>

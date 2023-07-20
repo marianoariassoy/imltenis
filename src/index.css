@@ -14,6 +14,9 @@ body {
   color: #9d9c9c;
   font-size: 14px;
 }
+.color-main {
+  color: #9d9c9c;
+}
 #root {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -49,11 +52,8 @@ tfoot tr th {
   display: inline-block;
   margin: 0 0.6rem;
 }
-.icon-sponsor img {
-  height: 40px;
-  object-fit: cover;
-  object-position: center;
-  width: auto;
+.icon-sponsor svg {
+  height: 45px;
 }
 .circle {
   border: 1px solid var(--color-primary);
@@ -65,14 +65,7 @@ tfoot tr th {
   place-items: center;
   width: 1.6rem;
 }
-.svg-hover-white:hover svg {
-  fill: #fff;
-}
-#title-home {
-  /* font-size: clamp(1rem, 18vw, 7rem); */
-  font-weight: 900;
-  line-height: 1;
-}
+
 .fade-in {
   animation: fadeIn 1.4s ease forwards;
 }
@@ -106,4 +99,9 @@ tfoot tr th {
 }
 .text-7xl {
   font-size: 4rem;
+}
+
+svg {
+  fill: currentColor;
+  stroke: currentColor;
 }
