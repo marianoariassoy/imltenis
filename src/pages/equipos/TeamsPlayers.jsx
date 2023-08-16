@@ -1,17 +1,15 @@
-import { Link } from "react-router-dom";
-import useFetch from "../../hooks/useFetch";
-import Loader from "../../components/Loader";
+import { Link } from 'react-router-dom'
+import useFetch from '../../hooks/useFetch'
+import Loader from '../../components/Loader'
 
 const TeamsPlayers = ({ team_id }) => {
-  const { data, loading, error } = useFetch(`/teams/${team_id}/players`);
-  if (loading) return <Loader />;
-  if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
-  if (!data) return null;
+  const { data, loading } = useFetch(`/teams/${team_id}/players`)
+  if (loading) return <Loader />
 
   return (
-    <section id="lista">
-      <div className="overflow-x-auto">
-        <table className="table w-full">
+    <section id='lista'>
+      <div className='overflow-x-auto text-sm'>
+        <table className='table w-full'>
           <thead>
             <tr>
               <th>Nombre y Apellido</th>
@@ -22,16 +20,27 @@ const TeamsPlayers = ({ team_id }) => {
           <tbody>
             {data.map((item, index) => (
               <tr key={item.id}>
-                <td className="pl-0 flex items-center gap-3">
-                  <span className="font-semibold">{index + 1}</span>
-                  <div className="avatar">
-                    <div className="w-9 rounded-full">
-                      <Link to={`/jugadores/${item.id}`} className="hover:opacity-70">
-                        <img src={item.image} alt={item.name} width="36" height="36" />
+                <td className='pl-0 flex items-center gap-3'>
+                  <span className='font-semibold'>{index + 1}</span>
+                  <div className='avatar'>
+                    <div className='w-9 rounded-full'>
+                      <Link
+                        to={`/jugadores/${item.id}`}
+                        className='hover:opacity-70'
+                      >
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          width='36'
+                          height='36'
+                        />
                       </Link>
                     </div>
                   </div>
-                  <Link to={`/jugadores/${item.id}`} className="link-hover">
+                  <Link
+                    to={`/jugadores/${item.id}`}
+                    className='link-hover'
+                  >
                     {item.name}
                   </Link>
                 </td>
@@ -42,17 +51,25 @@ const TeamsPlayers = ({ team_id }) => {
           </tbody>
           <tfoot>
             <tr>
-              <th colSpan="6"></th>
+              <th colSpan='6'></th>
             </tr>
           </tfoot>
         </table>
       </div>
 
-      <div className="w-full text-center text-gray-500 text-sm mb-10">
-        <strong>P:</strong> Parciales Jugados <strong>PG:</strong> Parciales Ganados
+      <div
+        className='text-center text-sm'
+        id='info'
+      >
+        <p>
+          🔥
+          <span className='opacity-70'>
+            <strong>P:</strong> Parciales Jugados <strong>PG:</strong> Parciales Ganados/
+          </span>
+        </p>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default TeamsPlayers;
+export default TeamsPlayers

@@ -1,5 +1,5 @@
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 
 const Layout = ({ children }) => {
   return (
@@ -7,12 +7,12 @@ const Layout = ({ children }) => {
       <header>
         <NavBar />
       </header>
-      <main className="container mx-auto px-6 max-w-6xl">{children}</main>
-      <footer className="text-gray-500">
+      <main className='mx-auto px-4 max-w-6xl mt-24 w-screen'>{children}</main>
+      <footer>
         <Footer />
       </footer>
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

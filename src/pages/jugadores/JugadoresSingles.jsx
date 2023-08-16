@@ -1,22 +1,21 @@
-import { Link } from "react-router-dom";
-import useFetch from "../../hooks/useFetch";
-import Loader from "../../components/Loader";
+import { Link } from 'react-router-dom'
+import useFetch from '../../hooks/useFetch'
+import Loader from '../../components/Loader'
 
 const JugadoresSingles = ({ player_id }) => {
-  const { data, loading, error } = useFetch(`/players/${player_id}/singles`);
-  if (loading) return <Loader />;
-  if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
-  if (!data) return null;
+  const { data, loading } = useFetch(`/players/${player_id}/singles`)
+  if (loading) return <Loader />
+  if (!data) return null
 
   return (
-    <section id="lista-single">
-      <h1 className="text-center mb-3 font-semibold">Singles</h1>
+    <section id='lista-single'>
+      <h1 className='text-center mb-4 font-medium text-primary'>Singles</h1>
 
-      <div className="overflow-x-auto mb-3">
-        <table className="table w-full">
+      <div className='overflow-x-auto text-sm'>
+        <table className='table w-full'>
           <thead>
             <tr>
-              <th width="50">Fecha</th>
+              <th width='50'>Fecha</th>
               <th>Oponente</th>
               <th>Resultado</th>
               <th>G/P</th>
@@ -24,25 +23,34 @@ const JugadoresSingles = ({ player_id }) => {
             </tr>
           </thead>
           <tbody>
-            {data.map((item) => (
+            {data.map(item => (
               <tr key={item.id}>
                 <td>{item.date}</td>
                 <td>
-                  <Link to={`/jugadores/${item.oponent_id}`} className="link-hover link-error">
+                  <Link
+                    to={`/jugadores/${item.oponent_id}`}
+                    className='link-hover text-primary'
+                  >
                     {item.oponent_name}
                   </Link>
                   &nbsp;(
-                  <Link to={`/equipos/${item.team_oponent_id}`} className="link-hover">
+                  <Link
+                    to={`/equipos/${item.team_oponent_id}`}
+                    className='link-hover'
+                  >
                     {item.team_oponent_name}
                   </Link>
                   )
                 </td>
                 <td>{item.score}</td>
                 <td>
-                  <span className="circle text-primary">{item.result}</span>
+                  <span className='circle text-primary'>{item.result}</span>
                 </td>
                 <td>
-                  <Link to={`/torneos/${item.tournament_id}`} className="link-hover link-error">
+                  <Link
+                    to={`/torneos/${item.tournament_id}`}
+                    className='link-hover text-primary'
+                  >
                     {item.tournament_name}
                   </Link>
                 </td>
@@ -51,13 +59,13 @@ const JugadoresSingles = ({ player_id }) => {
           </tbody>
           <tfoot>
             <tr>
-              <th colSpan="5"></th>
+              <th colSpan='5'></th>
             </tr>
           </tfoot>
         </table>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default JugadoresSingles;
+export default JugadoresSingles

@@ -1,28 +1,60 @@
-import { Yuka, Typ, Urban, Vinica } from "../logos/Logos";
+import { Yuka, Typ, Urban, Vinica } from '../icons/icons'
 
 const Footer = () => {
   return (
-    <div className="pb-6 px-6 text-center text-sm">
-      <div className="row w-full text-center">
-        <a href="https://www.instagram.com/yuka_ant/" className="icon-sponsor hover:opacity-60" target="_blank" rel="noopener noreferrer">
+    <div className='footer-main px-4 py-4 opacity-50'>
+      <div className='flex justify-center gap-x-4 mb-4'>
+        <a
+          href='https://www.instagram.com/yuka_ant/'
+          className='icon-sponsor hover:opacity-60'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <Yuka />
         </a>
-        <a href="https://www.instagram.com/typdeportes/" className="icon-sponsor hover:opacity-60" target="_blank" rel="noopener noreferrer">
+        <a
+          href='https://www.instagram.com/typdeportes/'
+          className='icon-sponsor hover:opacity-60'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <Typ />
         </a>
-        <a href="https://www.instagram.com/urbankicks.ar/" className="icon-sponsor hover:opacity-60" target="_blank" rel="noopener noreferrer">
+        <a
+          href='https://www.instagram.com/urbankicks.ar/'
+          className='icon-sponsor hover:opacity-60'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <Urban />
         </a>
-        <a href="https://www.instagram.com/tiendavinica/" className="icon-sponsor hover:opacity-60" target="_blank" rel="noopener noreferrer">
+        <a
+          href='https://www.instagram.com/tiendavinica/'
+          className='icon-sponsor hover:opacity-60'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <Vinica />
         </a>
       </div>
 
-      <p className="row w-full text-sm mt-4">
-        <span className="block lg:inline-block font-semibold">Liga de Interclubes IML Tenis &copy; 2023</span> Buenos Aires, Argentina.
-      </p>
+      <div className='text-sm text-center'>
+        <span className='block lg:inline-block font-medium'>Liga de equipos IML Tenis &copy; 2023</span> &nbsp;
+        <span>Buenos Aires, Argentina.</span> &nbsp;
+        <span className='block lg:inline-block'>
+          Desarrollo: &nbsp;
+          <a
+            href='http://marianoarias.soy'
+            className='font-medium'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Mariano Arias
+          </a>
+        </span>
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

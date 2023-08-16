@@ -1,27 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      sans: "Montserrat, sans-serif",
-    },
+      sans: 'Montserrat, sans-serif'
+    }
   },
-  plugins: [require("daisyui")],
+  plugins: [require('daisyui')],
   daisyui: {
     themes: [
       {
         mytheme: {
-          primary: "#f34643",
-          secondary: "#D926AA",
-          accent: "#1FB2A5",
-          neutral: "#2e2f36",
-          "base-100": "#1f1f22",
-          info: "#3ABFF8",
-          success: "#36D399",
-          warning: "#FBBD23",
-          error: "#f34643",
-        },
-      },
-    ],
-  },
-};
+          'base-content': '#9d9c9c',
+          primary: '#f34643',
+          accent: '#f34643',
+          neutral: '#333',
+          'base-100': '#18181b',
+          'base-300': '#27282e'
+        }
+      }
+    ]
+  }
+}

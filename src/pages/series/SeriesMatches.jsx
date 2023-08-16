@@ -1,17 +1,15 @@
-import { Link } from "react-router-dom";
-import useFetch from "../../hooks/useFetch";
-import Loader from "../../components/Loader";
+import { Link } from 'react-router-dom'
+import useFetch from '../../hooks/useFetch'
+import Loader from '../../components/Loader'
 
 const SeriesMatches = ({ serie_id }) => {
-  const { data, loading, error } = useFetch(`/series/${serie_id}/matches`);
-  if (loading) return <Loader />;
-  if (error) return <div className="row w-full text-center">Ha ocurrido un error: {error.message}</div>;
-  if (!data) return null;
+  const { data, loading } = useFetch(`/series/${serie_id}/matches`)
+  if (loading) return <Loader />
 
   return (
-    <section className="mb-12" id="serie">
-      <div className="overflow-x-auto">
-        <table className="table w-full">
+    <section id='serie'>
+      <div className='overflow-x-auto text-sm'>
+        <table className='table w-full'>
           <thead>
             <tr>
               <th>Partido</th>
@@ -22,47 +20,59 @@ const SeriesMatches = ({ serie_id }) => {
             </tr>
           </thead>
           <tbody>
-            {data.map((item) => (
+            {data.map(item => (
               <tr key={item.id}>
                 <td>
-                  <span className="font-semibold">{item.type}</span>
+                  <span className='font-semibold'>{item.type}</span>
                 </td>
                 <td>
-                  <Link to={`/jugadores/${item.playerhome1_id}`} className="link-error link-hover ">
+                  <Link
+                    to={`/jugadores/${item.playerhome1_id}`}
+                    className='text-primary link-hover'
+                  >
                     {item.playerhome1_name}
                   </Link>
-                  {item.playerhome2_id > 0 ? " y " : ""}
-                  <Link to={`/jugadores/${item.playerhome2_id}`} className="link-error link-hover ">
+                  {item.playerhome2_id > 0 && ' y '}
+                  <Link
+                    to={`/jugadores/${item.playerhome2_id}`}
+                    className='text-primary link-hover'
+                  >
                     {item.playerhome2_name}
                   </Link>
                   &nbsp;vs.&nbsp;
-                  <Link to={`/jugadores/${item.playeraway1_id}`} className="link-error link-hover ">
+                  <Link
+                    to={`/jugadores/${item.playeraway1_id}`}
+                    className='text-primary link-hover'
+                  >
                     {item.playeraway1_name}
                   </Link>
-                  {item.playeraway2_id > 0 ? " y " : ""}
-                  <Link to={`/jugadores/${item.playeraway2_id}`} className="link-error link-hover ">
+                  {item.playeraway2_id > 0 && ' y '}
+                  <Link
+                    to={`/jugadores/${item.playeraway2_id}`}
+                    className='text-primary link-hover '
+                  >
                     {item.playeraway2_name}
                   </Link>
                 </td>
                 <td>{item.score}</td>
                 <td>
-                  <span className="circle text-primary">{item.result}</span>
+                  <span className='circle text-primary'>{item.result}</span>
                 </td>
                 <td>
-                  <div className="badge">{item.status}</div>
+                  <div className='badge'>{item.status}</div>
                 </td>
               </tr>
             ))}
           </tbody>
           <tfoot>
             <tr>
-              <th colSpan="5"></th>
+              <th colSpan='5'></th>
             </tr>
           </tfoot>
         </table>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SeriesMatches;
+export default SeriesMatches

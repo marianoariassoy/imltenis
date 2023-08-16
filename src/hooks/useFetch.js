@@ -1,29 +1,28 @@
-import { useState, useEffect } from "react";
-const apiUrl = "https://imltenis.com.ar/fixture/api";
-// const apiUrl = "http://localhost/sites/iml-backend/api";
+import { useState, useEffect } from 'react'
+const apiUrl = 'https://imltenis.com.ar/api'
 
 function useFetch(url) {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const urlOk = apiUrl + url;
-        const response = await fetch(urlOk);
-        const json = await response.json();
-        setData(json);
+        const urlOk = apiUrl + url
+        const response = await fetch(urlOk)
+        const json = await response.json()
+        setData(json)
       } catch (error) {
-        setError(error);
+        setError(error)
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
     }
-    fetchData();
-  }, [url]);
+    fetchData()
+  }, [url])
 
-  return { data, loading, error };
+  return { data, loading, error }
 }
 
-export default useFetch;
+export default useFetch

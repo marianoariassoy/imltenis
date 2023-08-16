@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
+import useFetch from '../../hooks/useFetch'
 import { Bull } from '../../icons/icons'
 
-const TeamsFixture = ({ team_id }) => {
+const TournamentsFixture = ({ group_id, type }) => {
   const [filters, setFilters] = useState('all')
-  const { data, loading } = useFetch(`/teams/${team_id}/fixture`)
+  const { data, loading } = useFetch(`/groups/series/${group_id}`)
   if (loading) return <Loader />
 
   const filterData = data => {
@@ -30,36 +30,33 @@ const TeamsFixture = ({ team_id }) => {
   }
 
   return (
-    <section
-      className='mt-8'
-      id='fixture'
-    >
-      <div className='text-center mb-4'>
-        <h1 className='font-bold text-primary'>Fixture</h1>
-      </div>
+    <section id='fixture'>
+      <div className='text-center mb-4'>{type != 1 && <h1 className='font-bold text-primary'>Fixture </h1>}</div>
 
-      <div id='filtros'>
-        <div className='flex gap-x-4 justify-center mb-4 text-sm'>
-          <button
-            className='btn-filter text-primary'
-            onClick={e => handlerFilter(e, 'all')}
-          >
-            Todos
-          </button>
-          <button
-            className='btn-filter opacity-70'
-            onClick={e => handlerFilter(e, false)}
-          >
-            Por Jugar
-          </button>
-          <button
-            className='btn-filter opacity-70'
-            onClick={e => handlerFilter(e, true)}
-          >
-            Jugados
-          </button>
+      {type != 1 && (
+        <div id='filtros'>
+          <div className='flex gap-x-4 justify-center mb-4 text-sm'>
+            <button
+              className='btn-filter text-primary'
+              onClick={e => handlerFilter(e, 'all')}
+            >
+              Todos
+            </button>
+            <button
+              className='btn-filter opacity-70'
+              onClick={e => handlerFilter(e, false)}
+            >
+              Por Jugar
+            </button>
+            <button
+              className='btn-filter opacity-70'
+              onClick={e => handlerFilter(e, true)}
+            >
+              Jugados
+            </button>
+          </div>
         </div>
-      </div>
+      )}
 
       <div className='overflow-x-auto text-sm'>
         <table className='table w-full'>
@@ -98,7 +95,12 @@ const TeamsFixture = ({ team_id }) => {
                           to={`/equipos/${item.home_id}`}
                           className='hover:opacity-70'
                         >
-                          <img src={item.home_image} />
+                          <img
+                            src={item.home_image}
+                            width='36'
+                            height='36'
+                            alt={item.home_name}
+                          />
                         </Link>
                       </div>
                     </div>
@@ -124,9 +126,14 @@ const TeamsFixture = ({ team_id }) => {
                       <div className='w-9 rounded-full'>
                         <Link
                           to={`/equipos/${item.away_id}`}
-                          className='hover:opacity-70 '
+                          className='hover:opacity-70'
                         >
-                          <img src={item.away_image} />
+                          <img
+                            src={item.away_image}
+                            width='36'
+                            height='36'
+                            alt={item.away_name}
+                          />
                         </Link>
                       </div>
                     </div>
@@ -153,4 +160,4 @@ const TeamsFixture = ({ team_id }) => {
   )
 }
 
-export default TeamsFixture
+export default TournamentsFixture
