@@ -47,7 +47,7 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
                         className='hover:opacity-70'
                       >
                         <img
-                          src={`https://imltenis.com.ar/fixture/images/${item.image ? item.image : item.club_image}`}
+                          src={`https://imltenis.com.ar/images/${item.image ? item.image : item.club_image}`}
                           width='36'
                           height='36'
                           alt={item.name}

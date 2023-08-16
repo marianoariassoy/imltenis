@@ -30,18 +30,6 @@ tbody tr th {
 tfoot tr th {
   background-color: transparent !important;
 }
-
-.circle {
-  border: 1px solid var(--color-primary);
-  border-radius: 50%;
-  display: block;
-  display: grid;
-  height: 1.6rem;
-  line-height: 1;
-  place-items: center;
-  width: 1.6rem;
-}
-
 .fade-in {
   animation: fadeIn 0.3s ease forwards;
 }
@@ -54,20 +42,8 @@ tfoot tr th {
   }
 }
 .active {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-}
-.tournaments-list li {
-  display: inline-block;
-  line-height: 1;
-  margin: 0.25rem 0.5rem;
-}
-.tournaments-list li::after {
-  content: ' / ';
-}
-.tournaments-list li:last-child::after {
-  content: '';
+  color: white;
+  opacity: 0.7;
 }
 
 svg {

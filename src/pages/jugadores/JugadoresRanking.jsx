@@ -41,9 +41,9 @@ const JugadoresRanking = () => {
         className='mb-4 text-center'
         id='presentacion'
       >
-        <h1 className='font-bold text-primary'>Ranking Urban Kicks</h1>
-        <h1 className='opacity-70'>Apertura 2023</h1>
-        <h1>👑</h1>
+        <h1 className='font-bold text-primary lg:text-xl'>Ranking Urban Kicks</h1>
+        <h2 className='opacity-70'>Apertura 2023</h2>
+        👑
       </section>
 
       <section id='filtros'>
@@ -135,7 +135,6 @@ const JugadoresRanking = () => {
                       {item.team_name}
                     </Link>
                   </td>
-
                   <td>
                     <a
                       href={`/torneos/${item.tournament_id}`}
@@ -158,7 +157,6 @@ const JugadoresRanking = () => {
             </tfoot>
           </table>
         </div>
-
         <div
           className='text-center text-sm'
           id='info'

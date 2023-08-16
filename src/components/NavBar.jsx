@@ -10,7 +10,7 @@ const NavBar = () => {
   }
 
   return (
-    <div className='navbar p-4 pt-6 fixed z-50 backdrop-blur-md'>
+    <div className='navbar p-4 pt-6 fixed z-50 backdrop-blur-md w-screen'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <label
@@ -42,7 +42,7 @@ const NavBar = () => {
         className='fade-in fixed top-0 left-0 w-screen h-screen backdrop-blur-md -z-10 content-center text-center hidden'
         onClick={openMenu}
       >
-        <ul className='font-medium text-sm'>
+        <ul className='font-medium text-sm lg:text-2xl'>
           {menu.map((item, index) => (
             <li
               key={index}
@@ -50,7 +50,7 @@ const NavBar = () => {
             >
               <NavLink
                 to={item.url}
-                className={item.style}
+                className={`${item.style} hover:text-white/70`}
               >
                 {item.name}
               </NavLink>

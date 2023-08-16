@@ -18,9 +18,9 @@ const ClubesRanking = () => {
         className='mb-4 text-center'
         id='presentacion'
       >
-        <h1 className='font-bold text-primary'>Ranking Anual de Clubes</h1>
-        <h1 className='opacity-70'>2023</h1>
-        <h1>🏆</h1>
+        <h1 className='font-bold text-primary lg:text-xl'>Ranking Anual de Clubes</h1>
+        <h2 className='opacity-70'>2023</h2>
+        🏆
       </section>
 
       <section id='grupo'>

@@ -9,7 +9,6 @@ const TournamentsContainer = () => {
   let { id } = useParams()
   const { data: dataTournament } = useFetch(`/tournaments/${id}`)
   const { data, loading } = useFetch(`/tournaments/groups/${id}`)
-
   if (loading) return <Loader />
   if (!dataTournament) return null
 
@@ -23,12 +22,12 @@ const TournamentsContainer = () => {
         className='mb-4'
         id='presentacion'
       >
-        <div className='text-center text-primary'>
+        <div className='text-center text-primary text-xl'>
           <h1>
             <span className='font-bold'>{dataTournament[0].name}</span>
-            <span className='block lg:inline lg:ml-2 '>{dataTournament[0].season}</span>
+            <span className='hidden lg:inline lg:ml-2'>{dataTournament[0].season}</span>
           </h1>
-          <h1>🏆</h1>
+          🏆
         </div>
       </section>
 

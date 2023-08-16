@@ -10,22 +10,22 @@ const Torneos = () => {
   return (
     <>
       <Helmet>
-        <title>Torneos</title>
+        <title>IML Tenis Torneos</title>
       </Helmet>
 
       <section
         className='mb-8'
         id='presentacion'
       >
-        <div className='text-center text-primary text-xl'>
-          <h1 className='font-bold '>Torneos</h1>
-          <h1>🏆</h1>
+        <div className='text-center text-primary lg:text-xl'>
+          <h1 className='font-bold'>Torneos</h1>
+          🏆
         </div>
       </section>
 
       <section>
         <div className='overflow-x-auto text-sm'>
-          <table className='table w-full'>
+          <table className='table w-full text-center'>
             <tbody>
               {data &&
                 data.map(item => (
@@ -33,20 +33,14 @@ const Torneos = () => {
                     <td>
                       <Link
                         to={`/torneos/${item.id}`}
-                        className='link-hover text-primary'
+                        className='link-hover'
                       >
-                        {item.name}
+                        <span className='text-primary font-medium'>{item.name}</span> {item.season_name}
                       </Link>
                     </td>
-                    <td>{item.season_name}</td>
                   </tr>
                 ))}
             </tbody>
-            <tfoot>
-              <tr>
-                <th colSpan='2'></th>
-              </tr>
-            </tfoot>
           </table>
         </div>
       </section>
