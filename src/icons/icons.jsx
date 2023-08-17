@@ -44,7 +44,6 @@ export const Instagram = () => {
     </svg>
   )
 }
-
 export const Bars = () => {
   return (
     <svg
@@ -62,7 +61,6 @@ export const Bars = () => {
     </svg>
   )
 }
-
 export const Pin = () => {
   return (
     <svg
@@ -74,7 +72,6 @@ export const Pin = () => {
     </svg>
   )
 }
-
 export const WhatsApp = () => {
   return (
     <svg

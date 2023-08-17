@@ -5,6 +5,7 @@ import Loader from '../../components/Loader'
 const TeamsPlayers = ({ team_id }) => {
   const { data, loading } = useFetch(`/teams/${team_id}/players`)
   if (loading) return <Loader />
+  if (!data) return null
 
   return (
     <section id='lista'>

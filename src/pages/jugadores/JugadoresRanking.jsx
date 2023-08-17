@@ -38,10 +38,10 @@ const JugadoresRanking = () => {
       </Helmet>
 
       <section
-        className='mb-4 text-center'
+        className='mb-4 text-center '
         id='presentacion'
       >
-        <h1 className='font-bold text-primary lg:text-xl'>Ranking Urban Kicks</h1>
+        <h1 className='font-bold text-primary text-xl'>Ranking Urban Kicks</h1>
         <h2 className='opacity-70'>Apertura 2023</h2>
         👑
       </section>
@@ -162,7 +162,7 @@ const JugadoresRanking = () => {
           id='info'
         >
           <p>
-            🔥
+            🔥{' '}
             <span className='opacity-70'>
               <strong>PJ:</strong> Parciales Jugados <strong>PG:</strong> Parciales Ganados <strong>DS:</strong>{' '}
               Diferencia de Sets <strong>DG:</strong> Diferencia de Games.

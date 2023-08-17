@@ -8,6 +8,7 @@ const TeamsFixture = ({ team_id }) => {
   const [filters, setFilters] = useState('all')
   const { data, loading } = useFetch(`/teams/${team_id}/fixture`)
   if (loading) return <Loader />
+  if (!data) return null
 
   const filterData = data => {
     return data.filter(item => {

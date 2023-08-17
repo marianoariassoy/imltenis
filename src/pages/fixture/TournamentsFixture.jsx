@@ -8,6 +8,7 @@ const TournamentsFixture = ({ group_id, type }) => {
   const [filters, setFilters] = useState('all')
   const { data, loading } = useFetch(`/groups/series/${group_id}`)
   if (loading) return <Loader />
+  if (!data) return null
 
   const filterData = data => {
     return data.filter(item => {

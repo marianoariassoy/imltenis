@@ -17,32 +17,25 @@ const Torneos = () => {
         className='mb-8'
         id='presentacion'
       >
-        <div className='text-center text-primary lg:text-xl'>
+        <div className='text-center text-primary text-xl'>
           <h1 className='font-bold'>Torneos</h1>
           🏆
         </div>
       </section>
 
-      <section>
-        <div className='overflow-x-auto text-sm'>
-          <table className='table w-full text-center'>
-            <tbody>
-              {data &&
-                data.map(item => (
-                  <tr key={item.id}>
-                    <td>
-                      <Link
-                        to={`/torneos/${item.id}`}
-                        className='link-hover'
-                      >
-                        <span className='text-primary font-medium'>{item.name}</span> {item.season_name}
-                      </Link>
-                    </td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
-        </div>
+      <section className='flex flex-col gap-y-2 justify-center items-center font-bold'>
+        {data &&
+          data
+            .filter(item => item.season !== 2)
+            .map(item => (
+              <Link
+                key={item.id}
+                to={`/torneos/${item.id}`}
+                className='link-hover text-primary'
+              >
+                <span>{item.name}</span> {item.season_name}
+              </Link>
+            ))}
       </section>
     </>
   )

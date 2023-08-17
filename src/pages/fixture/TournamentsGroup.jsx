@@ -86,7 +86,7 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
         id='info'
       >
         <p>
-          🔥
+          🔥{' '}
           <span className='opacity-70'>
             <strong>SJ:</strong> Series Jugadas <strong>SG:</strong> Series Ganadas <strong>P:</strong> Parciales
             Ganados <strong>DS:</strong> Diferencia de Sets <strong>DG:</strong> Diferencia de Games.

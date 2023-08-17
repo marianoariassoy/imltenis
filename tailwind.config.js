@@ -14,9 +14,8 @@ module.exports = {
           'base-content': '#9d9c9c',
           primary: '#f34643',
           accent: '#f34643',
-          neutral: '#333',
-          'base-100': '#18181b',
-          'base-300': '#27282e'
+          'base-100': '#1c1c1e'
+          // 'base-100': '#18181b',
         }
       }
     ]

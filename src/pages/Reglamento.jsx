@@ -7,8 +7,8 @@ const Reglamento = () => {
         <title>Reglamento IML Tenis 2023</title>
       </Helmet>
 
-      <h1 className='font-bold text-center text-primary'>Reglamento IML Tenis 2023</h1>
-      <h1 className='mb-4 text-center'>🤝</h1>
+      <h1 className='font-bold text-center text-primary text-xl'>Reglamento IML Tenis 2023</h1>
+      <div className='mb-6 text-center'>🤝</div>
 
       <p className='md:columns-2 text-sm'>
         <strong className='text-primary'>Formación:</strong> En todas las categorías se juegan 1 single y 2 dobles, de

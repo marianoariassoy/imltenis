@@ -2,7 +2,7 @@ import { Yuka, Typ, Urban, Vinica } from '../icons/icons'
 
 const Footer = () => {
   return (
-    <div className='footer-main px-4 py-4 opacity-50'>
+    <div className='footer-main px-4 py-6 opacity-50'>
       <div className='flex justify-center gap-x-4 mb-4'>
         <a
           href='https://www.instagram.com/yuka_ant/'
@@ -38,14 +38,14 @@ const Footer = () => {
         </a>
       </div>
 
-      <div className='text-sm text-center'>
-        <span className='block lg:inline-block font-medium'>Liga de equipos IML Tenis &copy; 2023</span> &nbsp;
+      <div className='text-[.8rem] text-center'>
+        <span className='block lg:inline-block font-bold'>Liga de equipos IML Tenis &copy; 2023</span> &nbsp;
         <span>Buenos Aires, Argentina.</span> &nbsp;
         <span className='block lg:inline-block'>
           Desarrollo: &nbsp;
           <a
             href='http://marianoarias.soy'
-            className='font-medium'
+            className='font-bold hover:text-white'
             target='_blank'
             rel='noopener noreferrer'
           >

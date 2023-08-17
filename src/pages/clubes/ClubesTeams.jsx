@@ -5,6 +5,7 @@ import Loader from '../../components/Loader'
 const ClubesTeams = ({ club_id }) => {
   const { data, loading } = useFetch(`/clubes/${club_id}/teams`)
   if (loading) return <Loader />
+  if (!data) return null
 
   return (
     <section>

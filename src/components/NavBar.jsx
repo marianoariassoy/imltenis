@@ -24,7 +24,7 @@ const NavBar = () => {
       <div className='navbar-center'>
         <Link
           to='/'
-          className='text-primary hover:blur-sm'
+          className='text-primary transition-all hover:blur-sm'
         >
           <Logo />
         </Link>
@@ -42,7 +42,7 @@ const NavBar = () => {
         className='fade-in fixed top-0 left-0 w-screen h-screen backdrop-blur-md -z-10 content-center text-center hidden'
         onClick={openMenu}
       >
-        <ul className='font-medium text-sm lg:text-2xl'>
+        <ul className='text-xl italic lg:text-3xl text-white/70'>
           {menu.map((item, index) => (
             <li
               key={index}
@@ -50,20 +50,20 @@ const NavBar = () => {
             >
               <NavLink
                 to={item.url}
-                className={`${item.style} hover:text-white/70`}
+                className={`${item.style} nav-link`}
               >
                 {item.name}
               </NavLink>
             </li>
           ))}
-          <li>
+          {/* <li>
             <a
               href='https://imltenis.com.ar/assets/docs/planilla_de_carga_iml_tenis.pdf'
               target='_blank'
             >
               Planilla de carga
             </a>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>
