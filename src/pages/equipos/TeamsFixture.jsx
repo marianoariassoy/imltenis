@@ -36,7 +36,7 @@ const TeamsFixture = ({ team_id }) => {
       id='fixture'
     >
       <div className='text-center mb-4'>
-        <h1 className='font-bold text-primary'>Fixture</h1>
+        <h1 className='italic text-primary'>Fixture</h1>
       </div>
 
       <div id='filtros'>

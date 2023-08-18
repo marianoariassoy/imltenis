@@ -60,7 +60,9 @@ const JugadoresDobles = ({ player_id }) => {
                 </td>
                 <td>{item.score}</td>
                 <td>
-                  <span className='circle text-primary'>{item.result}</span>
+                  <div className='h-7 w-7 rounded-full flex justify-center items-center border text-primary border-[#f34643]'>
+                    {item.result}
+                  </div>
                 </td>
                 <td>
                   <Link

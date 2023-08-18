@@ -24,7 +24,7 @@ const NavBar = () => {
       <div className='navbar-center'>
         <Link
           to='/'
-          className='text-primary transition-all hover:blur-sm'
+          className='text-primary'
         >
           <Logo />
         </Link>
@@ -46,7 +46,7 @@ const NavBar = () => {
           {menu.map((item, index) => (
             <li
               key={index}
-              className='mb-2'
+              className='mb-1'
             >
               <NavLink
                 to={item.url}

@@ -10,7 +10,7 @@ const TornamentsChampion = ({ data }) => {
         numberOfPieces={50}
       />
       <div className='text-center mb-8'>
-        <h1 className='font-bold mb-4 text-primary'>Campéon</h1>
+        <h1 className='italic mb-4 text-primary'>Campéon</h1>
         <div className='avatar mb-2'>
           <div className='w-24 rounded-full'>
             <Link

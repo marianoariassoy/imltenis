@@ -53,7 +53,7 @@ const Teams = () => {
           <a
             href={data[0].googlemaplink}
             target='_blank'
-            className='flex font-medium items-center gap-x-1'
+            className='flex font-medium items-center gap-x-1 link-hover'
           >
             <Pin />
             Ubicación del club
@@ -61,7 +61,7 @@ const Teams = () => {
           <a
             href={`https://wa.me/${data[0].captain_phone}`}
             target='_blank'
-            className='flex font-medium items-center gap-x-1'
+            className='flex font-medium items-center gap-x-1 link-hover'
           >
             <WhatsApp />
             WhatsApp
@@ -69,8 +69,8 @@ const Teams = () => {
         </div>
 
         <div className='text-center mb-4'>
-          <h1 className='text-primary font-medium'>Lista de buena fe ✏️</h1>
-          <h2 className='opacity-70 text-sm'>{data[0].captain_name} (Capitán/a)</h2>
+          <h1 className='text-primary italic'>Lista de buena fe ✏️</h1>
+          <h2 className='opacity-70 text-sm'>{data[0].captain_name} (Capitán)</h2>
         </div>
       </section>
 

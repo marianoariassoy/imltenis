@@ -89,7 +89,6 @@ const ClubesRanking = () => {
           id='info'
         >
           <p>
-            🔥{' '}
             <span className='opacity-70'>
               <strong>SJ:</strong> Series Jugadas <strong>SG:</strong> Series Ganadas <strong>PG:</strong> Parciales
               Ganados.

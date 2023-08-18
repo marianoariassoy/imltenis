@@ -24,7 +24,7 @@ const TeamsPlayers = ({ team_id }) => {
                 <td className='pl-0 flex items-center gap-3'>
                   <span className='font-semibold'>{index + 1}</span>
                   <div className='avatar'>
-                    <div className='w-9 rounded-full'>
+                    <div className='w-12 rounded-full'>
                       <Link
                         to={`/jugadores/${item.id}`}
                         className='hover:opacity-70'
@@ -32,8 +32,8 @@ const TeamsPlayers = ({ team_id }) => {
                         <img
                           src={item.image}
                           alt={item.name}
-                          width='36'
-                          height='36'
+                          width='48'
+                          height='48'
                         />
                       </Link>
                     </div>
@@ -63,7 +63,6 @@ const TeamsPlayers = ({ team_id }) => {
         id='info'
       >
         <p>
-          🔥
           <span className='opacity-70'>
             <strong>P:</strong> Parciales Jugados <strong>PG:</strong> Parciales Ganados/
           </span>

@@ -5,7 +5,7 @@ const Tournaments = ({ group_id, name, description, winners, type }) => {
   return (
     <>
       {type == 1 ? (
-        <h2 className='font-bold text-primary text-center'>{name}</h2>
+        <h2 className='italic text-primary text-center'>{name}</h2>
       ) : (
         <TournamentsGroup
           group_id={group_id}

@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-primary: #f34643;
-  --color-secondary: #666;
-  --color-gray-1: #34363c;
-  --color-bg: #1f2023;
-  --color-bg-secondary: #27282e;
-}
-
 #root {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -18,14 +10,14 @@
 
 thead tr th {
   background-color: transparent !important;
-  border-bottom: 1px solid #ffffff10;
-  color: var(--color-secondary);
+  border-bottom: 1px solid #2f2f2f;
+  opacity: 0.5;
 }
 tbody tr td,
 tbody tr th {
   background-color: transparent !important;
-  border-bottom: 1px solid #ffffff10;
-  border-color: #ffffff10 !important;
+  border-bottom: 1px solid #2f2f2f;
+  border-color: #2f2f2f !important;
 }
 tfoot tr th {
   background-color: transparent !important;

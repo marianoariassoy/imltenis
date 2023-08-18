@@ -162,7 +162,6 @@ const JugadoresRanking = () => {
           id='info'
         >
           <p>
-            🔥{' '}
             <span className='opacity-70'>
               <strong>PJ:</strong> Parciales Jugados <strong>PG:</strong> Parciales Ganados <strong>DS:</strong>{' '}
               Diferencia de Sets <strong>DG:</strong> Diferencia de Games.

@@ -32,7 +32,7 @@ const TournamentsFixture = ({ group_id, type }) => {
 
   return (
     <section id='fixture'>
-      <div className='text-center mb-4'>{type != 1 && <h1 className='font-bold text-primary'>Fixture </h1>}</div>
+      <div className='text-center mb-4'>{type != 1 && <h1 className='italic text-primary'>Fixture </h1>}</div>
 
       {type != 1 && (
         <div id='filtros'>

@@ -13,8 +13,10 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
         className='row text-center mb-4'
         id='presentacion'
       >
-        <h1 className='font-bold text-primary'>{name}</h1>
-        <h2 className='font-medium opacity-70'>Posiciones 💪</h2>
+        <h1 className='text-primary italic'>{name}</h1>
+        <h2 className='text-sm'>
+          <span className='opacity-70 font-medium'>Posiciones</span> 💪
+        </h2>
       </div>
 
       <div className='overflow-x-auto text-sm'>
@@ -35,21 +37,21 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
             {data.map((item, index) => (
               <tr
                 key={item.id}
-                className={`${index < winners && 'text-primary'}`}
+                // className={`${index < winners && 'text-primary'}`}
               >
-                <td className='p-0'>{index < winners && <Bull />}</td>
+                <td className='p-0 text-primary'>{index < winners && <Bull />}</td>
                 <td className='pl-0 flex items-center gap-3'>
                   <span className='font-semibold'>{index + 1}</span>
                   <div className='avatar'>
-                    <div className='w-9 rounded-full'>
+                    <div className='w-12 rounded-full'>
                       <Link
                         to={`/equipos/${item.id}`}
                         className='hover:opacity-70'
                       >
                         <img
                           src={`https://imltenis.com.ar/images/${item.image ? item.image : item.club_image}`}
-                          width='36'
-                          height='36'
+                          width='48'
+                          height='48'
                           alt={item.name}
                         />
                       </Link>
@@ -68,7 +70,7 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
                 <td>
-                  <span className='font-semibold'>{item.points}</span>
+                  <span className={`${index < winners && 'text-primary'} font-semibold`}>{item.points}</span>
                 </td>
               </tr>
             ))}
@@ -86,14 +88,13 @@ const TournamentsGroup = ({ group_id, name, description, winners }) => {
         id='info'
       >
         <p>
-          🔥{' '}
           <span className='opacity-70'>
             <strong>SJ:</strong> Series Jugadas <strong>SG:</strong> Series Ganadas <strong>P:</strong> Parciales
             Ganados <strong>DS:</strong> Diferencia de Sets <strong>DG:</strong> Diferencia de Games.
           </span>
         </p>
         <p>
-          🥇 <span className='opacity-70'>{description}</span>
+          🔥 <span className='opacity-70'>{description}</span>
         </p>
       </div>
     </section>
