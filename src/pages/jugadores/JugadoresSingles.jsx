@@ -11,7 +11,7 @@ const JugadoresSingles = ({ player_id }) => {
     <section id='lista-single'>
       <h1 className='text-center mb-4 font-medium text-primary'>Singles</h1>
 
-      <div className='overflow-x-auto text-sm'>
+      <div className='overflow-x-auto text-sm mb-6'>
         <table className='table w-full'>
           <thead>
             <tr>
@@ -44,7 +44,9 @@ const JugadoresSingles = ({ player_id }) => {
                 </td>
                 <td>{item.score}</td>
                 <td>
-                  <span className='circle text-primary'>{item.result}</span>
+                  <div className='h-7 w-7 rounded-full flex justify-center items-center border text-primary border-[#f34643]'>
+                    {item.result}
+                  </div>
                 </td>
                 <td>
                   <Link
@@ -57,11 +59,6 @@ const JugadoresSingles = ({ player_id }) => {
               </tr>
             ))}
           </tbody>
-          <tfoot>
-            <tr>
-              <th colSpan='5'></th>
-            </tr>
-          </tfoot>
         </table>
       </div>
     </section>

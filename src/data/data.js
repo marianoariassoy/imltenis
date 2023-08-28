@@ -11,3 +11,31 @@ export const menu = [
   { name: 'Reglamento', url: '/reglamento', style: '' },
   { name: 'Nosotros', url: '/nosotros', style: '' }
 ]
+
+export const rankingOptions = [
+  {
+    name: 'Todos',
+    tournament_id: 0
+  },
+  {
+    name: 'Damas',
+    tournament_id: 19
+  },
+  {
+    name: '2da',
+    tournament_id: 20
+  },
+
+  {
+    name: '3ra',
+    tournament_id: 18
+  },
+  {
+    name: '4ta',
+    tournament_id: 17
+  },
+  {
+    name: '5ta',
+    tournament_id: 16
+  }
+]

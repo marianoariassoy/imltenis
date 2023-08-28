@@ -11,7 +11,7 @@ const ClubesTeams = ({ club_id }) => {
     <section>
       <h1 className='text-center text-primary font-bold mb-4'>Equipos</h1>
 
-      <div className='overflow-x-auto text-sm'>
+      <div className='overflow-x-auto text-sm mb-6'>
         <table className='table w-full'>
           <thead>
             <tr>
@@ -47,11 +47,6 @@ const ClubesTeams = ({ club_id }) => {
               </tr>
             ))}
           </tbody>
-          <tfoot>
-            <tr>
-              <th colSpan='6'></th>
-            </tr>
-          </tfoot>
         </table>
       </div>
     </section>

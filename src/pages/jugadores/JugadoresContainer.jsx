@@ -23,17 +23,18 @@ const JugadoresContainer = () => {
       >
         <div className='text-center'>
           <div className='avatar mb-2'>
-            <div className='w-24 rounded-full bg-base-300'>
+            <div className='w-28 rounded-full bg-base-300'>
               <img
                 src={data[0].image}
                 alt={data[0].name}
-                width='128'
-                height='128'
+                width='112'
+                height='112'
               />
             </div>
           </div>
           <h1 className='font-bold text-primary'>{data[0].name}</h1>
-          <h2 className='opacity-70 text-sm'>{data[0].age}</h2>
+          {/* <h2 className='opacity-70 text-sm'>{data[0].age}</h2> */}
+          <span className='text-xl'>🎾</span>
         </div>
       </section>
 

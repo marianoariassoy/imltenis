@@ -27,12 +27,16 @@ const TournamentsFixture = ({ group_id, type }) => {
       item.classList.add('opacity-70')
     })
     e.target.classList.add('text-primary')
+    e.target.classList.remove('opacity-70')
     e.target.classList.add('opacity-100')
   }
 
   return (
-    <section id='fixture'>
-      <div className='text-center mb-4'>{type != 1 && <h1 className='italic text-primary'>Fixture </h1>}</div>
+    <section
+      className='mb-14'
+      id='fixture'
+    >
+      <div className='text-center mb-4'>{type != 1 && <h1 className='italic text-xl text-primary'>Fixture </h1>}</div>
 
       {type != 1 && (
         <div id='filtros'>
@@ -59,7 +63,7 @@ const TournamentsFixture = ({ group_id, type }) => {
         </div>
       )}
 
-      <div className='overflow-x-auto text-sm'>
+      <div className='overflow-x-auto text-sm mb-6'>
         <table className='table w-full'>
           <thead>
             <tr>
@@ -81,7 +85,7 @@ const TournamentsFixture = ({ group_id, type }) => {
             {filteredData.map(item => (
               <tr
                 key={item.id}
-                className={item.winner && 'opacity-50'}
+                className={item.winner ? 'opacity-50' : ''}
               >
                 <td className='p-0'>{item.winner && <Bull />}</td>
                 <td className='pl-0'>
@@ -150,11 +154,6 @@ const TournamentsFixture = ({ group_id, type }) => {
               </tr>
             ))}
           </tbody>
-          <tfoot>
-            <tr>
-              <th colSpan='6'></th>
-            </tr>
-          </tfoot>
         </table>
       </div>
     </section>

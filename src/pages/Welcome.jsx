@@ -19,7 +19,7 @@ const Welcome = () => {
   return (
     <>
       <Helmet>
-        <title>IML Tenis Liga de clubes de Zona Norte y Oeste de Buenos Aires</title>
+        <title>Liga de clubes de tenis de Zona Norte de Buenos Aires</title>
       </Helmet>
 
       <section className='fade-in flex justify-center items-center text-center  h-full'>

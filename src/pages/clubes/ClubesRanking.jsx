@@ -24,7 +24,7 @@ const ClubesRanking = () => {
       </section>
 
       <section id='grupo'>
-        <div className='overflow-x-auto text-sm'>
+        <div className='overflow-x-auto text-sm mb-6'>
           <table className='table w-full'>
             <thead>
               <tr>
@@ -46,7 +46,7 @@ const ClubesRanking = () => {
                   <td className='pl-0 flex items-center gap-3'>
                     <span className='font-semibold'>{index + 1}</span>
                     <div className='avatar'>
-                      <div className='w-9 rounded-full'>
+                      <div className='w-11 rounded-full'>
                         <Link
                           to={`/clubes/${item.id}`}
                           className='hover:opacity-70'
@@ -54,8 +54,8 @@ const ClubesRanking = () => {
                           <img
                             src={item.image}
                             alt={item.name}
-                            width='36'
-                            height='36'
+                            width='44'
+                            height='44'
                           />
                         </Link>
                       </div>
@@ -76,11 +76,6 @@ const ClubesRanking = () => {
                 </tr>
               ))}
             </tbody>
-            <tfoot>
-              <tr>
-                <th colSpan='6'></th>
-              </tr>
-            </tfoot>
           </table>
         </div>
 

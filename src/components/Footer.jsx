@@ -3,7 +3,7 @@ import { Yuka, Typ, Urban, Vinica } from '../icons/icons'
 const Footer = () => {
   return (
     <div className='footer-main px-4 py-6 opacity-50'>
-      <div className='flex justify-center gap-x-4 mb-4'>
+      <div className='flex justify-center gap-x-4 mb-6'>
         <a
           href='https://www.instagram.com/yuka_ant/'
           className='icon-sponsor hover:opacity-60'
@@ -39,7 +39,7 @@ const Footer = () => {
       </div>
 
       <div className='text-[.8rem] text-center'>
-        <span className='block lg:inline-block font-bold'>Liga de equipos IML Tenis &copy; 2023</span> &nbsp;
+        <span className='block lg:inline-block font-bold'>Liga de clubes IML Tenis &copy; 2023</span> &nbsp;
         <span>Buenos Aires, Argentina.</span> &nbsp;
         <span className='block lg:inline-block'>
           Desarrollo: &nbsp;

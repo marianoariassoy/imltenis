@@ -8,8 +8,8 @@ const TeamsPlayers = ({ team_id }) => {
   if (!data) return null
 
   return (
-    <section id='lista'>
-      <div className='overflow-x-auto text-sm'>
+    <section>
+      <div className='overflow-x-auto text-sm mb-6'>
         <table className='table w-full'>
           <thead>
             <tr>
@@ -24,7 +24,7 @@ const TeamsPlayers = ({ team_id }) => {
                 <td className='pl-0 flex items-center gap-3'>
                   <span className='font-semibold'>{index + 1}</span>
                   <div className='avatar'>
-                    <div className='w-12 rounded-full'>
+                    <div className='w-11 rounded-full'>
                       <Link
                         to={`/jugadores/${item.id}`}
                         className='hover:opacity-70'
@@ -32,8 +32,8 @@ const TeamsPlayers = ({ team_id }) => {
                         <img
                           src={item.image}
                           alt={item.name}
-                          width='48'
-                          height='48'
+                          width='44'
+                          height='44'
                         />
                       </Link>
                     </div>
@@ -50,11 +50,6 @@ const TeamsPlayers = ({ team_id }) => {
               </tr>
             ))}
           </tbody>
-          <tfoot>
-            <tr>
-              <th colSpan='6'></th>
-            </tr>
-          </tfoot>
         </table>
       </div>
 
@@ -64,7 +59,7 @@ const TeamsPlayers = ({ team_id }) => {
       >
         <p>
           <span className='opacity-70'>
-            <strong>P:</strong> Parciales Jugados <strong>PG:</strong> Parciales Ganados/
+            <strong>P:</strong> Parciales Jugados <strong>PG:</strong> Parciales Ganados
           </span>
         </p>
       </div>

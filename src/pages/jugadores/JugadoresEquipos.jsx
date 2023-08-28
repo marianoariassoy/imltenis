@@ -5,12 +5,13 @@ import Loader from '../../components/Loader'
 const JugadoresEquipos = ({ player_id }) => {
   const { data, loading } = useFetch(`/players/${player_id}/teams`)
   if (loading) return <Loader />
+  if (!data) return null
 
   return (
     <section id='equipos'>
       <h1 className='text-center mb-4 font-medium text-primary'>Equipos</h1>
 
-      <div className='overflow-x-auto text-sm'>
+      <div className='overflow-x-auto text-sm mb-6'>
         <table className='table w-full'>
           <thead>
             <tr>
@@ -66,11 +67,6 @@ const JugadoresEquipos = ({ player_id }) => {
               </tr>
             ))}
           </tbody>
-          <tfoot>
-            <tr>
-              <th colSpan='3'></th>
-            </tr>
-          </tfoot>
         </table>
       </div>
     </section>

@@ -7,7 +7,6 @@
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
-
 thead tr th {
   background-color: transparent !important;
   border-bottom: 1px solid #2f2f2f;
@@ -19,8 +18,10 @@ tbody tr th {
   border-bottom: 1px solid #2f2f2f;
   border-color: #2f2f2f !important;
 }
-tfoot tr th {
-  background-color: transparent !important;
+th,
+td {
+  padding-top: 0.7rem !important;
+  padding-bottom: 0.7rem !important;
 }
 .fade-in {
   animation: fadeIn 0.3s ease forwards;
@@ -38,7 +39,6 @@ tfoot tr th {
   text-decoration: underline;
   text-decoration-thickness: 4px;
 }
-
 svg {
   fill: currentColor;
   stroke: currentColor;

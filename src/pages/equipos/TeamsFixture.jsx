@@ -27,6 +27,7 @@ const TeamsFixture = ({ team_id }) => {
       item.classList.add('opacity-70')
     })
     e.target.classList.add('text-primary')
+    e.target.classList.remove('opacity-70')
     e.target.classList.add('opacity-100')
   }
 
@@ -62,7 +63,7 @@ const TeamsFixture = ({ team_id }) => {
         </div>
       </div>
 
-      <div className='overflow-x-auto text-sm'>
+      <div className='overflow-x-auto text-sm mb-6'>
         <table className='table w-full'>
           <thead>
             <tr>
@@ -84,7 +85,7 @@ const TeamsFixture = ({ team_id }) => {
             {filteredData.map(item => (
               <tr
                 key={item.id}
-                className={item.winner && 'opacity-50'}
+                className={item.winner ? 'opacity-50' : ''}
               >
                 <td className='p-0'>{item.winner && <Bull />}</td>
                 <td className='pl-0'>
@@ -143,11 +144,6 @@ const TeamsFixture = ({ team_id }) => {
               </tr>
             ))}
           </tbody>
-          <tfoot>
-            <tr>
-              <th colSpan='6'></th>
-            </tr>
-          </tfoot>
         </table>
       </div>
     </section>

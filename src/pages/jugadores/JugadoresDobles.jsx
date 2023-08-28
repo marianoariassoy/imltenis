@@ -11,7 +11,7 @@ const JugadoresDobles = ({ player_id }) => {
     <section id='lista-dobles'>
       <h1 className='text-center mb-4 font-medium text-primary'>Dobles</h1>
 
-      <div className='overflow-x-auto text-sm'>
+      <div className='overflow-x-auto text-sm mb-6'>
         <table className='table w-full'>
           <thead>
             <tr>
@@ -75,11 +75,6 @@ const JugadoresDobles = ({ player_id }) => {
               </tr>
             ))}
           </tbody>
-          <tfoot>
-            <tr>
-              <th colSpan='6'></th>
-            </tr>
-          </tfoot>
         </table>
       </div>
     </section>

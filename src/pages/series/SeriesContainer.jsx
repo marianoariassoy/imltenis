@@ -9,19 +9,14 @@ const Series = () => {
   const { data, loading } = useFetch(`/series/${id}`)
   if (loading) return <Loader />
 
-  let title = data[0].date + ' ' + data[0].hour
-
   return (
     <>
       <Helmet>
-        <title>Serie {title}</title>
+        <title>Serie {data[0].date + ' ' + data[0].hour}</title>
       </Helmet>
 
-      <section
-        className='row text-center mb-12'
-        id='presentacion'
-      >
-        <h1 className='font-bold text-primary'>{title}</h1>
+      <section className='text-center mb-12'>
+        <h1 className='font-bold text-primary'>{data[0].date + ' ' + data[0].hour}</h1>
 
         <Link
           to={`/torneos/${data[0].tournament_id}`}

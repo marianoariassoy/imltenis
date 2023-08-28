@@ -25,22 +25,21 @@ const Teams = () => {
         id='presentacion'
       >
         <div className='avatar mb-2'>
-          <div className='w-24 rounded-full'>
+          <div className='w-28 rounded-full'>
             <Link
               to={`/clubes/${data[0].club_id}`}
               className='hover:opacity-70'
             >
               <img
                 src={data[0].image}
-                width='128'
-                height='128'
+                width='112'
+                height='112'
                 alt={data[0].name}
               />
             </Link>
           </div>
         </div>
-
-        <h1 className='font-bold text-primary'>{data[0].name}</h1>
+        <h1 className='font-bold text-xl text-primary'>{data[0].name}</h1>
 
         <Link
           to={`/torneos/${data[0].tournament_id}`}

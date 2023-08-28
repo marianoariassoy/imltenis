@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ReactGA from 'react-ga4'
 import Layout from './Layout'
-
 import Welcome from './pages/Welcome'
 import TournamentsContainer from './pages/fixture/TorunamentsContainer'
 import JugadoresRanking from './pages/jugadores/JugadoresRanking'
@@ -14,6 +13,7 @@ import Torneos from './pages/torneos/Torneos'
 import Nosotros from './pages/Nosotros'
 import Reglamento from './pages/Reglamento'
 import PageNotFound from './pages/PageNotFound'
+import TournamentsCalendar from './pages/fixture/TornamentsCalendar'
 
 const App = () => {
   ReactGA.initialize('G-G1DBH0K86R')
@@ -27,8 +27,16 @@ const App = () => {
             element={<Welcome />}
           />
           <Route
+            path='/torneos/:id/grupo/:gid'
+            element={<TournamentsContainer />}
+          />
+          <Route
             path='/torneos/:id'
             element={<TournamentsContainer />}
+          />
+          <Route
+            path='/torneos/fechas/:id'
+            element={<TournamentsCalendar />}
           />
           <Route
             path='/jugadores/:id'

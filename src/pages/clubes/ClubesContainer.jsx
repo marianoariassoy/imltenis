@@ -17,17 +17,34 @@ const ClubesContainer = () => {
       </Helmet>
 
       <section className='text-sm mb-8 text-center '>
-        <div className='avatar'>
-          <div className='w-32 rounded-full'>
-            <img src={data[0].image} />
+        <div className='avatar mb-2'>
+          <div className='w-28 rounded-full'>
+            <img
+              src={data[0].image}
+              alt={data[0].name}
+              width='112'
+              height='112'
+            />
           </div>
         </div>
-        <h1 className='font-bold text-xl text-white mb-2'>{data[0].name}</h1>
+        <h1 className='font-bold text-xl text-primary mb-2'>{data[0].name}</h1>
         <div className='mb-4'>
           <p>{data[0].location}</p>
           {data[0].phone && <p className='font-bold'>Tel. {data[0].phone}</p>}
         </div>
         <div>
+          {data[0].googlemaps && (
+            <p className='font-bold'>
+              <a
+                href={data[0].googlemaps}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-primary link-hover'
+              >
+                Google Map
+              </a>
+            </p>
+          )}
           {data[0].whatsapp && (
             <p className='font-bold'>
               <a
