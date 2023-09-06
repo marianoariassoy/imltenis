@@ -19,16 +19,18 @@ const Welcome = () => {
   return (
     <>
       <Helmet>
-        <title>Liga de clubes de tenis de Zona Norte de Buenos Aires</title>
+        <title>Liga de clubes de Tenis Zona Norte Buenos Aires</title>
       </Helmet>
 
-      <section className='fade-in flex justify-center items-center text-center  h-full'>
+      <section className='fade-in flex justify-center items-center text-center h-full'>
         <div
           className='cursor-pointer text-primary'
           onClick={openMenu}
         >
-          <h1 className='text-6xl lg:text-8xl font-black mb-2'>Clausura 2023</h1>
-          <span className='text-4xl'>🏆</span>
+          <h1 className='text-6xl lg:text-8xl font-black'>
+            Clausura <span className='block'>Yuka</span> <span className='block'>2023</span>
+          </h1>
+          <span className='text-5xl mt-2 block'>🏆</span>
         </div>
       </section>
 

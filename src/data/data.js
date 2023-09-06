@@ -6,8 +6,8 @@ export const menu = [
   { name: 'Cuarta Libre', url: '/torneos/17', style: 'text-primary' },
   { name: 'Quinta Libre', url: '/torneos/16', style: 'text-primary' },
   { name: 'Ranking UrbanKicks', url: '/jugadores/ranking', style: '' },
-  { name: 'Ranking de Clubes', url: '/clubes/ranking', style: '' },
-  { name: 'Torneos', url: '/historial', style: '' },
+  { name: 'Ranking de Clubes TyP', url: '/clubes/ranking', style: '' },
+  { name: 'Otros Torneos', url: '/historial', style: '' },
   { name: 'Reglamento', url: '/reglamento', style: '' },
   { name: 'Nosotros', url: '/nosotros', style: '' }
 ]
