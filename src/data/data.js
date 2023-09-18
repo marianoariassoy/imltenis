@@ -15,27 +15,31 @@ export const menu = [
 export const rankingOptions = [
   {
     name: 'Todos',
-    tournament_id: 0
+    category: 0
   },
   {
     name: 'Damas',
-    tournament_id: 19
+    category: 6
+  },
+  {
+    name: '1era',
+    category: 1
   },
   {
     name: '2da',
-    tournament_id: 20
+    category: 2
   },
 
   {
     name: '3ra',
-    tournament_id: 18
+    category: 3
   },
   {
     name: '4ta',
-    tournament_id: 17
+    category: 4
   },
   {
     name: '5ta',
-    tournament_id: 16
+    category: 5
   }
 ]
