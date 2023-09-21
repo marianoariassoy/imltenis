@@ -63,7 +63,7 @@ const TournamentsFixture = ({ group_id, type }) => {
         </div>
       )}
 
-      <div className='overflow-x-auto text-sm mb-6'>
+      <div className='overflow-x-auto text-sm mb-6 fade-in'>
         <table className='table w-full'>
           <thead>
             <tr>
@@ -111,7 +111,7 @@ const TournamentsFixture = ({ group_id, type }) => {
                     </div>
                     <Link
                       to={`/equipos/${item.home_id}`}
-                      className='link-hover font-semibold'
+                      className='hover:text-primary font-semibold'
                     >
                       {item.home_name}
                     </Link>
@@ -120,7 +120,7 @@ const TournamentsFixture = ({ group_id, type }) => {
                 <td className='text-center'>
                   <Link
                     to={`/series/${item.id}`}
-                    className='link-hover mr-1 font-semibold'
+                    className='hover:text-primary mr-1 font-semibold'
                   >
                     {item.score_home}-{item.score_away}
                   </Link>
@@ -144,7 +144,7 @@ const TournamentsFixture = ({ group_id, type }) => {
                     </div>
                     <Link
                       to={`/equipos/${item.away_id}`}
-                      className='link-hover font-semibold'
+                      className='hover:text-primary font-semibold'
                     >
                       {item.away_name}
                     </Link>

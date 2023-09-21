@@ -14,7 +14,7 @@ const Torneos = () => {
       </Helmet>
 
       <section
-        className='mb-8'
+        className='mb-8 fade-in'
         id='presentacion'
       >
         <div className='text-center text-primary text-xl'>

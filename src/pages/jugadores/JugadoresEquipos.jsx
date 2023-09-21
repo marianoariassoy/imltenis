@@ -42,7 +42,7 @@ const JugadoresEquipos = ({ player_id }) => {
                     </div>
                     <Link
                       to={`/equipos/${item.team_id}`}
-                      className='link-hover font-medium'
+                      className='hover:text-primary font-medium'
                     >
                       {item.team_name}
                     </Link>
@@ -51,7 +51,7 @@ const JugadoresEquipos = ({ player_id }) => {
                 <td>
                   <Link
                     to={`/clubes/${item.club_id}`}
-                    className='link-hover'
+                    className='hover:text-primary'
                   >
                     {item.club_name}
                   </Link>

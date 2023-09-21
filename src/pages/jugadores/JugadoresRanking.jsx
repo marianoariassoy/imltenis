@@ -58,7 +58,7 @@ const JugadoresRanking = () => {
         </div>
       ) : (
         <section id='grupo'>
-          <div className='overflow-x-auto text-sm mb-6'>
+          <div className='overflow-x-auto text-sm mb-6 fade-in'>
             <table className='table w-full'>
               <thead>
                 <tr>
@@ -98,7 +98,7 @@ const JugadoresRanking = () => {
                       </div>
                       <Link
                         to={`/jugadores/${item.id}`}
-                        className='link-hover font-medium'
+                        className='hover:text-primary font-medium'
                       >
                         {item.name}
                       </Link>
@@ -106,7 +106,7 @@ const JugadoresRanking = () => {
                     <td>
                       <Link
                         to={`/equipos/${item.team_id}`}
-                        className='link-hover'
+                        className='hover:text-primary'
                       >
                         {item.team_name}
                       </Link>
@@ -114,7 +114,7 @@ const JugadoresRanking = () => {
                     <td>
                       <a
                         href={`/torneos/${item.tournament_id}`}
-                        className='link-hover'
+                        className='hover:text-primary'
                       >
                         {item.tournament_name}
                       </a>

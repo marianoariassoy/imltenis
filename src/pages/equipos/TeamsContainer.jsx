@@ -43,7 +43,7 @@ const Teams = () => {
 
         <Link
           to={`/torneos/${data[0].tournament_id}`}
-          className='link-hover block opacity-70 mb-4 text-sm'
+          className='hover:text-primary hover:opacity-100 block opacity-70 mb-4 text-sm'
         >
           {data[0].tournament_name}
         </Link>

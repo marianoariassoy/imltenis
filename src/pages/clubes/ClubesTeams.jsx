@@ -28,7 +28,7 @@ const ClubesTeams = ({ club_id }) => {
                 <td>
                   <Link
                     to={`/equipos/${item.id}`}
-                    className='link-hover text-primary font-medium'
+                    className='link-hover text-primary '
                   >
                     {item.name}
                   </Link>
@@ -36,7 +36,7 @@ const ClubesTeams = ({ club_id }) => {
                 <td>
                   <Link
                     to={`/torneos/${item.tournament_id}`}
-                    className='link-hover'
+                    className='hover:text-primary'
                   >
                     {item.tournament_name}
                   </Link>

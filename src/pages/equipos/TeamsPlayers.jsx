@@ -9,7 +9,7 @@ const TeamsPlayers = ({ team_id }) => {
 
   return (
     <section>
-      <div className='overflow-x-auto text-sm mb-6'>
+      <div className='overflow-x-auto text-sm mb-6 fade-in'>
         <table className='table w-full'>
           <thead>
             <tr>
@@ -40,7 +40,7 @@ const TeamsPlayers = ({ team_id }) => {
                   </div>
                   <Link
                     to={`/jugadores/${item.id}`}
-                    className='link-hover'
+                    className='hover:text-primary'
                   >
                     {item.name}
                   </Link>

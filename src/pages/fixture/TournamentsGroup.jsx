@@ -23,12 +23,12 @@ const TournamentsGroup = ({ group, tournament }) => {
         </h2>
       </div>
 
-      <div className='overflow-x-auto text-sm mb-6'>
+      <div className='overflow-x-auto text-sm mb-6 fade-in'>
         <table className='table w-full'>
           <thead>
             <tr>
               <th width='30'></th>
-              <th className='pl-0'>Equipo</th>
+              <th className='pl-0'> </th>
               <th width='100'>SJ</th>
               <th width='100'>SG</th>
               <th width='100'>P</th>
@@ -60,7 +60,7 @@ const TournamentsGroup = ({ group, tournament }) => {
                   </div>
                   <Link
                     to={`/equipos/${item.id}`}
-                    className='link-hover font-semibold'
+                    className='hover:text-primary font-semibold'
                   >
                     {item.name}
                   </Link>

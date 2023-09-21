@@ -24,7 +24,7 @@ const ClubesRanking = () => {
       </section>
 
       <section id='grupo'>
-        <div className='overflow-x-auto text-sm mb-6'>
+        <div className='overflow-x-auto text-sm mb-6 fade-in'>
           <table className='table w-full'>
             <thead>
               <tr>
@@ -62,7 +62,7 @@ const ClubesRanking = () => {
                     </div>
                     <Link
                       to={`/clubes/${item.id}`}
-                      className='link-hover font-semibold'
+                      className='hover:text-primary font-medium'
                     >
                       {item.name}
                     </Link>

@@ -36,7 +36,7 @@ const JugadoresSingles = ({ player_id }) => {
                   &nbsp;(
                   <Link
                     to={`/equipos/${item.team_oponent_id}`}
-                    className='link-hover'
+                    className='hover:text-primary'
                   >
                     {item.team_oponent_name}
                   </Link>
