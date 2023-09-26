@@ -223,6 +223,12 @@ const Reglamento = () => {
           lograr una solución, se permitirá la intervención de terceros, siempre y cuando exista un acuerdo previo entre
           los participante involucrados. <br />
           <br />
+          <strong className='text-primary'>Anexo IV:</strong> En la eventualidad de que dos equipos representativos de
+          un mismo club alcancen las instancias de playoff, independientemente de lo que los cruces preestablecidos
+          indiquen, no se les permitirá acceder ambos a la final; en su lugar, deberán enfrentarse en etapas previas del
+          torneo.
+          <br />
+          <br />
         </p>
       </article>
     </>
