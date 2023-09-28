@@ -34,7 +34,7 @@ const Welcome = () => {
         </div>
       </section>
 
-      <div className='video-background fixed h-screen w-screen left-0 top-0 -z-10'>
+      <div className='fade-in-slow video-background fixed h-screen w-screen left-0 top-0 -z-10'>
         <video
           autoPlay
           playsInline

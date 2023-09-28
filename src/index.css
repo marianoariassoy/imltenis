@@ -26,6 +26,9 @@ td {
 .fade-in {
   animation: fadeIn 0.3s ease forwards;
 }
+.fade-in-slow {
+  animation: fadeIn 1s ease forwards;
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
