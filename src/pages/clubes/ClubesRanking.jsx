@@ -23,17 +23,16 @@ const ClubesRanking = () => {
         🏆
       </section>
 
-      <section id='grupo'>
+      <section>
         <div className='overflow-x-auto text-sm mb-6 fade-in'>
           <table className='table w-full'>
             <thead>
               <tr>
                 <th width='30'></th>
                 <th className='pl-0'>Club</th>
-                <th width='100'>SJ</th>
                 <th width='100'>SG</th>
+                <th width='100'>SJ</th>
                 <th width='100'>PG</th>
-                <th width='100'>Pts</th>
               </tr>
             </thead>
             <tbody>
@@ -67,12 +66,9 @@ const ClubesRanking = () => {
                       {item.name}
                     </Link>
                   </td>
+                  <td className='font-semibold'>{item.series_won}</td>
                   <td>{item.series_total}</td>
-                  <td>{item.series_won}</td>
                   <td>{item.matches_won}</td>
-                  <td>
-                    <span className='font-semibold'>{item.points}</span>
-                  </td>
                 </tr>
               ))}
             </tbody>
@@ -85,7 +81,7 @@ const ClubesRanking = () => {
         >
           <p>
             <span className='opacity-70'>
-              <strong>SJ:</strong> Series Jugadas <strong>SG:</strong> Series Ganadas <strong>PG:</strong> Parciales
+              <strong>SG:</strong> Series Ganadas <strong>SJ:</strong> Series Jugadas <strong>PG:</strong> Parciales
               Ganados.
             </span>
           </p>

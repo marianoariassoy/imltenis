@@ -1,46 +1,68 @@
-import { Yuka, Typ, Urban, Vinica } from '../icons/icons'
-
 const Footer = () => {
   return (
-    <div className='footer-main px-4 py-6 opacity-50'>
-      <div className='flex justify-center gap-x-4 mb-6'>
-        <a
-          href='https://www.instagram.com/yuka_ant/'
-          className='icon-sponsor hover:opacity-60'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Yuka />
-        </a>
-        <a
-          href='https://www.instagram.com/typdeportes/'
-          className='icon-sponsor hover:opacity-60'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Typ />
-        </a>
-        <a
-          href='https://www.instagram.com/urbankicks.ar/'
-          className='icon-sponsor hover:opacity-60'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Urban />
-        </a>
-        <a
-          href='https://www.instagram.com/tiendavinica/'
-          className='icon-sponsor hover:opacity-60'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Vinica />
-        </a>
+    <div className='footer-main px-6 py-6 opacity-60 mt-8'>
+      <div className='max-w-[18rem] lg:max-w-xl m-auto grid grid-cols-3 lg:grid-cols-6 gap-4 items-center justify-center text-center [&>div]:flex [&>div]:justify-center [&>div>a:hover]:opacity-70 mb-6 lg:mb-12'>
+        <div>
+          <a
+            href='https://www.instagram.com/yuka_ant/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <img src='/assets/logos/yuka.svg' />
+          </a>
+        </div>
+        <div>
+          <a
+            href='#'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <img src='/assets/logos/head.svg' />
+          </a>
+        </div>
+        <div>
+          <a
+            href='https://www.instagram.com/urbankicks.ar/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <img src='/assets/logos/urban.svg' />
+          </a>
+        </div>
+        <div>
+          <a
+            href='https://www.instagram.com/typdeportes/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <img src='/assets/logos/typ.svg' />
+          </a>
+        </div>
+        <div>
+          <a
+            href='https://www.addnicetienda.com.ar/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <img src='/assets/logos/addnice.svg' />
+          </a>
+        </div>
+        <div>
+          <a
+            href='https://www.instagram.com/tiendavinica/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <img src='/assets/logos/vinica.svg' />
+          </a>
+        </div>
       </div>
 
       <div className='text-[.8rem] text-center'>
-        <span className='block lg:inline-block font-bold'>Liga de clubes IML Tenis &copy; 2023</span> &nbsp;
-        <span>Buenos Aires, Argentina.</span> &nbsp;
+        <span className='block lg:inline-block font-bold'>Liga de clubes IML Tenis </span> &nbsp;
+        <span>Buenos Aires, Argentina.</span>
+        <span className='block font-bold'>&copy; 2024</span>
+        &nbsp;{' '}
         <span className='block lg:inline-block'>
           Desarrollo: &nbsp;
           <a

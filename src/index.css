@@ -46,3 +46,7 @@ svg {
   fill: currentColor;
   stroke: currentColor;
 }
+
+.text-6xl {
+  font-size: 4rem;
+}

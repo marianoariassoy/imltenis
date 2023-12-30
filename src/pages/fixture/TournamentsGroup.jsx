@@ -28,7 +28,7 @@ const TournamentsGroup = ({ group, tournament }) => {
           <thead>
             <tr>
               <th width='30'></th>
-              <th className='pl-0'> </th>
+              <th className='pl-0'>Equipo</th>
               <th width='100'>SJ</th>
               <th width='100'>SG</th>
               <th width='100'>P</th>

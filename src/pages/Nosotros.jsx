@@ -7,24 +7,20 @@ const Nosotros = () => {
         <title>Nosotros</title>
       </Helmet>
 
-      <section className='text-center '>
+      <section className='text-center mb-14'>
         <div>
           <h1 className='mb-6 font-bold text-primary text-xl'>¡Hola! 👋</h1>
-          <div className='max-w-2xl m-auto text-sm'>
-            <p className='mb-4'>
-              En <span className='font-semibold'>IML Tenis</span> somos un grupo de amigos unidos por la pasión del
-              tenis, la amistad y la competencia 🏆
-              <br />
-              Durante años participamos y organizamos diferentes torneos, pero siempre tuvimos las mejores experiencias
-              y momentos jugando por equipos, por eso conocemos y valoramos cada detalle de este tipo de liga y lo que
-              los jugadores y clubes necesitan 😉
+          <div className='max-w-2xl m-auto'>
+            <p className='mb-4 text-wrap'>
+              Quienes hacemos la <strong className='text-primary'>liga de clubes IML Tenis</strong> {''}
+              somos un grupo de amigos unidos por la pasión del tenis, la amistad y la competencia 🏆 <br />
+              Durante años participamos y organizamos diferentes tipos de torneos, pero siempre tuvimos los mejores y
+              más emocionantes momentos jugando en equipo, por eso conocemos y valoramos cada detalle de este tipo de
+              competencia y lo que significa para los jugadores, capitanes y clubes. <br />
+              Nos encanta que puedas ser parte de esta comunidad que ama al tenis y la buena competencia. 💪
             </p>
-            <p className='mb-4'>
-              Queremos que durante cada semana previa a una fecha el grupo de WhatsApp de tu equipo explote, que el día
-              del partido sientas la ansiedad y los nervios de representar a tu equipo y que al final de cada partido
-              con un apreton de manos a tu rival, ganes o pierdas te lleves cada vez más ganas de volver a jugar.
-            </p>
-            <p className='font-semibold mb-6'>Nos vemos en la cancha 💪</p>
+
+            <strong className='text-primary'>¡Nos vemos en la cancha! 😉 </strong>
           </div>
         </div>
       </section>

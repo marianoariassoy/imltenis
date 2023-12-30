@@ -8,7 +8,7 @@ const JugadoresEquipos = ({ player_id }) => {
   if (!data) return null
 
   return (
-    <section id='equipos'>
+    <section>
       <h1 className='text-center mb-4 font-medium text-primary'>Equipos</h1>
 
       <div className='overflow-x-auto text-sm mb-6'>

@@ -31,7 +31,7 @@ const JugadoresRanking = () => {
       </Helmet>
 
       <section
-        className='mb-4 text-center '
+        className='mb-4 text-center'
         id='presentacion'
       >
         <h1 className='font-bold text-primary text-xl'>Ranking UrbanKicks</h1>
@@ -57,7 +57,7 @@ const JugadoresRanking = () => {
           <Loader />
         </div>
       ) : (
-        <section id='grupo'>
+        <section>
           <div className='overflow-x-auto text-sm mb-6 fade-in'>
             <table className='table w-full'>
               <thead>

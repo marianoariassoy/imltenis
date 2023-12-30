@@ -32,10 +32,7 @@ const TournamentsFixture = ({ group_id, type }) => {
   }
 
   return (
-    <section
-      className='mb-14'
-      id='fixture'
-    >
+    <section>
       <div className='text-center mb-4'>{type != 1 && <h1 className='italic text-xl text-primary'>Fixture </h1>}</div>
 
       {type != 1 && (
@@ -63,7 +60,7 @@ const TournamentsFixture = ({ group_id, type }) => {
         </div>
       )}
 
-      <div className='overflow-x-auto text-sm mb-6 fade-in'>
+      <div className='overflow-x-auto text-sm mb-6 fade-in mb-6'>
         <table className='table w-full'>
           <thead>
             <tr>

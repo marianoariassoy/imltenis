@@ -4,9 +4,12 @@ import { useEffect } from 'react'
 const Welcome = () => {
   useEffect(() => {
     const nav = document.querySelector('.navbar')
+    const footer = document.querySelector('.footer-main')
     nav.classList.remove('backdrop-blur-md')
+    footer.classList.remove('mt-16')
     return () => {
       nav.classList.add('backdrop-blur-md')
+      footer.classList.add('mt-16')
     }
   }, [])
 
@@ -18,10 +21,6 @@ const Welcome = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Liga de clubes de Tenis Zona Norte Buenos Aires</title>
-      </Helmet>
-
       <section className='fade-in flex justify-center items-center text-center h-full'>
         <div
           className='cursor-pointer text-primary'
@@ -30,7 +29,7 @@ const Welcome = () => {
           <h1 className='text-6xl lg:text-8xl font-black'>
             Clausura <span className='block'>Yuka</span> <span className='block'>2023</span>
           </h1>
-          <span className='text-5xl mt-2 block'>🏆</span>
+          <span className='text-4xl lg:text-5xl mt-2 block'>🏆</span>
         </div>
       </section>
 
@@ -52,6 +51,10 @@ const Welcome = () => {
           />
         </video>
       </div>
+
+      <Helmet>
+        <title>Liga de clubes de Tenis Zona Norte Buenos Aires</title>
+      </Helmet>
     </>
   )
 }

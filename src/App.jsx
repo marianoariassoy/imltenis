@@ -14,6 +14,7 @@ import Nosotros from './pages/Nosotros'
 import Reglamento from './pages/Reglamento'
 import PageNotFound from './pages/PageNotFound'
 import TournamentsCalendar from './pages/fixture/TornamentsCalendar'
+import Soon from './Soon'
 
 const App = () => {
   ReactGA.initialize('G-G1DBH0K86R')
@@ -35,7 +36,7 @@ const App = () => {
             element={<TournamentsContainer />}
           />
           <Route
-            path='/torneos/fechas/:id'
+            path='/torneos/series/:id'
             element={<TournamentsCalendar />}
           />
           <Route
@@ -73,6 +74,10 @@ const App = () => {
           <Route
             path='/reglamento'
             element={<Reglamento />}
+          />
+          <Route
+            path='/soon'
+            element={<Soon />}
           />
           <Route
             path='*'

@@ -32,7 +32,6 @@ export const Logo = () => {
     </svg>
   )
 }
-
 export const Instagram = () => {
   return (
     <svg

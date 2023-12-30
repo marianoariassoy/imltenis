@@ -65,7 +65,9 @@ const Reglamento = () => {
           </a>
           <br />
           <br />
-          <strong className='text-primary'>Tercer tiempo:</strong> Queda a voluntad del equipo local.
+          <strong className='text-primary'>Tercer tiempo:</strong> Queda a voluntad del equipo local. Por parte de la
+          organización recomendamos en lo posible llevarlo a cabo compartiendo los gastos del mismo, de esta manera
+          fomentando la camaraderia entre los jugadores y equipos.
           <br />
           <br />
           <strong className='text-primary'>Coaching:</strong> Los capitanes pueden intercambiar pareceres, comentarios
@@ -119,7 +121,10 @@ const Reglamento = () => {
           <strong className='text-primary'>Instalaciones Necesarias:</strong> El Club deberá poder ofrecer para jugar un
           partido completo un mínimo de dos (2) canchas reglamentarias de Tenis, vestuarios con comodidades suficientes.
           Dichas canchas deberán ser de un mismo tipo de superficie, las que serán previamente aprobadas por esta
-          Asociación.
+          Asociación. <br />
+          <strong>
+            En caso de clubes con 3 o más canchas, la disputa de los 3 partidos deberá ser en el mismo horario.
+          </strong>
           <br />
           <br />
           <strong className='text-primary'>Lista de buena fe:</strong> Deben ser enviadas por el capitán de cada equipo
@@ -206,15 +211,21 @@ const Reglamento = () => {
           de sus parciales, los equipos pueden ser modificados aun cuando se hubiera intercambiado las listas.
           <br />
           <br />
+          <strong className='text-primary'>Sistema de ascensos:</strong> En todas las categorías, con excepción de la
+          primera, tanto de damas como de caballeros, ascenderán los equipos finalistas de cada categoría con la
+          participación obligatoría en la categoría superior de sus jugadores que hayan disputado la serie final y hayan
+          ganado su encuentro, el resto de los jugadores de los equipos será optativo el ascenso.
+          <br />
+          <br />
           <strong className='text-primary'>Anexo I:</strong> La Liga IML Tenis ostenta el legítimo derecho de ascender a
           cualquier jugador cuyo nivel sobrepase ampliamente la categoría correspondiente, así como a aquellos que
-          posean registros de haber participado y/o ganado torneos en categorías considerablemente superiores en
-          tiempo reciente.
+          posean registros de haber participado y/o ganado torneos en categorías considerablemente superiores en tiempo
+          reciente.
           <br />
           <br />
           <strong className='text-primary'>Anexo II:</strong> En las etapas de playoffs, solo podrán participar los
           jugadores que hayan disputado al menos una serie en instancias previas en la categoría corresponiente en el
-          actual torneo o en el anterior, a excepción de la categoría 1era, donde esta regla no se aplicará.
+          actual torneo, a excepción de la categoría 1era, donde esta regla no se aplicará.
           <br />
           <br />
           <strong className='text-primary'>Anexo III:</strong> A. IML Tenis se reserva el derecho de sancionar y/o
@@ -222,12 +233,6 @@ const Reglamento = () => {
           inconveniente surgido durante el partido deberá ser resuelto por los participantes del mismo, y en caso de no
           lograr una solución, se permitirá la intervención de terceros, siempre y cuando exista un acuerdo previo entre
           los participante involucrados. <br />
-          <br />
-          <strong className='text-primary'>Anexo IV:</strong> En la eventualidad de que dos equipos representativos de
-          un mismo club alcancen las instancias de playoff, independientemente de lo que los cruces preestablecidos
-          indiquen, no se les permitirá acceder ambos a la final; en su lugar, deberán enfrentarse en etapas previas del
-          torneo.
-          <br />
           <br />
         </p>
       </article>

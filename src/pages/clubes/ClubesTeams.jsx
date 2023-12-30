@@ -8,7 +8,7 @@ const ClubesTeams = ({ club_id }) => {
   if (!data) return null
 
   return (
-    <section>
+    <section className='mb-14'>
       <h1 className='text-center text-primary font-bold mb-4'>Equipos</h1>
 
       <div className='overflow-x-auto text-sm mb-6'>
