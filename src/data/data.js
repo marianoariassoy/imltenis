@@ -1,18 +1,22 @@
+export const categories = [
+  { name: 'Primera Libre', url: '/soon' },
+  { name: 'Segunda Libre', url: '/soon' },
+  { name: 'Tercera Libre', url: '/soon' },
+  { name: 'Cuarta Libre', url: '/soon' },
+  { name: 'Quinta Libre', url: '/soon' },
+  { name: 'Tercera +45', url: '/soon' },
+  { name: 'Segunda Damas', url: '/soon' },
+  { name: 'Tercera Damas', url: '/soon' },
+  { name: 'Cuarta Damas', url: 'soon' }
+]
+
 export const menu = [
-  { name: 'Primera HEAD Libre', url: '/torneos/21', style: 'text-primary' },
-  { name: 'Segunda Damas', url: '/soon', style: 'text-primary' },
-  { name: 'Segunda Libre', url: '/torneos/20', style: 'text-primary' },
-  { name: 'Tercera Damas', url: '/torneos/19', style: 'text-primary' },
-  { name: 'Tercera Libre', url: '/torneos/18', style: 'text-primary' },
-  { name: 'Tercera +45 Libre', url: '/soon', style: 'text-primary' },
-  { name: 'Cuarta Damas', url: 'soon', style: 'text-primary' },
-  { name: 'Cuarta Libre', url: '/torneos/17', style: 'text-primary' },
-  { name: 'Quinta Libre', url: '/torneos/16', style: 'text-primary' },
-  { name: 'Ranking UrbanKicks', url: '/jugadores/ranking', style: '' },
-  { name: 'Ranking de Clubes TyP', url: '/clubes/ranking', style: '' },
-  { name: 'Otros Torneos', url: '/historial', style: '' },
-  { name: 'Reglamento', url: '/reglamento', style: '' },
-  { name: 'Nosotros', url: '/nosotros', style: '' }
+  { name: 'Ranking de Jugadores', url: '/jugadores/ranking' },
+  { name: 'Ranking de Clubes', url: '/clubes/ranking' },
+  { name: 'Torneos Anteriores', url: '/historial' },
+  { name: 'Colaboradores', url: '/colaboradores' },
+  { name: 'Reglamento', url: '/reglamento' },
+  { name: 'Nosotros', url: '/nosotros' }
 ]
 
 export const rankingOptions = [

@@ -14,6 +14,7 @@ import Nosotros from './pages/Nosotros'
 import Reglamento from './pages/Reglamento'
 import PageNotFound from './pages/PageNotFound'
 import TournamentsCalendar from './pages/fixture/TornamentsCalendar'
+import Colaboradores from './pages/colaboradores/Colaboradores'
 import Soon from './Soon'
 
 const App = () => {
@@ -78,6 +79,10 @@ const App = () => {
           <Route
             path='/soon'
             element={<Soon />}
+          />
+          <Route
+            path='/colaboradores'
+            element={<Colaboradores />}
           />
           <Route
             path='*'

@@ -23,11 +23,12 @@ const Welcome = () => {
     <>
       <section className='fade-in flex justify-center items-center text-center h-full'>
         <div
-          className='cursor-pointer text-primary'
+          className='cursor-pointer text-primary mt-8'
           onClick={openMenu}
         >
           <h1 className='text-6xl lg:text-8xl font-black'>
-            Clausura <span className='block'>Yuka</span> <span className='block'>2023</span>
+            <span className='block'>Torneo</span>
+            <span className='block'>Apertura</span> <span className='block'>2024</span>
           </h1>
           <span className='text-4xl lg:text-5xl mt-2 block'>🏆</span>
         </div>
@@ -53,7 +54,7 @@ const Welcome = () => {
       </div>
 
       <Helmet>
-        <title>Liga de clubes de Tenis Zona Norte Buenos Aires</title>
+        <title>IML Tenis - Liga de clubes de Buenos Aires</title>
       </Helmet>
     </>
   )

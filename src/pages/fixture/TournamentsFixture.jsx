@@ -60,7 +60,7 @@ const TournamentsFixture = ({ group_id, type }) => {
         </div>
       )}
 
-      <div className='overflow-x-auto text-sm mb-6 fade-in mb-6'>
+      <div className='overflow-x-auto text-sm mb-12 fade-in'>
         <table className='table w-full'>
           <thead>
             <tr>

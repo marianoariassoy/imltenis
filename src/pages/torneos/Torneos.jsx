@@ -9,34 +9,30 @@ const Torneos = () => {
 
   return (
     <>
-      <Helmet>
-        <title>IML Tenis Torneos</title>
-      </Helmet>
-
-      <section
-        className='mb-8 fade-in'
-        id='presentacion'
-      >
+      <section className='mb-8 fade-in'>
         <div className='text-center text-primary text-xl'>
-          <h1 className='font-bold'>Torneos</h1>
-          🏆
+          <h1 className='font-bold'>Torneos Anteriores</h1>
+          👴
         </div>
       </section>
 
       <section className='flex flex-col gap-y-2 justify-center items-center font-bold'>
         {data &&
           data
-            .filter(item => item.season !== 2)
+            .filter(item => item.season !== 3)
             .map(item => (
               <Link
                 key={item.id}
                 to={`/torneos/${item.id}`}
-                className='link-hover text-primary'
+                className='link-hover'
               >
                 <span>{item.name}</span> {item.season_name}
               </Link>
             ))}
       </section>
+      <Helmet>
+        <title>IML Tenis Torneos</title>
+      </Helmet>
     </>
   )
 }

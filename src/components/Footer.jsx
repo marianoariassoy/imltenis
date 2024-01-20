@@ -60,10 +60,8 @@ const Footer = () => {
 
       <div className='text-[.8rem] text-center'>
         <span className='block lg:inline-block font-bold'>Liga de clubes IML Tenis </span> &nbsp;
-        <span>Buenos Aires, Argentina.</span>
-        <span className='block font-bold'>&copy; 2024</span>
-        &nbsp;{' '}
-        <span className='block lg:inline-block'>
+        <span>Buenos Aires, Argentina. &copy; 2024</span>
+        <span className='block'>
           Desarrollo: &nbsp;
           <a
             href='http://marianoarias.soy'

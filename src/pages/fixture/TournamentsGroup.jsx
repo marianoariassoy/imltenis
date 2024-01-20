@@ -23,23 +23,25 @@ const TournamentsGroup = ({ group, tournament }) => {
         </h2>
       </div>
 
-      <div className='overflow-x-auto text-sm mb-6 fade-in'>
+      <div className='overflow-x-auto text-sm mb-12 fade-in'>
         <table className='table w-full'>
           <thead>
             <tr>
               <th width='30'></th>
               <th className='pl-0'>Equipo</th>
-              <th width='100'>SJ</th>
+              <th width='100'>Pts</th>
               <th width='100'>SG</th>
-              <th width='100'>P</th>
               <th width='100'>DS</th>
               <th width='100'>DG</th>
-              <th width='100'>Pts</th>
+              <th width='100'>SJ</th>
             </tr>
           </thead>
           <tbody>
             {data.map((item, index) => (
-              <tr key={item.id}>
+              <tr
+                key={item.id}
+                className={`font-semibold ${index < group.winners && 'text-primary'}`}
+              >
                 <td className='p-0 text-primary'>{index < group.winners && <Bull />}</td>
                 <td className='pl-0 flex items-center gap-3'>
                   <span className='font-semibold'>{index + 1}</span>
@@ -65,14 +67,14 @@ const TournamentsGroup = ({ group, tournament }) => {
                     {item.name}
                   </Link>
                 </td>
-                <td>{item.series_total}</td>
+
+                <td>
+                  <span className='font-semibold'>{item.match_won}</span>
+                </td>
                 <td>{item.series_won}</td>
-                <td>{item.match_won}</td>
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
-                <td>
-                  <span className='font-semibold'>{item.points}</span>
-                </td>
+                <td>{item.series_total}</td>
               </tr>
             ))}
           </tbody>
@@ -85,8 +87,9 @@ const TournamentsGroup = ({ group, tournament }) => {
       >
         <p>
           <span className='opacity-70'>
-            <strong>SJ:</strong> Series Jugadas <strong>SG:</strong> Series Ganadas <strong>P:</strong> Parciales
-            Ganados <strong>DS:</strong> Diferencia de Sets <strong>DG:</strong> Diferencia de Games.
+            <strong>PTS:</strong> Puntos, <strong>PJ:</strong> Partidos jugados, <strong>SG:</strong> Series Ganadas,{' '}
+            <strong>DS:</strong> Diferencia de Sets, <strong>DG:</strong> Diferencia de Games, <strong>SJ:</strong>{' '}
+            Series Jugadas
           </span>
         </p>
         <p>

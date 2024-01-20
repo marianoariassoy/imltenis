@@ -4,7 +4,13 @@ const Soon = () => {
       <h1 className='text-4xl mb-3'>🚀</h1>
       <h1 className='text-xl font-semibold mb-1 text-primary text-center'>
         ¡Inscripciones abiertas! <br />
-        Torneo Apertura 2024
+        <a
+          href='https://www.instagram.com/p/C2M_QQ2gUEJ/'
+          target='_blank'
+          className='underline'
+        >
+          Más información click acá
+        </a>
       </h1>
     </div>
   )

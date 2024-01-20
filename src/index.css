@@ -50,3 +50,8 @@ svg {
 .text-6xl {
   font-size: 4rem;
 }
+
+.table :where(thead, tfoot) :where(th, td) {
+  text-transform: capitalize;
+  font-size: inherit;
+}
