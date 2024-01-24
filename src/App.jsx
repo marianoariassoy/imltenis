@@ -5,6 +5,7 @@ import Welcome from './pages/Welcome'
 import TournamentsContainer from './pages/fixture/TorunamentsContainer'
 import JugadoresRanking from './pages/jugadores/JugadoresRanking'
 import JugadoresContainer from './pages/jugadores/JugadoresContainer'
+import Jugadores from './pages/jugadores'
 import TeamsContainer from './pages/equipos/TeamsContainer'
 import SeriesContainer from './pages/series/SeriesContainer'
 import ClubesRanking from './pages/clubes/ClubesRanking'
@@ -47,6 +48,10 @@ const App = () => {
           <Route
             path='/jugadores/ranking'
             element={<JugadoresRanking />}
+          />
+          <Route
+            path='/jugadores'
+            element={<Jugadores />}
           />
           <Route
             path='/equipos/:id'

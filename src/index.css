@@ -55,3 +55,13 @@ svg {
   text-transform: capitalize;
   font-size: inherit;
 }
+
+input::placeholder {
+  color: inherit;
+}
+
+#search {
+  background-image: url('/assets/images/magnifying-glass-solid.svg');
+  background-repeat: no-repeat;
+  background-position: 95%;
+}

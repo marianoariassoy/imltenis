@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
         <Header />
         <NavBar />
       </header>
-      <main className='mx-auto px-4 max-w-6xl mt-24 w-screen'>{children}</main>
+      <main className='mx-auto px-4 max-w-5xl mt-24 w-screen'>{children}</main>
       <footer>
         <Footer />
       </footer>

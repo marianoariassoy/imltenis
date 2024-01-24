@@ -11,7 +11,7 @@ const Reglamento = () => {
           🤝
         </div>
 
-        <p className='md:columns-2 text-sm'>
+        <p className='md:columns-2 gap-8 text-sm'>
           <strong className='text-primary'>Modalidad de juego:</strong> En la categoría Primera Libre se jugarán 2
           singles y 1 doble. En el resto de las categorías se jugarán 1 single y 2 dobles. <br />
           Todos los partidos se disputarán al mejor de tres (3) sets, con tie break. El tercer set será Super Tie break
