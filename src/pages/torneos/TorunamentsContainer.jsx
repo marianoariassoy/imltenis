@@ -26,13 +26,11 @@ const TournamentsContainer = () => {
           className='link-hover block'
         >
           <span className='font-bold'>{dataTournament[0].name}</span>
-          <span className='font-bold hidden lg:inline lg:ml-2'>{dataTournament[0].season}</span>
+          <span className='font-medium hidden lg:inline'> {dataTournament[0].season}</span>
         </Link>
         🏆
       </div>
-
       {dataTournament[0].team_champion && <TornamentsChampion data={dataTournament} />}
-
       {data
         .filter(item => item.id === gid || !gid)
         .map(item => (
@@ -42,7 +40,6 @@ const TournamentsContainer = () => {
             tournament={id}
           />
         ))}
-
       <Helmet>
         <title>IML Tenis {dataTournament[0].name + ' ' + dataTournament[0].season}</title>
       </Helmet>

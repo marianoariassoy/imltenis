@@ -9,7 +9,7 @@ const JugadoresSingles = ({ player_id }) => {
 
   return (
     <section className='fade-in flex flex-col gap-y-6'>
-      <h1 className='text-center font-bold text-primary'>Singles</h1>
+      <h1 className='text-center font-bold text-primary -mb-3'>Singles</h1>
 
       <div className='overflow-x-auto text-sm'>
         <table className='table w-full'>

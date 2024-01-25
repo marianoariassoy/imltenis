@@ -25,7 +25,7 @@ const index = () => {
 
       <input
         type='text'
-        placeholder='Filtrar por nombre'
+        placeholder='Buscar por nombre'
         value={filterText}
         onChange={handleFilterChange}
         className='input input-bordered w-full text-sm max-w-xl m-auto'
@@ -39,7 +39,7 @@ const index = () => {
               <tr key={item.id}>
                 <td className='pl-0 flex items-center gap-3'>
                   <div className='avatar'>
-                    <div className='w-12 rounded-full'>
+                    <div className='w-10 rounded-full'>
                       <Link
                         to={`/jugadores/${item.id}`}
                         className='hover:opacity-70 transition-all'
@@ -47,8 +47,8 @@ const index = () => {
                         <img
                           src={`${item.image}`}
                           alt={item.name}
-                          width='48'
-                          height='48'
+                          width='40'
+                          height='40'
                         />
                       </Link>
                     </div>

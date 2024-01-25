@@ -53,7 +53,7 @@ const ClubesRanking = () => {
                 <td className='pl-0 flex items-center gap-3'>
                   <span className='font-semibold'>{index + 1}</span>
                   <div className='avatar'>
-                    <div className='w-12 rounded-full'>
+                    <div className='w-10 rounded-full'>
                       <Link
                         to={`/clubes/${item.id}`}
                         className='hover:opacity-70 transition-all'
@@ -61,8 +61,8 @@ const ClubesRanking = () => {
                         <img
                           src={item.image}
                           alt={item.name}
-                          width='44'
-                          height='44'
+                          width='40'
+                          height='40'
                         />
                       </Link>
                     </div>

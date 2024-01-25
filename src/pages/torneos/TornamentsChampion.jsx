@@ -8,24 +8,25 @@ const TornamentsChampion = ({ data }) => {
   }, [data])
 
   return (
-    <div className='flex flex-col gap-y-3 items-center'>
-      <h1 className='italic text-primary lg:text-xl'>Campéon</h1>
+    <div className='flex flex-col gap-y-3 items-center -mt-3'>
+      <h1 className='italic text-primary lg:text-xl text-center'>
+        Campéon <br /> {data[0].team_champion}
+      </h1>
       <div className='avatar'>
-        <div className='w-20 rounded-full'>
+        <div className='w-28 rounded-full'>
           <Link
             to={`/equipos/${data[0].team_champion_id}`}
             className='hover:opacity-70 transition-all'
           >
             <img
               src={data[0].team_champion_image}
-              width='80'
-              height='80'
+              width='112'
+              height='112'
               alt={data[0].team_champion}
             />
           </Link>
         </div>
       </div>
-      <h1 className='font-medium'>{data[0].team_champion}</h1>
     </div>
   )
 }

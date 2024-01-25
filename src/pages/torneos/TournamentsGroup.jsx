@@ -69,15 +69,15 @@ const TournamentsGroup = ({ group, tournament }) => {
                 <td className='pl-0 flex items-center gap-3'>
                   <span className='font-semibold'>{index + 1}</span>
                   <div className='avatar'>
-                    <div className='w-12 rounded-full '>
+                    <div className='w-10 rounded-full '>
                       <Link
                         to={`/equipos/${item.id}`}
                         className='hover:opacity-70 transition-all'
                       >
                         <img
                           src={`https://imltenis.com.ar/images/${item.image ? item.image : item.club_image}`}
-                          width='48'
-                          height='48'
+                          width='40'
+                          height='40'
                           alt={item.name}
                         />
                       </Link>
@@ -106,7 +106,7 @@ const TournamentsGroup = ({ group, tournament }) => {
 
       <Labels labels={labels.slice(1, labels.length)} />
 
-      <div className='text-center max-w-xl m-auto text-sm my-6'>
+      <div className='text-center text-sm mt-3'>
         🚀 <span className='opacity-70'>{group.tournament_description}</span>
       </div>
     </section>
