@@ -13,22 +13,13 @@ const Teams = () => {
   if (!data) return null
 
   return (
-    <>
-      <Helmet>
-        <title>
-          {data[0].name} {data[0].tournament_name}
-        </title>
-      </Helmet>
-
-      <section
-        className='text-center'
-        id='presentacion'
-      >
-        <div className='avatar mb-2'>
+    <section className='fade-in flex flex-col gap-y-6'>
+      <div className='flex flex-col gap-y-3 items-center'>
+        <div className='avatar'>
           <div className='w-28 rounded-full'>
             <Link
               to={`/clubes/${data[0].club_id}`}
-              className='hover:opacity-70'
+              className='hover:opacity-70 transition-all'
             >
               <img
                 src={data[0].image}
@@ -39,16 +30,19 @@ const Teams = () => {
             </Link>
           </div>
         </div>
-        <h1 className='font-bold text-xl text-primary'>{data[0].name}</h1>
+        <div className='text-center text-primary '>
+          <h1 className='font-bold '>{data[0].name}</h1>
+          <h2>
+            <Link
+              to={`/torneos/${data[0].tournament_id}`}
+              className=''
+            >
+              {data[0].tournament_name}
+            </Link>
+          </h2>
+        </div>
 
-        <Link
-          to={`/torneos/${data[0].tournament_id}`}
-          className='hover:text-primary hover:opacity-100 block opacity-70 mb-4 text-sm'
-        >
-          {data[0].tournament_name}
-        </Link>
-
-        <div className='flex justify-center gap-x-4 items-center mb-8 text-sm text-primary'>
+        <div className='flex justify-center gap-x-3 items-center text-sm opacity-70 my-3'>
           <a
             href={data[0].googlemaplink}
             target='_blank'
@@ -67,15 +61,21 @@ const Teams = () => {
           </a>
         </div>
 
-        <div className='text-center mb-4'>
-          <h1 className='text-primary italic'>Lista de buena fe ✏️</h1>
-          <h2 className='opacity-70 text-sm'>{data[0].captain_name} (Capitán)</h2>
+        <div className='text-center'>
+          <h1 className='text-primary italic'>Lista de buena fe</h1>
+          <h2 className='font-medium opacity-70 text-sm'>{data[0].captain_name} (Capitán)</h2>
         </div>
-      </section>
+      </div>
 
       <TeamsPlayers team_id={id} />
       <TeamsFixture team_id={id} />
-    </>
+
+      <Helmet>
+        <title>
+          IML Tenis {data[0].name} {data[0].tournament_name}
+        </title>
+      </Helmet>
+    </section>
   )
 }
 

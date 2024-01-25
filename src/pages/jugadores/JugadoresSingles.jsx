@@ -8,10 +8,10 @@ const JugadoresSingles = ({ player_id }) => {
   if (!data) return null
 
   return (
-    <section id='lista-single'>
-      <h1 className='text-center mb-4 font-medium text-primary'>Singles</h1>
+    <section className='fade-in flex flex-col gap-y-6'>
+      <h1 className='text-center font-bold text-primary'>Singles</h1>
 
-      <div className='overflow-x-auto text-sm mb-6'>
+      <div className='overflow-x-auto text-sm'>
         <table className='table w-full'>
           <thead>
             <tr>

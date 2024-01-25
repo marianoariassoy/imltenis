@@ -7,6 +7,7 @@ import { Bull } from '../../icons/icons'
 const TournamentsFixture = ({ group_id, type }) => {
   const [filters, setFilters] = useState('all')
   const { data, loading } = useFetch(`/groups/series/${group_id}`)
+
   if (loading) return <Loader />
   if (!data) return null
 
@@ -32,49 +33,47 @@ const TournamentsFixture = ({ group_id, type }) => {
   }
 
   return (
-    <section>
-      <div className='text-center mb-4'>{type != 1 && <h1 className='italic text-xl text-primary'>Fixture </h1>}</div>
+    <section className='fade-in flex flex-col mb-6'>
+      <div className='text-center'>{type != 1 && <h1 className='italic text-primary mb-3 lg:text-xl'>Fixture</h1>}</div>
 
       {type != 1 && (
-        <div id='filtros'>
-          <div className='flex gap-x-4 justify-center mb-4 text-sm'>
-            <button
-              className='btn-filter text-primary'
-              onClick={e => handlerFilter(e, 'all')}
-            >
-              Todos
-            </button>
-            <button
-              className='btn-filter opacity-70'
-              onClick={e => handlerFilter(e, false)}
-            >
-              Por Jugar
-            </button>
-            <button
-              className='btn-filter opacity-70'
-              onClick={e => handlerFilter(e, true)}
-            >
-              Jugados
-            </button>
-          </div>
+        <div className='flex gap-x-6 justify-center text-sm mb-6'>
+          <button
+            className='btn-filter text-primary'
+            onClick={e => handlerFilter(e, 'all')}
+          >
+            Todos
+          </button>
+          <button
+            className='btn-filter opacity-70'
+            onClick={e => handlerFilter(e, false)}
+          >
+            Por jugar
+          </button>
+          <button
+            className='btn-filter opacity-70'
+            onClick={e => handlerFilter(e, true)}
+          >
+            Jugados
+          </button>
         </div>
       )}
 
-      <div className='overflow-x-auto text-sm mb-12 fade-in'>
+      <div className='overflow-x-auto text-sm'>
         <table className='table w-full'>
           <thead>
             <tr>
               <th width='30'></th>
               <th
                 className='pl-0'
-                width='30'
+                width='50'
               >
                 Fecha
               </th>
-              <th width='30'>Hora</th>
-              <th width='308'>Local</th>
-              <th className='text-center'>Score</th>
-              <th width='308'>Visitante</th>
+              <th width='100'>Hora</th>
+              <th width='280'>Local</th>
+              <th width='160'>Score</th>
+              <th>Visitante</th>
               <th>Serie</th>
             </tr>
           </thead>
@@ -82,7 +81,7 @@ const TournamentsFixture = ({ group_id, type }) => {
             {filteredData.map(item => (
               <tr
                 key={item.id}
-                className={item.winner ? 'opacity-50' : ''}
+                className={item.winner ? 'opacity-50 grayscale' : ''}
               >
                 <td className='p-0'>{item.winner && <Bull />}</td>
                 <td className='pl-0'>
@@ -114,7 +113,7 @@ const TournamentsFixture = ({ group_id, type }) => {
                     </Link>
                   </div>
                 </td>
-                <td className='text-center'>
+                <td>
                   <Link
                     to={`/series/${item.id}`}
                     className='hover:text-primary mr-1 font-semibold'

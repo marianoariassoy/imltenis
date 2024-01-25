@@ -5,18 +5,17 @@ import Loader from '../../components/Loader'
 
 const Torneos = () => {
   const { data, loading } = useFetch(`/tournaments`)
+
   if (loading) return <Loader />
 
   return (
-    <>
-      <section className='mb-8 fade-in'>
-        <div className='text-center text-primary text-xl'>
-          <h1 className='font-bold'>Torneos Anteriores</h1>
-          👴
-        </div>
-      </section>
+    <section className='fade-in flex flex-col gap-y-6'>
+      <div className='text-center text-primary text-xl'>
+        <h1 className='font-bold'>Torneos Anteriores</h1>
+        👴
+      </div>
 
-      <section className='flex flex-col gap-y-2 justify-center items-center font-bold'>
+      <div className='flex flex-col gap-y-1 items-center font-bold'>
         {data &&
           data
             .filter(item => item.season !== 3)
@@ -29,11 +28,12 @@ const Torneos = () => {
                 <span>{item.name}</span> {item.season_name}
               </Link>
             ))}
-      </section>
+      </div>
+
       <Helmet>
-        <title>IML Tenis Torneos</title>
+        <title>IML Tenis Torneos Anteriores</title>
       </Helmet>
-    </>
+    </section>
   )
 }
 

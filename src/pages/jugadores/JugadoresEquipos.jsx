@@ -8,16 +8,16 @@ const JugadoresEquipos = ({ player_id }) => {
   if (!data) return null
 
   return (
-    <section>
-      <h1 className='text-center mb-4 font-medium text-primary'>Equipos</h1>
+    <section className='fade-in flex flex-col gap-y-6'>
+      <h1 className='text-center font-bold text-primary'>Equipos</h1>
 
-      <div className='overflow-x-auto text-sm mb-6'>
+      <div className='overflow-x-auto text-sm'>
         <table className='table w-full'>
           <thead>
             <tr>
               <th>Equipo</th>
               <th>Club</th>
-              <th>Competencia</th>
+              <th>Torneo</th>
             </tr>
           </thead>
           <tbody>
@@ -29,7 +29,7 @@ const JugadoresEquipos = ({ player_id }) => {
                       <div className='w-9 rounded-full'>
                         <Link
                           to={`/equipos/${item.team_id}`}
-                          className='hover:opacity-70'
+                          className='hover:opacity-70 transition-all'
                         >
                           <img
                             src={item.image}

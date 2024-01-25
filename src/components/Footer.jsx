@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className='footer-main px-6 py-6 opacity-60 mt-8'>
+    <div className='footer-main p-6 opacity-60 mt-8'>
       <div className='max-w-[18rem] lg:max-w-xl m-auto grid grid-cols-3 lg:grid-cols-6 gap-4 items-center justify-center text-center [&>div]:flex [&>div]:justify-center [&>div>a:hover]:opacity-70 mb-6 lg:mb-12'>
         <div>
           <a

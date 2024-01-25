@@ -19,21 +19,17 @@ const TournamentsContainer = () => {
   if (!dataTournament) return null
 
   return (
-    <>
-      <Helmet>
-        <title>{dataTournament[0].name + ' ' + dataTournament[0].season}</title>
-      </Helmet>
-
-      <section className='mb-4 text-center text-primary text-xl'>
+    <section className='fade-in flex flex-col gap-y-6'>
+      <div className='text-center text-primary text-xl'>
         <Link
           to={`/torneos/${id}`}
           className='link-hover block'
         >
           <span className='font-bold'>{dataTournament[0].name}</span>
-          <span className='hidden lg:inline lg:ml-2'>{dataTournament[0].season}</span>
+          <span className='font-bold hidden lg:inline lg:ml-2'>{dataTournament[0].season}</span>
         </Link>
         🏆
-      </section>
+      </div>
 
       {dataTournament[0].team_champion && <TornamentsChampion data={dataTournament} />}
 
@@ -46,7 +42,11 @@ const TournamentsContainer = () => {
             tournament={id}
           />
         ))}
-    </>
+
+      <Helmet>
+        <title>IML Tenis {dataTournament[0].name + ' ' + dataTournament[0].season}</title>
+      </Helmet>
+    </section>
   )
 }
 

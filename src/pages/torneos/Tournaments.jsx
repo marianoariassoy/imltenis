@@ -5,7 +5,7 @@ const Tournaments = ({ data, tournament }) => {
   return (
     <>
       {data.type == 1 ? (
-        <h2 className='italic text-primary text-center text-xl'>{data.name}</h2>
+        <h2 className='italic text-primary text-center lg:text-xl'>{data.name}</h2>
       ) : (
         <TournamentsGroup
           group={data}

@@ -16,23 +16,22 @@ const Amigos = () => {
     }
   ]
   return (
-    <section className='fade-in mb-6 max-w-xl m-auto'>
-      <div className='mb-3'>
-        <div className='text-center text-primary text-xl'>
+    <section className='fade-in flex flex-col gap-y-6 text-center max-w-2xl m-auto'>
+      <div>
+        <div className='text-primary text-xl mb-2'>
           <h1 className='font-bold'>Colaboradores</h1>👉
         </div>
+        <p className='text-sm text-wrap'>
+          Gracias al apoyo y la contribucion generosa de los siguientes colaboradores nuestra liga y comunidad tenistica
+          continua creciendo y fortalciendose.
+        </p>
       </div>
-
-      <p className='mb-6 text-sm text-center'>
-        Gracias al apoyo y la contribucion generosa de los siguientes colaboradores nuestra liga y comunidad tenistica
-        continua creciendo y fortalciendose.
-      </p>
 
       <div className='flex flex-col gap-y-3 text-sm text-center'>
         {data.map((item, index) => (
           <article
             key={index}
-            className=' border-white/20 pb-3'
+            className='border-white/20 pb-3'
           >
             <h2 className='font-bold'>
               <span className='text-primary'>{item.title}</span> &bull; {item.subtitle}
@@ -43,6 +42,19 @@ const Amigos = () => {
           </article>
         ))}
       </div>
+
+      <p className='text-sm'>
+        🤙 Comunicate al{' '}
+        <a
+          href='https://wa.me/5491130171475'
+          className='underline'
+          target='_blank'
+        >
+          {' '}
+          +54 9 11 3017-1475
+        </a>{' '}
+        para anunciar
+      </p>
 
       <Helmet>
         <title>IML Tenis Colaboradores</title>

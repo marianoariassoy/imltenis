@@ -9,7 +9,7 @@ const Header = () => {
   }
 
   return (
-    <div className='navbar p-4 pt-6 fixed z-50 w-full backdrop-blur-md'>
+    <div className='navbar w-full p-6 backdrop-blur-md'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <label

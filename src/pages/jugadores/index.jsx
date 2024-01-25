@@ -17,40 +17,38 @@ const index = () => {
   const filteredPlayers = data.filter(player => player.name.toLowerCase().includes(filterText.toLowerCase()))
 
   return (
-    <section className='flex flex-col gap-y-8'>
+    <section className='fade-in flex flex-col gap-y-8'>
       <div className='text-center text-xl'>
         <h1 className='font-bold text-primary'>Jugadores IML Tenis</h1>
         🧑‍🦰👩
       </div>
 
-      <div className='flex justify-center'>
-        <input
-          type='text'
-          placeholder='Filtrar por nombre'
-          value={filterText}
-          onChange={handleFilterChange}
-          className='input input-bordered w-full max-w-md text-sm'
-          id='search'
-        />
-      </div>
+      <input
+        type='text'
+        placeholder='Filtrar por nombre'
+        value={filterText}
+        onChange={handleFilterChange}
+        className='input input-bordered w-full text-sm max-w-xl m-auto'
+        id='search'
+      />
 
-      <div className='overflow-x-auto text-sm mb-6 fade-in'>
+      <div className='overflow-x-auto text-sm'>
         <table className='table w-full'>
           <tbody>
             {filteredPlayers.map(item => (
               <tr key={item.id}>
                 <td className='pl-0 flex items-center gap-3'>
                   <div className='avatar'>
-                    <div className='w-11 rounded-full'>
+                    <div className='w-12 rounded-full'>
                       <Link
                         to={`/jugadores/${item.id}`}
-                        className='hover:opacity-70'
+                        className='hover:opacity-70 transition-all'
                       >
                         <img
                           src={`${item.image}`}
                           alt={item.name}
-                          width='44'
-                          height='44'
+                          width='48'
+                          height='48'
                         />
                       </Link>
                     </div>

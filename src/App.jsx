@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ReactGA from 'react-ga4'
 import Layout from './Layout'
 import Welcome from './pages/Welcome'
-import TournamentsContainer from './pages/fixture/TorunamentsContainer'
+import TournamentsContainer from './pages/torneos/TorunamentsContainer'
 import JugadoresRanking from './pages/jugadores/JugadoresRanking'
 import JugadoresContainer from './pages/jugadores/JugadoresContainer'
 import Jugadores from './pages/jugadores'
@@ -10,12 +10,12 @@ import TeamsContainer from './pages/equipos/TeamsContainer'
 import SeriesContainer from './pages/series/SeriesContainer'
 import ClubesRanking from './pages/clubes/ClubesRanking'
 import ClubesContainer from './pages/clubes/ClubesContainer'
-import Torneos from './pages/torneos/Torneos'
-import Nosotros from './pages/Nosotros'
-import Reglamento from './pages/Reglamento'
+import TorneosAnteriores from './pages/torneos-anteriores'
+import Nosotros from './pages/nosotros'
+import Reglamento from './pages/reglamento'
 import PageNotFound from './pages/PageNotFound'
-import TournamentsCalendar from './pages/fixture/TornamentsCalendar'
-import Colaboradores from './pages/colaboradores/Colaboradores'
+import TournamentsCalendar from './pages/torneos/TornamentsCalendar'
+import Colaboradores from './pages/colaboradores'
 import Soon from './Soon'
 
 const App = () => {
@@ -46,7 +46,7 @@ const App = () => {
             element={<JugadoresContainer />}
           />
           <Route
-            path='/jugadores/ranking'
+            path='/ranking-jugadores'
             element={<JugadoresRanking />}
           />
           <Route
@@ -62,7 +62,7 @@ const App = () => {
             element={<SeriesContainer />}
           />
           <Route
-            path='/clubes/ranking'
+            path='/ranking-clubes'
             element={<ClubesRanking />}
           />
           <Route
@@ -70,8 +70,8 @@ const App = () => {
             element={<ClubesContainer />}
           />
           <Route
-            path='/historial'
-            element={<Torneos />}
+            path='/torneos-anteriores'
+            element={<TorneosAnteriores />}
           />
           <Route
             path='/nosotros'

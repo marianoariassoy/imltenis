@@ -53,7 +53,7 @@ svg {
 
 .table :where(thead, tfoot) :where(th, td) {
   text-transform: capitalize;
-  font-size: inherit;
+  font-size: 0.85rem;
 }
 
 input::placeholder {

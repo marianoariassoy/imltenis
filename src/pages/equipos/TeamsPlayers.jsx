@@ -1,46 +1,63 @@
 import { Link } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
+import Labels from '../../components/Labels'
 
 const TeamsPlayers = ({ team_id }) => {
   const { data, loading } = useFetch(`/teams/${team_id}/players`)
+
   if (loading) return <Loader />
   if (!data) return null
 
+  const labels = [
+    {
+      name: 'Nombre',
+      value: ''
+    },
+    {
+      name: 'PJ',
+      value: 'Parciales jugados'
+    },
+    {
+      name: 'PG',
+      value: 'Parciales ganados'
+    }
+  ]
+
   return (
-    <section>
-      <div className='overflow-x-auto text-sm mb-6 fade-in'>
+    <section className='fade-in flex flex-col gap-y-6'>
+      <div className='overflow-x-auto text-sm'>
         <table className='table w-full'>
           <thead>
             <tr>
-              <th>Nombre y Apellido</th>
-              <th>P</th>
-              <th>PG</th>
+              {labels.map((item, index) => (
+                <th key={index}>{item.name}</th>
+              ))}
             </tr>
           </thead>
           <tbody>
             {data.map((item, index) => (
               <tr key={item.id}>
                 <td className='pl-0 flex items-center gap-3'>
-                  <span className='font-semibold'>{index + 1}</span>
+                  <span className='font-medium'>{index + 1}</span>
                   <div className='avatar'>
-                    <div className='w-11 rounded-full'>
+                    <div className='w-12 rounded-full'>
                       <Link
                         to={`/jugadores/${item.id}`}
-                        className='hover:opacity-70'
+                        className='hover:opacity-70 transition-all'
                       >
                         <img
                           src={item.image}
                           alt={item.name}
-                          width='44'
-                          height='44'
+                          width='48'
+                          height='48'
                         />
                       </Link>
                     </div>
                   </div>
                   <Link
                     to={`/jugadores/${item.id}`}
-                    className='hover:text-primary'
+                    className='hover:text-primary font-medium'
                   >
                     {item.name}
                   </Link>
@@ -53,16 +70,7 @@ const TeamsPlayers = ({ team_id }) => {
         </table>
       </div>
 
-      <div
-        className='text-center text-sm'
-        id='info'
-      >
-        <p>
-          <span className='opacity-70'>
-            <strong>P:</strong> Parciales Jugados <strong>PG:</strong> Parciales Ganados
-          </span>
-        </p>
-      </div>
+      <Labels labels={labels.slice(1, labels.length)} />
     </section>
   )
 }

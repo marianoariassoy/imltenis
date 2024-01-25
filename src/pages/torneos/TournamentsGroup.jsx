@@ -2,38 +2,61 @@ import { Link } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import { Bull } from '../../icons/icons'
+import Labels from '../../components/Labels'
+
 const TournamentsGroup = ({ group, tournament }) => {
   const { data, loading } = useFetch(`/groups/teams/${group.id}`)
   if (loading) return <Loader />
 
+  const labels = [
+    {
+      name: 'Equipo',
+      value: ''
+    },
+    {
+      name: 'Pts.',
+      value: 'Puntos'
+    },
+    {
+      name: 'SG',
+      value: 'Series ganadas'
+    },
+    {
+      name: 'DS',
+      value: 'Diferencia de sets'
+    },
+    {
+      name: 'DG',
+      value: 'Diferencia de games'
+    },
+    {
+      name: 'SJ',
+      value: 'Series jugadas'
+    }
+  ]
+
   return (
-    <section id='grupo'>
-      <div
-        className='row text-center mb-4'
-        id='presentacion'
-      >
+    <section className='fade-in flex flex-col'>
+      <div className='row text-center mb-3'>
         <Link
           to={`/torneos/${tournament}/grupo/${group.id}`}
-          className='text-primary italic text-xl link-hover'
+          className='text-primary italic link-hover lg:text-xl'
         >
           {group.name}
         </Link>
-        <h2 className='text-sm'>
-          <span className='opacity-70 font-medium'>Posiciones</span> 💪
+        <h2>
+          <span className='font-medium opacity-70'>Posiciones</span> 🔥
         </h2>
       </div>
 
-      <div className='overflow-x-auto text-sm mb-12 fade-in'>
+      <div className='overflow-x-auto text-sm mb-6'>
         <table className='table w-full'>
           <thead>
             <tr>
-              <th width='30'></th>
-              <th className='pl-0'>Equipo</th>
-              <th width='100'>Pts</th>
-              <th width='100'>SG</th>
-              <th width='100'>DS</th>
-              <th width='100'>DG</th>
-              <th width='100'>SJ</th>
+              <th width='20'></th>
+              {labels.map((item, index) => (
+                <th key={index}>{item.name}</th>
+              ))}
             </tr>
           </thead>
           <tbody>
@@ -46,15 +69,15 @@ const TournamentsGroup = ({ group, tournament }) => {
                 <td className='pl-0 flex items-center gap-3'>
                   <span className='font-semibold'>{index + 1}</span>
                   <div className='avatar'>
-                    <div className='w-11 rounded-full'>
+                    <div className='w-12 rounded-full '>
                       <Link
                         to={`/equipos/${item.id}`}
-                        className='hover:opacity-70'
+                        className='hover:opacity-70 transition-all'
                       >
                         <img
                           src={`https://imltenis.com.ar/images/${item.image ? item.image : item.club_image}`}
-                          width='44'
-                          height='44'
+                          width='48'
+                          height='48'
                           alt={item.name}
                         />
                       </Link>
@@ -69,7 +92,7 @@ const TournamentsGroup = ({ group, tournament }) => {
                 </td>
 
                 <td>
-                  <span className='font-semibold'>{item.match_won}</span>
+                  <span className='font-bold'>{item.match_won}</span>
                 </td>
                 <td>{item.series_won}</td>
                 <td>{item.sets}</td>
@@ -81,20 +104,10 @@ const TournamentsGroup = ({ group, tournament }) => {
         </table>
       </div>
 
-      <div
-        className='text-center text-sm mb-10'
-        id='info'
-      >
-        <p>
-          <span className='opacity-70'>
-            <strong>PTS:</strong> Puntos, <strong>PJ:</strong> Partidos jugados, <strong>SG:</strong> Series Ganadas,{' '}
-            <strong>DS:</strong> Diferencia de Sets, <strong>DG:</strong> Diferencia de Games, <strong>SJ:</strong>{' '}
-            Series Jugadas
-          </span>
-        </p>
-        <p>
-          🔥 <span className='opacity-70'>{group.tournament_description}</span>
-        </p>
+      <Labels labels={labels.slice(1, labels.length)} />
+
+      <div className='text-center max-w-xl m-auto text-sm my-6'>
+        🚀 <span className='opacity-70'>{group.tournament_description}</span>
       </div>
     </section>
   )

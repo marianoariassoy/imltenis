@@ -8,10 +8,10 @@ const JugadoresDobles = ({ player_id }) => {
   if (!data) return null
 
   return (
-    <section id='lista-dobles'>
-      <h1 className='text-center mb-4 font-medium text-primary'>Dobles</h1>
+    <section className='fade-in flex flex-col gap-y-6'>
+      <h1 className='text-center text-primary font-bold'>Dobles</h1>
 
-      <div className='overflow-x-auto text-sm mb-6'>
+      <div className='overflow-x-auto text-sm'>
         <table className='table w-full'>
           <thead>
             <tr>
@@ -19,7 +19,7 @@ const JugadoresDobles = ({ player_id }) => {
               <th>Oponentes</th>
               <th>Pareja</th>
               <th>Resultado</th>
-              <th>G/T</th>
+              <th>G/P</th>
               <th>Torneo</th>
             </tr>
           </thead>
