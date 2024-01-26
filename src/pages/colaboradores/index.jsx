@@ -1,18 +1,28 @@
 import { Helmet } from 'react-helmet'
+import { WhatsApp, Instagram } from '../../components/icons'
 
 const Amigos = () => {
   const data = [
     {
+      title: 'Alex Tennis',
+      subtitle: 'Insumos y accesorios para Tenis',
+      description: 'Todo lo que necesitas para jugar la liga.',
+      phone: '5491144752027',
+      url: 'https://www.instagram.com/alexunfhutennis/'
+    },
+    {
       title: 'Tennis Station',
       subtitle: 'Academia / Escuela de tenis',
-      description: 'Sociedad Alemana de Gimnasia',
-      phone: '11 5039 1880'
+      description: 'Nos encontras en SAG Los Polvorines.',
+      phone: '5491150391880',
+      url: 'https://www.instagram.com/tennis.station2023/'
     },
     {
       title: 'Estudio jurídico Giollo y Asoc.',
       subtitle: 'Bufet de abogados',
-      description: 'Los Polvorines',
-      phone: '11 6853 7131'
+      description: 'Oficina en Los Polvorines.',
+      phone: '5491168537131',
+      url: 'https://www.instagram.com/giolloabogados/'
     }
   ]
   return (
@@ -27,18 +37,45 @@ const Amigos = () => {
         </p>
       </div>
 
-      <div className='flex flex-col gap-y-3 text-sm text-center'>
+      <div className='flex flex-col gap-y-4 text-sm text-center'>
         {data.map((item, index) => (
           <article
             key={index}
-            className='border-white/20 pb-3'
+            className='border-white/20 flex flex-col'
           >
-            <h2 className='font-bold'>
-              <span className='text-primary'>{item.title}</span> &bull; {item.subtitle}
-            </h2>
-            <p>
-              {item.description} &bull; Tel. {item.phone}
-            </p>
+            <a
+              href={item.url}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='hover:text-primary'
+            >
+              <h2 className='font-bold'>
+                <span className='text-primary'>{item.title}</span> &bull; {item.subtitle}
+              </h2>
+              <div>{item.description}</div>
+              {/* <div className='flex gap-x-3 justify-center items-center'>
+              {item.url && (
+                <a
+                  href={item.url}
+                  target='_blank'
+                  rel='noreferrer'
+                  className='text-xs'
+                >
+                  <Instagram />
+                </a>
+              )}
+              {item.phone && (
+                <a
+                  href={'https://wa.me/' + item.phone}
+                  target='_blank'
+                  rel='noreferrer'
+                  className='text-xs'
+                >
+                  <WhatsApp />
+                </a>
+              )}
+            </div> */}
+            </a>
           </article>
         ))}
       </div>

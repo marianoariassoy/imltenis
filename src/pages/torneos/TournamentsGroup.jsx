@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
-import { Bull } from '../../icons/icons'
+import { Bull } from '../../components/icons'
 import Labels from '../../components/Labels'
 
 const TournamentsGroup = ({ group, tournament }) => {

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Logo, Instagram, Bars } from '../icons/icons'
+import { Logo, Instagram, Bars } from '../components/icons'
 
 const Header = () => {
   const openMenu = () => {

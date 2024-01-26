@@ -14,7 +14,9 @@ const index = () => {
     setFilterText(event.target.value)
   }
 
-  const filteredPlayers = data.filter(player => player.name.toLowerCase().includes(filterText.toLowerCase()))
+  const filteredPlayers = filterText
+    ? data.filter(player => player.name.toLowerCase().includes(filterText.toLowerCase()))
+    : []
 
   return (
     <section className='fade-in flex flex-col gap-y-8'>
@@ -25,7 +27,7 @@ const index = () => {
 
       <input
         type='text'
-        placeholder='Buscar por nombre'
+        placeholder='Buscar por nombre o apellido'
         value={filterText}
         onChange={handleFilterChange}
         className='input input-bordered w-full text-sm max-w-xl m-auto'

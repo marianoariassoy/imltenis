@@ -4,7 +4,7 @@ import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import TeamsPlayers from './TeamsPlayers'
 import TeamsFixture from './TeamsFixture'
-import { Pin, WhatsApp } from '../../icons/icons'
+import { Pin, WhatsApp } from '../../components/icons'
 
 const Teams = () => {
   let { id } = useParams()

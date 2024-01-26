@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Bull } from '../../icons/icons'
+import { Bull } from '../../components/icons'
 import FixtureFilter from './FixtureFilter'
 
 const Fixture = ({ data, type }) => {
