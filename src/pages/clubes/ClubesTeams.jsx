@@ -1,25 +1,48 @@
 import { Link } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
+import Labels from '../../components/Labels'
 
 const ClubesTeams = ({ club_id }) => {
   const { data, loading } = useFetch(`/clubes/${club_id}/teams`)
+
   if (loading) return <Loader />
   if (!data) return null
 
-  return (
-    <section className='mb-14'>
-      <h1 className='text-center text-primary font-bold mb-4'>Equipos</h1>
+  const labels = [
+    {
+      name: 'Nombre',
+      value: ''
+    },
+    {
+      name: 'Torneo',
+      value: ''
+    },
+    {
+      name: 'SJ',
+      value: 'Series jugadas'
+    },
+    {
+      name: 'SG',
+      value: 'Series ganadas'
+    },
+    {
+      name: 'PG',
+      value: 'Parciales ganados'
+    }
+  ]
 
-      <div className='overflow-x-auto text-sm mb-6'>
+  return (
+    <section className='fade-in flex flex-col gap-y-6'>
+      <h1 className='text-center text-primary font-bold italic lg:text-xl'>Equipos</h1>
+
+      <div className='overflow-x-auto text-sm'>
         <table className='table w-full'>
           <thead>
             <tr>
-              <th>Nombre</th>
-              <th>Torneo</th>
-              <th width='100'>Series</th>
-              <th width='100'>Ganadas</th>
-              <th width='100'>Parciales</th>
+              {labels.map((item, index) => (
+                <th key={index}>{item.name}</th>
+              ))}
             </tr>
           </thead>
           <tbody>
@@ -28,7 +51,7 @@ const ClubesTeams = ({ club_id }) => {
                 <td>
                   <Link
                     to={`/equipos/${item.id}`}
-                    className='link-hover text-primary '
+                    className='link-hover text-primary font-bold'
                   >
                     {item.name}
                   </Link>
@@ -36,7 +59,7 @@ const ClubesTeams = ({ club_id }) => {
                 <td>
                   <Link
                     to={`/torneos/${item.tournament_id}`}
-                    className='hover:text-primary'
+                    className='hover:text-primary font-bold'
                   >
                     {item.tournament_name}
                   </Link>
@@ -49,6 +72,8 @@ const ClubesTeams = ({ club_id }) => {
           </tbody>
         </table>
       </div>
+
+      <Labels labels={labels} />
     </section>
   )
 }

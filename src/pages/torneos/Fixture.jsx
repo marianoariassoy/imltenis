@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Bull } from '../../components/icons'
 import FixtureFilter from './FixtureFilter'
+import TeamItem from '../../components/TeamItem'
 
 const Fixture = ({ data, type }) => {
   const [filters, setFilters] = useState('all')
@@ -24,47 +25,39 @@ const Fixture = ({ data, type }) => {
           className='table w-full'
           summary='Fixture'
         >
-          <thead>
-            <tr>
-              <th
-                scope='col'
-                width='2%'
-              ></th>
-              <th
-                scope='col'
-                width='8%'
-                className='pl-0'
-              >
-                Fecha
-              </th>
-              <th
-                scope='col'
-                width='10%'
-              >
-                Hora
-              </th>
-              <th
-                scope='col'
-                width='21%'
-              >
-                Local
-              </th>
-              <th
-                scope='col'
-                className='text-center'
-                width='15%'
-              >
-                Score
-              </th>
-              <th
-                scope='col'
-                width='35%'
-              >
-                Visitante
-              </th>
-              <th scope='col'>Serie</th>
-            </tr>
-          </thead>
+          {filteredData.length > 0 && (
+            <thead>
+              <tr>
+                <th
+                  scope='col'
+                  width='50'
+                >
+                  Fecha
+                </th>
+                <th
+                  scope='col'
+                  width='50'
+                >
+                  Hora
+                </th>
+                <th
+                  scope='col'
+                  width='206'
+                >
+                  Local
+                </th>
+                <th
+                  scope='col'
+                  className='text-center'
+                >
+                  Score
+                </th>
+                <th scope='col'>Visitante</th>
+                <th scope='col'>Serie</th>
+              </tr>
+            </thead>
+          )}
+
           <tbody>
             {filteredData.map(item => (
               <tr
@@ -75,76 +68,43 @@ const Fixture = ({ data, type }) => {
                   scope='row'
                   className='pl-0'
                 >
-                  {item.winner && <Bull />}
-                </td>
-                <td className='pl-0'>
-                  <span className='font-semibold'>{item.date}</span>
-                </td>
-                <td>{item.hour}</td>
-                <td>
-                  <div className='flex items-center'>
-                    <div className='avatar mr-4'>
-                      <div className='w-9 rounded-full'>
-                        <Link
-                          to={`/equipos/${item.home_id}`}
-                          className='hover:opacity-70'
-                        >
-                          <img
-                            src={item.home_image}
-                            width='36'
-                            height='36'
-                            alt={item.home_name}
-                          />
-                        </Link>
-                      </div>
-                    </div>
-                    <Link
-                      to={`/equipos/${item.home_id}`}
-                      className='hover:text-primary font-semibold'
-                    >
-                      {item.home_name}
-                    </Link>
+                  <div className='flex gap-x-[0.6rem] items-center'>
+                    {item.winner && <Bull />}
+                    <span className='font-semibold'>{item.date}</span>
                   </div>
+                </td>
+                <td>{item.hour} hs.</td>
+
+                <td className='lg:whitespace-normal'>
+                  <TeamItem
+                    id={item.home_id}
+                    name={item.home_name}
+                    image={item.home_image}
+                  />
                 </td>
                 <td className='text-center'>
                   <Link
                     to={`/series/${item.id}`}
-                    className='hover:text-primary mr-1 font-semibold'
+                    className='hover:text-primary font-bold'
                   >
                     {item.score_home}-{item.score_away}
                   </Link>
                 </td>
-                <td>
-                  <div className='flex items-center'>
-                    <div className='avatar mr-4'>
-                      <div className='w-9 rounded-full'>
-                        <Link
-                          to={`/equipos/${item.away_id}`}
-                          className='hover:opacity-70'
-                        >
-                          <img
-                            src={item.away_image}
-                            width='36'
-                            height='36'
-                            alt={item.away_name}
-                          />
-                        </Link>
-                      </div>
-                    </div>
-                    <Link
-                      to={`/equipos/${item.away_id}`}
-                      className='hover:text-primary font-semibold'
-                    >
-                      {item.away_name}
-                    </Link>
-                  </div>
+                <td className='lg:whitespace-normal'>
+                  <TeamItem
+                    id={item.away_id}
+                    name={item.away_name}
+                    image={item.away_image}
+                  />
                 </td>
                 <td>{item.id}</td>
               </tr>
             ))}
           </tbody>
         </table>
-        {filteredData.length === 0 && <div className='text-center font-medium text-primary py-6'>No hay series</div>}
+        {filteredData.length === 0 && (
+          <div className='text-center text-primary mb-6 mt-3 font-bold'>No hay series 🥲</div>
+        )}
       </div>
     </section>
   )

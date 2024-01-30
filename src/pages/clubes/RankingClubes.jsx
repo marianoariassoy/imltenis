@@ -49,7 +49,7 @@ const ClubesRanking = () => {
             {data.map((item, index) => (
               <tr
                 key={item.id}
-                className={`${index === 0 ? 'text-primary' : ''}`}
+                className={`${index === 0 && 'text-primary'}`}
               >
                 <TitleRow
                   num={index + 1}
@@ -68,7 +68,7 @@ const ClubesRanking = () => {
         </table>
       </div>
 
-      <Labels labels={labels.slice(1, labels.length)} />
+      <Labels labels={labels} />
 
       <Helmet>
         <title>IML Tenis Ranking de Clubes</title>

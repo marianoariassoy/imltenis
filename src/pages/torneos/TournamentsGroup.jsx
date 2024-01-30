@@ -54,7 +54,6 @@ const TournamentsGroup = ({ group, tournament }) => {
         <table className='table w-full'>
           <thead>
             <tr>
-              {/* <th width='30'></th> */}
               {labels.map((item, index) => (
                 <th key={index}>{item.name}</th>
               ))}
@@ -64,9 +63,8 @@ const TournamentsGroup = ({ group, tournament }) => {
             {data.map((item, index) => (
               <tr
                 key={item.id}
-                className={`font-semibold ${index < group.winners && 'text-primary'}`}
+                className={`${index < group.winners ? 'text-primary' : ''}`}
               >
-                {/* <td className='pl-0 text-primary'>{index < group.winners && <Bull />}</td> */}
                 <TitleRow
                   num={index + 1}
                   image={`https://imltenis.com.ar/images/${item.image ? item.image : item.club_image}`}
@@ -86,7 +84,7 @@ const TournamentsGroup = ({ group, tournament }) => {
         </table>
       </div>
 
-      <Labels labels={labels.slice(1, labels.length)} />
+      <Labels labels={labels} />
 
       <div className='text-center text-sm mt-3'>
         🚀 <span className='opacity-70'>{group.tournament_description}</span>

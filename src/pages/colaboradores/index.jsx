@@ -1,14 +1,13 @@
 import { Helmet } from 'react-helmet'
-// import { WhatsApp, Instagram } from '../../components/icons'
 
 const Amigos = () => {
   const data = [
     {
-      title: 'Alex Tennis',
-      subtitle: 'Insumos y accesorios para Tenis',
-      description: 'Todo lo que necesitas para jugar la liga.',
+      title: 'Unfhutenis',
+      subtitle: 'Tienda deportiva',
+      description: 'Contenido para deportistas amateurs y profesionales.',
       phone: '5491144752027',
-      url: 'https://www.instagram.com/alexunfhutennis/'
+      url: 'https://www.instagram.com/unfhutenis/'
     },
     {
       title: 'Tennis Station',

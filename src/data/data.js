@@ -23,10 +23,6 @@ export const menu = [
 
 export const rankingOptions = [
   {
-    name: 'Todos',
-    category: 'all'
-  },
-  {
     name: 'Damas',
     category: 6
   },

@@ -9,21 +9,44 @@
 }
 thead tr th {
   background-color: transparent !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   opacity: 0.5;
 }
-tbody tr td,
-tbody tr th {
-  background-color: transparent !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.05) !important;
+.table:where(:not(.table-zebra)) :where(thead, tbody, tfoot) :where(tr:not(:last-child) :where(th, td)) {
+  border: 0;
+  /* border-color: rgba(255, 255, 255, 0.075) !important; */
 }
-th,
-td {
-  padding-top: 0.7rem !important;
-  padding-bottom: 0.7rem !important;
+.table :where(thead, tfoot) :where(th, td) {
+  text-transform: initial;
+  font-size: 0.85rem;
+}
+.table :where(th, td) {
+  padding-top: 0.76rem;
+  padding-bottom: 0.75rem;
+}
+.table th:first-child {
+  position: static;
 }
 
+.active,
+.nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+.text-6xl {
+  font-size: 4rem;
+}
+input::placeholder {
+  color: inherit;
+}
+#search {
+  background-image: url('/assets/images/magnifying-glass-solid.svg');
+  background-repeat: no-repeat;
+  background-position: 95%;
+}
 .fade-in {
   animation: fadeIn 0.3s ease forwards;
 }
@@ -37,32 +60,4 @@ td {
   100% {
     opacity: 1;
   }
-}
-.active,
-.nav-link:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-}
-svg {
-  fill: currentColor;
-  stroke: currentColor;
-}
-
-.text-6xl {
-  font-size: 4rem;
-}
-
-.table :where(thead, tfoot) :where(th, td) {
-  text-transform: capitalize;
-  font-size: 0.85rem;
-}
-
-input::placeholder {
-  color: inherit;
-}
-
-#search {
-  background-image: url('/assets/images/magnifying-glass-solid.svg');
-  background-repeat: no-repeat;
-  background-position: 95%;
 }

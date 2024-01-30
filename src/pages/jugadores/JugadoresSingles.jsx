@@ -29,14 +29,14 @@ const JugadoresSingles = ({ player_id }) => {
                 <td>
                   <Link
                     to={`/jugadores/${item.oponent_id}`}
-                    className='link-hover text-primary'
+                    className='link-hover text-primary mr-2 inline-block'
                   >
                     {item.oponent_name}
                   </Link>
-                  &nbsp;(
+                  (
                   <Link
                     to={`/equipos/${item.team_oponent_id}`}
-                    className='hover:text-primary'
+                    className='link-hover'
                   >
                     {item.team_oponent_name}
                   </Link>

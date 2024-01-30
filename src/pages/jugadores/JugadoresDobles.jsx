@@ -15,7 +15,7 @@ const JugadoresDobles = ({ player_id }) => {
         <table className='table w-full'>
           <thead>
             <tr>
-              <th width='80'>Fecha</th>
+              <th width='50'>Fecha</th>
               <th>Oponentes</th>
               <th>Pareja</th>
               <th>Resultado</th>
@@ -34,17 +34,17 @@ const JugadoresDobles = ({ player_id }) => {
                   >
                     {item.oponent1_name}
                   </Link>
-                  &nbsp;/&nbsp;
+                  <span className='mx-1'>y</span>
                   <Link
                     to={`/jugadores/${item.oponent2_id}`}
-                    className='link-hover text-primary'
+                    className='link-hover text-primary mx-1'
                   >
                     {item.oponent2_name}
                   </Link>
-                  &nbsp;(
+                  (
                   <Link
                     to={`/equipos/${item.team_oponent_id}`}
-                    className='hover:text-primary'
+                    className='link-hover'
                   >
                     {item.team_oponent_name}
                   </Link>

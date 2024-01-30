@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import Loader from '../../components/Loader'
 import useFetch from '../../hooks/useFetch'
+import TitleRow from '../../components/TitleRow'
 
 const index = () => {
   const { data, loading } = useFetch(`/players`)
@@ -19,7 +20,7 @@ const index = () => {
     : []
 
   return (
-    <section className='fade-in flex flex-col gap-y-8'>
+    <section className='fade-in flex flex-col gap-y-6 max-w-md m-auto'>
       <div className='text-center text-xl'>
         <h1 className='font-bold text-primary'>Jugadores IML Tenis</h1>
         🧑‍🦰👩
@@ -30,7 +31,7 @@ const index = () => {
         placeholder='Buscar por nombre o apellido'
         value={filterText}
         onChange={handleFilterChange}
-        className='input input-bordered w-full text-sm max-w-xl m-auto'
+        className='input input-bordered w-full text-sm'
         id='search'
       />
 
@@ -39,29 +40,12 @@ const index = () => {
           <tbody>
             {filteredPlayers.map(item => (
               <tr key={item.id}>
-                <td className='pl-0 flex items-center gap-x-4'>
-                  <div className='avatar'>
-                    <div className='w-14 rounded-full'>
-                      <Link
-                        to={`/jugadores/${item.id}`}
-                        className='hover:opacity-70 transition-all'
-                      >
-                        <img
-                          src={`${item.image}`}
-                          alt={item.name}
-                          width='56'
-                          height='56'
-                        />
-                      </Link>
-                    </div>
-                  </div>
-                  <Link
-                    to={`/jugadores/${item.id}`}
-                    className='hover:text-primary font-medium'
-                  >
-                    {item.name}
-                  </Link>
-                </td>
+                <TitleRow
+                  num=''
+                  image={item.image}
+                  title={item.name}
+                  link={`/jugadores/${item.id}`}
+                />
               </tr>
             ))}
           </tbody>

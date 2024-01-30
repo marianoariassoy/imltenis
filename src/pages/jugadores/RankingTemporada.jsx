@@ -9,7 +9,7 @@ import TitleRow from '../../components/TitleRow'
 
 const JugadoresRanking = () => {
   const { data, loading } = useFetch(`/players/ranking/2`)
-  const [filter, setFilter] = useState('all')
+  const [filter, setFilter] = useState(6)
 
   if (loading) return <Loader />
 
@@ -24,10 +24,7 @@ const JugadoresRanking = () => {
       name: 'Equipo',
       value: ''
     },
-    {
-      name: 'Categoría',
-      value: ''
-    },
+
     {
       name: 'Pts.',
       value: 'Puntos'
@@ -91,18 +88,10 @@ const JugadoresRanking = () => {
                 <td>
                   <Link
                     to={`/equipos/${item.team_id}`}
-                    className='hover:text-primary'
+                    className='hover:text-primary font-bold'
                   >
                     {item.team_name}
                   </Link>
-                </td>
-                <td>
-                  <a
-                    href={`/torneos/${item.tournament_id}`}
-                    className='hover:text-primary'
-                  >
-                    {item.tournament_name}
-                  </a>
                 </td>
                 <td>
                   <span className='font-bold'>{item.matches_won}</span>
@@ -116,7 +105,7 @@ const JugadoresRanking = () => {
         </table>
       </div>
 
-      <Labels labels={labels.slice(1, labels.length)} />
+      <Labels labels={labels} />
 
       <Helmet>
         <title>IML Tenis Ranking de Jugadores UrbanKicks</title>

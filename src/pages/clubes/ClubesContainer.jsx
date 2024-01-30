@@ -6,18 +6,13 @@ import ClubesTeams from './ClubesTeams'
 const ClubesContainer = () => {
   let { id } = useParams()
   const { data, loading } = useFetch(`/clubes/${id}`)
+
   if (loading) return <Loader />
 
-  console.log(data)
-
   return (
-    <>
-      <Helmet>
-        <title>{data[0].name + ' IML Tenis'}</title>
-      </Helmet>
-
-      <section className='text-sm mb-8 text-center '>
-        <div className='avatar mb-2'>
+    <section className='fade-in flex flex-col gap-y-6'>
+      <div className='text-sm text-center flex flex-col gap-y-3 items-center'>
+        <div className='avatar'>
           <div className='w-28 rounded-full'>
             <img
               src={data[0].image}
@@ -27,8 +22,8 @@ const ClubesContainer = () => {
             />
           </div>
         </div>
-        <h1 className='font-bold text-xl text-primary mb-2'>{data[0].name}</h1>
-        <div className='mb-4'>
+        <h1 className='font-bold text-xl text-primary'>{data[0].name}</h1>
+        <div>
           <p>{data[0].location}</p>
           {data[0].phone && <p className='font-bold'>Tel. {data[0].phone}</p>}
         </div>
@@ -94,10 +89,14 @@ const ClubesContainer = () => {
             </p>
           )}
         </div>
-      </section>
+      </div>
 
       <ClubesTeams club_id={id} />
-    </>
+
+      <Helmet>
+        <title>IML Tenis {data[0].name}</title>
+      </Helmet>
+    </section>
   )
 }
 

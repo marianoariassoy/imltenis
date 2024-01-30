@@ -37,7 +37,7 @@ const JugadoresRanking = () => {
     <section className='fade-in flex flex-col gap-y-6'>
       <div className='text-center text-xl'>
         <h1 className='font-bold text-primary'>Ranking UrbanKicks</h1>
-        <p className='text-base font-medium opacity-70'>Temporadas 2023 / 2024</p>
+        <p className='text-base font-medium opacity-70'>Temporada 2023 / 2024</p>
         👑
       </div>
 
@@ -74,7 +74,7 @@ const JugadoresRanking = () => {
         </table>
       </div>
 
-      <Labels labels={labels.slice(1, labels.length)} />
+      <Labels labels={labels} />
 
       <Helmet>
         <title>IML Tenis Ranking de Jugadores UrbanKicks</title>
