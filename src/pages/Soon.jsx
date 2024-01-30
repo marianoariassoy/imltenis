@@ -1,10 +1,15 @@
+import Counter from './Counter'
+
 const Soon = () => {
   return (
-    <div className='fade-in flex flex-col items-center justify-center mb-8 h-full'>
+    <div className='fade-in flex flex-col items-center justify-center h-full'>
       <h1 className='text-4xl mb-3'>🚀</h1>
-      <h1 className='text-xl font-semibold mb-1 text-primary text-center'>
-        <span className='block'>¡Inscripciones abiertas!</span>
-        <span className='block'>
+      <Counter />
+      <div className='text-primary text-center'>
+        <span className='block font-bold text-xl'>¡Inscripciones abiertas!</span>
+        <span className='block font-bold mb-3 text-xl'>Inicio el 16 y 17 de Marzo</span>
+        <span className='block'>Descuentos hasta el 17 de Febrero</span>
+        <span className='block font-bold'>
           Más información{' '}
           <a
             href='https://www.instagram.com/p/C2M_QQ2gUEJ/'
@@ -25,7 +30,7 @@ const Soon = () => {
             +54 9 11 3017-1475
           </a>
         </span>
-      </h1>
+      </div>
     </div>
   )
 }

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import Labels from '../../components/Labels'
+import TitleRow from '../../components/TitleRow'
 
 const TeamsPlayers = ({ team_id }) => {
   const { data, loading } = useFetch(`/teams/${team_id}/players`)
@@ -38,30 +39,12 @@ const TeamsPlayers = ({ team_id }) => {
           <tbody>
             {data.map((item, index) => (
               <tr key={item.id}>
-                <td className='pl-0 flex items-center gap-3'>
-                  <span className='font-medium'>{index + 1}</span>
-                  <div className='avatar'>
-                    <div className='w-10 rounded-full'>
-                      <Link
-                        to={`/jugadores/${item.id}`}
-                        className='hover:opacity-70 transition-all'
-                      >
-                        <img
-                          src={item.image}
-                          alt={item.name}
-                          width='40'
-                          height='40'
-                        />
-                      </Link>
-                    </div>
-                  </div>
-                  <Link
-                    to={`/jugadores/${item.id}`}
-                    className='hover:text-primary font-medium'
-                  >
-                    {item.name}
-                  </Link>
-                </td>
+                <TitleRow
+                  num={index + 1}
+                  image={item.image}
+                  title={item.name}
+                  link={`/jugadores/${item.id}`}
+                />
                 <td>{item.series_total}</td>
                 <td>{item.series_won_total}</td>
               </tr>

@@ -12,29 +12,29 @@ const Reglamento = () => {
       <p className='md:columns-2 gap-8 text-sm'>
         <strong className='text-primary'>Modalidad de juego:</strong> En la categoría Primera Libre se jugarán 2 singles
         y 1 doble. En el resto de las categorías se jugarán 1 single y 2 dobles. <br />
-        Todos los partidos se disputarán al mejor de tres (3) sets, con tie break. El tercer set será Super Tie break a
-        10 puntos con diferencia de dos.
+        Todos los partidos se disputarán al mejor de 3 sets, con tie break. El tercer set será Super Tie break a 10
+        puntos con diferencia de dos.
         <br />
         <br />
         <strong className='text-primary'>Puntuación:</strong> Cada encuentro ganado sumará un punto, es decir, ganando
-        los 3 encuentros de la serie se sumaran 3 puntos al equipo vencedor, ganando 2 a 1 se sumarán dos puntos al
-        equipo vencedor y un punto al equipo rival, por lo que ahora todos los encuentros ganados suman puntos. <br />
-        En caso de empate por puntos, se desempatará en primer lugar por mayor cantidad de series ganadas, de persistir
-        el empate, por diferencia de sets y en el ultimo caso diferencia de games.
+        los 3 encuentros de la serie se sumarán 3 puntos al equipo vencedor, ganando 2 a 1 se sumarán 2 puntos al equipo
+        vencedor y 1 punto al equipo rival, por lo que ahora todos los encuentros ganados suman puntos. <br />
+        En caso de empate por puntos en las fases de grupo, se desempatará por mayor cantidad de series ganadas, de
+        persistir el empate, por diferencia de sets y en el ultimo caso diferencia de games.
         <br />
         <br />
         <strong className='text-primary'>Formación:</strong> En la categoría Primera Libre de los 4 jugadores convocados
         para la serie, el jugador que esté más arriba en la lista de buena fe deberá jugar el single 1, el resto de sus
-        compañeros el single 2 y el doble. <br /> <br />
+        compañeros el single 2 y el doble. <br />
         En el resto de las categorías de los 5 jugadores convocados para la serie, el jugador que esté más arriba en la
         lista de buena fe deberá jugar el doble 1 con cualquiera de sus compañeros, el resto de los jugadores pueden
         jugar el single y doble 2. <br />
         <br />
-        <strong className='text-primary'>Formación Incompleta:</strong> Si el equipo completo o algún jugador visitante
-        no se presentara a jugar la fecha correspondiente (WO) deberá avisar con un mínimo de 48hs al capitán rival por
+        <strong className='text-primary'>Formación Incompleta:</strong> Si el equipo completo o algún jugador no se
+        presentara a jugar la fecha correspondiente (WO) deberá avisar con un mínimo de 48hs al capitán rival por
         escrito al chat de capitanes de WhatsApp, de lo contrario deberá correr con los gastos que correspondan al
-        equipo local, como ser alquiler de canchas. De tener que disputarse solo 2 encuentros, estos serán el single y
-        doble 1
+        equipo local, como ser alquiler de canchas. <br /> De tener que disputarse solo 2 encuentros, estos serán el
+        single y doble 1
         <br />
         <br />
         <strong className='text-primary'>Mala formación:</strong> El equipo que incurra en ella, perderá la fecha por
@@ -50,14 +50,12 @@ const Reglamento = () => {
         jugarán los días sábados en un horario a determinar por el equipo local en cada oportunidad, que deberá ser
         entre las 13 y las 17hs.
         <br />
-        <br />
         El resto de las categorías jugarán los días domingos en un horario a determinar por el equipo local en cada
         oportunidad, que deberá ser entre las 9 y las 17hs.
         <br />
-        <br />
         Los horarios deben informarse por el capitan del equipo local en el grupo de capitanes de WhatsApp ANTES DEL
         MEDIODIA DEL JUEVES de la semana correspondiente, de lo contrario se procedera a la quita de 1 punto de la serie
-        a disputarse por día de atraso, en caso de la quita de 1 punto no se jugará el doble 2.
+        a disputarse por día de atraso, en caso de la quita de 1 punto no se jugará el doble o single 2.
         <br />
         <br />
         <strong className='text-primary'>Resultados y Formación:</strong> Es obligatorio el envío de la planilla de

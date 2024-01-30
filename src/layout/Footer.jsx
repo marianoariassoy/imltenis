@@ -35,7 +35,7 @@ const Footer = () => {
 
   return (
     <div className='footer-main p-6 opacity-60 mt-8'>
-      <div className='max-w-[18rem] lg:max-w-xl m-auto grid grid-cols-3 lg:grid-cols-6 gap-4 items-center justify-center text-center [&>div]:flex [&>div]:justify-center [&>div>a:hover]:opacity-70 mb-6 lg:mb-12'>
+      <div className='max-w-[18rem] lg:max-w-xl m-auto grid grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-center text-center [&>div]:flex [&>div]:justify-center [&>div>a:hover]:opacity-70 mb-6 lg:mb-12'>
         {logos.map((logo, index) => (
           <div key={index}>
             <a
@@ -52,20 +52,28 @@ const Footer = () => {
         ))}
       </div>
 
-      <div className='text-[.8rem] text-center'>
-        <span className='block lg:inline-block font-bold'>Liga de clubes IML Tenis </span> &nbsp;
-        <span>Buenos Aires, Argentina. &copy; {year}</span>
-        <span className='block'>
-          Desarrollo: &nbsp;
+      <div className='text-[.8rem] text-center flex flex-col'>
+        <div>
+          <span className='font-bold'>Liga de clubes IML Tenis </span>
+          Buenos Aires, Argentina. &copy; {year}
+        </div>
+        <div>
+          <a
+            href='mailto:hola@imltenis.com.ar'
+            className='hover:text-primary'
+          >
+            hola@imltenis.com.ar
+          </a>
+          &bull; Desarrollo: &nbsp;
           <a
             href='http://marianoarias.soy'
-            className='font-bold hover:text-white'
+            className='font-bold hover:text-primary'
             target='_blank'
             rel='noopener noreferrer'
           >
             Mariano Arias
           </a>
-        </span>
+        </div>
       </div>
     </div>
   )

@@ -12,12 +12,12 @@ const NavBar = () => {
       className='fade-in fixed top-0 left-0 w-full h-screen content-center text-center z-30 bg-black/10 backdrop-blur-md hidden'
       onClick={openMenu}
     >
-      <ul className='text-xl italic lg:text-2xl text-white/70 flex flex-col'>
+      <ul className=' text-white/70 flex flex-col'>
         {categories.map((item, index) => (
           <li key={index}>
             <NavLink
               to={item.url}
-              className='nav-link text-primary'
+              className='nav-link text-primary italic text-xl lg:text-2xl leading-7'
             >
               {item.name}
             </NavLink>
@@ -27,7 +27,7 @@ const NavBar = () => {
           <li key={index + 10}>
             <NavLink
               to={item.url}
-              className='nav-link'
+              className='nav-link font-medium leading-7 text-[1.18rem] lg:text-[1.35rem]'
             >
               {item.name}
             </NavLink>

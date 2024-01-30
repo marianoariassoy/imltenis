@@ -20,21 +20,49 @@ const Fixture = ({ data, type }) => {
       )}
 
       <div className='overflow-x-auto text-sm'>
-        <table className='table w-full'>
+        <table
+          className='table w-full'
+          summary='Fixture'
+        >
           <thead>
             <tr>
-              <th width='30'></th>
               <th
+                scope='col'
+                width='2%'
+              ></th>
+              <th
+                scope='col'
+                width='8%'
                 className='pl-0'
-                width='50'
               >
                 Fecha
               </th>
-              <th width='100'>Hora</th>
-              <th width='280'>Local</th>
-              <th width='160'>Score</th>
-              <th>Visitante</th>
-              <th>Serie</th>
+              <th
+                scope='col'
+                width='10%'
+              >
+                Hora
+              </th>
+              <th
+                scope='col'
+                width='21%'
+              >
+                Local
+              </th>
+              <th
+                scope='col'
+                className='text-center'
+                width='15%'
+              >
+                Score
+              </th>
+              <th
+                scope='col'
+                width='35%'
+              >
+                Visitante
+              </th>
+              <th scope='col'>Serie</th>
             </tr>
           </thead>
           <tbody>
@@ -43,7 +71,12 @@ const Fixture = ({ data, type }) => {
                 key={item.id}
                 className={item.winner ? 'opacity-50 grayscale' : ''}
               >
-                <td className='p-0'>{item.winner && <Bull />}</td>
+                <td
+                  scope='row'
+                  className='pl-0'
+                >
+                  {item.winner && <Bull />}
+                </td>
                 <td className='pl-0'>
                   <span className='font-semibold'>{item.date}</span>
                 </td>
@@ -73,7 +106,7 @@ const Fixture = ({ data, type }) => {
                     </Link>
                   </div>
                 </td>
-                <td>
+                <td className='text-center'>
                   <Link
                     to={`/series/${item.id}`}
                     className='hover:text-primary mr-1 font-semibold'

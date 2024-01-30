@@ -9,20 +9,21 @@
 }
 thead tr th {
   background-color: transparent !important;
-  border-bottom: 1px solid #2f2f2f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   opacity: 0.5;
 }
 tbody tr td,
 tbody tr th {
   background-color: transparent !important;
-  border-bottom: 1px solid #2f2f2f;
-  border-color: #2f2f2f !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.05) !important;
 }
 th,
 td {
   padding-top: 0.7rem !important;
   padding-bottom: 0.7rem !important;
 }
+
 .fade-in {
   animation: fadeIn 0.3s ease forwards;
 }
@@ -40,7 +41,7 @@ td {
 .active,
 .nav-link:hover {
   text-decoration: underline;
-  text-decoration-thickness: 4px;
+  text-decoration-thickness: 3px;
 }
 svg {
   fill: currentColor;

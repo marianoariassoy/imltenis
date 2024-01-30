@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet'
-import { WhatsApp, Instagram } from '../../components/icons'
+// import { WhatsApp, Instagram } from '../../components/icons'
 
 const Amigos = () => {
   const data = [
@@ -52,30 +52,20 @@ const Amigos = () => {
               <h2 className='font-bold'>
                 <span className='text-primary'>{item.title}</span> &bull; {item.subtitle}
               </h2>
-              <div>{item.description}</div>
-              {/* <div className='flex gap-x-3 justify-center items-center'>
-              {item.url && (
-                <a
-                  href={item.url}
-                  target='_blank'
-                  rel='noreferrer'
-                  className='text-xs'
-                >
-                  <Instagram />
-                </a>
-              )}
+            </a>
+            <div>
+              {item.description}{' '}
               {item.phone && (
                 <a
                   href={'https://wa.me/' + item.phone}
                   target='_blank'
                   rel='noreferrer'
-                  className='text-xs'
+                  className='hover:text-primary'
                 >
-                  <WhatsApp />
+                  Tel. {item.phone}
                 </a>
               )}
-            </div> */}
-            </a>
+            </div>
           </article>
         ))}
       </div>
@@ -84,7 +74,7 @@ const Amigos = () => {
         🤙 Comunicate al{' '}
         <a
           href='https://wa.me/5491130171475'
-          className='underline'
+          className='underline hover:text-primary'
           target='_blank'
         >
           {' '}

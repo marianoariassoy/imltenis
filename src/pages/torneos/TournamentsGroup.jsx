@@ -3,6 +3,7 @@ import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import { Bull } from '../../components/icons'
 import Labels from '../../components/Labels'
+import TitleRow from '../../components/TitleRow'
 
 const TournamentsGroup = ({ group, tournament }) => {
   const { data, loading } = useFetch(`/groups/teams/${group.id}`)
@@ -53,7 +54,7 @@ const TournamentsGroup = ({ group, tournament }) => {
         <table className='table w-full'>
           <thead>
             <tr>
-              <th width='20'></th>
+              {/* <th width='30'></th> */}
               {labels.map((item, index) => (
                 <th key={index}>{item.name}</th>
               ))}
@@ -65,32 +66,13 @@ const TournamentsGroup = ({ group, tournament }) => {
                 key={item.id}
                 className={`font-semibold ${index < group.winners && 'text-primary'}`}
               >
-                <td className='p-0 text-primary'>{index < group.winners && <Bull />}</td>
-                <td className='pl-0 flex items-center gap-3'>
-                  <span className='font-semibold'>{index + 1}</span>
-                  <div className='avatar'>
-                    <div className='w-10 rounded-full '>
-                      <Link
-                        to={`/equipos/${item.id}`}
-                        className='hover:opacity-70 transition-all'
-                      >
-                        <img
-                          src={`https://imltenis.com.ar/images/${item.image ? item.image : item.club_image}`}
-                          width='40'
-                          height='40'
-                          alt={item.name}
-                        />
-                      </Link>
-                    </div>
-                  </div>
-                  <Link
-                    to={`/equipos/${item.id}`}
-                    className='hover:text-primary font-semibold'
-                  >
-                    {item.name}
-                  </Link>
-                </td>
-
+                {/* <td className='pl-0 text-primary'>{index < group.winners && <Bull />}</td> */}
+                <TitleRow
+                  num={index + 1}
+                  image={`https://imltenis.com.ar/images/${item.image ? item.image : item.club_image}`}
+                  title={item.name}
+                  link={`/equipos/${item.id}`}
+                />
                 <td>
                   <span className='font-bold'>{item.match_won}</span>
                 </td>

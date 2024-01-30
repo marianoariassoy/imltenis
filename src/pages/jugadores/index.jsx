@@ -39,9 +39,9 @@ const index = () => {
           <tbody>
             {filteredPlayers.map(item => (
               <tr key={item.id}>
-                <td className='pl-0 flex items-center gap-3'>
+                <td className='pl-0 flex items-center gap-x-4'>
                   <div className='avatar'>
-                    <div className='w-10 rounded-full'>
+                    <div className='w-14 rounded-full'>
                       <Link
                         to={`/jugadores/${item.id}`}
                         className='hover:opacity-70 transition-all'
@@ -49,8 +49,8 @@ const index = () => {
                         <img
                           src={`${item.image}`}
                           alt={item.name}
-                          width='40'
-                          height='40'
+                          width='56'
+                          height='56'
                         />
                       </Link>
                     </div>

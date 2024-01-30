@@ -30,23 +30,23 @@ const Teams = () => {
             </Link>
           </div>
         </div>
-        <div className='text-center text-primary '>
-          <h1 className='font-bold '>{data[0].name}</h1>
+        <div className='text-center'>
+          <h1 className='font-bold text-primary lg:text-xl'>{data[0].name}</h1>
           <h2>
             <Link
               to={`/torneos/${data[0].tournament_id}`}
-              className=''
+              className='font-medium opacity-70 hover:text-primary text-sm'
             >
               {data[0].tournament_name}
             </Link>
           </h2>
         </div>
 
-        <div className='flex justify-center gap-x-3 items-center text-sm opacity-70 my-3'>
+        <div className='flex justify-center gap-x-3 items-center text-sm mb-3'>
           <a
             href={data[0].googlemaplink}
             target='_blank'
-            className='flex font-medium items-center gap-x-1 link-hover'
+            className='flex gap-x-2 font-medium items-center text-primary link-hover'
           >
             <Pin />
             Ubicación del club
@@ -54,7 +54,7 @@ const Teams = () => {
           <a
             href={`https://wa.me/${data[0].captain_phone}`}
             target='_blank'
-            className='flex font-medium items-center gap-x-1 link-hover'
+            className='flex gap-x-2 font-medium items-center text-primary link-hover'
           >
             <WhatsApp />
             WhatsApp
@@ -62,7 +62,7 @@ const Teams = () => {
         </div>
 
         <div className='text-center'>
-          <h1 className='text-primary italic'>Lista de buena fe</h1>
+          <h1 className='text-primary italic lg:text-xl'>Lista de buena fe</h1>
           <h2 className='font-medium opacity-70 text-sm'>{data[0].captain_name} (Capitán)</h2>
         </div>
       </div>

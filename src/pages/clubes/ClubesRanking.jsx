@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import Loader from '../../components/Loader'
 import useFetch from '../../hooks/useFetch'
 import Labels from '../../components/Labels'
+import TitleRow from '../../components/TitleRow'
 
 const ClubesRanking = () => {
   const { data, loading } = useFetch(`/clubes/ranking`)
@@ -48,32 +49,14 @@ const ClubesRanking = () => {
             {data.map((item, index) => (
               <tr
                 key={item.id}
-                className={` ${index === 0 && 'text-primary'}`}
+                className={`${index === 0 ? 'text-primary' : ''}`}
               >
-                <td className='pl-0 flex items-center gap-3'>
-                  <span className='font-semibold'>{index + 1}</span>
-                  <div className='avatar'>
-                    <div className='w-10 rounded-full'>
-                      <Link
-                        to={`/clubes/${item.id}`}
-                        className='hover:opacity-70 transition-all'
-                      >
-                        <img
-                          src={item.image}
-                          alt={item.name}
-                          width='40'
-                          height='40'
-                        />
-                      </Link>
-                    </div>
-                  </div>
-                  <Link
-                    to={`/clubes/${item.id}`}
-                    className='hover:text-primary font-medium'
-                  >
-                    {item.name}
-                  </Link>
-                </td>
+                <TitleRow
+                  num={index + 1}
+                  image={item.image}
+                  title={item.name}
+                  link={`/clubes/${item.id}`}
+                />
                 <td>
                   <span className='font-bold'>{item.matches_won}</span>
                 </td>

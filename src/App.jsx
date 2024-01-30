@@ -5,6 +5,7 @@ import Welcome from './pages/home'
 import TournamentsContainer from './pages/torneos/TorunamentsContainer'
 import JugadoresRanking from './pages/jugadores/JugadoresRanking'
 import JugadoresContainer from './pages/jugadores/JugadoresContainer'
+import RankginUrbanKicks from './pages/jugadores/RankingGeneral'
 import TeamsContainer from './pages/equipos/TeamsContainer'
 import SeriesContainer from './pages/series/SeriesContainer'
 import ClubesRanking from './pages/clubes/ClubesRanking'
@@ -27,8 +28,12 @@ const App = () => {
         <Routes>
           <Route
             path='/'
-            element={<Welcome />}
+            element={<Soon />}
           />
+          {/* <Route
+            path='/'
+            element={<Welcome />}
+          /> */}
           <Route
             path='/torneos/:id/grupo/:gid'
             element={<TournamentsContainer />}
@@ -48,6 +53,10 @@ const App = () => {
           <Route
             path='/ranking-jugadores'
             element={<JugadoresRanking />}
+          />
+          <Route
+            path='/ranking-urbankicks'
+            element={<RankginUrbanKicks />}
           />
           <Route
             path='/jugadores'

@@ -11,7 +11,8 @@ export const categories = [
 ]
 
 export const menu = [
-  { name: 'Ranking de Jugadores', url: '/ranking-jugadores' },
+  { name: 'Ranking Clausura 2023', url: '/ranking-jugadores' },
+  { name: 'Ranking UrbanKicks', url: '/ranking-urbankicks' },
   { name: 'Ranking de Clubes', url: '/ranking-clubes' },
   { name: 'Torneos Anteriores', url: '/torneos-anteriores' },
   { name: 'Jugadores', url: '/jugadores' },
@@ -23,7 +24,7 @@ export const menu = [
 export const rankingOptions = [
   {
     name: 'Todos',
-    category: 0
+    category: 'all'
   },
   {
     name: 'Damas',
