@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-const TeamItem = ({ id, name, image }) => {
+const TeamItem = ({ id, name, image, type }) => {
   return (
     <div className='flex flex-col gap-y-3 items-center w-2/5'>
       <div className='avatar'>
@@ -25,7 +25,7 @@ const TeamItem = ({ id, name, image }) => {
         >
           {name}
         </Link>
-        Local
+        <span className='opacity-70'>{type}</span>
       </div>
     </div>
   )

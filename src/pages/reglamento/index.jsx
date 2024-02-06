@@ -1,6 +1,13 @@
+import { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 
 const Reglamento = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }, [])
   return (
     <section className='fade-in flex flex-col gap-y-6'>
       <div className='text-center text-xl'>
@@ -8,8 +15,12 @@ const Reglamento = () => {
         <h2 className='font-bold text-primary'>Apertura 2024</h2>
         🤝
       </div>
-
       <p className='md:columns-2 gap-8 text-sm'>
+        La presente liga de clubes se desarrolla desde el mes de Marzo hasta el mes de Diciembre en 2 torneos a jugarse
+        los días Sábados y Domingos, según corresponda. Disputando en cada fecha 3 encuentros entre 2 equipos
+        representantes de un club de tenis.
+        <br />
+        <br />
         <strong className='text-primary'>Modalidad de juego:</strong> En la categoría Primera Libre se jugarán 2 singles
         y 1 doble. En el resto de las categorías se jugarán 1 single y 2 dobles. <br />
         Todos los partidos se disputarán al mejor de 3 sets, con tie break. El tercer set será Super Tie break a 10
@@ -20,7 +31,8 @@ const Reglamento = () => {
         los 3 encuentros de la serie se sumarán 3 puntos al equipo vencedor, ganando 2 a 1 se sumarán 2 puntos al equipo
         vencedor y 1 punto al equipo rival, por lo que ahora todos los encuentros ganados suman puntos. <br />
         En caso de empate por puntos en las fases de grupo, se desempatará por mayor cantidad de series ganadas, de
-        persistir el empate, por diferencia de sets y en el ultimo caso diferencia de games.
+        persistir el empate, por diferencia de sets y en el ultimo caso diferencia de games. <br />
+        Todos los resultados podrán ser vistos en este sitio web.
         <br />
         <br />
         <strong className='text-primary'>Formación:</strong> En la categoría Primera Libre de los 4 jugadores convocados
@@ -126,6 +138,9 @@ const Reglamento = () => {
         Es responsabilidad de los capitanes chequear que estén todos sus jugadores y colocados en la posición que
         consideren correcta antes del comienzo del torneo.
         <br />
+        En la categoría con límite de edad, tercera +45, se considerará que el jugador está dentro de la categoría, al
+        cumplir años dentro del año calendario de inicio del torneo.
+        <br />
         <br />
         <strong className='text-primary'>El límite de integrantes de la lista de buena fe</strong> es de 20 jugadores.
         <br />
@@ -155,19 +170,17 @@ const Reglamento = () => {
         <br />
         <br />
         <strong className='text-primary'>Instalaciones Necesarias:</strong> El Club deberá poder ofrecer para jugar un
-        partido completo un mínimo de dos (2) canchas reglamentarias de tenis, vestuarios con comodidades suficientes.
-        Dichas canchas deberán ser de un mismo tipo de superficie, las que serán previamente aprobadas por esta
-        asociación. <br />
+        partido completo un mínimo de 2 canchas reglamentarias de tenis, vestuarios con comodidades suficientes. Dichas
+        canchas deberán ser de un mismo tipo de superficie, las que serán previamente aprobadas por esta asociación.{' '}
+        <br />
         Los 3 encuentros deberán disputarse en el mismo horario, con excepción de clubes con 2 canchas, ver apartado
         para clubes con 2 canchas.
         <br />
         <br />
-        <strong className='text-primary'>Clubes con 2 canchas:</strong> En caso de disputarse una serie en un club con 2
-        canchas, cada jugador solo podrá disputar un encuentro en una misma serie. <br />
-        No podrán fijarse partidos para comenzar con posterioridad a las 16hs siendo ese el último horario para fijar
-        partidos, pudiendo comenzar la serie jugándose un partido y a continuación los dos restantes, o bien puede
-        comenzarse la serie jugándose dos partidos y a continuación el partido restante. SIEMPRE los partidos deben
-        desarrollarse a continuación, no pudiendo entre ellos haber un alquiler o clase u otro partido de otra serie.
+        <strong className='text-primary'>Clubes con 2 canchas:</strong> En caso de disputarse una serie en un club con
+        dos canchas, cada jugador solo podrá disputar un encuentro en una misma serie. La serie se desarrollará en dos
+        tandas que deben jugarse una a continuación de la otra, sin excepcion. La segunda tanda deberá comenzar no
+        despues de las 17hs.
         <br />
         <br />
         <strong className='text-primary'>Sistema de ascensos:</strong> En todas las categorías, con excepción de la

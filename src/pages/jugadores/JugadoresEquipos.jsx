@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
+import TeamItem from '../../components/TeamItem'
 
 const JugadoresEquipos = ({ player_id }) => {
   const { data, loading } = useFetch(`/players/${player_id}/teams`)
@@ -15,7 +16,7 @@ const JugadoresEquipos = ({ player_id }) => {
         <table className='table w-full'>
           <thead>
             <tr>
-              <th>Equipo</th>
+              <th className='pl-0'>Equipo</th>
               <th>Club</th>
               <th>Torneo</th>
             </tr>
@@ -23,30 +24,12 @@ const JugadoresEquipos = ({ player_id }) => {
           <tbody>
             {data.map(item => (
               <tr key={item.id}>
-                <td>
-                  <div className='flex items-center'>
-                    <div className='avatar mr-4'>
-                      <div className='w-9 rounded-full'>
-                        <Link
-                          to={`/equipos/${item.team_id}`}
-                          className='hover:opacity-70 transition-all'
-                        >
-                          <img
-                            src={item.image}
-                            width='36'
-                            height='36'
-                            alt={item.team_name}
-                          />
-                        </Link>
-                      </div>
-                    </div>
-                    <Link
-                      to={`/equipos/${item.team_id}`}
-                      className='hover:text-primary font-medium'
-                    >
-                      {item.team_name}
-                    </Link>
-                  </div>
+                <td className='pl-0'>
+                  <TeamItem
+                    id={item.team_id}
+                    name={item.team_name}
+                    image={item.image}
+                  />
                 </td>
                 <td>
                   <Link

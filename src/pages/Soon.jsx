@@ -1,23 +1,24 @@
 import Counter from './Counter'
+import { Link } from 'react-router-dom'
 
 const Soon = () => {
   return (
     <div className='fade-in flex flex-col items-center justify-center h-full'>
       <h1 className='text-4xl mb-3'>🚀</h1>
       <Counter />
+
       <div className='text-primary text-center'>
         <span className='block font-bold text-xl'>¡Inscripciones abiertas!</span>
         <span className='block font-bold mb-3 text-xl'>Inicio el 16 y 17 de Marzo</span>
         <span className='block'>Descuentos hasta el 17 de Febrero</span>
         <span className='block font-bold'>
-          Más información{' '}
-          <a
-            href='https://www.instagram.com/p/C2M_QQ2gUEJ/'
-            target='_blank'
+          Más información y presentación del torneo{' '}
+          <Link
+            to='/presentacion'
             className='underline'
           >
             click acá
-          </a>
+          </Link>
         </span>
         <span>
           o al WhatsApp{' '}

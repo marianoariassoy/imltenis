@@ -7,6 +7,27 @@ const JugadoresDobles = ({ player_id }) => {
   if (loading) return <Loader />
   if (!data) return null
 
+  const labels = [
+    {
+      name: 'Fecha.'
+    },
+    {
+      name: 'Oponentes'
+    },
+    {
+      name: 'Pareja'
+    },
+    {
+      name: 'Resultado'
+    },
+    {
+      name: 'G/P'
+    },
+    {
+      name: 'Torneo'
+    }
+  ]
+
   return (
     <section className='fade-in flex flex-col gap-y-6'>
       <h1 className='text-center text-primary font-bold -mb-3'>Dobles</h1>
@@ -15,52 +36,52 @@ const JugadoresDobles = ({ player_id }) => {
         <table className='table w-full'>
           <thead>
             <tr>
-              <th width='50'>Fecha</th>
-              <th>Oponentes</th>
-              <th>Pareja</th>
-              <th>Resultado</th>
-              <th>G/P</th>
-              <th>Torneo</th>
+              {labels.map((label, index) => (
+                <th
+                  key={index}
+                  className={index === 0 && 'pl-0'}
+                >
+                  {label.name}
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
             {data.map(item => (
               <tr key={item.id}>
-                <td>{item.date}</td>
+                <td className='pl-0 opacity-70 font-medium'>{item.date}</td>
                 <td>
                   <Link
                     to={`/jugadores/${item.oponent1_id}`}
-                    className='link-hover text-primary'
+                    className='link-hover text-primary font-bold'
                   >
                     {item.oponent1_name}
                   </Link>
-                  <span className='mx-1'>y</span>
+                  <span> y </span>
                   <Link
                     to={`/jugadores/${item.oponent2_id}`}
-                    className='link-hover text-primary mx-1'
+                    className='link-hover text-primary font-bold'
                   >
                     {item.oponent2_name}
-                  </Link>
-                  (
+                  </Link>{' '}
                   <Link
                     to={`/equipos/${item.team_oponent_id}`}
-                    className='link-hover'
+                    className='hover:text-primary opacity-70'
                   >
-                    {item.team_oponent_name}
+                    ({item.team_oponent_name})
                   </Link>
-                  )
                 </td>
                 <td>
                   <Link
                     to={`/jugadores/${item.partner_id}`}
-                    className='link-hover text-primary'
+                    className='link-hover text-primary font-bold'
                   >
                     {item.partner_name}
                   </Link>
                 </td>
                 <td>{item.score}</td>
                 <td>
-                  <div className='h-7 w-7 rounded-full flex justify-center items-center border text-primary border-[#f34643]'>
+                  <div className='h-7 w-7 rounded-full flex justify-center items-center border text-primary border-primary'>
                     {item.result}
                   </div>
                 </td>

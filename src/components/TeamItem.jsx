@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Image from './Image'
 
 const TeamItem = ({ id, name, image }) => {
   return (
@@ -9,10 +10,8 @@ const TeamItem = ({ id, name, image }) => {
             to={`/equipos/${id}`}
             className='hover:opacity-70'
           >
-            <img
+            <Image
               src={image}
-              width='36'
-              height='36'
               alt={name}
             />
           </Link>

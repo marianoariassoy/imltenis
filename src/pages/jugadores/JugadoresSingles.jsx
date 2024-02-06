@@ -7,6 +7,23 @@ const JugadoresSingles = ({ player_id }) => {
   if (loading) return <Loader />
   if (!data) return null
 
+  const labels = [
+    {
+      name: 'Fecha'
+    },
+    {
+      name: 'Oponente'
+    },
+    {
+      name: 'Resultado'
+    },
+    {
+      name: 'G/P'
+    },
+    {
+      name: 'Torneo'
+    }
+  ]
   return (
     <section className='fade-in flex flex-col gap-y-6'>
       <h1 className='text-center font-bold text-primary -mb-3'>Singles</h1>
@@ -15,36 +32,40 @@ const JugadoresSingles = ({ player_id }) => {
         <table className='table w-full'>
           <thead>
             <tr>
-              <th width='50'>Fecha</th>
-              <th>Oponente</th>
-              <th>Resultado</th>
-              <th>G/P</th>
-              <th>Torneo</th>
+              {labels.map((label, index) => (
+                <th
+                  key={index}
+                  className={index === 0 && 'pl-0'}
+                >
+                  {label.name}
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
             {data.map(item => (
               <tr key={item.id}>
-                <td>{item.date}</td>
+                <td className='pl-0 opacity-70 font-medium'>{item.date}</td>
                 <td>
                   <Link
                     to={`/jugadores/${item.oponent_id}`}
-                    className='link-hover text-primary mr-2 inline-block'
+                    className='link-hover text-primary inline-block font-bold'
                   >
                     {item.oponent_name}
-                  </Link>
-                  (
+                  </Link>{' '}
                   <Link
                     to={`/equipos/${item.team_oponent_id}`}
-                    className='link-hover'
+                    className='hover:text-primary opacity-70'
                   >
-                    {item.team_oponent_name}
+                    ({item.team_oponent_name} )
                   </Link>
-                  )
                 </td>
-                <td>{item.score}</td>
+
                 <td>
-                  <div className='h-7 w-7 rounded-full flex justify-center items-center border text-primary border-[#f34643]'>
+                  <span className='font-medium '>{item.score}</span>
+                </td>
+                <td>
+                  <div className='h-7 w-7 rounded-full flex justify-center items-center border text-primary border-primary'>
                     {item.result}
                   </div>
                 </td>

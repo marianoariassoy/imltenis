@@ -1,10 +1,11 @@
-import { useParams, Navigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import JugadoresSingles from './JugadoresSingles'
 import JugadoresDobles from './JugadoresDobles'
 import JugadoresEquipos from './JugadoresEquipos'
+import Image from '../../components/Image'
 
 const JugadoresContainer = () => {
   let { id } = useParams()
@@ -16,11 +17,9 @@ const JugadoresContainer = () => {
       <div className='items-center flex flex-col gap-y-3'>
         <div className='avatar'>
           <div className='w-28 rounded-full bg-base-300'>
-            <img
+            <Image
               src={data[0].image}
               alt={data[0].name}
-              width='112'
-              height='112'
             />
           </div>
         </div>

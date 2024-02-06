@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Logo, Instagram, Bars } from '../components/icons'
+import Theme from './Theme'
 
 const Header = () => {
   const openMenu = () => {
@@ -9,7 +10,7 @@ const Header = () => {
   }
 
   return (
-    <div className='navbar w-full p-6 backdrop-blur-md'>
+    <div className='navbar w-full py-6 px-5 backdrop-blur-md'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <label
@@ -28,7 +29,8 @@ const Header = () => {
           <Logo />
         </Link>
       </div>
-      <div className='navbar-end'>
+      <div className='navbar-end flex gap-x-4 items-center'>
+        <Theme />
         <a
           href='https://www.instagram.com/imltenis/'
           target='_blank'

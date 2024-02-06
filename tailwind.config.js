@@ -10,12 +10,18 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        mytheme: {
-          'base-content': '#9d9c9c',
+        dark: {
+          'base-content': '#9d9c9d',
           primary: '#f34643',
           accent: '#f34643',
-          // 'base-100': '#171717'
           'base-100': '#202020'
+        }
+      },
+      {
+        light: {
+          primary: '#4ddb7f',
+          'base-content': '#666',
+          'base-100': '#f7f7FF'
         }
       }
     ]

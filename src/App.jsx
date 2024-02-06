@@ -4,21 +4,22 @@ import Layout from './layout/Layout'
 // import Welcome from './pages/home'
 
 import TournamentsContainer from './pages/torneos/TorunamentsContainer'
-import RankingTemporada from './pages/jugadores/RankingTemporada'
-import RankingJugadores from './pages/jugadores/RankingJugadores'
-import RankingClubes from './pages/clubes/RankingClubes'
-import Colaboradores from './pages/colaboradores'
-import Jugadores from './pages/jugadores'
-import TorneosAnteriores from './pages/torneos-anteriores'
-import Nosotros from './pages/nosotros'
-import Reglamento from './pages/reglamento'
-
 import JugadoresContainer from './pages/jugadores/JugadoresContainer'
 import TeamsContainer from './pages/equipos/TeamsContainer'
 import SeriesContainer from './pages/series/SeriesContainer'
 import TournamentsCalendar from './pages/torneos/TornamentsCalendar'
 import ClubesContainer from './pages/clubes/ClubesContainer'
 
+import RankingTemporada from './pages/jugadores/RankingTemporada'
+import RankingJugadores from './pages/jugadores/RankingJugadores'
+import RankingClubes from './pages/clubes/RankingClubes'
+import Jugadores from './pages/jugadores'
+import TorneosAnteriores from './pages/torneos-anteriores'
+import Colaboradores from './pages/colaboradores'
+import Reglamento from './pages/reglamento'
+import Nosotros from './pages/nosotros'
+
+import Presentacion from './pages/presentacion'
 import Soon from './pages/Soon'
 import PageNotFound from './pages/PageNotFound'
 
@@ -37,21 +38,37 @@ const App = () => {
             path='/'
             element={<Welcome />}
           /> */}
+
           <Route
-            path='/torneos/:id/grupo/:gid'
+            path='/torneos/:id'
             element={<TournamentsContainer />}
           />
           <Route
-            path='/torneos/:id'
+            path='/torneos/:id/grupo/:gid'
             element={<TournamentsContainer />}
           />
           <Route
             path='/torneos/series/:id'
             element={<TournamentsCalendar />}
           />
-
           <Route
-            path='/ranking-jugadores'
+            path='/clubes/:id'
+            element={<ClubesContainer />}
+          />
+          <Route
+            path='/jugadores/:id'
+            element={<JugadoresContainer />}
+          />
+          <Route
+            path='/equipos/:id'
+            element={<TeamsContainer />}
+          />
+          <Route
+            path='/series/:id'
+            element={<SeriesContainer />}
+          />
+          <Route
+            path='/ranking-temporada'
             element={<RankingTemporada />}
           />
           <Route
@@ -62,39 +79,18 @@ const App = () => {
             path='/ranking-clubes'
             element={<RankingClubes />}
           />
-
-          <Route
-            path='/clubes/:id'
-            element={<ClubesContainer />}
-          />
-
-          <Route
-            path='/jugadores'
-            element={<Jugadores />}
-          />
-          <Route
-            path='/jugadores/:id'
-            element={<JugadoresContainer />}
-          />
-
-          <Route
-            path='/equipos/:id'
-            element={<TeamsContainer />}
-          />
-          <Route
-            path='/series/:id'
-            element={<SeriesContainer />}
-          />
-
           <Route
             path='/torneos-anteriores'
             element={<TorneosAnteriores />}
           />
           <Route
+            path='/jugadores'
+            element={<Jugadores />}
+          />
+          <Route
             path='/colaboradores'
             element={<Colaboradores />}
           />
-
           <Route
             path='/reglamento'
             element={<Reglamento />}
@@ -104,10 +100,14 @@ const App = () => {
             element={<Nosotros />}
           />
           <Route
+            path='/presentacion'
+            element={<Presentacion />}
+          />
+
+          <Route
             path='/soon'
             element={<Soon />}
           />
-
           <Route
             path='*'
             element={<PageNotFound />}

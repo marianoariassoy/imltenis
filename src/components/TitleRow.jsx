@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Image from './Image'
 
 const TitleRow = ({ num, image, title, link }) => {
   return (
@@ -11,11 +12,9 @@ const TitleRow = ({ num, image, title, link }) => {
               to={link}
               className='hover:opacity-70 transition-all'
             >
-              <img
+              <Image
                 src={image}
                 alt={title}
-                width='56'
-                height='56'
               />
             </Link>
           </div>

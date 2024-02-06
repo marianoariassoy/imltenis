@@ -1,12 +1,21 @@
-import { useParams, Navigate, Link } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import TeamsPlayers from './TeamsPlayers'
 import TeamsFixture from './TeamsFixture'
 import { Pin, WhatsApp } from '../../components/icons'
+import Image from '../../components/Image'
 
 const Teams = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }, [])
+
   let { id } = useParams()
   const { data, loading } = useFetch(`/teams/${id}`)
   if (loading) return <Loader />
@@ -21,10 +30,8 @@ const Teams = () => {
               to={`/clubes/${data[0].club_id}`}
               className='hover:opacity-70 transition-all'
             >
-              <img
+              <Image
                 src={data[0].image}
-                width='112'
-                height='112'
                 alt={data[0].name}
               />
             </Link>

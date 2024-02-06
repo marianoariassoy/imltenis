@@ -42,7 +42,7 @@ const Fixture = ({ data, type }) => {
                 </th>
                 <th
                   scope='col'
-                  width='206'
+                  width='240'
                 >
                   Local
                 </th>
@@ -73,7 +73,7 @@ const Fixture = ({ data, type }) => {
                     <span className='font-semibold'>{item.date}</span>
                   </div>
                 </td>
-                <td>{item.hour} hs.</td>
+                <td>{item.hour}</td>
 
                 <td className='lg:whitespace-normal'>
                   <TeamItem

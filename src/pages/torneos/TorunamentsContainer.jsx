@@ -8,7 +8,10 @@ import TornamentsChampion from './TornamentsChampion'
 
 const TournamentsContainer = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
   }, [])
 
   const { id, gid } = useParams()
@@ -18,6 +21,9 @@ const TournamentsContainer = () => {
   if (loadinngTournament) return <Loader />
   if (!dataTournament) return null
 
+  const tournament = dataTournament[0].name
+  const season = dataTournament[0].season
+  const title = tournament + ' ' + season
   return (
     <section className='fade-in flex flex-col gap-y-6'>
       <div className='text-center text-primary text-xl'>
@@ -25,12 +31,14 @@ const TournamentsContainer = () => {
           to={`/torneos/${id}`}
           className='link-hover block'
         >
-          <span className='font-bold'>{dataTournament[0].name}</span>
-          <span className='font-medium hidden lg:inline'> {dataTournament[0].season}</span>
+          <span className='font-bold'>{tournament}</span>
+          <span className='font-medium hidden lg:inline'> {season}</span>
         </Link>
         🏆
       </div>
+
       {dataTournament[0].team_champion && <TornamentsChampion data={dataTournament} />}
+
       {data
         .filter(item => item.id === gid || !gid)
         .map(item => (
@@ -40,8 +48,9 @@ const TournamentsContainer = () => {
             tournament={id}
           />
         ))}
+
       <Helmet>
-        <title>IML Tenis {dataTournament[0].name + ' ' + dataTournament[0].season}</title>
+        <title>IML Tenis {title}</title>
       </Helmet>
     </section>
   )
