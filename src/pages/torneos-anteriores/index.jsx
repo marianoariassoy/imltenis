@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import slugify from 'react-slugify'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 
@@ -22,7 +23,7 @@ const Torneos = () => {
             .map(item => (
               <Link
                 key={item.id}
-                to={`/torneos/${item.id}`}
+                to={`/torneos/${item.id}/${slugify(item.name)}-${slugify(item.season_name)}`}
                 className='link-hover'
               >
                 <span>{item.name}</span> {item.season_name}

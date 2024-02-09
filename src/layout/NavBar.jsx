@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { menu, categories } from '../data/data'
+import { menu, categories } from '../components/data'
 const NavBar = () => {
   const openMenu = () => {
     const menu = document.querySelector('nav')
@@ -9,10 +9,10 @@ const NavBar = () => {
 
   return (
     <nav
-      className='fade-in fixed top-0 left-0 w-full h-screen content-center text-center z-30 bg-black/30 backdrop-blur-md hidden'
+      className='fade-in fixed top-0 left-0 w-full h-screen content-center text-center z-30 backdrop-blur-md hidden'
       onClick={openMenu}
     >
-      <ul className=' text-white/70 flex flex-col'>
+      <ul className='text-white/70 flex flex-col'>
         {categories.map((item, index) => (
           <li key={index}>
             <NavLink

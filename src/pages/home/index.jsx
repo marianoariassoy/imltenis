@@ -54,7 +54,7 @@ const Welcome = () => {
       </div>
 
       <Helmet>
-        <title>IML Tenis - Liga de clubes de Buenos Aires</title>
+        <title>IML Tenis Liga de clubes</title>
       </Helmet>
     </>
   )

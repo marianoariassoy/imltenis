@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import Image from './Image'
-
 const TitleRow = ({ num, image, title, link }) => {
   return (
     <td className='pl-0'>

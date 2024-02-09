@@ -10,7 +10,7 @@ const Soon = () => {
       <div className='text-primary text-center'>
         <span className='block font-bold text-xl'>¡Inscripciones abiertas!</span>
         <span className='block font-bold mb-3 text-xl'>Inicio el 16 y 17 de Marzo</span>
-        <span className='block'>Descuentos hasta el 17 de Febrero</span>
+        <span className='block'>Descuento hasta el 17 de Febrero</span>
         <span className='block font-bold'>
           Más información y presentación del torneo{' '}
           <Link

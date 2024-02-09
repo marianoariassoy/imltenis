@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import Loader from '../../components/Loader'
 import useFetch from '../../hooks/useFetch'

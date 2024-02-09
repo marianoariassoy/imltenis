@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
+import slugify from 'react-slugify'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import Labels from '../../components/Labels'
 
-const ClubesTeams = ({ club_id }) => {
-  const { data, loading } = useFetch(`/clubes/${club_id}/teams`)
-
+const ClubesTeams = ({ id }) => {
+  const { data, loading } = useFetch(`/clubes/${id}/teams`)
   if (loading) return <Loader />
   if (!data) return null
 
@@ -50,7 +50,7 @@ const ClubesTeams = ({ club_id }) => {
               <tr key={item.id}>
                 <td>
                   <Link
-                    to={`/equipos/${item.id}`}
+                    to={`/equipos/${item.id}/${slugify(item.name)}`}
                     className='link-hover text-primary font-bold'
                   >
                     {item.name}
@@ -58,7 +58,7 @@ const ClubesTeams = ({ club_id }) => {
                 </td>
                 <td>
                   <Link
-                    to={`/torneos/${item.tournament_id}`}
+                    to={`/torneos/${item.tournament_id}/${slugify(item.tournament_name)}`}
                     className='hover:text-primary font-bold'
                   >
                     {item.tournament_name}

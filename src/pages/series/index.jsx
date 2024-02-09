@@ -1,22 +1,23 @@
 import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import slugify from 'react-slugify'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
-import SeriesMatches from './SeriesMatches'
-import TeamItem from './TeamItem'
+import Matches from './Matches'
+import TeamItem from './Team'
 
 const Series = () => {
   let { id } = useParams()
   const { data, loading } = useFetch(`/series/${id}`)
-
   if (loading) return <Loader />
+  if (!data) return null
 
   return (
     <section className='fade-in flex flex-col gap-y-6'>
       <div className='text-center'>
         <h1 className='font-bold text-primary lg:text-xl'>{data[0].date + ' ' + data[0].hour} hs.</h1>
         <Link
-          to={`/torneos/${data[0].tournament_id}`}
+          to={`/torneos/${data[0].tournament_id}/${slugify(data[0].tournament_name)}`}
           className='link-hover opacity-70'
         >
           {data[0].tournament_name}
@@ -51,7 +52,7 @@ const Series = () => {
         </div>
       </div>
 
-      {data[0].winner > 0 && <SeriesMatches serie_id={id} />}
+      {data[0].winner > 0 && <Matches id={id} />}
 
       <Helmet>
         <title>IML Tenis {data[0].date + ' ' + data[0].hour}</title>

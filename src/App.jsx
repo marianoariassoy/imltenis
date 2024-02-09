@@ -3,16 +3,17 @@ import ReactGA from 'react-ga4'
 import Layout from './layout/Layout'
 // import Welcome from './pages/home'
 
-import TournamentsContainer from './pages/torneos/TorunamentsContainer'
-import JugadoresContainer from './pages/jugadores/JugadoresContainer'
-import TeamsContainer from './pages/equipos/TeamsContainer'
-import SeriesContainer from './pages/series/SeriesContainer'
-import TournamentsCalendar from './pages/torneos/TornamentsCalendar'
-import ClubesContainer from './pages/clubes/ClubesContainer'
+import Tournaments from './pages/torneos'
+import JugadoresProfile from './pages/jugadores/Profile'
+import Teams from './pages/equipos'
+import Series from './pages/series'
+import Calendar from './pages/torneos/Calendar'
+import Clubes from './pages/clubes'
 
 import RankingTemporada from './pages/jugadores/RankingTemporada'
-import RankingJugadores from './pages/jugadores/RankingJugadores'
-import RankingClubes from './pages/clubes/RankingClubes'
+import RankingJugadores from './pages/jugadores/Ranking'
+import RankingClubes from './pages/clubes/Ranking'
+
 import Jugadores from './pages/jugadores'
 import TorneosAnteriores from './pages/torneos-anteriores'
 import Colaboradores from './pages/colaboradores'
@@ -22,6 +23,9 @@ import Nosotros from './pages/nosotros'
 import Presentacion from './pages/presentacion'
 import Soon from './pages/Soon'
 import PageNotFound from './pages/PageNotFound'
+
+import UsersLogin from './pages/users'
+import UsersRegistro from './pages/users/Registro'
 
 const App = () => {
   ReactGA.initialize('G-G1DBH0K86R')
@@ -40,32 +44,28 @@ const App = () => {
           /> */}
 
           <Route
-            path='/torneos/:id'
-            element={<TournamentsContainer />}
-          />
-          <Route
-            path='/torneos/:id/grupo/:gid'
-            element={<TournamentsContainer />}
+            path='/torneos/:id/:slug'
+            element={<Tournaments />}
           />
           <Route
             path='/torneos/series/:id'
-            element={<TournamentsCalendar />}
+            element={<Calendar />}
           />
           <Route
-            path='/clubes/:id'
-            element={<ClubesContainer />}
+            path='/clubes/:id/:slug'
+            element={<Clubes />}
+          />
+          <Route
+            path='/equipos/:id/:slug'
+            element={<Teams />}
           />
           <Route
             path='/jugadores/:id'
-            element={<JugadoresContainer />}
-          />
-          <Route
-            path='/equipos/:id'
-            element={<TeamsContainer />}
+            element={<JugadoresProfile />}
           />
           <Route
             path='/series/:id'
-            element={<SeriesContainer />}
+            element={<Series />}
           />
           <Route
             path='/ranking-temporada'
@@ -102,6 +102,14 @@ const App = () => {
           <Route
             path='/presentacion'
             element={<Presentacion />}
+          />
+          <Route
+            path='/usuarios/login'
+            element={<UsersLogin />}
+          />
+          <Route
+            path='/usuarios/registro'
+            element={<UsersRegistro />}
           />
 
           <Route

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import slugify from 'react-slugify'
 
 const TeamItem = ({ id, name, image, type }) => {
   return (
@@ -6,7 +7,7 @@ const TeamItem = ({ id, name, image, type }) => {
       <div className='avatar'>
         <div className='w-20 rounded-full'>
           <Link
-            to={`/equipos/${id}`}
+            to={`/equipos/${id}/${slugify(name)}`}
             className='hover:opacity-70 transition-all'
           >
             <img
@@ -20,7 +21,7 @@ const TeamItem = ({ id, name, image, type }) => {
       </div>
       <div className='px-3'>
         <Link
-          to={`/equipos/${id}`}
+          to={`/equipos/${id}/${slugify(name)}`}
           className='link-hover text-primary font-bold block'
         >
           {name}

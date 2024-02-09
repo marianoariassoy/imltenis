@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 
-const SeriesMatches = ({ serie_id }) => {
-  const { data, loading } = useFetch(`/series/${serie_id}/matches`)
+const SeriesMatches = ({ id }) => {
+  const { data, loading } = useFetch(`/series/${id}/matches`)
   if (loading) return <Loader />
 
   return (

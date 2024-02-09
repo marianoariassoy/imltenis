@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom'
+import slugify from 'react-slugify'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
-import { Bull } from '../../components/icons'
 import Labels from '../../components/Labels'
 import TitleRow from '../../components/TitleRow'
 
@@ -39,12 +38,7 @@ const TournamentsGroup = ({ group, tournament }) => {
   return (
     <section className='fade-in flex flex-col'>
       <div className='row text-center mb-3'>
-        <Link
-          to={`/torneos/${tournament}/grupo/${group.id}`}
-          className='text-primary italic link-hover lg:text-xl'
-        >
-          {group.name}
-        </Link>
+        <h1 className='text-primary italic lg:text-xl'>{group.name}</h1>
         <h2>
           <span className='font-medium opacity-70'>Posiciones</span> 🔥
         </h2>
@@ -69,7 +63,7 @@ const TournamentsGroup = ({ group, tournament }) => {
                   num={index + 1}
                   image={`https://imltenis.com.ar/images/${item.image ? item.image : item.club_image}`}
                   title={item.name}
-                  link={`/equipos/${item.id}`}
+                  link={`/equipos/${item.id}/${slugify(item.name)}`}
                 />
                 <td>
                   <span className='font-bold'>{item.match_won}</span>

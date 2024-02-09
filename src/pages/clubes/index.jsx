@@ -2,11 +2,10 @@ import { useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
-import ClubesTeams from './ClubesTeams'
+import Teams from './Teams'
 const ClubesContainer = () => {
   let { id } = useParams()
   const { data, loading } = useFetch(`/clubes/${id}`)
-
   if (loading) return <Loader />
 
   return (
@@ -91,7 +90,7 @@ const ClubesContainer = () => {
         </div>
       </div>
 
-      <ClubesTeams club_id={id} />
+      <Teams id={id} />
 
       <Helmet>
         <title>IML Tenis {data[0].name}</title>

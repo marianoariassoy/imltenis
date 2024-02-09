@@ -1,12 +1,10 @@
-import { Link } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import Labels from '../../components/Labels'
 import TitleRow from '../../components/TitleRow'
 
-const TeamsPlayers = ({ team_id }) => {
-  const { data, loading } = useFetch(`/teams/${team_id}/players`)
-
+const TeamsPlayers = ({ id }) => {
+  const { data, loading } = useFetch(`/teams/${id}/players`)
   if (loading) return <Loader />
   if (!data) return null
 

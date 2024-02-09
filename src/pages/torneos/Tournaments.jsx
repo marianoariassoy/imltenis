@@ -1,24 +1,19 @@
-import TournamentsGroup from './TournamentsGroup'
-import TournamentsFixture from './TournamentsFixture'
+import useFetch from '../../hooks/useFetch'
+import Loader from '../../components/Loader'
+import TournamentsItem from './TournamentsItem'
 
-const Tournaments = ({ data, tournament }) => {
-  return (
-    <>
-      {data.type == 1 ? (
-        <h2 className='italic text-primary text-center lg:text-xl -mb-3'>{data.name}</h2>
-      ) : (
-        <TournamentsGroup
-          group={data}
-          tournament={tournament}
-        />
-      )}
+const Tournaments = ({ id }) => {
+  const { data, loading } = useFetch(`/tournaments/groups/${id}`)
+  if (loading) return <Loader />
+  if (!data) return null
 
-      <TournamentsFixture
-        group_id={data.id}
-        type={data.type}
-      />
-    </>
-  )
+  return data.map(item => (
+    <TournamentsItem
+      key={item.id}
+      data={item}
+      tournament={id}
+    />
+  ))
 }
 
 export default Tournaments

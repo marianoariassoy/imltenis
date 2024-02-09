@@ -47,7 +47,7 @@ const Footer = () => {
 
   return (
     <div className='footer-main p-6 opacity-60 mt-8'>
-      <div className='lg:max-w-3xl gap-3 m-auto grid grid-cols-4 lg:grid-cols-8 items-center justify-center  mb-12 lg:mb-6'>
+      <div className='max-w-lg lg:max-w-3xl gap-3 m-auto grid grid-cols-4 lg:grid-cols-8 items-center justify-center mb-10 lg:mb-6'>
         {logos.map((logo, index) => (
           <div
             key={index}
@@ -70,7 +70,7 @@ const Footer = () => {
 
       <div className='text-[.8rem] text-center flex flex-col'>
         <div>
-          <span className='font-bold'>Liga de clubes IML Tenis </span>
+          <span className='font-bold block'>Liga de clubes IML Tenis </span>
           Buenos Aires, Argentina. &copy; {year}
         </div>
         <div>

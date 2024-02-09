@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import slugify from 'react-slugify'
 import Loader from '../../components/Loader'
 import useFetch from '../../hooks/useFetch'
-import { rankingOptions } from '../../data/data'
+import { rankingOptions } from '../../components/data'
 import Labels from '../../components/Labels'
 import TitleRow from '../../components/TitleRow'
 
@@ -87,7 +88,7 @@ const JugadoresRanking = () => {
                 />
                 <td>
                   <Link
-                    to={`/equipos/${item.team_id}`}
+                    to={`/equipos/${item.team_id}/${slugify(item.team_name)}`}
                     className='hover:text-primary font-bold'
                   >
                     {item.team_name}

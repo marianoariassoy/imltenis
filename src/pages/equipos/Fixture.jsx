@@ -2,9 +2,8 @@ import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import Fixture from '../torneos/Fixture'
 
-const TeamsFixture = ({ team_id }) => {
-  const { data, loading } = useFetch(`/teams/${team_id}/fixture`)
-
+const TeamsFixture = ({ id }) => {
+  const { data, loading } = useFetch(`/teams/${id}/fixture`)
   if (loading) return <Loader />
   if (!data) return null
 

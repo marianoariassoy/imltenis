@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import Loader from '../../components/Loader'
 import useFetch from '../../hooks/useFetch'
@@ -7,7 +5,7 @@ import Labels from '../../components/Labels'
 import TitleRow from '../../components/TitleRow'
 
 const JugadoresRanking = () => {
-  const { data, loading, setLoading } = useFetch(`/players/ranking`)
+  const { data, loading } = useFetch(`/players/ranking`)
   if (loading) return <Loader />
 
   const labels = [

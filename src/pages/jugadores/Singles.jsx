@@ -1,21 +1,19 @@
 import { Link } from 'react-router-dom'
+import slugify from 'react-slugify'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 
-const JugadoresDobles = ({ player_id }) => {
-  const { data, loading } = useFetch(`/players/${player_id}/doubles`)
+const JugadoresSingles = ({ id }) => {
+  const { data, loading } = useFetch(`/players/${id}/singles`)
   if (loading) return <Loader />
   if (!data) return null
 
   const labels = [
     {
-      name: 'Fecha.'
+      name: 'Fecha'
     },
     {
-      name: 'Oponentes'
-    },
-    {
-      name: 'Pareja'
+      name: 'Oponente'
     },
     {
       name: 'Resultado'
@@ -30,7 +28,7 @@ const JugadoresDobles = ({ player_id }) => {
 
   return (
     <section className='fade-in flex flex-col gap-y-6'>
-      <h1 className='text-center text-primary font-bold -mb-3'>Dobles</h1>
+      <h1 className='text-center font-bold text-primary -mb-3'>Singles</h1>
 
       <div className='overflow-x-auto text-sm'>
         <table className='table w-full'>
@@ -52,34 +50,21 @@ const JugadoresDobles = ({ player_id }) => {
                 <td className='pl-0 opacity-70 font-medium'>{item.date}</td>
                 <td>
                   <Link
-                    to={`/jugadores/${item.oponent1_id}`}
-                    className='link-hover text-primary font-bold'
+                    to={`/jugadores/${item.oponent_id}`}
+                    className='link-hover text-primary inline-block font-bold'
                   >
-                    {item.oponent1_name}
-                  </Link>
-                  <span> y </span>
-                  <Link
-                    to={`/jugadores/${item.oponent2_id}`}
-                    className='link-hover text-primary font-bold'
-                  >
-                    {item.oponent2_name}
+                    {item.oponent_name}
                   </Link>{' '}
                   <Link
-                    to={`/equipos/${item.team_oponent_id}`}
+                    to={`/equipos/${item.team_oponent_id}/${slugify(item.team_oponent_name)}`}
                     className='hover:text-primary opacity-70'
                   >
-                    ({item.team_oponent_name})
+                    ({item.team_oponent_name} )
                   </Link>
                 </td>
                 <td>
-                  <Link
-                    to={`/jugadores/${item.partner_id}`}
-                    className='link-hover text-primary font-bold'
-                  >
-                    {item.partner_name}
-                  </Link>
+                  <span className='font-medium '>{item.score}</span>
                 </td>
-                <td>{item.score}</td>
                 <td>
                   <div className='h-7 w-7 rounded-full flex justify-center items-center border text-primary border-primary'>
                     {item.result}
@@ -87,7 +72,7 @@ const JugadoresDobles = ({ player_id }) => {
                 </td>
                 <td>
                   <Link
-                    to={`/torneos/${item.tournament_id}`}
+                    to={`/torneos/${item.tournament_id}/${slugify(item.tournament_name)}`}
                     className='link-hover text-primary'
                   >
                     {item.tournament_name}
@@ -102,4 +87,4 @@ const JugadoresDobles = ({ player_id }) => {
   )
 }
 
-export default JugadoresDobles
+export default JugadoresSingles

@@ -4,7 +4,6 @@ import Fixture from './Fixture'
 
 const TournamentsFixture = ({ group_id, type }) => {
   const { data, loading } = useFetch(`/groups/series/${group_id}`)
-
   if (loading) return <Loader />
   if (!data) return null
 
