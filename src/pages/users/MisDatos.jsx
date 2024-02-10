@@ -1,13 +1,21 @@
+import { useAuth } from '../../context'
+import Login from './Login'
 import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { BeatLoader } from 'react-spinners'
-import axios from 'axios'
 import { Input, Button, Select } from '../ui'
 import { texts, days, months, years } from '../../components/data'
-import Thanks from './Thanks'
+import axios from 'axios'
+import useFetch from '../../hooks/useFetch'
+import Loader from '../../components/Loader'
 import Error from './Error'
 
 const index = () => {
+  const { isLoggedIn, userData } = useAuth()
+
+  if (!isLoggedIn) return <Login />
+
+  const { data, loading } = useFetch(`/users/data/${userData.id}`)
   const [sended, setSended] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState(null)
@@ -20,13 +28,15 @@ const index = () => {
     formState: { errors }
   } = useForm()
 
+  if (loading) return <Loader />
+
   const onSubmit = async data => {
     setSending(true)
     const formData = new FormData()
     formData.append('data', JSON.stringify(data))
     formData.append('file', image)
     try {
-      const response = await axios.post('https://imltenis.com.ar/api/users/register', formData, {
+      const response = await axios.post('https://imltenis.com.ar/api/users/update', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -55,31 +65,27 @@ const index = () => {
   return (
     <section>
       <div className='flex flex-col gap-y-6 max-w-md m-auto lg:max-w-none'>
-        {!sended && (
-          <div className='text-center'>
-            <h1 className='font-bold text-primary text-xl mb-3'>¡Bienvenido! 🚀</h1>
-            <div>
-              <p className='text-sm'>
-                Completá con tus datos y se parte de una de las ligas de clubes más importantes.
-              </p>
-            </div>
-          </div>
-        )}
-        <div className='w-full m-auto'>
-          {error && <div className='text-primary font-bold text-center my-6'>{error}</div>}
-          {sended && <Thanks />}
+        <div className='text-center text-xl'>
+          <h1 className='font-bold text-primary'>Mis Datos </h1>
+          😀
+        </div>
 
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className={`${sended ? 'hidden' : 'block'}`}
-          >
+        <div className='w-full m-auto'>
+          {error && <div className='text-primary text-center text-sm font-medium mb-6'>{error}</div>}
+          {sended && (
+            <div className='text-primary text-center text-sm font-medium mb-6 '>
+              Tus datos fueron actualizados correctamente. 👍
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className='grid lg:grid-cols-2 gap-x-6'>
               <div className='form-control'>
                 <Input
                   type='text'
                   title='Nombre'
-                  placeholder='Rafael'
-                  register={register('name', { required: texts.required })}
+                  placeholder=''
+                  register={register('name', { value: data[0].name }, { required: texts.required })}
                 />
                 {errors.name && <Error text={errors.name.message} />}
               </div>
@@ -87,8 +93,12 @@ const index = () => {
                 <Input
                   type='text'
                   title='Apellido'
-                  placeholder='Nadal'
-                  register={register('lastname', { required: texts.required, maxLength: 20 })}
+                  placeholder=''
+                  register={register(
+                    'lastname',
+                    { value: data[0].lastname },
+                    { required: texts.required, maxLength: 20 }
+                  )}
                 />
                 {errors.lastname && <Error text={errors.lastname.message} />}
               </div>
@@ -96,8 +106,8 @@ const index = () => {
                 <Input
                   type='text'
                   title='Télefono'
-                  placeholder='11 1111-1111'
-                  register={register('phone', { required: texts.required, maxLength: 20 })}
+                  placeholder=''
+                  register={register('phone', { value: data[0].phone }, { required: texts.required, maxLength: 20 })}
                 />
                 {errors.phone && <Error text={errors.phone.message} />}
               </div>
@@ -105,8 +115,8 @@ const index = () => {
                 <Input
                   type='text'
                   title='Localidad'
-                  placeholder='Manacor'
-                  register={register('location', { required: texts.required })}
+                  placeholder=''
+                  register={register('location', { value: data[0].location }, { required: texts.required })}
                 />
                 {errors.location && <Error text={errors.location.message} />}
               </div>
@@ -114,15 +124,19 @@ const index = () => {
                 <Input
                   type='email'
                   title='Email'
-                  placeholder='rafa@rafaelnadal.com'
-                  register={register('email', {
-                    required: texts.required,
-                    maxLength: 30,
-                    pattern: {
-                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: 'Dirección de correo electrónico inválida'
+                  placeholder=''
+                  register={register(
+                    'email',
+                    { value: data[0].email },
+                    {
+                      required: texts.required,
+                      maxLength: 30,
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: 'Dirección de correo electrónico inválida'
+                      }
                     }
-                  })}
+                  )}
                 />
                 {errors.email && <Error text={errors.email.message} />}
               </div>
@@ -130,41 +144,38 @@ const index = () => {
                 <Input
                   type='text'
                   title='DNI'
-                  placeholder='12345678'
-                  register={register('dni', {
-                    required: texts.required,
-                    pattern: {
-                      value: /^[0-9]+$/,
-                      message: 'Solo se permiten números'
-                    },
-                    validate: value => value.length === 8 || 'La longitud del DNI deben ser 8 números'
-                  })}
+                  placeholder=''
+                  register={register(
+                    'dni',
+                    { value: data[0].dni },
+                    {
+                      required: texts.required,
+                      pattern: {
+                        value: /^[0-9]+$/,
+                        message: 'Solo se permiten números'
+                      },
+                      validate: value => value.length === 8 || 'La longitud del DNI deben ser 8 números'
+                    }
+                  )}
                 />
                 {errors.dni && <Error text={errors.dni.message} />}
-              </div>
+              </div>{' '}
+              {/* TODO: Validar nuevas contraseñas */}
               <div className='form-control'>
                 <Input
                   type='password'
-                  title='Contraseña'
-                  placeholder='contraseña'
-                  register={register('password', {
-                    required: texts.required,
-                    validate: value => value.length > 4 || 'La longitud debe ser mayor a 4 caracteres'
-                  })}
+                  title='Modificar contraseña'
+                  placeholder=''
+                  register={register('password')}
                 />
-                {errors.password && <Error text={errors.password.message} />}
               </div>
               <div className='form-control'>
                 <Input
                   type='password'
                   title='Repetir contraseña'
-                  placeholder='contraseña'
-                  register={register('confirmPassword', {
-                    required: texts.required,
-                    validate: value => value === password || 'Las contraseñas no coinciden'
-                  })}
+                  placeholder=''
+                  register={register('confirmPassword')}
                 />
-                {errors.confirmPassword && <Error text={errors.confirmPassword.message} />}
               </div>
               <div className='form-control'>
                 <label className='label'>
@@ -173,19 +184,19 @@ const index = () => {
                 <div className='flex gap-x-3'>
                   <Select
                     options={days}
-                    selected='3'
+                    selected={data[0].day}
                     register={register('day', { required: true })}
                     title='día'
                   />
                   <Select
                     options={months}
-                    selected='6'
+                    selected={data[0].month}
                     register={register('month', { required: true })}
                     title='mes'
                   />
                   <Select
                     options={years}
-                    selected='1986'
+                    selected={data[0].year}
                     register={register('year', { required: true })}
                     title='año'
                   />
@@ -203,15 +214,13 @@ const index = () => {
                   className='file-input file-input-bordered file-input-primary w-full text-sm'
                   onChange={getFile}
                 />
-                {image && (
-                  <div className='my-3'>
-                    <img
-                      src={URL.createObjectURL(image)}
-                      alt='Vista previa de la foto'
-                      className='w-24 h-24 rounded-full object-cover object-center'
-                    />
-                  </div>
-                )}
+                <div className='mt-3'>
+                  <img
+                    src={image ? URL.createObjectURL(image) : data[0].image}
+                    alt='Vista previa de la foto'
+                    className='w-24 h-24 rounded-full object-cover object-center'
+                  />
+                </div>
               </div>
             </div>
             <div className='form-control mt-6 flex items-center justify-center'>
@@ -220,7 +229,7 @@ const index = () => {
                   <BeatLoader />
                 </div>
               ) : (
-                <Button>Registrate</Button>
+                !sended && <Button>Modificar</Button>
               )}
             </div>
             <div className='mt-6'>
@@ -228,6 +237,11 @@ const index = () => {
                 Solo se mostrán de forma publica los siguientes datos: nombre, apellido y foto de perfil.
               </p>
             </div>
+            <input
+              type='hidden'
+              value={data[0].id}
+              {...register('id')}
+            />
           </form>
         </div>
       </div>

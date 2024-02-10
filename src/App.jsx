@@ -2,13 +2,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ReactGA from 'react-ga4'
 import Layout from './layout/Layout'
 // import Welcome from './pages/home'
-
 import Tournaments from './pages/torneos'
-import JugadoresProfile from './pages/jugadores/Profile'
 import Teams from './pages/equipos'
 import Series from './pages/series'
 import Calendar from './pages/torneos/Calendar'
 import Clubes from './pages/clubes'
+import JugadoresProfile from './pages/jugadores/Perfil'
 
 import RankingTemporada from './pages/jugadores/RankingTemporada'
 import RankingJugadores from './pages/jugadores/Ranking'
@@ -24,8 +23,10 @@ import Presentacion from './pages/presentacion'
 import Soon from './pages/Soon'
 import PageNotFound from './pages/PageNotFound'
 
-import UsersLogin from './pages/users'
+import UsersLogin from './pages/users/Login'
 import UsersRegistro from './pages/users/Registro'
+import UsersPerfil from './pages/users/Perfil'
+import UsersMisDatos from './pages/users/MisDatos'
 
 const App = () => {
   ReactGA.initialize('G-G1DBH0K86R')
@@ -103,6 +104,7 @@ const App = () => {
             path='/presentacion'
             element={<Presentacion />}
           />
+
           <Route
             path='/usuarios/login'
             element={<UsersLogin />}
@@ -110,6 +112,14 @@ const App = () => {
           <Route
             path='/usuarios/registro'
             element={<UsersRegistro />}
+          />
+          <Route
+            path='/usuarios/perfil'
+            element={<UsersPerfil />}
+          />
+          <Route
+            path='/usuarios/misdatos'
+            element={<UsersMisDatos />}
           />
 
           <Route

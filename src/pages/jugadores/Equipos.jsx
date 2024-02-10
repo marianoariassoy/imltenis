@@ -11,20 +11,20 @@ const JugadoresEquipos = ({ id }) => {
 
   return (
     <section className='fade-in flex flex-col gap-y-6'>
-      <h1 className='text-center font-bold text-primary -mb-3'>Equipos</h1>
+      <h1 className='text-center font-bold text-primary'>Equipos integrados</h1>
 
       <div className='overflow-x-auto text-sm'>
         <table className='table w-full'>
           <thead>
             <tr>
-              <th className='pl-0'>Equipo</th>
+              <th className='pl-0'>Nombre</th>
               <th>Club</th>
               <th>Torneo</th>
             </tr>
           </thead>
           <tbody>
-            {data.map(item => (
-              <tr key={item.id}>
+            {data.map((item, index) => (
+              <tr key={index}>
                 <td className='pl-0'>
                   <TeamItem
                     id={item.team_id}

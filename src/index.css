@@ -47,3 +47,6 @@ input::placeholder {
     opacity: 1;
   }
 }
+table tbody tr td {
+  white-space: nowrap;
+}

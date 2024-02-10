@@ -42,12 +42,12 @@ const ThemeInput = () => {
     <label className='swap swap-rotate'>
       <input
         type='checkbox'
-        className='theme-controller'
+        className='theme-controller '
         value='cupcake'
         onClick={changeTheme}
       />
       <svg
-        className='swap-off'
+        className='swap-off hover:text-primary'
         height='1.5em'
         width='1.5em'
         xmlns='http://www.w3.org/2000/svg'
@@ -57,7 +57,7 @@ const ThemeInput = () => {
       </svg>
 
       <svg
-        className='swap-on'
+        className='swap-on hover:text-primary'
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 24 24'
         height='1.5em'

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import { Logo, Instagram, Bars } from '../components/icons'
-import Theme from './Theme'
+import { Logo, Bars } from '../components/icons'
+// import Theme from './Theme'
+import UserMenu from './UserMenu'
 
 const Header = () => {
   const openMenu = () => {
@@ -11,7 +12,7 @@ const Header = () => {
 
   return (
     <div className='navbar w-full py-6 px-5 backdrop-blur-md'>
-      <div className='navbar-start'>
+      <div className='navbar-start gap-x-3'>
         <div className='dropdown'>
           <label
             className='cursor-pointer hover:text-primary'
@@ -20,24 +21,15 @@ const Header = () => {
             <Bars />
           </label>
         </div>
+        {/* <Theme /> */}
       </div>
-      <div className='navbar-center'>
-        <Link
-          to='/'
-          className='text-primary'
-        >
+      <div className='navbar-center text-primary'>
+        <Link to='/'>
           <Logo />
         </Link>
       </div>
-      <div className='navbar-end flex gap-x-4 items-center'>
-        <Theme />
-        <a
-          href='https://www.instagram.com/imltenis/'
-          target='_blank'
-          className='hover:text-primary'
-        >
-          <Instagram />
-        </a>
+      <div className='navbar-end'>
+        <UserMenu />
       </div>
     </div>
   )
