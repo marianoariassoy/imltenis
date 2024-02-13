@@ -6,6 +6,7 @@ import { Input, Button, Select } from '../ui'
 import { texts, days, months, years } from '../../components/data'
 import Thanks from './Thanks'
 import Error from './Error'
+import Messages from './Messages'
 
 const index = () => {
   const [sended, setSended] = useState(false)
@@ -35,6 +36,7 @@ const index = () => {
         setError(null)
         setSending(false)
         setSended(true)
+        window.scrollTo(0, 0)
       } else {
         setError(response.data.message)
         setSending(false)
@@ -59,14 +61,14 @@ const index = () => {
           <div className='text-center'>
             <h1 className='font-bold text-primary text-xl mb-3'>¡Bienvenido! 🚀</h1>
             <div>
-              <p className='text-sm'>
+              <p className='text-sm opacity-70'>
                 Completá con tus datos y se parte de una de las ligas de clubes más importantes.
               </p>
             </div>
           </div>
         )}
         <div className='w-full m-auto'>
-          {error && <div className='text-primary font-bold text-center my-6'>{error}</div>}
+          {error && <Messages text={error} />}
           {sended && <Thanks />}
 
           <form
@@ -117,7 +119,7 @@ const index = () => {
                   placeholder='rafa@rafaelnadal.com'
                   register={register('email', {
                     required: texts.required,
-                    maxLength: 30,
+                    maxLength: 50,
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                       message: 'Dirección de correo electrónico inválida'
@@ -225,7 +227,7 @@ const index = () => {
             </div>
             <div className='mt-6'>
               <p className='text-sm opacity-70 text-center'>
-                Solo se mostrán de forma publica los siguientes datos: nombre, apellido y foto de perfil.
+                Solo se muestran de forma pública tu nombre, apellido y foto de perfil.
               </p>
             </div>
           </form>

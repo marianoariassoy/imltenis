@@ -1,6 +1,5 @@
 import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
-import slugify from 'react-slugify'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import Matches from './Matches'
@@ -17,7 +16,7 @@ const Series = () => {
       <div className='text-center'>
         <h1 className='font-bold text-primary lg:text-xl'>{data[0].date + ' ' + data[0].hour} hs.</h1>
         <Link
-          to={`/torneos/${data[0].tournament_id}/${slugify(data[0].tournament_name)}`}
+          to={`/torneos/${data[0].tournament_id}`}
           className='link-hover opacity-70'
         >
           {data[0].tournament_name}

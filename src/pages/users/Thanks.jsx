@@ -1,12 +1,15 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
+
 const Thanks = () => {
   return (
-    <div className='fade-in flex items-center justify-center h-full'>
-      <div className='text-center texl-xl flex flex-col gap-y-1 text-primary px-6'>
-        <span className='text-3xl'>👍</span>
-        <div className='font-bold'>Tus datos fueron enviados correctamente.</div>
-        <div>¡Ya estas registrado en nuestro sistema!</div>
-      </div>
+    <div className='fade-in flex flex-col text-center text-sm'>
+      <div className='text-primary font-medium'>¡Ya estas registrado en nuestro sistema! 🎉</div>
+      <Link
+        to='/usuarios/login'
+        className='hover:text-primary hover:opacity-100 opacity-70'
+      >
+        Inicia sesión haciendo clic acá.
+      </Link>
     </div>
   )
 }

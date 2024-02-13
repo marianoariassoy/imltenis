@@ -1,19 +1,17 @@
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
-import Counter from './Counter'
 import { Ray, Heart } from '../../components/icons'
+import EstadisticasItem from './EstadisticasItem'
+import Messages from '../users/Messages'
 
 const Estadisticas = ({ id }) => {
   const { data, loading } = useFetch(`/users/stats/${id}`)
   if (loading) return <Loader />
-  if (!data)
-    return (
-      <h1 className='text-center text-primary font-medium px-6 text-sm'>Todavía no fuiste parte de ningún equipo 🥲</h1>
-    )
+  if (!data) return <Messages text='No formas parte de ningún equipo 🥲' />
 
   const info = [
     {
-      title: 'Encuentros',
+      title: 'Juegos',
       number: data[0].matches_total,
       icon: <Ray />
     },
@@ -37,18 +35,10 @@ const Estadisticas = ({ id }) => {
   return (
     <section className='grid grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-6 bg-base-300 p-6 rounded-2xl'>
       {info.map((item, index) => (
-        <article
-          className='flex flex-col'
+        <EstadisticasItem
           key={index}
-        >
-          <div className='opacity-70'>{item.title}</div>
-          <div className='flex items-center justify-between'>
-            <div className='font-black text-primary text-2xl'>
-              <Counter finalNumber={item.number} />
-            </div>
-            <div className='text-primary'>{item.icon}</div>
-          </div>
-        </article>
+          item={item}
+        />
       ))}
     </section>
   )

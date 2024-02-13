@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import slugify from 'react-slugify'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import Labels from '../../components/Labels'
@@ -50,7 +49,7 @@ const ClubesTeams = ({ id }) => {
               <tr key={item.id}>
                 <td>
                   <Link
-                    to={`/equipos/${item.id}/${slugify(item.name)}`}
+                    to={`/equipos/${item.id}`}
                     className='link-hover text-primary font-bold'
                   >
                     {item.name}
@@ -58,7 +57,7 @@ const ClubesTeams = ({ id }) => {
                 </td>
                 <td>
                   <Link
-                    to={`/torneos/${item.tournament_id}/${slugify(item.tournament_name)}`}
+                    to={`/torneos/${item.tournament_id}`}
                     className='hover:text-primary font-bold'
                   >
                     {item.tournament_name}

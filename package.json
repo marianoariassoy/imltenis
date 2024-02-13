@@ -19,7 +19,6 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.50.1",
     "react-router-dom": "^6.10.0",
-    "react-slugify": "^3.0.3",
     "react-spinners": "^0.13.8"
   },
   "devDependencies": {

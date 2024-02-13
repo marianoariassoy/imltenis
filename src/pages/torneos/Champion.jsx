@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import confetti from 'canvas-confetti'
-import slugify from 'react-slugify'
 import Image from '../../components/Image'
 
 const TornamentsChampion = ({ id, name, image }) => {
@@ -17,7 +16,7 @@ const TornamentsChampion = ({ id, name, image }) => {
       <div className='avatar'>
         <div className='w-28 rounded-full'>
           <Link
-            to={`/equipos/${id}/${slugify(name)}`}
+            to={`/equipos/${id}`}
             className='hover:opacity-70 transition-all'
           >
             <Image

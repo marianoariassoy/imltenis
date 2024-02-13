@@ -27,6 +27,8 @@ import UsersLogin from './pages/users/Login'
 import UsersRegistro from './pages/users/Registro'
 import UsersPerfil from './pages/users/Perfil'
 import UsersMisDatos from './pages/users/MisDatos'
+import UsersRecuperar from './pages/users/RecuperarPassword'
+import UsersRestablecer from './pages/users/RestablecerPassword'
 
 const App = () => {
   ReactGA.initialize('G-G1DBH0K86R')
@@ -45,7 +47,7 @@ const App = () => {
           /> */}
 
           <Route
-            path='/torneos/:id/:slug'
+            path='/torneos/:id'
             element={<Tournaments />}
           />
           <Route
@@ -53,11 +55,11 @@ const App = () => {
             element={<Calendar />}
           />
           <Route
-            path='/clubes/:id/:slug'
+            path='/clubes/:id'
             element={<Clubes />}
           />
           <Route
-            path='/equipos/:id/:slug'
+            path='/equipos/:id'
             element={<Teams />}
           />
           <Route
@@ -120,6 +122,14 @@ const App = () => {
           <Route
             path='/usuarios/misdatos'
             element={<UsersMisDatos />}
+          />
+          <Route
+            path='/usuarios/recuperar-password'
+            element={<UsersRecuperar />}
+          />
+          <Route
+            path='/usuarios/restablecer-password'
+            element={<UsersRestablecer />}
           />
 
           <Route

@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet'
-import slugify from 'react-slugify'
 import Loader from '../../components/Loader'
 import useFetch from '../../hooks/useFetch'
 import Labels from '../../components/Labels'
@@ -55,7 +54,7 @@ const ClubesRanking = () => {
                   num={index + 1}
                   image={item.image}
                   title={item.name}
-                  link={`/clubes/${item.id}/${slugify(item.name)}`}
+                  link={`/clubes/${item.id}`}
                 />
                 <td>
                   <span className='font-bold'>{item.matches_won}</span>

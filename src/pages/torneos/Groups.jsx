@@ -1,4 +1,3 @@
-import slugify from 'react-slugify'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import Labels from '../../components/Labels'
@@ -63,7 +62,7 @@ const TournamentsGroup = ({ group, tournament }) => {
                   num={index + 1}
                   image={`https://imltenis.com.ar/images/${item.image ? item.image : item.club_image}`}
                   title={item.name}
-                  link={`/equipos/${item.id}/${slugify(item.name)}`}
+                  link={`/equipos/${item.id}`}
                 />
                 <td>
                   <span className='font-bold'>{item.match_won}</span>

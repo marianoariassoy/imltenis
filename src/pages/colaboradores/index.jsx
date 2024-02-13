@@ -19,7 +19,7 @@ const Amigos = () => {
     {
       title: 'Estudio jurídico Giollo y Asoc.',
       subtitle: 'Bufet de abogados',
-      description: 'Oficina en Los Polvorines.',
+      description: 'Los Polvorines.',
       phone: '5491168537131',
       url: 'https://www.instagram.com/giolloabogados/'
     }
@@ -32,7 +32,7 @@ const Amigos = () => {
         </div>
         <p className='text-sm text-wrap'>
           Gracias al apoyo y la contribucion generosa de los siguientes colaboradores nuestra liga y comunidad tenistica
-          continua creciendo y fortalciendose.
+          continua creciendo.
         </p>
       </div>
 
@@ -70,7 +70,7 @@ const Amigos = () => {
       </div>
 
       <p className='text-sm'>
-        🤙 Comunicate al{' '}
+        📢 Comunicate al{' '}
         <a
           href='https://wa.me/5491130171475'
           className='underline hover:text-primary'

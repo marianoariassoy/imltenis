@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
-import slugify from 'react-slugify'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import { Pin, WhatsApp } from '../../components/icons'
@@ -29,7 +28,7 @@ const Teams = () => {
         <div className='avatar'>
           <div className='w-28 rounded-full'>
             <Link
-              to={`/clubes/${data[0].club_id}/${slugify(data[0].name)}`}
+              to={`/clubes/${data[0].club_id}`}
               className='hover:opacity-70 transition-all'
             >
               <Image
@@ -43,7 +42,7 @@ const Teams = () => {
           <h1 className='font-bold text-primary lg:text-xl'>{data[0].name}</h1>
           <h2>
             <Link
-              to={`/torneos/${data[0].tournament_id}/${slugify(data[0].tournament_name)}`}
+              to={`/torneos/${data[0].tournament_id}`}
               className='font-medium opacity-70 hover:text-primary text-sm'
             >
               {data[0].tournament_name}

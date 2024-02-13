@@ -9,7 +9,7 @@ import Equipos from './Equipos'
 import Image from '../../components/Image'
 
 const JugadoresContainer = () => {
-  let { id } = useParams()
+  const { id } = useParams()
 
   useEffect(() => {
     window.scrollTo({

@@ -1,6 +1,6 @@
 import { useAuth } from '../../context'
 import Login from './Login'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { BeatLoader } from 'react-spinners'
 import { Input, Button, Select } from '../ui'
@@ -9,17 +9,18 @@ import axios from 'axios'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import Error from './Error'
+import Messages from './Messages'
 
 const index = () => {
-  const { isLoggedIn, userData } = useAuth()
+  const { isLoggedIn, userData, setUserData } = useAuth()
 
   if (!isLoggedIn) return <Login />
 
   const { data, loading } = useFetch(`/users/data/${userData.id}`)
   const [sended, setSended] = useState(false)
   const [sending, setSending] = useState(false)
-  const [error, setError] = useState(null)
-  const [image, setImage] = useState()
+  const [error, setError] = useState('')
+  const [image, setImage] = useState('')
 
   const {
     register,
@@ -36,7 +37,7 @@ const index = () => {
     formData.append('data', JSON.stringify(data))
     formData.append('file', image)
     try {
-      const response = await axios.post('https://imltenis.com.ar/api/users/update', formData, {
+      const response = await axios.post(`https://imltenis.com.ar/api/users/update/${userData.id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -45,10 +46,18 @@ const index = () => {
         setError(null)
         setSending(false)
         setSended(true)
+        const newImage = response.data.image
+        if (newImage) {
+          setUserData({
+            ...userData,
+            image: newImage
+          })
+        }
       } else {
         setError(response.data.message)
         setSending(false)
       }
+      window.scrollTo(0, 0)
     } catch (error) {
       setError(error)
       setSending(false)
@@ -71,12 +80,8 @@ const index = () => {
         </div>
 
         <div className='w-full m-auto'>
-          {error && <div className='text-primary text-center text-sm font-medium mb-6'>{error}</div>}
-          {sended && (
-            <div className='text-primary text-center text-sm font-medium mb-6 '>
-              Tus datos fueron actualizados correctamente. 👍
-            </div>
-          )}
+          {error && <Messages text={error} />}
+          {sended && <Messages text='Tus datos fueron actualizados correctamente 👍' />}
 
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className='grid lg:grid-cols-2 gap-x-6'>
@@ -234,14 +239,9 @@ const index = () => {
             </div>
             <div className='mt-6'>
               <p className='text-sm opacity-70 text-center'>
-                Solo se mostrán de forma publica los siguientes datos: nombre, apellido y foto de perfil.
+                Solo se muestran de forma pública tu nombre, apellido y foto de perfil.
               </p>
             </div>
-            <input
-              type='hidden'
-              value={data[0].id}
-              {...register('id')}
-            />
           </form>
         </div>
       </div>
