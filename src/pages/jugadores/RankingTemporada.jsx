@@ -74,7 +74,7 @@ const JugadoresRanking = () => {
             </tr>
           </thead>
           <tbody>
-            {filteredPlayers.slice(0, 30).map((item, index) => (
+            {filteredPlayers.slice(0, 50).map((item, index) => (
               <tr
                 key={item.id}
                 className={`${index === 0 && 'text-primary'}`}

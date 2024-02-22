@@ -1,28 +1,20 @@
-import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Ghost, Instagram } from '../components/icons'
 import { useAuth } from '../context'
 
 const UserMenu = () => {
   const { logout, isLoggedIn, userData } = useAuth()
   const location = useLocation()
-  const [image, setImage] = useState(null)
 
   if (!isLoggedIn)
     return (
-      <div className='flex gap-x-4 items-center'>
-        <a
-          href='https://www.instagram.com/imltenis/'
-          target='_blank'
-          className='hover:text-primary'
-        >
-          <Instagram />
-        </a>
+      <div>
         <Link
           to='/usuarios/login'
-          className={location.pathname === '/usuarios/login' ? 'text-primary' : 'hover:text-primary'}
+          className={`text-sm font-bold ${
+            location.pathname === '/usuarios/login' ? 'text-primary' : 'hover:text-primary'
+          }`}
         >
-          <Ghost />
+          LOGIN
         </Link>
       </div>
     )

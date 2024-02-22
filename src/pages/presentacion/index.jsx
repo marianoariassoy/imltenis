@@ -23,7 +23,9 @@ Cierre de listas de buena fe: <strong>Lunes 11 de Marzo</strong>`
     {
       title: '⭐ ¿En qué categorías puedo inscribirme?',
       text: `<strong>Los Domingos:</strong> Primera Libre, Segunda Libre, Tercera Libre, Cuarta Libre, Quinta Libre. <br/> 
-      <strong>Los Sábados:</strong> Tercera +45, Segunda Damas, Tercera Damas, Cuarta Damas. `
+      <strong>Sábados y Domingos:</strong> Damas Segunda, Damas Tercera, Damas Cuarta. <br/> 
+      <strong>Sábados:</strong> Tercera +45. 
+      `
     },
     {
       title: '📈 ¿Cómo se a que categoría corresponde mi equipo?',

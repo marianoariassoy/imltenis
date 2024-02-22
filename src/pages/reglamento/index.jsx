@@ -13,7 +13,8 @@ const Reglamento = () => {
       <div className='text-center text-xl'>
         <h1 className='font-bold text-primary'>Reglamento IML Tenis</h1>
         <h2 className='font-bold text-primary'>Apertura 2024</h2>
-        🤝
+        <div className='block'>🤝</div>
+        <div className='text-sm text-center opacity-70'>Ultima actualización 17 de febrero de 2024.</div>
       </div>
       <p className='md:columns-2 gap-8 text-sm'>
         La presente liga de clubes se desarrolla desde el mes de Marzo hasta el mes de Diciembre en 2 torneos a jugarse
@@ -58,9 +59,11 @@ const Reglamento = () => {
         pedir W.O.
         <br />
         <br />
-        <strong className='text-primary'>Días y Horarios:</strong> Las categorías de damas y la categoría tercera +45
-        jugarán los días sábados en un horario a determinar por el equipo local en cada oportunidad, que deberá ser
-        entre las 13 y las 17hs.
+        <strong className='text-primary'>Días y Horarios:</strong> Las categorías de damas jugarán los días sábados y
+        domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser los sábados entre
+        las 13 y las 17hs y los domingos entre las 9 y las 17hs. <br />
+        La categoría tercera +45 jugarán los días sábados en un horario a determinar por el equipo local en cada
+        oportunidad, que deberá ser entre las 13 y las 17hs.
         <br />
         El resto de las categorías jugarán los días domingos en un horario a determinar por el equipo local en cada
         oportunidad, que deberá ser entre las 9 y las 17hs.
@@ -155,7 +158,8 @@ const Reglamento = () => {
         ausencia de algún o algunos jugadores, podrá auxiliarlo, mediante el reemplazo por otros jugadores de sus
         divisiones inferiores. Dicho jugador si ganara 1 partido en la categoría superior, al siguiente partido jugado
         pasará a integrar la lista de buena fe del equipo de la categoría superior, no pudiendo jugar en la categoría
-        inferior en la que fue inscripto en un principio.
+        inferior en la que fue inscripto en un principio. <br />
+        Esta regla se aplica a todo jugador independientemente del club al que forme parte
         <br />
         <br />
         <strong className='text-primary'>Dos o más Equipos por División:</strong> Cuando un club tenga dos o más equipos
@@ -227,6 +231,16 @@ const Reglamento = () => {
         <br />
         <strong className='text-primary'>Los jugadores profesionales, ex jugadores profesionales,</strong> solo podrán
         competir en la categoría Primera Libre.
+        <br />
+        <br />
+        la organización se reserva el derecho a modificar el presente reglamento cuando sea imperioso establecer,
+        regular o fijar conductas o acciones que puedan generar conflictos o diversas interpretaciones con el objeto de
+        conducir a un mejor desenvolvimiento de las diversas competiciones <br />
+        <br />
+        Para el supuesto caso que pudiera darse una laguna en la normativa o posible doble interpretación, esta
+        organización resolverá puntualmente la cuestión en conflicto de acuerdo a su leal saber y entender, notificando
+        a las partes que pudieran estar involucradas. La decisión será inapelable por las partes que pudieran estar
+        involucradas y generará un precedente que será utilizado para aclaración de las posibles normas en conflicto
       </p>
 
       <Helmet>

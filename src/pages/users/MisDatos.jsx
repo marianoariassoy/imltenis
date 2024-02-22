@@ -3,7 +3,7 @@ import Login from './Login'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { BeatLoader } from 'react-spinners'
-import { Input, Button, Select } from '../ui'
+import { Input, Button, Select } from '../../ui'
 import { texts, days, months, years } from '../../components/data'
 import axios from 'axios'
 import useFetch from '../../hooks/useFetch'
@@ -239,7 +239,10 @@ const index = () => {
             </div>
             <div className='mt-6'>
               <p className='text-sm opacity-70 text-center'>
-                Solo se muestran de forma pública tu nombre, apellido y foto de perfil.
+                Solo se muestran tu nombre, apellido y foto de perfil.
+                <br />
+                El resto de los datos se encuentran protegidos y nadie por fuera de la organiazación tiene acceso a
+                ellos.
               </p>
             </div>
           </form>

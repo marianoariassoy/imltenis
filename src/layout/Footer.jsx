@@ -69,18 +69,27 @@ const Footer = () => {
       </div>
 
       <div className='text-[.8rem] text-center flex flex-col'>
-        <div>
-          <span className='font-bold block'>Liga de clubes IML Tenis </span>
-          Buenos Aires, Argentina. &copy; {year}
-        </div>
-        <div>
+        <span className='font-bold'>Liga de clubes IML Tenis</span>
+        <span>Buenos Aires, Argentina. &copy; {year}</span>
+
+        <span>
           <a
             href='mailto:hola@imltenis.com.ar'
             className='hover:text-primary'
           >
             hola@imltenis.com.ar
           </a>
-          &bull; Desarrollo: &nbsp;
+          <span>&nbsp;&bull;&nbsp;</span>
+          <a
+            href='https://www.instagram.com/imltenis/'
+            target='_blank'
+            className='hover:text-primary'
+          >
+            instagram.com/imltenis
+          </a>
+        </span>
+        <span>
+          Desarrollo: &nbsp;
           <a
             href='http://marianoarias.soy'
             className='font-bold hover:text-primary'
@@ -89,7 +98,7 @@ const Footer = () => {
           >
             Mariano Arias
           </a>
-        </div>
+        </span>
       </div>
     </div>
   )

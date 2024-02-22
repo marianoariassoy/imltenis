@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { BeatLoader } from 'react-spinners'
-import { Input, Button } from '../ui'
+import { Input, Button } from '../../ui'
 import { texts } from '../../components/data'
 import { useAuth } from '../../context'
 import Error from './Error'
@@ -43,7 +43,7 @@ const index = () => {
     <section>
       <div className='flex flex-col gap-y-6'>
         <div className='text-center px-12 text-sm'>
-          <p>Ingresá con tu email y contraseña.</p>
+          <div className='text-primary'>Ingresá con tu email y contraseña.</div>
           <Link
             to='/usuarios/registro'
             className='hover:text-primary hover:opacity-100 opacity-70'

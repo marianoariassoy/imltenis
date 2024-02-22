@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { BeatLoader } from 'react-spinners'
 import axios from 'axios'
-import { Input, Button, Select } from '../ui'
+import { Input, Button, Select } from '../../ui'
 import { texts, days, months, years } from '../../components/data'
 import Thanks from './Thanks'
 import Error from './Error'
@@ -61,9 +61,7 @@ const index = () => {
           <div className='text-center'>
             <h1 className='font-bold text-primary text-xl mb-3'>¡Bienvenido! 🚀</h1>
             <div>
-              <p className='text-sm opacity-70'>
-                Completá con tus datos y se parte de una de las ligas de clubes más importantes.
-              </p>
+              <p className='text-sm opacity-70'>Completá con tus datos y se parte de nuestra liga.</p>
             </div>
           </div>
         )}
@@ -227,7 +225,10 @@ const index = () => {
             </div>
             <div className='mt-6'>
               <p className='text-sm opacity-70 text-center'>
-                Solo se muestran de forma pública tu nombre, apellido y foto de perfil.
+                Solo se muestran tu nombre, apellido y foto de perfil.
+                <br />
+                El resto de los datos se encuentran protegidos y nadie por fuera de la organiazación tiene acceso a
+                ellos.
               </p>
             </div>
           </form>

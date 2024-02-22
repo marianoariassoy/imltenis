@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
 import { BeatLoader } from 'react-spinners'
-import { Input, Button } from '../ui'
+import { Input, Button } from '../../ui'
 import { texts } from '../../components/data'
 import Error from './Error'
 import Messages from './Messages'
@@ -40,8 +40,8 @@ const index = () => {
     <section>
       <div className='flex flex-col gap-y-6'>
         {!sended ? (
-          <div className='text-center text-sm px-12'>
-            Ingresá tu email y te enviamos un enlace para restablecer tu contraseña 😉
+          <div className='text-center text-sm px-12 text-primary'>
+            Ingresá tu email y te enviaremos un enlace para restablecer tu contraseña 😉
           </div>
         ) : (
           <Messages text='Se envio un enlace a tu correo para restablecer tu contraseña 👍' />
