@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { BeatLoader } from 'react-spinners'
+import { Helmet } from 'react-helmet'
 import axios from 'axios'
 import { Input, Button, Select } from '../../ui'
 import { texts, days, months, years } from '../../components/data'
@@ -234,6 +235,9 @@ const index = () => {
           </form>
         </div>
       </div>
+      <Helmet>
+        <title>IML Tenis Registro</title>
+      </Helmet>
     </section>
   )
 }

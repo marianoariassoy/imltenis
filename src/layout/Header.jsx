@@ -20,7 +20,7 @@ const Header = () => {
             <Bars />
           </label>
         </div>
-        {/* <div>
+        <div>
           <a
             href='https://www.instagram.com/imltenis/'
             target='_blank'
@@ -28,7 +28,7 @@ const Header = () => {
           >
             <Instagram />
           </a>
-        </div> */}
+        </div>
       </div>
       <div className='navbar-center text-primary'>
         <Link to='/'>

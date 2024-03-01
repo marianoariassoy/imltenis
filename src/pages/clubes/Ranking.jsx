@@ -5,7 +5,7 @@ import Labels from '../../components/Labels'
 import TitleRow from '../../components/TitleRow'
 
 const ClubesRanking = () => {
-  const { data, loading } = useFetch(`/clubes/ranking`)
+  const { data, loading } = useFetch(`/clubes/ranking/2024`)
   if (loading) return <Loader />
 
   const labels = [
@@ -30,8 +30,8 @@ const ClubesRanking = () => {
   return (
     <section className='fade-in flex flex-col gap-y-6'>
       <div className='text-center text-xl'>
-        <h1 className='font-bold text-primary'>Ranking de Clubes TyP</h1>
-        <h2 className='font-medium opacity-70'>2023</h2>
+        <h1 className='font-bold text-primary'>Ranking de Clubes</h1>
+        <h2 className='font-medium opacity-70'>2024</h2>
         🏆
       </div>
 

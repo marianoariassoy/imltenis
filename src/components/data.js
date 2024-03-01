@@ -1,13 +1,12 @@
 export const categories = [
-  { name: 'Primera Libre', url: '/soon' },
-  { name: 'Segunda Libre', url: '/soon' },
-  { name: 'Tercera Libre', url: '/soon' },
-  { name: 'Cuarta Libre', url: '/soon' },
-  { name: 'Quinta Libre', url: '/soon' },
-  { name: 'Tercera +45', url: '/soon' },
-  { name: 'Segunda Damas', url: '/soon' },
-  { name: 'Tercera Damas', url: '/soon' },
-  { name: 'Cuarta Damas', url: 'soon' }
+  { name: 'Damas Tercera', url: '/torneos/34' },
+  { name: 'Damas Cuarta ', url: '/torneos/35' },
+  { name: 'Primera Libre', url: '/torneos/28' },
+  { name: 'Segunda Libre', url: '/torneos/29' },
+  { name: 'Tercera Libre', url: '/torneos/30' },
+  { name: 'Tercera +45', url: '/torneos/33' },
+  { name: 'Cuarta Libre', url: '/torneos/31' },
+  { name: 'Quinta Libre', url: '/torneos/32' }
 ]
 
 export const menu = [

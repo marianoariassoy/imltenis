@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 import axios from 'axios'
 import { BeatLoader } from 'react-spinners'
 import { Input, Button } from '../../ui'
@@ -43,7 +44,7 @@ const index = () => {
     <section>
       <div className='flex flex-col gap-y-6'>
         <div className='text-center px-12 text-sm'>
-          <div className='text-primary'>Ingresá con tu email y contraseña.</div>
+          <div className='text-primary font-medium'>Ingresá con tu email y contraseña.</div>
           <Link
             to='/usuarios/registro'
             className='hover:text-primary hover:opacity-100 opacity-70'
@@ -104,6 +105,9 @@ const index = () => {
           </form>
         </div>
       </div>
+      <Helmet>
+        <title>IML Tenis Login</title>
+      </Helmet>
     </section>
   )
 }

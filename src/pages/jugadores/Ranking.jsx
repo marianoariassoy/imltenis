@@ -15,7 +15,15 @@ const JugadoresRanking = () => {
     },
     {
       name: 'Pts.',
-      value: 'Puntos'
+      value: 'Puntos de diferencia'
+    },
+    {
+      name: 'PG',
+      value: 'Parciales ganados'
+    },
+    {
+      name: 'PJ',
+      value: 'Parciales jugados'
     },
     {
       name: 'DS',
@@ -24,10 +32,6 @@ const JugadoresRanking = () => {
     {
       name: 'DG',
       value: 'Diferencia de games'
-    },
-    {
-      name: 'PJ',
-      value: 'Parciales jugados'
     }
   ]
 
@@ -61,11 +65,12 @@ const JugadoresRanking = () => {
                   link={`/jugadores/${item.id}`}
                 />
                 <td>
-                  <span className='font-bold'>{item.matches_won}</span>
+                  <span className='font-bold'>{item.difference}</span>
                 </td>
+                <td>{item.matches_won}</td>
+                <td>{item.matches_total}</td>
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
-                <td>{item.matches_total}</td>
               </tr>
             ))}
           </tbody>

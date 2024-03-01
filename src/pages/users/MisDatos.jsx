@@ -3,6 +3,7 @@ import Login from './Login'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { BeatLoader } from 'react-spinners'
+import { Helmet } from 'react-helmet'
 import { Input, Button, Select } from '../../ui'
 import { texts, days, months, years } from '../../components/data'
 import axios from 'axios'
@@ -248,6 +249,9 @@ const index = () => {
           </form>
         </div>
       </div>
+      <Helmet>
+        <title>IML Tenis Mis Datos</title>
+      </Helmet>
     </section>
   )
 }

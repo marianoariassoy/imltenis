@@ -4,12 +4,9 @@ import { useEffect } from 'react'
 const Welcome = () => {
   useEffect(() => {
     const nav = document.querySelector('.navbar')
-    const footer = document.querySelector('.footer-main')
     nav.classList.remove('backdrop-blur-md')
-    footer.classList.remove('mt-16')
     return () => {
       nav.classList.add('backdrop-blur-md')
-      footer.classList.add('mt-16')
     }
   }, [])
 

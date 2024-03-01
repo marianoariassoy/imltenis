@@ -1,3 +1,5 @@
+import { WhatsApp } from '../components/icons'
+
 const Footer = () => {
   const year = new Date().getFullYear()
   const logos = [
@@ -46,8 +48,8 @@ const Footer = () => {
   ]
 
   return (
-    <div className='footer-main p-6 opacity-60 mt-8'>
-      <div className='max-w-lg lg:max-w-3xl gap-3 m-auto grid grid-cols-4 lg:grid-cols-8 items-center justify-center mb-10 lg:mb-6'>
+    <div className='p-6 opacity-60'>
+      <div className='max-w-lg lg:max-w-3xl gap-3 m-auto grid grid-cols-4 lg:grid-cols-8 items-center justify-center mb-8 lg:mb-2'>
         {logos.map((logo, index) => (
           <div
             key={index}
@@ -68,37 +70,34 @@ const Footer = () => {
         ))}
       </div>
 
-      <div className='text-[.8rem] text-center flex flex-col'>
+      <div className='text-sm text-center flex flex-col'>
         <span className='font-bold'>Liga de clubes IML Tenis</span>
         <span>Buenos Aires, Argentina. &copy; {year}</span>
 
-        <span>
-          <a
-            href='mailto:hola@imltenis.com.ar'
-            className='hover:text-primary'
-          >
-            hola@imltenis.com.ar
-          </a>
-          <span>&nbsp;&bull;&nbsp;</span>
-          <a
-            href='https://www.instagram.com/imltenis/'
-            target='_blank'
-            className='hover:text-primary'
-          >
-            instagram.com/imltenis
-          </a>
-        </span>
-        <span>
-          Desarrollo: &nbsp;
-          <a
-            href='http://marianoarias.soy'
-            className='font-bold hover:text-primary'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Mariano Arias
-          </a>
-        </span>
+        <div className='flex items-center justify-center gap-x-2'>
+          <span className='flex items-center gap-x-2'>
+            <WhatsApp />
+            <a
+              href='https://wa.me/5491130171475'
+              className='hover:text-primary'
+            >
+              11 3017-1475
+            </a>
+          </span>
+          <span>&bull;</span>
+          <span>
+            Desarrollo:{' '}
+            <a
+              href='http://marianoarias.soy'
+              className='font-bold hover:text-primary'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Mariano Arias
+            </a>
+          </span>
+        </div>
+        <span></span>
       </div>
     </div>
   )

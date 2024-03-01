@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ReactGA from 'react-ga4'
 import Layout from './layout/Layout'
-// import Welcome from './pages/home'
+import Welcome from './pages/home'
 import Tournaments from './pages/torneos'
 import Teams from './pages/equipos'
 import Series from './pages/series'
@@ -19,8 +19,8 @@ import Colaboradores from './pages/colaboradores'
 import Reglamento from './pages/reglamento'
 import Nosotros from './pages/nosotros'
 
-import Presentacion from './pages/presentacion'
-import Soon from './pages/Soon'
+// import Presentacion from './pages/presentacion'
+// import Soon from './pages/Soon'
 import PageNotFound from './pages/PageNotFound'
 
 import UsersLogin from './pages/users/Login'
@@ -37,15 +37,14 @@ const App = () => {
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route
-            path='/'
-            element={<Soon />}
-          />
           {/* <Route
             path='/'
-            element={<Welcome />}
+            element={<Soon />}
           /> */}
-
+          <Route
+            path='/'
+            element={<Welcome />}
+          />
           <Route
             path='/torneos/:id'
             element={<Tournaments />}
@@ -102,10 +101,10 @@ const App = () => {
             path='/nosotros'
             element={<Nosotros />}
           />
-          <Route
+          {/* <Route
             path='/presentacion'
             element={<Presentacion />}
-          />
+          /> */}
 
           <Route
             path='/usuarios/login'
@@ -131,11 +130,10 @@ const App = () => {
             path='/usuarios/restablecer-password'
             element={<UsersRestablecer />}
           />
-
-          <Route
+          {/* <Route
             path='/soon'
             element={<Soon />}
-          />
+          /> */}
           <Route
             path='*'
             element={<PageNotFound />}

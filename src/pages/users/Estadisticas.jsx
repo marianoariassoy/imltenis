@@ -33,7 +33,7 @@ const Estadisticas = ({ id }) => {
   ]
 
   return (
-    <section className='grid grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-6 bg-base-300 p-6 rounded-2xl'>
+    <section className='grid grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-6 bg-black/20 p-6 rounded-2xl'>
       {info.map((item, index) => (
         <EstadisticasItem
           key={index}

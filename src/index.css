@@ -7,9 +7,6 @@
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
-table thead tr {
-  border: none;
-}
 .active,
 .nav-link:hover {
   text-decoration: underline;
@@ -47,9 +44,16 @@ input::placeholder {
     opacity: 1;
   }
 }
-/* table tbody tr td {
+table thead tr {
+  border: none;
+}
+table tbody tr td {
   white-space: nowrap;
-} */
+}
 table tbody tr {
   border: 0;
+}
+input:-webkit-autofill {
+  background-color: transparent;
+  color: white;
 }

@@ -1,5 +1,6 @@
-import Counter from './Counter'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
+import Counter from './Counter'
 
 const Soon = () => {
   return (
@@ -32,6 +33,9 @@ const Soon = () => {
           </a>
         </span>
       </div>
+      <Helmet>
+        <title>IML Tenis Liga de clubes</title>
+      </Helmet>
     </div>
   )
 }

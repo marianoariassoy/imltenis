@@ -14,7 +14,7 @@ const TournamentsGroup = ({ group, tournament }) => {
     },
     {
       name: 'Pts.',
-      value: 'Puntos'
+      value: 'Puntos - Parciales ganados'
     },
     {
       name: 'SG',

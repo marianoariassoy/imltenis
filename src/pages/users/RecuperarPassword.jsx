@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
 import { BeatLoader } from 'react-spinners'
+import { Helmet } from 'react-helmet'
 import { Input, Button } from '../../ui'
 import { texts } from '../../components/data'
 import Error from './Error'
@@ -40,7 +41,7 @@ const index = () => {
     <section>
       <div className='flex flex-col gap-y-6'>
         {!sended ? (
-          <div className='text-center text-sm px-12 text-primary'>
+          <div className='text-center text-sm px-12 text-primary font-medium'>
             Ingresá tu email y te enviaremos un enlace para restablecer tu contraseña 😉
           </div>
         ) : (
@@ -82,6 +83,9 @@ const index = () => {
           </form>
         </div>
       </div>
+      <Helmet>
+        <title>IML Tenis Recupero de contraseña</title>
+      </Helmet>
     </section>
   )
 }

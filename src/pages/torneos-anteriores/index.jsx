@@ -16,7 +16,7 @@ const Torneos = () => {
         👴
       </div>
 
-      <div className='flex flex-col gap-y-1 items-center font-bold'>
+      <div className='flex flex-col gap-y-1 items-center font-medium'>
         {data &&
           data
             .filter(item => item.season !== 3)
