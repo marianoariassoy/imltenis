@@ -31,6 +31,7 @@ const Fixture = ({ data, type }) => {
                 <th
                   scope='col'
                   width='50'
+                  className='pl-0'
                 >
                   Fecha
                 </th>
@@ -42,7 +43,7 @@ const Fixture = ({ data, type }) => {
                 </th>
                 <th
                   scope='col'
-                  width='240'
+                  width='255'
                 >
                   Local
                 </th>
@@ -83,12 +84,17 @@ const Fixture = ({ data, type }) => {
                   />
                 </td>
                 <td className='text-center'>
-                  <Link
-                    to={`/series/${item.id}`}
-                    className='hover:text-primary font-bold'
-                  >
-                    {item.score_home}-{item.score_away}
-                  </Link>
+                  {item.score_home ||
+                    (item.score_away ? (
+                      <Link
+                        to={`/series/${item.id}`}
+                        className='hover:text-primary font-bold'
+                      >
+                        {item.score_home}-{item.score_away}
+                      </Link>
+                    ) : (
+                      '-'
+                    ))}
                 </td>
                 <td className='lg:whitespace-normal'>
                   <TeamItem

@@ -20,7 +20,7 @@ import Reglamento from './pages/reglamento'
 import Nosotros from './pages/nosotros'
 
 // import Presentacion from './pages/presentacion'
-// import Soon from './pages/Soon'
+import Soon from './pages/Soon'
 import PageNotFound from './pages/PageNotFound'
 
 import UsersLogin from './pages/users/Login'
@@ -130,10 +130,10 @@ const App = () => {
             path='/usuarios/restablecer-password'
             element={<UsersRestablecer />}
           />
-          {/* <Route
+          <Route
             path='/soon'
             element={<Soon />}
-          /> */}
+          />
           <Route
             path='*'
             element={<PageNotFound />}

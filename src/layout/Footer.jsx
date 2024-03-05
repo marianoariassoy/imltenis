@@ -49,7 +49,7 @@ const Footer = () => {
 
   return (
     <div className='p-6 opacity-60'>
-      <div className='max-w-lg lg:max-w-3xl gap-3 m-auto grid grid-cols-4 lg:grid-cols-8 items-center justify-center mb-8 lg:mb-2'>
+      <div className='max-w-lg lg:max-w-3xl gap-2 m-auto grid grid-cols-4 lg:grid-cols-8 items-center justify-center mb-6 lg:mb-2'>
         {logos.map((logo, index) => (
           <div
             key={index}

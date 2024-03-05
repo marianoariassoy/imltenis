@@ -10,40 +10,48 @@ export const categories = [
 ]
 
 export const menu = [
-  { name: 'Ranking Clausura 2023', url: '/ranking-temporada' },
+  { name: 'Ranking Apertura 2024', url: '/soon' },
   { name: 'Ranking UrbanKicks', url: '/ranking-urbankicks' },
   { name: 'Ranking de Clubes', url: '/ranking-clubes' },
   { name: 'Torneos Anteriores', url: '/torneos-anteriores' },
   { name: 'Jugadores', url: '/jugadores' },
   { name: 'Colaboradores', url: '/colaboradores' },
   { name: 'Reglamento', url: '/reglamento' },
+  { name: 'Login', url: '/usuarios/login' },
   { name: 'Nosotros', url: '/nosotros' }
 ]
 
 export const rankingOptions = [
   {
-    name: 'Damas',
+    name: 'Damas Tercera',
     category: 6
   },
   {
-    name: '1era',
+    name: 'Damas Cuarta',
+    category: 8
+  },
+  {
+    name: 'Primera Libre',
     category: 1
   },
   {
-    name: '2da',
+    name: 'Segunda Libre',
     category: 2
   },
-
   {
-    name: '3ra',
+    name: 'Tercera Libre',
     category: 3
   },
   {
-    name: '4ta',
+    name: 'Tercera +45',
+    category: 7
+  },
+  {
+    name: 'Cuarta Libre',
     category: 4
   },
   {
-    name: '5ta',
+    name: 'Quinta Libre',
     category: 5
   }
 ]

@@ -47,6 +47,9 @@ input::placeholder {
 table thead tr {
   border: none;
 }
+table thead tr th {
+  padding-bottom: 0 !important;
+}
 table tbody tr td {
   white-space: nowrap;
 }

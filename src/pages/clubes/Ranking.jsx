@@ -15,11 +15,15 @@ const ClubesRanking = () => {
     },
     {
       name: 'Pts.',
-      value: 'Puntos'
+      value: 'Puntos de diferencia'
     },
     {
       name: 'SG',
       value: 'Series ganadas'
+    },
+    {
+      name: 'PG',
+      value: 'Parciales ganados'
     },
     {
       name: 'SJ',
@@ -57,9 +61,13 @@ const ClubesRanking = () => {
                   link={`/clubes/${item.id}`}
                 />
                 <td>
-                  <span className='font-bold'>{item.matches_won}</span>
+                  <span className='font-bold'>0</span>
                 </td>
                 <td>{item.series_won}</td>
+                <td>
+                  <span className='font-bold'>{item.matches_won}</span>
+                </td>
+
                 <td>{item.series_total}</td>
               </tr>
             ))}
