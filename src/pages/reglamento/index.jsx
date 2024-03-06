@@ -16,7 +16,6 @@ const Reglamento = () => {
         🤝
       </div>
       <p className='md:columns-2 gap-8 text-sm'>
-        <span className='block opacity-70'>Ultima actualización 06 de Marzo 2024.</span>
         La presente liga de clubes se desarrolla desde el mes de Marzo hasta el mes de Diciembre en 2 torneos a jugarse
         los días Sábados y Domingos, según corresponda. Disputando en cada fecha 3 encuentros entre 2 equipos
         representantes de un club de tenis.
@@ -229,18 +228,19 @@ const Reglamento = () => {
         participar por primera vez anotarse en la categoría más baja.
         <br />
         <br />
-        <strong className='text-primary'>Los jugadores profesionales, ex jugadores profesionales,</strong> solo podrán
-        competir en la categoría Primera Libre.
-        <br />
-        <br />
-        la organización se reserva el derecho a modificar el presente reglamento cuando sea imperioso establecer,
+        <strong className='text-primary'>Otras cuestiones: </strong>
+        La organización se reserva el derecho a modificar el presente reglamento cuando sea imperioso establecer,
         regular o fijar conductas o acciones que puedan generar conflictos o diversas interpretaciones con el objeto de
-        conducir a un mejor desenvolvimiento de las diversas competiciones <br />
+        conducir a un mejor desenvolvimiento de las diversas competiciones.
+        <br />
         <br />
         Para el supuesto caso que pudiera darse una laguna en la normativa o posible doble interpretación, esta
         organización resolverá puntualmente la cuestión en conflicto de acuerdo a su leal saber y entender, notificando
         a las partes que pudieran estar involucradas. La decisión será inapelable por las partes que pudieran estar
-        involucradas y generará un precedente que será utilizado para aclaración de las posibles normas en conflicto
+        involucradas y generará un precedente que será utilizado para aclaración de las posibles normas en conflicto.
+        <br />
+        <br />
+        <span className='block opacity-70'>Ultima actualización el 06 de Marzo 2024.</span>
       </p>
 
       <Helmet>
