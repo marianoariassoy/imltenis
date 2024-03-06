@@ -13,10 +13,10 @@ const Reglamento = () => {
       <div className='text-center text-xl'>
         <h1 className='font-bold text-primary'>Reglamento IML Tenis</h1>
         <h2 className='font-bold text-primary'>Apertura 2024</h2>
-        <div className='block'>🤝</div>
-        <div className='text-sm text-center opacity-70'>Ultima actualización 17 de febrero de 2024.</div>
+        🤝
       </div>
       <p className='md:columns-2 gap-8 text-sm'>
+        <span className='block opacity-70'>Ultima actualización 06 de Marzo 2024.</span>
         La presente liga de clubes se desarrolla desde el mes de Marzo hasta el mes de Diciembre en 2 torneos a jugarse
         los días Sábados y Domingos, según corresponda. Disputando en cada fecha 3 encuentros entre 2 equipos
         representantes de un club de tenis.
@@ -156,15 +156,15 @@ const Reglamento = () => {
         <br />
         <strong className='text-primary'>Suplentes naturales:</strong> Cuando un equipo quede incompleto debido a
         ausencia de algún o algunos jugadores, podrá auxiliarlo, mediante el reemplazo por otros jugadores de sus
-        divisiones inferiores. Dicho jugador si ganara 1 partido en la categoría superior, al siguiente partido jugado
-        pasará a integrar la lista de buena fe del equipo de la categoría superior, no pudiendo jugar en la categoría
-        inferior en la que fue inscripto en un principio. <br />
-        Esta regla se aplica a todo jugador independientemente del club al que forme parte
+        divisiones inferiores. Dicho jugador si ganara 1 partido en la categoría superior pasará a integrar la lista de
+        buena fe del equipo de la categoría superior, no pudiendo jugar en la categoría inferior en la que fue inscripto
+        en un principio. <br />
+        Esta regla se aplica a todo jugador independientemente del club al que forme parte.
         <br />
         <br />
         <strong className='text-primary'>Dos o más Equipos por División:</strong> Cuando un club tenga dos o más equipos
         en la misma categoría, éstos se considerarán como equipos distintos, los jugadores de estos equipos no podrán
-        jugar en ningún otro de la misma categoría a la que pertenezcan.
+        jugar en ningún otro equipo de la misma categoría a la que pertenezcan.
         <br />
         <br />
         <strong className='text-primary'>Excepciones a la programación:</strong> Cuando por coincidencia de fechas con
@@ -188,9 +188,9 @@ const Reglamento = () => {
         <br />
         <br />
         <strong className='text-primary'>Sistema de ascensos:</strong> En todas las categorías, con excepción de la
-        primera, tanto de damas como de caballeros, ascenderán los equipos finalistas de cada categoría con la
-        participación obligatoría en la categoría superior de sus jugadores que hayan disputado la serie final y hayan
-        ganado su encuentro, el resto de los jugadores de los equipos será optativo el ascenso.
+        primera libre, ascenderán los equipos finalistas de cada categoría con la participación obligatoría en la
+        categoría superior de los jugadores que hayan terminado con una diferencia de +3 o superior en encuentros
+        disputados, para el resto de los jugadores de los equipos será optativo el ascenso.
         <br />
         <br />
         <strong className='text-primary'>Ascensos de jugadores:</strong> La Liga IML Tenis ostenta el legítimo derecho
@@ -200,8 +200,8 @@ const Reglamento = () => {
         <br />
         <br />
         <strong className='text-primary'>Niveles orientativos para la formación de equipos: </strong>
-        Quinta: Jugadores categoría 125, C. Cuarta: Jugadores categoría 250, B2, B-. Tercera: Jugadores categoría 500,
-        B1 Segunda: Jugadores categoría 750, A1, A2 Primera: Jugadores categoría 1000, Super A.
+        Quinta: Jugadores categoría 125, C. Cuarta: Jugadores categoría 250 a 500, B2, B-. Tercera: Jugadores categoría
+        500 a 750, B1 Segunda: Jugadores categoría 750 a 1000, A1, A2 Primera: Jugadores categoría 1000, Super A.
         <br />
         <br />
         <strong className='text-primary'>Playoffs:</strong> En estas estapas solo podrán participar los jugadores que
