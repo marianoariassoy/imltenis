@@ -108,8 +108,8 @@ const Fixture = ({ data, type }) => {
             ))}
           </tbody>
         </table>
-        {filteredData.length === 0 && (
-          <div className='text-center text-primary mb-6 mt-3 font-bold'>No hay series 🥲</div>
+        {filters !== null && filteredData.length === 0 && (
+          <div className='text-center text-primary mb-3 font-bold'>No hay series 🥲</div>
         )}
       </div>
     </section>
