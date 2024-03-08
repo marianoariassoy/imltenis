@@ -6,7 +6,7 @@ import TitleRow from '../../components/TitleRow'
 const TeamsPlayers = ({ id }) => {
   const { data, loading } = useFetch(`/teams/${id}/players`)
   if (loading) return <Loader />
-  if (!data) return null
+  if (data.length === 0) return null
 
   const labels = [
     {
@@ -20,6 +20,10 @@ const TeamsPlayers = ({ id }) => {
     {
       name: 'PG',
       value: 'Parciales ganados'
+    },
+    {
+      name: 'Dif.',
+      value: 'Diferencia de puntos'
     }
   ]
 
@@ -45,6 +49,7 @@ const TeamsPlayers = ({ id }) => {
                 />
                 <td>{item.series_total}</td>
                 <td>{item.series_won_total}</td>
+                <td>{item.series_dif}</td>
               </tr>
             ))}
           </tbody>
