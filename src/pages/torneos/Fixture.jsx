@@ -74,8 +74,7 @@ const Fixture = ({ data, type }) => {
                     <span className='font-semibold'>{item.date}</span>
                   </div>
                 </td>
-                <td>{item.hour}</td>
-
+                <td>{item.hour == ' :00' ? '-' : item.hour}</td>
                 <td className='lg:whitespace-normal'>
                   <TeamItem
                     id={item.home_id}
@@ -84,17 +83,16 @@ const Fixture = ({ data, type }) => {
                   />
                 </td>
                 <td className='text-center'>
-                  {item.score_home ||
-                    (item.score_away ? (
-                      <Link
-                        to={`/series/${item.id}`}
-                        className='hover:text-primary font-bold'
-                      >
-                        {item.score_home}-{item.score_away}
-                      </Link>
-                    ) : (
-                      '-'
-                    ))}
+                  {item.score_home || item.score_away ? (
+                    <Link
+                      to={`/series/${item.id}`}
+                      className='hover:text-primary font-bold'
+                    >
+                      {item.score_home}-{item.score_away}
+                    </Link>
+                  ) : (
+                    '-'
+                  )}
                 </td>
                 <td className='lg:whitespace-normal'>
                   <TeamItem
