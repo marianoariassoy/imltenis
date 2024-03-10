@@ -5,7 +5,7 @@ import FixtureFilter from './FixtureFilter'
 import TeamItem from '../../components/TeamItem'
 
 const Fixture = ({ data, type }) => {
-  const [filters, setFilters] = useState(null)
+  const [filters, setFilters] = useState('all')
   const filteredData = data.filter(item => item.winner === filters || filters === 'all')
 
   return (
