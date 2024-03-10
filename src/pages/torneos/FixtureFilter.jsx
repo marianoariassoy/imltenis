@@ -1,7 +1,11 @@
 const FixtureFilter = ({ filters, setFilters }) => {
   const options = [
     {
-      name: 'Todo',
+      name: 'Ocultar',
+      value: null
+    },
+    {
+      name: 'Mostrar',
       value: 'all'
     },
     {
@@ -11,10 +15,6 @@ const FixtureFilter = ({ filters, setFilters }) => {
     {
       name: 'Jugados',
       value: true
-    },
-    {
-      name: 'Ocultar',
-      value: null
     }
   ]
 

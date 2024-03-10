@@ -17,7 +17,7 @@ const NavBar = () => {
           <li key={index}>
             <NavLink
               to={item.url}
-              className='nav-link text-primary italic text-xl lg:text-2xl leading-7'
+              className='nav-link text-primary italic text-xl lg:text-2xl'
             >
               {item.name}
             </NavLink>
@@ -27,7 +27,7 @@ const NavBar = () => {
           <li key={index + 10}>
             <NavLink
               to={item.url}
-              className='nav-link font-medium leading-7 text-[1.18rem] lg:text-[1.35rem]'
+              className='nav-link font-medium text-base lg:text-[1.2rem]'
             >
               {item.name}
             </NavLink>
