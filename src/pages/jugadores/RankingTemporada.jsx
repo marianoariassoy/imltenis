@@ -46,11 +46,11 @@ const JugadoresRanking = () => {
   return (
     <section className='fade-in flex flex-col gap-y-6'>
       <div className='text-center text-xl'>
-        <h1 className='font-bold text-primary'>Ranking Jugadores</h1>
-        <h2 className='font-medium opacity-70 text-base'>Clausura 2023</h2>
+        <h1 className='font-bold text-primary'>Ranking UrbanKicks</h1>
+        <h2 className='font-medium opacity-70 text-base'>Apertura 2024</h2>
       </div>
 
-      <div className='row flex gap-4 justify-center text-sm'>
+      <div className='row flex gap-4 justify-center text-sm flex-wrap'>
         {rankingOptions.map(item => (
           <button
             key={item.category}
@@ -74,7 +74,7 @@ const JugadoresRanking = () => {
             </tr>
           </thead>
           <tbody>
-            {filteredPlayers.slice(0, 50).map((item, index) => (
+            {filteredPlayers.slice(0, 30).map((item, index) => (
               <tr
                 key={item.id}
                 className={`${index === 0 && 'text-primary'}`}

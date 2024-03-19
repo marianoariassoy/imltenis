@@ -25,7 +25,7 @@ const Welcome = () => {
         >
           <h1 className='text-6xl lg:text-8xl font-black'>
             <span className='block'>Torneo</span>
-            <span className='block'>Apertura</span> <span className='block'>2024</span>
+            <span className='block'>Yuka Apertura</span> <span className='block'>2024</span>
           </h1>
           <span className='text-4xl lg:text-5xl mt-2 block'>🏆</span>
         </div>

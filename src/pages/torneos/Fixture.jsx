@@ -74,7 +74,7 @@ const Fixture = ({ data, type }) => {
                     <span className='font-semibold'>{item.date}</span>
                   </div>
                 </td>
-                <td>{item.hour == ' :00' ? '-' : item.hour}</td>
+                <td>{item.hour}</td>
                 <td className='lg:whitespace-normal'>
                   <TeamItem
                     id={item.home_id}

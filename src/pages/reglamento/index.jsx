@@ -21,13 +21,13 @@ const Reglamento = () => {
         representantes de un club de tenis.
         <br />
         <br />
-        <strong className='text-primary'>Modalidad de juego:</strong> En la categoría Primera Libre se jugarán 2 singles
-        y 1 doble. En el resto de las categorías se jugarán 1 single y 2 dobles. <br />
+        <strong className='text-primary'>Modalidad de juego: </strong> En la categoría Primera Libre se jugarán 2
+        singles y 1 doble. En el resto de las categorías se jugarán 1 single y 2 dobles. <br />
         Todos los partidos se disputarán al mejor de 3 sets, con tie break. El tercer set será Super Tie break a 10
         puntos con diferencia de dos.
         <br />
         <br />
-        <strong className='text-primary'>Puntuación:</strong> Cada encuentro ganado sumará un punto, es decir, ganando
+        <strong className='text-primary'>Puntuación: </strong> Cada encuentro ganado sumará un punto, es decir, ganando
         los 3 encuentros de la serie se sumarán 3 puntos al equipo vencedor, ganando 2 a 1 se sumarán 2 puntos al equipo
         vencedor y 1 punto al equipo rival, por lo que ahora todos los encuentros ganados suman puntos. <br />
         En caso de empate por puntos en las fases de grupo, se desempatará por mayor cantidad de series ganadas, de
@@ -35,30 +35,34 @@ const Reglamento = () => {
         Todos los resultados podrán ser vistos en este sitio web.
         <br />
         <br />
-        <strong className='text-primary'>Formación:</strong> En la categoría Primera Libre de los 4 jugadores convocados
-        para la serie, el jugador que esté más arriba en la lista de buena fe deberá jugar el single 1, el resto de sus
-        compañeros el single 2 y el doble. <br />
-        En el resto de las categorías de los 5 jugadores convocados para la serie, el jugador que esté más arriba en la
-        lista de buena fe deberá jugar el doble 1 con cualquiera de sus compañeros, el resto de los jugadores pueden
-        jugar el single y doble 2. <br />
+        <strong className='text-primary'>Formación: </strong>
+        En las categorías en las cuales se disputen 1 partido de singles y 2 partidos de dobles, de los cinco jugadores
+        convocados para la serie, cualquiera podrá ser designado para jugar el partido de singles. De los cuatro
+        jugadores restantes, el de mejor ranking deberá ser asignado obligatoriamente para jugar el doble 1.
         <br />
-        <strong className='text-primary'>Formación Incompleta:</strong> Si el equipo completo o algún jugador no se
+        En las categorías en las cuales se disputen 1 partido de dobles y 2 partidos de singles, de los 4 jugadores
+        convocados para la serie, el de mejor ranking deberá ser asignado obligatoriamente para jugar el single 1.
+        <br />
+        <br />
+        <strong className='text-primary'>Formación Incompleta: </strong> Si el equipo completo o algún jugador no se
         presentara a jugar la fecha correspondiente (WO) deberá avisar con un mínimo de 48hs al capitán rival por
         escrito al chat de capitanes de WhatsApp, de lo contrario deberá correr con los gastos que correspondan al
         equipo local, como ser alquiler de canchas. <br /> De tener que disputarse solo 2 encuentros, estos serán el
         single y doble 1
         <br />
         <br />
-        <strong className='text-primary'>Mala formación:</strong> El equipo que incurra en ella, perderá la fecha por
+        <strong className='text-primary'>Mala formación: </strong> El equipo que incurra en ella, perderá la fecha por
         6-0 6-0 en todos los parciales.
         <br />
         <br />
-        <strong className='text-primary'>Pelotas:</strong> El equipo local será el encargado de proveer las pelotas para
-        el encuentro. Se podrán usar tubos o pelotas sueltas hasta con un uso, de lo contrario el equipo rival podrá
-        pedir W.O.
+        <strong className='text-primary'>Pelotas: </strong> El equipo local será el encargado de proveer las pelotas
+        para el encuentro. Se podrán usar tubos o pelotas sueltas hasta con un uso, de lo contrario el equipo rival
+        podrá pedir W.O. <br />
+        Las pelotas "con un uso" deben tener presión de pelota nueva y en cuanto a la felpa debe verse la marca de la
+        pelota completa.
         <br />
         <br />
-        <strong className='text-primary'>Días y Horarios:</strong> Las categorías de damas jugarán los días sábados y
+        <strong className='text-primary'>Días y Horarios: </strong> Las categorías de damas jugarán los días sábados y
         domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser los sábados entre
         las 13 y las 17hs y los domingos entre las 9 y las 17hs. <br />
         La categoría tercera +45 jugarán los días sábados en un horario a determinar por el equipo local en cada
@@ -72,7 +76,7 @@ const Reglamento = () => {
         a disputarse por día de atraso, en caso de la quita de 1 punto no se jugará el doble o single 2.
         <br />
         <br />
-        <strong className='text-primary'>Resultados y Formación:</strong> Es obligatorio el envío de la planilla de
+        <strong className='text-primary'>Resultados y Formación: </strong> Es obligatorio el envío de la planilla de
         resultados o los resultados y formaciones al chat de capitanes de WhatsApp por parte del capitan del equipo
         ganador en el transcurso de las 48 hs. del horario en que se haya disputado la serie, de lo contrario se
         procedera a anular la serie.
@@ -87,20 +91,20 @@ const Reglamento = () => {
         </a>
         <br />
         <br />
-        <strong className='text-primary'>Tercer tiempo:</strong> Queda a voluntad del equipo local. Por parte de la
+        <strong className='text-primary'>Tercer tiempo: </strong> Queda a voluntad del equipo local. Por parte de la
         organización recomendamos en lo posible llevarlo a cabo compartiendo los gastos del mismo, de esta manera
         fomentando la camaraderia entre los jugadores y equipos.
         <br />
         <br />
-        <strong className='text-primary'>Coaching:</strong> Los capitanes pueden intercambiar pareceres, comentarios y/o
-        efectuar directivas a sus jugadores, sobre el partido o cualquier otro tema que tenga interés. Si el Capitán no
-        estuviere dentro de la Cancha acompañando a sus jugadores podrá ingresar en el momento de algún cambio de lado.
-        Todos los comentarios deberán ser efectuados en un nivel de tono, forma y contenido que no moleste a ningún
-        jugador rival. Cuando el Capitán fuera jugador y se encontrará disputando un partido, podrá delegar esta función
-        de Coaching en otra persona. Y responderá en todo por ella.
+        <strong className='text-primary'>Coaching: </strong> Los capitanes pueden intercambiar pareceres, comentarios
+        y/o efectuar directivas a sus jugadores, sobre el partido o cualquier otro tema que tenga interés. Si el Capitán
+        no estuviere dentro de la Cancha acompañando a sus jugadores podrá ingresar en el momento de algún cambio de
+        lado. Todos los comentarios deberán ser efectuados en un nivel de tono, forma y contenido que no moleste a
+        ningún jugador rival. Cuando el Capitán fuera jugador y se encontrará disputando un partido, podrá delegar esta
+        función de Coaching en otra persona. Y responderá en todo por ella.
         <br />
         <br />
-        <strong className='text-primary'>Feriados largos:</strong> Queda a criterio de la organización la programación
+        <strong className='text-primary'>Feriados largos: </strong> Queda a criterio de la organización la programación
         de partidos en dichos días.
         <br />
         <br />
@@ -112,25 +116,51 @@ const Reglamento = () => {
         decidan jugar antes, informando previamente a esta organización.
         <br />
         <br />
-        <strong className='text-primary'>Suspensión de un partido por falta de tiempo:</strong> En el caso de que el
+        <strong className='text-primary'>Reinicio de la Serie Reprogramada: </strong>
+        Al reprogramarse una serie que no ha comenzado, por razones climáticas, y/o algún otro motivo, esta se
+        considerará como una serie nueva en todos los aspectos. Esto incluye la anulación de cualquier configuración
+        previa, tales como formaciones de equipos, selección de jugadores, y el orden de los partidos.
+        <br />
+        Todas las partidas dentro de la serie reprogramada comenzarán con un conteo de puntos nuevo, sin tener en cuenta
+        cualquier configuración o acuerdo previo establecido antes de la interrupción.
+        <br />
+        <br />
+        <strong className='text-primary'>Suspensión de un partido por falta de tiempo: </strong> En el caso de que el
         equipo local tenga que suspender el partido por compromisos de alquiler de canchas o similares, se considerará
         ese partido como abandono del equipo local. Se computará el resultado hasta ese momento y abandono local.
         <br />
         <br />
-        <strong className='text-primary'>Suspensión de partidos comenzados:</strong> Los partidos suspendidos por
+        <strong className='text-primary'>Suspensión de partidos comenzados: </strong> Los partidos suspendidos por
         razones climáticas, y/o algún otro motivo, ya iniciados, serán reprogramados por esta asociación, con los
         parciales y los jugadores participantes. En caso de no presentase alguno de los jugadores en la fecha
         reprogramada, el parcial en disputa será considerado perdido por abandono, debiendo continuar los demás que
         faltaren terminar.
         <br />
         <br />
-        <strong className='text-primary'>Inpuntualidad de jugadores:</strong> El máximo de tolerenacia será de 15
+        <strong className='text-primary'>Inpuntualidad de jugadores: </strong> El máximo de tolerenacia será de 15
         minutos, pasados los cuales se considerará como abandono del partido. El equipo que abandone un partido, deberá
         avisar a la organización por escrito al chat de capitanes de WhatsApp, y deberá correr con los gastos que
         correspondan al equipo rival, como ser alquiler de canchas.
         <br />
         <br />
-        <strong className='text-primary'>Lista de buena fe:</strong> Deben ser enviadas por el capitán de cada equipo a
+        <strong className='text-primary'>Alquiler de canchas: </strong>
+        La presente es una liga de Interclubes que reúne a la mayoría de clubes deportivos cuyos ingresos provienen del
+        cobro por el uso de dichos espacios. Cada jugador debe abonar cuando le toca jugar ya sea de local o de
+        visitante una suma fijada por la organización. Ese dinero se abona en el club donde se desarrolla la serie.
+        Aquel equipo que presente formación incompleta sin haber avisado con el mínimo de 48hs en el chat de capitanes,
+        deberá abonar igualmente el costo completo en concepto de alquiler de cancha. Aquellos emprendimientos
+        urbanísticos que no acostumbran a cobrar el alquiler por el uso de las canchas en razón que los propietarios la
+        sostienen mediante el pago de las expensas, tienen el mismo derecho a cobrarlas y utilizar el dinero recaudado
+        en las localias para afrontar el costo de su participación cuando jueguen de visitantes. Queda igualmente a
+        criterio de los mismos el cobro a los equipos visitantes. La única manera de evitar el pago del alquiler de las
+        canchas es avisando 48hs antes de la ausencia, en cuyo caso el club que será local tiene el tiempo suficiente de
+        disponer de la misma para alquilarla a terceros.
+        <br />
+        El costo fijado en concepto de alquiler de cancha será actualizado periódicamente por esta organización con el
+        fin de mantenerlo acorde a la necesidad de los clubes.
+        <br />
+        <br />
+        <strong className='text-primary'>Lista de buena fe: </strong> Deben ser enviadas por el capitán de cada equipo a
         la organización antes de la fecha informada de su cierre. Pasada dicha fecha, no se podrá realizar incorporación
         o cambio alguno.
         <br />
@@ -144,16 +174,16 @@ const Reglamento = () => {
         cumplir años dentro del año calendario de inicio del torneo.
         <br />
         <br />
-        <strong className='text-primary'>El límite de integrantes de la lista de buena fe</strong> es de 20 jugadores.
+        <strong className='text-primary'>El límite de integrantes de la lista de buena fe </strong> es de 20 jugadores.
         <br />
         <br />
-        <strong className='text-primary'>Auditoria de lista de buena fe rivales:</strong> Cada capitán podrá objetar la
+        <strong className='text-primary'>Auditoria de lista de buena fe rivales: </strong> Cada capitán podrá objetar la
         ubicación de algún jugador rival en la lista de algún equipo rival. Para tal fin deberá informarlo por mail a
         hola@imltenis.com.ar, mencionando equipo, ubicación objetada, motivos y ubicación que considera correcta. No se
         tomarán reclamos por teléfono o WhatsApp. Tal objeción, será tomada de forma anónima.
         <br />
         <br />
-        <strong className='text-primary'>Suplentes naturales:</strong> Cuando un equipo quede incompleto debido a
+        <strong className='text-primary'>Suplentes naturales: </strong> Cuando un equipo quede incompleto debido a
         ausencia de algún o algunos jugadores, podrá auxiliarlo, mediante el reemplazo por otros jugadores de sus
         divisiones inferiores. Dicho jugador si ganara 1 partido en la categoría superior pasará a integrar la lista de
         buena fe del equipo de la categoría superior, no pudiendo jugar en la categoría inferior en la que fue inscripto
@@ -161,18 +191,18 @@ const Reglamento = () => {
         Esta regla se aplica a todo jugador independientemente del club al que forme parte.
         <br />
         <br />
-        <strong className='text-primary'>Dos o más Equipos por División:</strong> Cuando un club tenga dos o más equipos
-        en la misma categoría, éstos se considerarán como equipos distintos, los jugadores de estos equipos no podrán
-        jugar en ningún otro equipo de la misma categoría a la que pertenezcan.
+        <strong className='text-primary'>Dos o más equipos por división: </strong> Cuando un club tenga dos o más
+        equipos en la misma categoría, éstos se considerarán como equipos distintos, los jugadores de estos equipos no
+        podrán jugar en ningún otro equipo de la misma categoría a la que pertenezcan.
         <br />
         <br />
-        <strong className='text-primary'>Excepciones a la programación:</strong> Cuando por coincidencia de fechas con
+        <strong className='text-primary'>Excepciones a la programación: </strong> Cuando por coincidencia de fechas con
         la realización del circuito de tenis algún club tenga compromisos asumidos con anterioridad, podrá solicitar a
         esta asociación, a considerar, la no programación de partidos, la misma deberá ser presentada con anterioridad a
         la realización de la programación oficial e indicará fechas ciertas de los compromisos asumidos.
         <br />
         <br />
-        <strong className='text-primary'>Instalaciones Necesarias:</strong> El Club deberá poder ofrecer para jugar un
+        <strong className='text-primary'>Instalaciones necesarias: </strong> El Club deberá poder ofrecer para jugar un
         partido completo un mínimo de 2 canchas reglamentarias de tenis, vestuarios con comodidades suficientes. Dichas
         canchas deberán ser de un mismo tipo de superficie, las que serán previamente aprobadas por esta asociación.{' '}
         <br />
@@ -180,22 +210,26 @@ const Reglamento = () => {
         para clubes con 2 canchas.
         <br />
         <br />
-        <strong className='text-primary'>Clubes con 2 canchas:</strong> En caso de disputarse una serie en un club con
+        <strong className='text-primary'>Clubes con 2 canchas: </strong> En caso de disputarse una serie en un club con
         dos canchas, cada jugador solo podrá disputar un encuentro en una misma serie. La serie se desarrollará en dos
         tandas que deben jugarse una a continuación de la otra, sin excepcion. La segunda tanda deberá comenzar no
         despues de las 17hs.
         <br />
         <br />
-        <strong className='text-primary'>Sistema de ascensos:</strong> En todas las categorías, con excepción de la
-        primera libre, ascenderán los equipos finalistas de cada categoría con la participación obligatoría en la
-        categoría superior de los jugadores que hayan terminado con una diferencia de +3 o superior en encuentros
-        disputados, para el resto de los jugadores de los equipos será optativo el ascenso.
+        <strong className='text-primary'>Ascenso de equipos: </strong>
+        El sistema de ascenso será personalizado para cada categoría, adaptándose a la cantidad de equipos y al formato
+        de competencia específico. Este enfoque garantiza una experiencia de torneo más justa y equitativa, reflejando
+        las necesidades únicas de cada categoría y promoviendo un ambiente competitivo saludable para todos.
+        <br />
+        Para los equipos ascendidos se requerirá la participación obligatoría de los jugadores que hayan terminado el
+        torneo correspondiente con una diferencia de +3 o superior en encuentros disputados, para el resto de los
+        jugadores será optativo el ascenso.
         <br />
         <br />
-        <strong className='text-primary'>Ascensos de jugadores:</strong> La Liga IML Tenis ostenta el legítimo derecho
+        <strong className='text-primary'>Ascensos de jugadores: </strong> la liga IML tenis ostenta el legítimo derecho
         de ascender a cualquier jugador cuyo nivel sobrepase ampliamente la categoría correspondiente, así como a
         aquellos que posean registros de haber participado y/o ganado torneos en categorías considerablemente superiores
-        en el tiempo reciente, hasta 2 años, con la considerable quita de puntos correspondiente.
+        en el tiempo reciente, hasta dos años, con la quita de puntos de la serie en reclamo.
         <br />
         <br />
         <strong className='text-primary'>Niveles orientativos para la formación de equipos: </strong>
@@ -203,12 +237,12 @@ const Reglamento = () => {
         500 a 750, B1 Segunda: Jugadores categoría 750 a 1000, A1, A2 Primera: Jugadores categoría 1000, Super A.
         <br />
         <br />
-        <strong className='text-primary'>Playoffs:</strong> En estas estapas solo podrán participar los jugadores que
+        <strong className='text-primary'>Playoffs: </strong> En estas estapas solo podrán participar los jugadores que
         hayan disputado al menos una serie en instancias previas en la categoría corresponiente en el actual torneo, a
         excepción de la categoría Primera Libre, donde esta regla no se aplicará.
         <br />
         <br />
-        <strong className='text-primary'>Penalizaciones:</strong> A. IML Tenis se reserva el derecho de sancionar y/o
+        <strong className='text-primary'>Penalizaciones: </strong> A. IML Tenis se reserva el derecho de sancionar y/o
         advertir a cualquier jugador que agreda física o verbalmente a cualquier miembro de la liga. B. Cualquier
         inconveniente surgido durante el partido deberá ser resuelto por los participantes del mismo, y en caso de no
         lograr una solución, se permitirá la intervención de terceros, siempre y cuando exista un acuerdo previo entre
@@ -228,6 +262,13 @@ const Reglamento = () => {
         participar por primera vez anotarse en la categoría más baja.
         <br />
         <br />
+        <strong className='text-primary'>Límite temporal de reclamos: </strong>
+        Cualquier reclamo que verse sobre cualquier situación que pueda darse desde el comienzo de la competición y
+        hasta su finalización, y que a criterio de alguna de las partes considerase que infringe este reglamento, dicho
+        reclamo deberá ser expresado a la organización dentro de las 48horas de haberse jugado la serie en cuestión.
+        Luego de ese tiempo y sin excepción, cualquier reclamo quedará sin efecto.
+        <br />
+        <br />
         <strong className='text-primary'>Otras cuestiones: </strong>
         La organización se reserva el derecho a modificar el presente reglamento cuando sea imperioso establecer,
         regular o fijar conductas o acciones que puedan generar conflictos o diversas interpretaciones con el objeto de
@@ -237,10 +278,10 @@ const Reglamento = () => {
         Para el supuesto caso que pudiera darse una laguna en la normativa o posible doble interpretación, esta
         organización resolverá puntualmente la cuestión en conflicto de acuerdo a su leal saber y entender, notificando
         a las partes que pudieran estar involucradas. La decisión será inapelable por las partes que pudieran estar
-        involucradas y generará un precedente que será utilizado para aclaración de las posibles normas en conflicto.
+        involucradas y generará un precedente que será utilizado para aclaración de las posibles normas en conflicto.
         <br />
         <br />
-        <span className='block opacity-70'>Ultima actualización el 06 de Marzo 2024.</span>
+        <span className='block opacity-70'>Ultima actualización el 19 de Marzo 2024.</span>
       </p>
 
       <Helmet>

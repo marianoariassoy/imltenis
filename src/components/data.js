@@ -1,7 +1,7 @@
 export const categories = [
   { name: 'Damas Tercera', url: '/torneos/34' },
   { name: 'Damas Cuarta ', url: '/torneos/35' },
-  { name: 'Primera Libre', url: '/torneos/28' },
+  { name: 'Primera HEAD libre', url: '/torneos/28' },
   { name: 'Segunda Libre', url: '/torneos/29' },
   { name: 'Tercera Libre', url: '/torneos/30' },
   { name: 'Tercera +45', url: '/torneos/33' },
@@ -10,7 +10,7 @@ export const categories = [
 ]
 
 export const menu = [
-  { name: 'Ranking Apertura 2024', url: '/soon' },
+  // { name: 'Ranking Apertura 2024', url: '/ranking' },
   { name: 'Ranking UrbanKicks', url: '/ranking-urbankicks' },
   { name: 'Ranking de Clubes', url: '/ranking-clubes' },
   { name: 'Torneos Anteriores', url: '/torneos-anteriores' },

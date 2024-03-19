@@ -10,7 +10,7 @@ import Clubes from './pages/clubes'
 import JugadoresProfile from './pages/jugadores/Perfil'
 
 import RankingTemporada from './pages/jugadores/RankingTemporada'
-import RankingJugadores from './pages/jugadores/Ranking'
+import RankingJugadores from './pages/jugadores/RankingTemporada'
 import RankingClubes from './pages/clubes/Ranking'
 
 import Jugadores from './pages/jugadores'
@@ -20,7 +20,7 @@ import Reglamento from './pages/reglamento'
 import Nosotros from './pages/nosotros'
 
 // import Presentacion from './pages/presentacion'
-import Soon from './pages/Soon'
+// import Soon from './pages/Soon'
 import PageNotFound from './pages/PageNotFound'
 
 import UsersLogin from './pages/users/Login'
@@ -69,10 +69,10 @@ const App = () => {
             path='/series/:id'
             element={<Series />}
           />
-          <Route
+          {/* <Route
             path='/ranking-temporada'
             element={<RankingTemporada />}
-          />
+          /> */}
           <Route
             path='/ranking-urbankicks'
             element={<RankingJugadores />}
@@ -130,10 +130,10 @@ const App = () => {
             path='/usuarios/restablecer-password'
             element={<UsersRestablecer />}
           />
-          <Route
+          {/* <Route
             path='/soon'
             element={<Soon />}
-          />
+          /> */}
           <Route
             path='*'
             element={<PageNotFound />}
