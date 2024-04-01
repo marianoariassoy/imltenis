@@ -2,6 +2,7 @@ import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import Labels from '../../components/Labels'
 import TitleRow from '../../components/TitleRow'
+import { Bull } from '../../components/icons'
 
 const TournamentsGroup = ({ group, tournament }) => {
   const { data, loading } = useFetch(`/groups/teams/${group.id}`)
@@ -31,6 +32,10 @@ const TournamentsGroup = ({ group, tournament }) => {
     {
       name: 'SJ',
       value: 'Series jugadas'
+    },
+    {
+      name: 'Ult. resultados',
+      value: ''
     }
   ]
 
@@ -71,6 +76,23 @@ const TournamentsGroup = ({ group, tournament }) => {
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
                 <td>{item.series_total}</td>
+                <td>
+                  <div className='flex gap-x-2'>
+                    {item.series.map((item, index) => (
+                      <span key={index}>
+                        {item ? (
+                          <span className='text-green-400'>
+                            <Bull />
+                          </span>
+                        ) : (
+                          <span className='text-primary'>
+                            <Bull />
+                          </span>
+                        )}
+                      </span>
+                    ))}
+                  </div>
+                </td>
               </tr>
             ))}
           </tbody>

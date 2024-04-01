@@ -63,14 +63,14 @@ const Fixture = ({ data, type }) => {
             {filteredData.map(item => (
               <tr
                 key={item.id}
-                className={item.winner ? 'opacity-50 grayscale' : ''}
+                className={item.winner || item.status === '❌' ? 'opacity-50 grayscale' : ''}
               >
                 <td
                   scope='row'
                   className='pl-0'
                 >
-                  <div className='flex gap-x-[0.6rem] items-center'>
-                    {item.winner && <Bull />}
+                  <div className='flex gap-x-2 items-center'>
+                    {item.winner || item.status === '❌' ? <Bull /> : null}
                     <span className='font-semibold'>{item.date}</span>
                   </div>
                 </td>
@@ -83,7 +83,7 @@ const Fixture = ({ data, type }) => {
                   />
                 </td>
                 <td className='text-center'>
-                  {item.score_home || item.score_away ? (
+                  {item.winner ? (
                     <Link
                       to={`/series/${item.id}`}
                       className='hover:text-primary font-bold'
@@ -91,7 +91,7 @@ const Fixture = ({ data, type }) => {
                       {item.score_home}-{item.score_away}
                     </Link>
                   ) : (
-                    '-'
+                    item.status
                   )}
                 </td>
                 <td className='lg:whitespace-normal'>
