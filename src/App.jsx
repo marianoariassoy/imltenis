@@ -9,7 +9,7 @@ import Calendar from './pages/torneos/Calendar'
 import Clubes from './pages/clubes'
 import JugadoresProfile from './pages/jugadores/Perfil'
 
-import RankingTemporada from './pages/jugadores/RankingTemporada'
+// import RankingTemporada from './pages/jugadores/RankingTemporada'
 import RankingJugadores from './pages/jugadores/RankingTemporada'
 import RankingClubes from './pages/clubes/Ranking'
 
@@ -19,7 +19,7 @@ import Colaboradores from './pages/colaboradores'
 import Reglamento from './pages/reglamento'
 import Nosotros from './pages/nosotros'
 
-// import Presentacion from './pages/presentacion'
+import Presentacion from './pages/presentacion'
 // import Soon from './pages/Soon'
 import PageNotFound from './pages/PageNotFound'
 
@@ -101,10 +101,10 @@ const App = () => {
             path='/nosotros'
             element={<Nosotros />}
           />
-          {/* <Route
+          <Route
             path='/presentacion'
             element={<Presentacion />}
-          /> */}
+          />
 
           <Route
             path='/usuarios/login'

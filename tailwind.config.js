@@ -11,7 +11,7 @@ module.exports = {
     themes: [
       {
         dark: {
-          'base-content': '#9d9c9d',
+          'base-content': '#8c8c8c',
           primary: '#f34643',
           accent: '#f34643',
           'base-100': '#202020',

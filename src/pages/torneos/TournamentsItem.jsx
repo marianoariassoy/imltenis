@@ -1,17 +1,13 @@
 import Groups from './Groups'
 import FixtureContainer from './FixtureContainer'
 
-const Tournaments = ({ data, tournament }) => {
+const Tournaments = ({ data }) => {
   return (
     <>
-      {data.type == 1 ? (
-        <h2 className='italic text-primary text-center lg:text-xl -mb-3'>{data.name}</h2>
-      ) : (
-        <Groups
-          group={data}
-          tournament={tournament}
-        />
-      )}
+      <Groups
+        group={data}
+        tournament={data.id}
+      />
 
       <FixtureContainer
         group_id={data.id}

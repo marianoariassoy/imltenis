@@ -34,20 +34,13 @@ const TournamentsGroup = ({ group, tournament }) => {
       value: 'Series jugadas'
     },
     {
-      name: 'Ult. resultados',
+      name: 'Ult. 5 series',
       value: ''
     }
   ]
 
   return (
-    <section className='fade-in flex flex-col'>
-      <div className='row text-center mb-3'>
-        <h1 className='text-primary italic lg:text-xl'>{group.name}</h1>
-        <h2>
-          <span className='font-medium opacity-70'>Posiciones</span> 🔥
-        </h2>
-      </div>
-
+    <section className='flex flex-col mb-6'>
       <div className='overflow-x-auto text-sm mb-6'>
         <table className='table w-full'>
           <thead>
@@ -81,11 +74,11 @@ const TournamentsGroup = ({ group, tournament }) => {
                     {item.series.map((item, index) => (
                       <span key={index}>
                         {item ? (
-                          <span className='text-green-400'>
+                          <span className='text-primary'>
                             <Bull />
                           </span>
                         ) : (
-                          <span className='text-primary'>
+                          <span className='text-white/30'>
                             <Bull />
                           </span>
                         )}

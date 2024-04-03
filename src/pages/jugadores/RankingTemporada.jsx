@@ -44,13 +44,13 @@ const JugadoresRanking = () => {
   ]
 
   return (
-    <section className='fade-in flex flex-col gap-y-6'>
-      <div className='text-center text-xl'>
+    <section className='fade-in flex flex-col gap-y-3'>
+      <div className='text-center text-xl mb-3'>
         <h1 className='font-bold text-primary'>Ranking UrbanKicks</h1>
         <h2 className='font-medium opacity-70 text-base'>Apertura 2024</h2>
       </div>
 
-      <div className='row flex gap-4 justify-center text-sm flex-wrap'>
+      <div className='row flex gap-3 justify-center text-sm flex-wrap max-w-xl m-auto lg:mb-3'>
         {rankingOptions.map(item => (
           <button
             key={item.category}

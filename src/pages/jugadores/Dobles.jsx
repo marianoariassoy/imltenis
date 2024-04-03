@@ -29,7 +29,7 @@ const JugadoresDobles = ({ id }) => {
   ]
 
   return (
-    <section className='fade-in flex flex-col gap-y-6'>
+    <section className='fade-in flex flex-col gap-y-3'>
       <h1 className='text-center text-primary font-bold'>Dobles disputados</h1>
 
       <div className='overflow-x-auto text-sm'>

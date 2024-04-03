@@ -9,8 +9,8 @@ const JugadoresEquipos = ({ id }) => {
   if (!data) return null
 
   return (
-    <section className='fade-in flex flex-col gap-y-6'>
-      <h1 className='text-center font-bold text-primary'>Equipos integrados</h1>
+    <section className='fade-in flex flex-col gap-y-3'>
+      <h1 className='text-center font-bold text-primary'>Equipos</h1>
 
       <div className='overflow-x-auto text-sm'>
         <table className='table w-full'>

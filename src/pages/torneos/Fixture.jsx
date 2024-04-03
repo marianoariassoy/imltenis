@@ -12,7 +12,7 @@ const Fixture = ({ data, type }) => {
     <section className='fade-in'>
       {+type !== 1 && (
         <div>
-          <h1 className='italic text-primary text-center mb-3 lg:text-xl'>Fixture</h1>
+          <h1 className='italic text-primary text-center mb-3 text-xl'>Fixture</h1>
           <FixtureFilter
             filters={filters}
             setFilters={setFilters}
@@ -63,14 +63,14 @@ const Fixture = ({ data, type }) => {
             {filteredData.map(item => (
               <tr
                 key={item.id}
-                className={item.winner || item.status === '❌' ? 'opacity-50 grayscale' : ''}
+                className={item.winner || item.status === 2 ? 'opacity-50 grayscale' : ''}
               >
                 <td
                   scope='row'
                   className='pl-0'
                 >
                   <div className='flex gap-x-2 items-center'>
-                    {item.winner || item.status === '❌' ? <Bull /> : null}
+                    {item.winner || item.status === 2 ? <Bull /> : null}
                     <span className='font-semibold'>{item.date}</span>
                   </div>
                 </td>
@@ -90,8 +90,12 @@ const Fixture = ({ data, type }) => {
                     >
                       {item.score_home}-{item.score_away}
                     </Link>
+                  ) : item.status === 1 ? (
+                    <span className='bg-yellow-300 p-1text-xs rounded-md'>REV</span>
+                  ) : item.status === 2 ? (
+                    <span className='bg-primary p-1 text-white text-xs rounded-md'>SUS</span>
                   ) : (
-                    item.status
+                    '-'
                   )}
                 </td>
                 <td className='lg:whitespace-normal'>

@@ -60,3 +60,6 @@ input:-webkit-autofill {
   background-color: transparent;
   color: white;
 }
+.text-xl {
+  font-size: 1.15rem;
+}

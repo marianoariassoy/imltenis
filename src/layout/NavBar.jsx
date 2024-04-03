@@ -9,7 +9,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className='fade-in fixed top-0 left-0 w-full bg-black/20 h-screen content-center text-center z-30 backdrop-blur-md hidden'
+      className='fade-in fixed top-0 left-0 w-full bg-black/10 h-screen content-center text-center z-30 backdrop-blur-md hidden'
       onClick={openMenu}
     >
       <ul className='text-white/70 flex flex-col'>

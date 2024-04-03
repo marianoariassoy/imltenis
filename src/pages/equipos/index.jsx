@@ -39,11 +39,11 @@ const Teams = () => {
           </div>
         </div>
         <div className='text-center'>
-          <h1 className='font-bold text-primary lg:text-xl'>{data[0].name}</h1>
+          <h1 className='italic text-primary text-xl'>{data[0].name}</h1>
           <h2>
             <Link
               to={`/torneos/${data[0].tournament_id}`}
-              className='font-medium opacity-70 hover:text-primary text-sm'
+              className='font-medium opacity-70 hover:text-primary'
             >
               {data[0].tournament_name}
             </Link>
@@ -70,7 +70,7 @@ const Teams = () => {
         </div>
 
         <div className='text-center'>
-          <h1 className='text-primary italic lg:text-xl'>Lista de buena fe</h1>
+          <h1 className='text-primary font-bold'>Lista de buena fe</h1>
           <h2 className='opacity-70 text-sm'>
             Capitán: <span className='font-bold'>{data[0].captain_name}</span>
           </h2>
