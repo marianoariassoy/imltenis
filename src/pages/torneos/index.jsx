@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
-import Tournaments from './Tournaments'
+import GroupsContainer from './GroupsContainer'
 import Champion from './Champion'
 
 const TournamentsContainer = () => {
@@ -35,7 +35,7 @@ const TournamentsContainer = () => {
       <div className='text-center text-primary px-6'>
         <h1>
           <span className='font-black text-xl'>{info.tournament}</span>
-          <span className='font-black hidden lg:inline text-xl'> {info.season} </span>
+          <span className='font-black hidden lg:inline text-xl'> {info.season}</span>
         </h1>
         <span className='text-2xl'>🏆</span>
       </div>
@@ -48,7 +48,7 @@ const TournamentsContainer = () => {
         />
       )}
 
-      <Tournaments id={id} />
+      <GroupsContainer id={id} />
 
       <Helmet>
         <title>IML Tenis {info.title}</title>

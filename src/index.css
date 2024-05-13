@@ -50,8 +50,10 @@ table thead tr {
 table thead tr th {
   padding-bottom: 0 !important;
 }
-table tbody tr td {
+table tbody tr td,
+table thead tr th {
   white-space: nowrap;
+  padding-left: 0.25rem !important;
 }
 table tbody tr {
   border: 0;

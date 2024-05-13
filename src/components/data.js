@@ -13,10 +13,11 @@ export const menu = [
   // { name: 'Ranking Apertura 2024', url: '/ranking' },
   { name: 'Ranking UrbanKicks', url: '/ranking-urbankicks' },
   { name: 'Ranking de Clubes', url: '/ranking-clubes' },
-  { name: 'Torneos Anteriores', url: '/torneos-anteriores' },
   { name: 'Jugadores', url: '/jugadores' },
-  { name: 'Colaboradores', url: '/colaboradores' },
   { name: 'Reglamento', url: '/reglamento' },
+
+  { name: 'Torneos Anteriores', url: '/torneos-anteriores' },
+  { name: 'Colaboradores', url: '/colaboradores' },
   { name: 'Login', url: '/usuarios/login' },
   { name: 'Nosotros', url: '/nosotros' }
 ]

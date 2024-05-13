@@ -43,7 +43,7 @@ const Fixture = ({ data, type }) => {
                 </th>
                 <th
                   scope='col'
-                  width='255'
+                  width='260'
                 >
                   Local
                 </th>
@@ -91,7 +91,7 @@ const Fixture = ({ data, type }) => {
                       {item.score_home}-{item.score_away}
                     </Link>
                   ) : item.status === 1 ? (
-                    <span className='bg-yellow-300 p-1text-xs rounded-md'>REV</span>
+                    <span className='bg-base-300 p-1 text-xs rounded-md'>REV</span>
                   ) : item.status === 2 ? (
                     <span className='bg-primary p-1 text-white text-xs rounded-md'>SUS</span>
                   ) : (
@@ -105,7 +105,14 @@ const Fixture = ({ data, type }) => {
                     image={item.away_image}
                   />
                 </td>
-                <td>{item.id}</td>
+                <td>
+                  <Link
+                    to={`/series/${item.id}`}
+                    className='hover:text-primary'
+                  >
+                    {item.id}
+                  </Link>
+                </td>
               </tr>
             ))}
           </tbody>

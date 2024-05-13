@@ -9,7 +9,7 @@ const TornamentsChampion = ({ id, name, image }) => {
   }, [id])
 
   return (
-    <div className='flex flex-col gap-y-3 items-center -mt-3'>
+    <div className='flex flex-col gap-y-3 items-center my-3'>
       <h1 className='italic text-primary text-xl text-center'>
         {name} <br />
         Campéon{' '}

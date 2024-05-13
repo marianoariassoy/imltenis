@@ -4,8 +4,8 @@ import Labels from '../../components/Labels'
 import TitleRow from '../../components/TitleRow'
 import { Bull } from '../../components/icons'
 
-const TournamentsGroup = ({ group, tournament }) => {
-  const { data, loading } = useFetch(`/groups/teams/${group.id}`)
+const TournamentsGroup = ({ group }) => {
+  const { data, loading } = useFetch(`/${group.type == 3 ? 'groups-stage2' : 'groups'}/teams/${group.id}`)
   if (loading) return <Loader />
 
   const labels = [
@@ -41,7 +41,7 @@ const TournamentsGroup = ({ group, tournament }) => {
 
   return (
     <section className='flex flex-col mb-6'>
-      <div className='overflow-x-auto text-sm mb-6'>
+      <div className='overflow-x-auto text-sm mb-3'>
         <table className='table w-full'>
           <thead>
             <tr>
@@ -95,7 +95,7 @@ const TournamentsGroup = ({ group, tournament }) => {
       <Labels labels={labels} />
 
       <div className='text-center text-sm mt-3'>
-        🚀 <span className='opacity-70'>{group.tournament_description}</span>
+        🚀 <span className='opacity-70 whitespace-break-spaces'>{group.tournament_description}</span>
       </div>
     </section>
   )

@@ -36,12 +36,13 @@ const Reglamento = () => {
         <br />
         <br />
         <strong className='text-primary'>Formación: </strong>
-        En las categorías en las cuales se disputen 1 partido de singles y 2 partidos de dobles, de los cinco jugadores
-        convocados para la serie, cualquiera podrá ser designado para jugar el partido de singles. De los cuatro
-        jugadores restantes, el de mejor ranking deberá ser asignado obligatoriamente para jugar el doble 1.
-        <br />
-        En las categorías en las cuales se disputen 1 partido de dobles y 2 partidos de singles, de los 4 jugadores
-        convocados para la serie, el de mejor ranking deberá ser asignado obligatoriamente para jugar el single 1.
+        En las categorías en las cuales se disputen <strong>1 partido de singles y 2 partidos de dobles</strong>, de los
+        cinco jugadores convocados para la serie, cualquiera podrá ser designado para jugar el partido de singles. De
+        los cuatro jugadores restantes, el de mejor ranking deberá ser asignado obligatoriamente para jugar el doble 1.
+        <br /> <br />
+        En las categorías en las cuales se disputen <strong>1 partido de dobles y 2 partidos de singles</strong>, el
+        jugador que participe en el single 1 deberá estar por encima en la lista de buena fe del jugador que participe
+        en el single 2.
         <br />
         <br />
         <strong className='text-primary'>Formación Incompleta: </strong> Si el equipo completo o algún jugador no se
@@ -71,9 +72,9 @@ const Reglamento = () => {
         El resto de las categorías jugarán los días domingos en un horario a determinar por el equipo local en cada
         oportunidad, que deberá ser entre las 9 y las 17hs.
         <br />
-        Los horarios deben informarse por el capitan del equipo local en el grupo de capitanes de WhatsApp ANTES DEL
-        MEDIODIA DEL JUEVES de la semana correspondiente, de lo contrario se procedera a la quita de 1 punto de la serie
-        a disputarse por día de atraso, en caso de la quita de 1 punto no se jugará el doble o single 2.
+        Los horarios deben informarse por el capitan del equipo local en el grupo de capitanes de WhatsApp ANTES DE LAS
+        12:00 DEL JUEVES de la semana correspondiente, de lo contrario se procedera a la quita de 1 punto de la serie al
+        equipo local, sumandose 1 punto por cada día de atraso.
         <br />
         <br />
         <strong className='text-primary'>Resultados y Formación: </strong> Es obligatorio el envío de la planilla de
@@ -185,7 +186,7 @@ const Reglamento = () => {
         <br />
         <strong className='text-primary'>Suplentes naturales: </strong> Cuando un equipo quede incompleto debido a
         ausencia de algún o algunos jugadores, podrá auxiliarlo, mediante el reemplazo por otros jugadores de sus
-        divisiones inferiores. Dicho jugador si ganara 1 partido en la categoría superior pasará a integrar la lista de
+        divisiones inferiores. Dicho jugador si ganará 1 partido en la categoría superior pasará a integrar la lista de
         buena fe del equipo de la categoría superior, no pudiendo jugar en la categoría inferior en la que fue inscripto
         en un principio. <br />
         Esta regla se aplica a todo jugador independientemente del club al que forme parte.
@@ -201,7 +202,13 @@ const Reglamento = () => {
         esta asociación, a considerar, la no programación de partidos, la misma deberá ser presentada con anterioridad a
         la realización de la programación oficial e indicará fechas ciertas de los compromisos asumidos.
         <br />
-        <br />
+        Esta posibilidad solo podrá ser concedida por una vez, por torneo, y de manera excepcional. Se hace saber que NO
+        es obligatorio para IML el otorgar dicha excepción pudiendo siempre la organización no hacer lugar al pedido. En
+        caso que algún club no haya hecho uso de dicha posibilidad dentro de un campeonato, pero que la organización IML
+        encuentre dificultades para otorgarles dicha excepción habida cuenta de retrasos que complican el normal
+        desarrollo del torneo, la organización podrá negar dicha posibilidad mediante una simple notificación por
+        razones organizativas, la cual será inapelable.
+        <br /> <br />
         <strong className='text-primary'>Instalaciones necesarias: </strong> El Club deberá poder ofrecer para jugar un
         partido completo un mínimo de 2 canchas reglamentarias de tenis, vestuarios con comodidades suficientes. Dichas
         canchas deberán ser de un mismo tipo de superficie, las que serán previamente aprobadas por esta asociación.{' '}
@@ -215,7 +222,15 @@ const Reglamento = () => {
         tandas que deben jugarse una a continuación de la otra, sin excepcion. La segunda tanda deberá comenzar no
         despues de las 17hs.
         <br />
-        <br />
+        Siempre debe programarse el comienzo de la serie con la disputa del doble 1 o el single en caso que la primer
+        tanda de partidos implique solo uno, o bien en caso de disputarse la primer tanda de partidos incluyendo dos
+        encuentros podrán ser con la disputa del doble 1 y el doble 2 o bien con la disputa del doble 1 y el single.
+        Jamás debe comenzar a disputarse el doble 2 a la par del single, postergando el inicio del doble 1. La misma
+        regla rige para clubes que cuentan con tres canchas, quienes deben hacer comenzar los tres partidos de manera
+        contemporánea. Si por cuestión de buena fe algún club accede a comenzar el doble 2 por llegada tardía de algún
+        integrante del doble 1 del equipo rival, en caso que este último (sea local o visitante) no presente el doble 1,
+        el mismo habrá perdido ambos dobles.
+        <br /> <br />
         <strong className='text-primary'>Ascenso de equipos: </strong>
         El sistema de ascenso será personalizado para cada categoría, adaptándose a la cantidad de equipos y al formato
         de competencia específico. Este enfoque garantiza una experiencia de torneo más justa y equitativa, reflejando
@@ -281,7 +296,7 @@ const Reglamento = () => {
         involucradas y generará un precedente que será utilizado para aclaración de las posibles normas en conflicto.
         <br />
         <br />
-        <span className='block opacity-70'>Ultima actualización el 19 de Marzo 2024.</span>
+        <span className='block opacity-70'>Ultima actualización el 8 de Mayo 2024.</span>
       </p>
 
       <Helmet>

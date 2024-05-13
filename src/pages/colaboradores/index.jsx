@@ -1,71 +1,30 @@
 import { Helmet } from 'react-helmet'
+import useFetch from '../../hooks/useFetch'
+import Loader from '../../components/Loader'
+import Item from './Item'
 
 const Amigos = () => {
-  const data = [
-    {
-      title: 'Unfhutenis',
-      subtitle: 'Tienda deportiva',
-      description: 'Contenido para deportistas amateurs y profesionales.',
-      phone: '5491144752027',
-      url: 'https://www.instagram.com/unfhutenis/'
-    },
-    {
-      title: 'Tennis Station',
-      subtitle: 'Academia / Escuela de tenis',
-      description: 'Nos encontras en SAG Los Polvorines.',
-      phone: '5491150391880',
-      url: 'https://www.instagram.com/tennis.station2023/'
-    },
-    {
-      title: 'Estudio jurídico Giollo y Asoc.',
-      subtitle: 'Bufet de abogados',
-      description: 'Los Polvorines.',
-      phone: '5491168537131',
-      url: 'https://www.instagram.com/giolloabogados/'
-    }
-  ]
+  const { data, loading } = useFetch(`/partners`)
+  if (loading) return <Loader />
+
   return (
     <section className='fade-in flex flex-col gap-y-6 text-center max-w-2xl m-auto'>
       <div>
         <div className='text-primary text-xl mb-2'>
-          <h1 className='font-bold'>Colaboradores</h1>👉
+          <h1 className='font-bold'>Colaboradores</h1>
         </div>
         <p className='text-sm text-wrap'>
-          Gracias al apoyo y la contribucion generosa de los siguientes colaboradores nuestra liga y comunidad tenistica
-          continua creciendo.
+          Gracias al apoyo y la contribucion de los siguientes colaboradores nuestra liga y comunidad tenistica continua
+          creciendo.
         </p>
       </div>
 
-      <div className='flex flex-col gap-y-4 text-sm text-center'>
+      <div className='grid grid-cols-3 lg:grid-cols-5 gap-6 mb-6'>
         {data.map((item, index) => (
-          <article
+          <Item
             key={index}
-            className='border-white/20 flex flex-col'
-          >
-            <a
-              href={item.url}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='hover:text-primary'
-            >
-              <h2 className='font-bold'>
-                <span className='text-primary'>{item.title}</span> &bull; {item.subtitle}
-              </h2>
-            </a>
-            <div>
-              {item.description}{' '}
-              {item.phone && (
-                <a
-                  href={'https://wa.me/' + item.phone}
-                  target='_blank'
-                  rel='noreferrer'
-                  className='hover:text-primary'
-                >
-                  Tel. {item.phone}
-                </a>
-              )}
-            </div>
-          </article>
+            item={item}
+          />
         ))}
       </div>
 
