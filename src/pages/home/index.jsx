@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet'
 import { useEffect } from 'react'
+import Aviso from './Aviso'
 
 const Welcome = () => {
   useEffect(() => {
@@ -18,26 +19,30 @@ const Welcome = () => {
 
   return (
     <>
-      <section className='fade-in flex justify-center items-center text-center h-full'>
+      <Aviso />
+
+      <div className='fade-in flex justify-center items-center text-center h-full'>
         <div
-          className='cursor-pointer text-primary mt-8'
+          className='cursor-pointer text-primary flex flex-col gap-y-3'
           onClick={openMenu}
         >
-          <h1 className='text-6xl lg:text-8xl font-black'>
-            <span className='block'>Torneo</span>
-            <span className='block'>Yuka Apertura</span> <span className='block'>2024</span>
+          <h1 className='text-6xl lg:text-8xl font-black flex flex-col'>
+            <span>Torneo</span>
+            <span>Apertura</span>
+            <span>
+              <span className='block lg:inline-block'>Yuka</span> 2024
+            </span>
           </h1>
-          <span className='text-4xl lg:text-5xl mt-2 block'>🏆</span>
         </div>
-      </section>
+      </div>
 
-      <div className='fade-in-slow video-background fixed h-screen w-screen left-0 top-0 -z-10'>
+      <div className='fade-in-slow fixed h-screen w-screen left-0 top-0 -z-10 bg-black/40'>
         <video
           autoPlay
           playsInline
           muted
           loop
-          className='opacity-50 h-full w-full object-cover'
+          className='opacity-60 h-full w-full object-cover'
         >
           <source
             src='./assets/videos/video.webm'

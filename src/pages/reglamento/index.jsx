@@ -48,10 +48,10 @@ const Reglamento = () => {
         <strong className='text-primary'>Formación Incompleta: </strong> Si el equipo completo o algún jugador no se
         presentara a jugar la fecha correspondiente (WO) deberá avisar con un mínimo de 48hs al capitán rival por
         escrito al chat de capitanes de WhatsApp, de lo contrario deberá correr con los gastos que correspondan al
-        equipo local, como ser alquiler de canchas. <br /> De tener que disputarse solo 2 encuentros, estos serán el
-        single y doble 1
+        equipo local, como ser alquiler de canchas. <br />
         <br />
-        <br />
+        Se podrá presentar WO tanto de single y/o de doble 2, pudiendose disputar el resto de el o los parciales.
+        <br /> <br />
         <strong className='text-primary'>Mala formación: </strong> El equipo que incurra en ella, perderá la fecha por
         6-0 6-0 en todos los parciales.
         <br />
@@ -142,6 +142,25 @@ const Reglamento = () => {
         minutos, pasados los cuales se considerará como abandono del partido. El equipo que abandone un partido, deberá
         avisar a la organización por escrito al chat de capitanes de WhatsApp, y deberá correr con los gastos que
         correspondan al equipo rival, como ser alquiler de canchas.
+        <br />
+        <br />
+        <strong className='text-primary'>
+          Impuntualidad en el inicio de la serie por falta de disponibilidad de canchas:{' '}
+        </strong>
+        Se sugiere a los clubes locales, establecer horarios entre series separados con un mínimo de dos horas entre una
+        y otra. El horario fijado por el club local para la iniciación de la serie debe ser respetado. El tiempo de
+        tolerancia por parte de los jugadores visitantes para el inicio de la serie es de un máximo de media hora a
+        partir del horario establecido. Transcurrido dicho límite temporal, y no habiendo posibilidades de comenzar la
+        serie, los jugadores visitantes podrán anoticiar a su capitán de dicha circunstancia y éste último en caso de
+        existir algún impedimento de sus jugadores para iniciar la serie con posterioridad a dicho horario, deberá
+        informar del hecho en el chat de capitanes. Informada dicha circunstancia, la organización IML podrá comunicarse
+        con el responsable del equipo local y evaluar si la demora obedece a un motivo atendible para exceptuar (espera
+        de ambulancia por alguna afectación sufrida por algún jugador, lluvia o chaparrón que obligó a demorar la serie
+        previa, o similares) y en caso contrario podrá el equipo visitante reclamar el punto, o los puntos que no
+        comenzaron en tiempo y forma.
+        <br />
+        La organización IML siempre evaluará la circunstancia de atraso en el inicio de la serie y tendrá la decisión
+        final.
         <br />
         <br />
         <strong className='text-primary'>Alquiler de canchas: </strong>
@@ -296,7 +315,7 @@ const Reglamento = () => {
         involucradas y generará un precedente que será utilizado para aclaración de las posibles normas en conflicto.
         <br />
         <br />
-        <span className='block opacity-70'>Ultima actualización el 8 de Mayo 2024.</span>
+        <span className='block opacity-70'>Ultima actualización el 22 de Mayo 2024.</span>
       </p>
 
       <Helmet>

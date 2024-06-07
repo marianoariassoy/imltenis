@@ -18,10 +18,10 @@ const Tournaments = ({ id }) => {
 
       {stage2.length > 0 && (
         <>
-          <section className='pb-6 mb-6 border-b border-dotted border-white/20'>
+          <section className='mb-6'>
             <GroupsStage groups={stage2} />
           </section>
-          <h2 className='text-primary text-xl mb-3 text-center font-extrabold'>Primera Fase ⭐</h2>
+          <h2 className='text-primary text-xl mb-3 text-center font-extrabold'>Primera Fase</h2>
         </>
       )}
 

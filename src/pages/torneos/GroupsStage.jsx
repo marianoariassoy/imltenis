@@ -4,11 +4,13 @@ import TournamentsItem from './TournamentsItem'
 const GroupsStage1 = ({ groups }) => {
   const [group, setGroup] = useState(0)
 
+  const arrayReverse = groups.filter(objeto => objeto).reverse()
+
   return (
     <section>
       <div className='text-center lg:mb-3'>
         <div className='flex gap-x-3 justify-center items-center mb-2'>
-          {groups.map((item, index) => (
+          {arrayReverse.map((item, index) => (
             <div
               key={index}
               className='flex gap-x-3 justify-center items-center'
@@ -28,7 +30,7 @@ const GroupsStage1 = ({ groups }) => {
         <span className='font-medium opacity-70 text-sm lg:text-base'>Posiciones</span> 🔥
       </div>
 
-      {groups.map((item, index) => (
+      {arrayReverse.map((item, index) => (
         <div
           key={index}
           className={index === group ? 'block' : 'hidden'}

@@ -79,21 +79,20 @@ const Footer = () => {
             <WhatsApp />
             <a
               href='https://wa.me/5491130171475'
-              className='hover:text-primary'
+              className='hover:underline'
             >
-              11 3017-1475
+              11 3017 1475
             </a>
           </span>
           <span>&bull;</span>
           <span>
-            Desarrollo:{' '}
             <a
-              href='http://marianoarias.soy'
-              className='font-bold hover:text-primary'
+              href='mailto:hola@imltenis.com.ar'
+              className='hover:underline'
               target='_blank'
               rel='noopener noreferrer'
             >
-              Mariano Arias
+              hola@imltenis.com.ar
             </a>
           </span>
         </div>

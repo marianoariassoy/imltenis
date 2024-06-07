@@ -7,6 +7,9 @@
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
+.bg-secondary {
+  background-color: #f6e7d8;
+}
 .active,
 .nav-link:hover {
   text-decoration: underline;
