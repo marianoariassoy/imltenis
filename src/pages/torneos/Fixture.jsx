@@ -12,7 +12,7 @@ const Fixture = ({ data, type }) => {
     <section className='fade-in'>
       {+type !== 1 && (
         <div>
-          <h1 className='italic text-primary text-center mb-3 text-xl'>Fixture</h1>
+          <h1 className='italic text-primary text-center mb-3 lg:text-xl'>Fixture</h1>
           <FixtureFilter
             filters={filters}
             setFilters={setFilters}

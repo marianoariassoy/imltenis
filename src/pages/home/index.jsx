@@ -5,9 +5,9 @@ import Aviso from './Aviso'
 const Welcome = () => {
   useEffect(() => {
     const nav = document.querySelector('.navbar')
-    nav.classList.remove('backdrop-blur-md')
+    nav.classList.remove('bg-base-100')
     return () => {
-      nav.classList.add('backdrop-blur-md')
+      nav.classList.add('bg-base-100')
     }
   }, [])
 
@@ -23,7 +23,7 @@ const Welcome = () => {
 
       <div className='fade-in flex justify-center items-center text-center h-full'>
         <div
-          className='cursor-pointer text-primary flex flex-col gap-y-3'
+          className='cursor-pointer mt-10 text-primary flex flex-col gap-y-3'
           onClick={openMenu}
         >
           <h1 className='text-6xl lg:text-8xl font-black flex flex-col'>
@@ -36,7 +36,7 @@ const Welcome = () => {
         </div>
       </div>
 
-      <div className='fade-in-slow fixed h-screen w-screen left-0 top-0 -z-10 bg-black/40'>
+      <div className='fade-in-slow fixed h-screen w-screen left-0 top-0 -z-10 bg-base-300'>
         <video
           autoPlay
           playsInline

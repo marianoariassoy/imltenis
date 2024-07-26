@@ -31,7 +31,6 @@ const index = () => {
         value={filterText}
         onChange={handleFilterChange}
         className='input input-bordered w-full text-sm'
-        id='search'
       />
 
       <div className='overflow-x-auto text-sm'>

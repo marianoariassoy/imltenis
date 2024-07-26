@@ -9,14 +9,14 @@ const GroupsStage1 = ({ groups }) => {
   return (
     <section>
       <div className='text-center lg:mb-3'>
-        <div className='flex gap-x-3 justify-center items-center mb-2'>
+        <div className='flex gap-x-3 justify-center items-center'>
           {arrayReverse.map((item, index) => (
             <div
               key={index}
               className='flex gap-x-3 justify-center items-center'
             >
               <button
-                className={`italic text-xl ${
+                className={`italic lg:text-xl ${
                   index === group ? 'text-primary' : 'opacity-50 hover:text-primary hover:opacity-100'
                 }`}
                 onClick={() => setGroup(index)}

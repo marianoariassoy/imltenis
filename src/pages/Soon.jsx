@@ -4,25 +4,27 @@ import Counter from './Counter'
 
 const Soon = () => {
   return (
-    <div className='fade-in flex flex-col items-center justify-center h-full'>
-      <h1 className='text-4xl mb-3'>🚀</h1>
+    <div className='fade-in-slow flex flex-col items-center justify-center h-full'>
+      <h1 className='text-4xl mb-3 animate-bounce'>🚀</h1>
       <Counter />
 
-      <div className='text-primary text-center'>
-        <span className='block font-bold text-xl'>¡Inscripciones abiertas!</span>
-        <span className='block font-bold mb-3 text-xl'>Inicio el 16 y 17 de Marzo</span>
-        <span className='block'>Descuento hasta el 29 de Febrero</span>
-        <span className='block font-bold'>
-          Más información y presentación del torneo{' '}
+      <div className='text-primary text-center flex flex-col gap-y-3'>
+        <div className='flex flex-col font-bold text-xl'>
+          <span>¡Inscripciones abiertas!</span>
+          <span>Inicio el 24 y 25 de Agosto</span>
+        </div>
+
+        {/* <span className=''>Aprocha los descuentos por anticipado</span> */}
+        <span className=' font-bold'>
           <Link
             to='/presentacion'
             className='underline'
           >
-            clic acá
+            Mira la presentación del torneo acá
           </Link>
         </span>
         <span>
-          o al WhatsApp{' '}
+          Más info al{' '}
           <a
             href='https://wa.me/5491130171475'
             className='underline'
@@ -33,6 +35,7 @@ const Soon = () => {
           </a>
         </span>
       </div>
+
       <Helmet>
         <title>IML Tenis Liga de clubes</title>
       </Helmet>

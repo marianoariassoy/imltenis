@@ -25,7 +25,7 @@ Cierre de listas de buena fe: <strong>18 de Agosto.</strong>`
       title: '⭐ ¿En qué categorías puedo inscribirme?',
       text: `<strong>Los Domingos:</strong> Primera Libre, Segunda Libre, Tercera Libre, Cuarta Libre, Quinta Libre. <br/> 
       <strong>Sábados y Domingos:</strong> Damas Segunda, Damas Tercera, Damas Cuarta. <br/> 
-      <strong>Sábados:</strong> Segunda +40, Tercera +40. 
+      <strong>Sábados:</strong> Segunda +45, Tercera +45. 
       `
     },
     {
@@ -36,7 +36,7 @@ Cierre de listas de buena fe: <strong>18 de Agosto.</strong>`
     },
     {
       title: '🔞 ¿Hay restricciones por edad?',
-      text: `Solamente en la categoría Segunda y Tercera +40, el resto de las categorías son libres de edad.`
+      text: `Solamente en la categoría Segunda y Tercera +45, el resto de las categorías son libres de edad.`
     },
     {
       title: '🌍 ¿Dónde se juega?',
@@ -58,7 +58,7 @@ Cierre de listas de buena fe: <strong>18 de Agosto.</strong>`
     },
     {
       title: '💵 ¿Cuál es el valor y como abonar la inscripción por cada equipo?',
-      text: `<strong>Durante el mes de Junio $80.000- </strong><br/>
+      text: `
       <strong>Durante el mes de Julio $99.000.- </strong><br/>
       <strong>Desde Agosto $130.000.- </strong><br/> <br/>
       CVU: 0000168300000001419333<br/>
@@ -78,7 +78,7 @@ Cierre de listas de buena fe: <strong>18 de Agosto.</strong>`
   ]
   return (
     <section className='fade-in flex flex-col gap-y-6 max-w-2xl m-auto'>
-      <div className='fixed bottom-6 right-6 flex items-center justify-center z-50 bg-primary text-white w-16 h-16 rounded-full text-2xl hover:bg-black'>
+      <div className='fixed bottom-8 right-5 flex items-center justify-center z-50 text-primary w-16 h-16 rounded-full text-2xl bg-base-200'>
         <a
           href='https://wa.me/5491130171475'
           target='_blank'
@@ -87,14 +87,14 @@ Cierre de listas de buena fe: <strong>18 de Agosto.</strong>`
         </a>
       </div>
       <div className='text-center'>
-        <h1 className='font-bold text-primary text-xl'>¡Hola Torneo Clausura 2024!</h1>
+        <h1 className='font-bold text-primary text-xl'>¡Hola Clausura 2024!</h1>
         <span className='text-2xl'>👋</span>
       </div>
 
       <div className='aspect-square lg:aspect-video'>
         <img
           className='w-full h-full object-cover'
-          src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZW9xOTB1NHEyMmU5dXQ1d2RqZWhzMGoxeTQzNjkxODhhdGFwYzFpNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ilyCVdhSbdNZ2NRmbz/giphy-downsized-large.gif'
+          src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTczeWgwYXZjcDhyZ2s3ZzZwd24yMzNlamdlN2Q1emwya2s1c3UzZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/J4JR8nlwPgXcuKRBoG/giphy-downsized-large.gif'
         />
       </div>
 
@@ -115,7 +115,7 @@ Cierre de listas de buena fe: <strong>18 de Agosto.</strong>`
         </p>
         <p>
           Como si fuera poco, sobre todas las cosas, queremos mucho a nuestra comunidad y también tenemos momentos de
-          entretenimiento en nuestras redes sociales, sin dejar de lado la competencia, como
+          entretenimiento en nuestras redes sociales, como
           <span className='text-primary'> la batalla de los clubes</span>,
           <span className='text-primary'> la elección de los mejores capitanes</span> y los nuevos
           <span className='text-primary'> IML Awards.</span>
