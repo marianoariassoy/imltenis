@@ -20,7 +20,7 @@ const Soon = () => {
             to='/presentacion'
             className='underline'
           >
-            Mira la presentación del torneo acá
+            Mira la presentación del Torneo Clausura Yuka 2024 acá
           </Link>
         </span>
         <span>

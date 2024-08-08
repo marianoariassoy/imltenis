@@ -29,9 +29,9 @@ const ClubesRanking = () => {
 
   return (
     <section className='fade-in flex flex-col gap-y-3'>
-      <div className='text-center'>
-        <h1 className='font-bold text-primary text-xl'>Ranking de Clubes</h1>
-        <h2 className='font-medium opacity-50 text-xl'>2024</h2>
+      <div className='text-center text-[1.15rem] lg:text-xl'>
+        <h1 className='font-bold text-primary'>Ranking de Clubes</h1>
+        <h2 className='font-medium opacity-70'>2024</h2>
         <span className='text-2xl'>🥇</span>
       </div>
 

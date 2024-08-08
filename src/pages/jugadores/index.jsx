@@ -20,7 +20,7 @@ const index = () => {
 
   return (
     <section className='fade-in flex flex-col gap-y-6 max-w-md m-auto'>
-      <div className='text-center text-xl'>
+      <div className='text-center text-[1.15rem] lg:text-xl'>
         <h1 className='font-bold text-primary'>Jugadores</h1>
         🧑👩
       </div>

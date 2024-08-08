@@ -43,15 +43,7 @@ const index = () => {
   return (
     <section>
       <div className='flex flex-col gap-y-6'>
-        <div className='text-center px-12 text-sm'>
-          <div className='text-primary font-medium'>Ingresá con tu email y contraseña.</div>
-          <Link
-            to='/usuarios/registro'
-            className='hover:text-primary hover:opacity-100 opacity-70'
-          >
-            Si no estas registrado hacé clic acá
-          </Link>
-        </div>
+        <h1 className='text-center text-primary font-bold text-[1.15rem] lg:text-xl'>¡Hola! 👋</h1>
 
         <div className='w-full max-w-md m-auto'>
           {error && <Messages text={error} />}
@@ -103,6 +95,14 @@ const index = () => {
               )}
             </div>
           </form>
+        </div>
+        <div className='text-center'>
+          <Link
+            to='/usuarios/registro'
+            className='hover:text-primary hover:opacity-100 opacity-70 text-sm'
+          >
+            Si no estas registrado hacé clic acá
+          </Link>
         </div>
       </div>
       <Helmet>

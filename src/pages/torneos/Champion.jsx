@@ -9,21 +9,19 @@ const TornamentsChampion = ({ id, name, image }) => {
   }, [id])
 
   return (
-    <div className='flex flex-col gap-y-3 items-center mb-6'>
-      <h1 className='italic text-primary lg:text-xl text-center'>{name} ⭐</h1>
-      <div className='avatar'>
-        <div className='w-28 rounded-full'>
-          <Link
-            to={`/equipos/${id}`}
-            className='hover:opacity-70 transition-all'
-          >
-            <Image
-              src={image}
-              alt={name}
-            />
-          </Link>
-        </div>
+    <div className='avatar flex flex-col gap-y-2 items-center mb-6 text-center'>
+      <div className='w-24 rounded-full'>
+        <Link
+          to={`/equipos/${id}`}
+          className='hover:opacity-70 transition-all'
+        >
+          <Image
+            src={image}
+            alt={name}
+          />
+        </Link>
       </div>
+      <h1 className='font-bold text-primary text-sm lg:text-base'>{name} ⭐</h1>
     </div>
   )
 }

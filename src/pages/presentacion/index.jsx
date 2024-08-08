@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet'
 import { NavLink } from 'react-router-dom'
 import Item from './Item'
-import { WhatsApp } from '../../components/icons'
+import Counter from '../Counter'
 
 const Presentacion = () => {
   const data = [
@@ -25,7 +25,7 @@ Cierre de listas de buena fe: <strong>18 de Agosto.</strong>`
       title: '⭐ ¿En qué categorías puedo inscribirme?',
       text: `<strong>Los Domingos:</strong> Primera Libre, Segunda Libre, Tercera Libre, Cuarta Libre, Quinta Libre. <br/> 
       <strong>Sábados y Domingos:</strong> Damas Segunda, Damas Tercera, Damas Cuarta. <br/> 
-      <strong>Sábados:</strong> Segunda +45, Tercera +45. 
+      <strong>Sábados:</strong> Segunda +35, Tercera +45. 
       `
     },
     {
@@ -45,7 +45,7 @@ Cierre de listas de buena fe: <strong>18 de Agosto.</strong>`
     },
     {
       title: '🕛 ¿Qué día y horario se juega por categoría?',
-      text: `Las categorías de los Domingos de <strong>9 a 17 hs.</strong><br/>Las categorías de los Sábados de <strong>13 a 17 hs.</strong> <br/><br/>
+      text: `Las categorías de los Domingos de <strong>9 a 18 hs.</strong><br/>Las categorías de los Sábados de <strong>13 a 18 hs.</strong> <br/><br/>
       Cada equipo puede elegir el horario cuando actúa de local. En caso de que una institución presente más de un equipo, la organización lo tendrá presente a la hora de las programaciones para no superponer horarios.`
     },
     {
@@ -61,8 +61,8 @@ Cierre de listas de buena fe: <strong>18 de Agosto.</strong>`
       text: `
       <strong>Durante el mes de Julio $99.000.- </strong><br/>
       <strong>Desde Agosto $130.000.- </strong><br/> <br/>
-      CVU: 0000168300000001419333<br/>
-      Alias: imltenis2023
+      Alias: imltenis2023<br/>
+      Mariano Arias
       <br/><br/>
       Enviar comprobante al área administrativa +54 9 11 3017-1475 <br/>
       ¡Reserva ahora! y consulta descuentos por cantidad de equipos.`
@@ -78,17 +78,8 @@ Cierre de listas de buena fe: <strong>18 de Agosto.</strong>`
   ]
   return (
     <section className='fade-in flex flex-col gap-y-6 max-w-2xl m-auto'>
-      <div className='fixed bottom-8 right-5 flex items-center justify-center z-50 text-primary w-16 h-16 rounded-full text-2xl bg-base-200'>
-        <a
-          href='https://wa.me/5491130171475'
-          target='_blank'
-        >
-          <WhatsApp />
-        </a>
-      </div>
-      <div className='text-center'>
-        <h1 className='font-bold text-primary text-xl'>¡Hola Clausura 2024!</h1>
-        <span className='text-2xl'>👋</span>
+      <div className='flex flex-col items-center gap-y-6'>
+        <Counter />
       </div>
 
       <div className='aspect-square lg:aspect-video'>

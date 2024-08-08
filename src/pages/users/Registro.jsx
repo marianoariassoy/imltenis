@@ -60,7 +60,7 @@ const index = () => {
       <div className='flex flex-col gap-y-6 max-w-md m-auto lg:max-w-none'>
         {!sended && (
           <div className='text-center'>
-            <h1 className='font-bold text-primary text-xl mb-3'>¡Bienvenido! 🚀</h1>
+            <h1 className='font-bold text-primary text-[1.15rem] lg:text-xl mb-3'>¡Bienvenido! 🚀</h1>
             <div>
               <p className='text-sm opacity-70'>Completá con tus datos y se parte de nuestra liga.</p>
             </div>
@@ -107,9 +107,8 @@ const index = () => {
                   type='text'
                   title='Localidad'
                   placeholder='Manacor'
-                  register={register('location', { required: texts.required })}
+                  register={register('location')}
                 />
-                {errors.location && <Error text={errors.location.message} />}
               </div>
               <div className='form-control'>
                 <Input
@@ -201,7 +200,8 @@ const index = () => {
                   type='file'
                   accept='image/*'
                   name='file'
-                  className='file-input file-input-bordered file-input-primary w-full text-sm'
+                  register={register('file')}
+                  className='pl-3 file-input file-input-bordered file-input-primary w-full text-sm'
                   onChange={getFile}
                 />
                 {image && (
@@ -213,6 +213,7 @@ const index = () => {
                     />
                   </div>
                 )}
+                {/* {errors.file && <Error text={errors.file.message} />} */}
               </div>
             </div>
             <div className='form-control mt-6 flex items-center justify-center'>

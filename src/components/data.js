@@ -1,28 +1,32 @@
 export const categories = [
-  { name: 'Damas Tercera', url: '/torneos/34' },
-  { name: 'Damas Cuarta ', url: '/torneos/35' },
-  { name: 'Primera HEAD libre', url: '/torneos/28' },
-  { name: 'Segunda Libre', url: '/torneos/29' },
-  { name: 'Tercera Libre', url: '/torneos/30' },
-  { name: 'Tercera +45', url: '/torneos/33' },
-  { name: 'Cuarta Libre', url: '/torneos/31' },
-  { name: 'Quinta Libre', url: '/torneos/32' }
+  { name: 'Damas Segunda', url: '/presentacion' },
+  { name: 'Damas Tercera ', url: '/presentacion' },
+  { name: 'Damas Cuarta ', url: '/presentacion' },
+  { name: 'Primera Libre', url: '/presentacion' },
+  { name: 'Segunda Libre', url: '/presentacion' },
+  { name: 'Tercera Libre', url: '/presentacion' },
+  { name: 'Cuarta Libre', url: '/presentacion' },
+  { name: 'Quinta Libre', url: '/presentacion' },
+  { name: 'Tercera +45', url: '/presentacion' },
+  { name: 'Juniors', url: '/presentacion' }
 ]
 
 export const menu = [
   // { name: 'Ranking Apertura 2024', url: '/ranking' },
-  { name: 'Ranking UrbanKicks', url: '/ranking-urbankicks' },
+  { name: 'Ranking Headshoes', url: '/ranking-headshoes' },
   { name: 'Ranking de Clubes', url: '/ranking-clubes' },
   { name: 'Jugadores', url: '/jugadores' },
-  { name: 'Reglamento', url: '/reglamento' },
-
   { name: 'Torneos Anteriores', url: '/torneos-anteriores' },
-  { name: 'Colaboradores', url: '/colaboradores' },
+  { name: 'Reglamento', url: '/reglamento' },
   { name: 'Login', url: '/usuarios/login' },
   { name: 'Nosotros', url: '/nosotros' }
 ]
 
 export const rankingOptions = [
+  {
+    name: 'Damas Segunda',
+    category: 8
+  },
   {
     name: 'Damas Tercera',
     category: 6

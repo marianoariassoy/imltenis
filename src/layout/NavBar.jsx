@@ -9,25 +9,27 @@ const NavBar = () => {
 
   return (
     <nav
-      className='fade-in fixed top-0 left-0 w-full bg-black/20 h-screen content-center text-center z-30 backdrop-blur-md hidden'
+      className='fade-in fixed top-0 left-0 w-full bg-black/20 h-screen content-center text-center  backdrop-blur-md hidden'
       onClick={openMenu}
     >
-      <ul className='text-white/70 flex flex-col'>
+      <ul className='text-white/70 italic text-xl lg:text-[1.25rem]'>
         {categories.map((item, index) => (
           <li key={index}>
             <NavLink
               to={item.url}
-              className='nav-link text-primary italic text-xl lg:text-2xl'
+              className='nav-link text-primary'
             >
               {item.name}
             </NavLink>
           </li>
         ))}
+      </ul>
+      <ul className='text-white/70 flex flex-col font-medium text-sm lg:text-base'>
         {menu.map((item, index) => (
-          <li key={index + 10}>
+          <li key={index + 12}>
             <NavLink
               to={item.url}
-              className='nav-link font-medium text-base lg:text-[1.2rem]'
+              className='nav-link'
             >
               {item.name}
             </NavLink>

@@ -16,7 +16,7 @@ const GroupsStage1 = ({ groups }) => {
               className='flex gap-x-3 justify-center items-center'
             >
               <button
-                className={`italic lg:text-xl ${
+                className={`italic ${
                   index === group ? 'text-primary' : 'opacity-50 hover:text-primary hover:opacity-100'
                 }`}
                 onClick={() => setGroup(index)}

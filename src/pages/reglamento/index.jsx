@@ -36,7 +36,7 @@ const Reglamento = () => {
     },
     {
       title: 'Pelotas',
-      text: `El equipo local será el encargado de proveer las pelotas para el encuentro. Se podrán usar tubos o pelotas sueltas hasta con un uso, de lo contrario el equipo rival podrá pedir WO. 
+      text: `El equipo local será el encargado de proveer las pelotas para el encuentro. Se podrán usar tubos o pelotas sueltas hasta con un uso, de lo contrario el equipo rival podrá pedir cambio de pelotas o pedir WO. 
       Las pelotas "con un uso" deben tener presión de pelota nueva y en cuanto a la felpa debe verse la marca de la
       pelota completa.`
     },
@@ -51,9 +51,9 @@ const Reglamento = () => {
     },
     {
       title: 'Días y Horarios',
-      text: `Las categorías de Damas jugarán los días sábados y domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser los sábados entre las 13 y las 17 hs. y los domingos entre las 9 y las 17 hs.
-      La categoría tercera +45 jugarán los días sábados en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 13 y las 17 hs. 
-      El resto de las categorías jugarán los días domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 9 y las 17 hs.
+      text: `Las categorías de Damas jugarán los días sábados y domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser los sábados entre las 13 y las 17 hs. y los domingos entre las 9 y las 18 hs.
+      La categoría tercera +45 jugarán los días sábados en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 13 y las 18 hs. 
+      El resto de las categorías jugarán los días domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 9 y las 18 hs.
       Los horarios deben informarse por el capitán del equipo local en el chat de capitanes de WhatsApp antes de las 12:00 hs. del jueves de la semana correspondiente, de lo contrario se procederá a la quita de 1 punto de la serie al equipo local, sumándose 1 punto por cada día de atraso.`
     },
     {
@@ -67,8 +67,15 @@ const Reglamento = () => {
       text: `El límite de integrantes de la lista de buena fe es de 18 jugadores.`
     },
     {
-      title: 'Niveles orientativos para la formación de equipos',
-      text: `Quinta: Jugadores categoría 125, C. Cuarta: Jugadores categoría 250 a 500, B2, B-. Tercera: Jugadores categoría 500 a 750, B1 Segunda: Jugadores categoría 750 a 1000, A1, A2 Primera: Jugadores categoría 1000, Super A.`
+      title: 'Equivalencias de niveles en otros torneos',
+      text: `Quinta Libre y Cuarta Damas: Jugadores categoría 125, C. 
+      Cuarta Libre, Tercera +45, 
+      Tercera Damas: Jugadores categoría 250 a 500, B2, B-. 
+      Tercera Libre, Segunda Damas: Jugadores categoría 500 a 750, B1 
+      Segunda Libre: Jugadores categoría 750 a 1000, A1, A2 
+      Primera Libre: Jugadores categoría 1000, Super A.
+      
+      Aquellos jugadores/as que participaron durante el torneo apertura 2024 en categoría primera o intermedia en cualquier otra liga, deben obligadamente jugar en Segunda Damas, Segunda Caballeros +35, o Segunda Libre.`
     },
     {
       title: 'Resultados y Formación',
@@ -218,7 +225,7 @@ const Reglamento = () => {
 
   return (
     <section className='fade-in flex flex-col gap-y-6'>
-      <div className='text-center text-xl'>
+      <div className='text-center text-[1.15rem] lg:text-xl'>
         <h1 className='font-bold text-primary'>Reglamento IML Tenis</h1>
         <h2 className='font-bold text-primary'>Clausura 2024</h2>
         <span className='block opacity-70 text-sm mt-3'>Ultima actualización 22 de Mayo 2024.</span>

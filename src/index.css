@@ -13,14 +13,11 @@
 .active,
 .nav-link:hover {
   text-decoration: underline;
-  text-decoration-thickness: 3px;
+  text-decoration-thickness: 2px;
 }
 svg {
   fill: currentColor;
   stroke: currentColor;
-}
-.text-6xl {
-  font-size: 4rem;
 }
 input::placeholder {
   color: inherit;
@@ -58,6 +55,12 @@ input:-webkit-autofill {
   background-color: transparent;
   color: white;
 }
-.text-xl {
-  font-size: 1.15rem;
+.italic {
+  font-size: 1.125rem;
+}
+@media screen and (max-width: 768px) {
+  .italic {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }

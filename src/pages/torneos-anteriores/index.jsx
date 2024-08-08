@@ -11,7 +11,7 @@ const Torneos = () => {
 
   return (
     <section className='fade-in flex flex-col gap-y-6'>
-      <div className='text-center text-primary text-xl'>
+      <div className='text-center text-primary text-[1.15rem] lg:text-xl'>
         <h1 className='font-bold'>Torneos Anteriores</h1>
         👴
       </div>
@@ -19,7 +19,7 @@ const Torneos = () => {
       <div className='flex flex-col gap-y-1 items-center font-medium'>
         {data &&
           data
-            .filter(item => item.season !== 3)
+            .filter(item => item.season !== 4)
             .map(item => (
               <Link
                 key={item.id}

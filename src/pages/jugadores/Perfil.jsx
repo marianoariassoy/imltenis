@@ -42,7 +42,7 @@ const JugadoresContainer = () => {
         </div>
         <div className='text-center'>
           <h1 className='font-bold text-primary'>{info.name}</h1>
-          {/* <h2 className='opacity-70 text-sm'>{info.age}</h2> */}
+          <h2 className='opacity-70 text-sm'>{info.age}</h2>
           <span className='text-xl'>🧑</span>
         </div>
       </div>
