@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 
 const Soon = () => {
   return (
-    <div className='fade-in-slow flex flex-col items-center justify-center h-full'>
+    <div className='fade-in flex flex-col items-center justify-center h-full'>
       <h1 className='text-4xl mb-3 animate-bounce'>🚀</h1>
 
       <div className='text-primary text-center flex flex-col gap-y-3'>
