@@ -3,7 +3,10 @@ import { Helmet } from 'react-helmet'
 const Nosotros = () => {
   return (
     <section className='fade-in text-center max-w-2xl m-auto flex flex-col gap-y-6'>
-      <h1 className='font-bold text-primary text-xl'>¡Hola! 👋</h1>
+      <div>
+        <h1 className='font-bold text-primary text-xl'>¡Hola! </h1>
+        <span className='text-xl'>👋</span>
+      </div>
 
       <p className='text-wrap text-sm'>
         La <strong className='text-primary'>liga de clubes IML Tenis</strong> está conformada por un grupo de amigos

@@ -8,11 +8,11 @@ import Labels from '../../components/Labels'
 import TitleRow from '../../components/TitleRow'
 
 const JugadoresRanking = () => {
-  const { data, loading } = useFetch(`/players/ranking/2`)
-  const [filter, setFilter] = useState(6)
+  const { data, loading } = useFetch(`/players/ranking/4`)
+  const [filter, setFilter] = useState(9)
 
   if (loading) return <Loader />
-
+  console.log(data)
   const filteredPlayers = data.filter(player => +player.tournament_category === filter || filter === 'all')
 
   const labels = [
@@ -64,48 +64,53 @@ const JugadoresRanking = () => {
         ))}
       </div>
 
-      <div className='overflow-x-auto text-sm'>
-        <table className='table w-full'>
-          <thead>
-            <tr>
-              {labels.map((item, index) => (
-                <th key={index}>{item.name}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {filteredPlayers.slice(0, 30).map((item, index) => (
-              <tr
-                key={item.id}
-                className={`${index === 0 && 'text-primary'}`}
-              >
-                <TitleRow
-                  num={index + 1}
-                  image={item.image}
-                  title={item.name}
-                  link={`/jugadores/${item.id}`}
-                />
-                <td>
-                  <Link
-                    to={`/equipos/${item.team_id}`}
-                    className='hover:text-primary font-bold'
+      {filteredPlayers.length === 0 ? (
+        <p className='text-center text-sm text-primary'>No hay jugadores para mostrar</p>
+      ) : (
+        <>
+          <div className='overflow-x-auto text-sm'>
+            <table className='table w-full'>
+              <thead>
+                <tr>
+                  {labels.map((item, index) => (
+                    <th key={index}>{item.name}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {filteredPlayers.slice(0, 30).map((item, index) => (
+                  <tr
+                    key={item.id}
+                    className={`${index === 0 && 'text-primary'}`}
                   >
-                    {item.team_name}
-                  </Link>
-                </td>
-                <td>
-                  <span className='font-bold'>{item.matches_won}</span>
-                </td>
-                <td>{item.sets}</td>
-                <td>{item.games}</td>
-                <td>{item.matches_total}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      <Labels labels={labels} />
+                    <TitleRow
+                      num={index + 1}
+                      image={item.image}
+                      title={item.name}
+                      link={`/jugadores/${item.id}`}
+                    />
+                    <td>
+                      <Link
+                        to={`/equipos/${item.team_id}`}
+                        className='hover:text-primary font-bold'
+                      >
+                        {item.team_name}
+                      </Link>
+                    </td>
+                    <td>
+                      <span className='font-bold'>{item.matches_won}</span>
+                    </td>
+                    <td>{item.sets}</td>
+                    <td>{item.games}</td>
+                    <td>{item.matches_total}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <Labels labels={labels} />
+        </>
+      )}
 
       <Helmet>
         <title>IML Tenis Ranking de Jugadores UrbanKicks</title>

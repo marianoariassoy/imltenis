@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet'
 import { useEffect } from 'react'
-import Aviso from './Aviso'
 
 const Welcome = () => {
   useEffect(() => {
@@ -19,8 +18,6 @@ const Welcome = () => {
 
   return (
     <>
-      <Aviso />
-
       <div className='fade-in flex justify-center items-center text-center h-full'>
         <div
           className='cursor-pointer mt-10 text-primary flex flex-col gap-y-3'
@@ -28,7 +25,7 @@ const Welcome = () => {
         >
           <h1 className='text-6xl lg:text-8xl font-black flex flex-col'>
             <span>Torneo</span>
-            <span>Apertura</span>
+            <span>Clausura</span>
             <span>
               <span className='block lg:inline-block'>Yuka</span> 2024
             </span>
@@ -56,7 +53,7 @@ const Welcome = () => {
       </div>
 
       <Helmet>
-        <title>IML Tenis Liga de clubes</title>
+        <title>IML Tenis Liga de clubes de Buenos Aires</title>
       </Helmet>
     </>
   )

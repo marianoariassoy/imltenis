@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ReactGA from 'react-ga4'
 import Layout from './layout/Layout'
-// import Welcome from './pages/home'
+import Welcome from './pages/home'
 import Tournaments from './pages/torneos'
 import Teams from './pages/equipos'
 import Series from './pages/series'
@@ -37,14 +37,14 @@ const App = () => {
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route
-            path='/'
-            element={<Soon />}
-          />
           {/* <Route
             path='/'
-            element={<Welcome />}
+            element={<Presentacion />}
           /> */}
+          <Route
+            path='/'
+            element={<Welcome />}
+          />
           <Route
             path='/torneos/:id'
             element={<Tournaments />}

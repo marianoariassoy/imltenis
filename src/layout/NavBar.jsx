@@ -12,7 +12,7 @@ const NavBar = () => {
       className='fade-in fixed top-0 left-0 w-full bg-black/20 h-screen content-center text-center  backdrop-blur-md hidden'
       onClick={openMenu}
     >
-      <ul className='text-white/70 italic text-xl lg:text-[1.25rem]'>
+      <ul className='text-white/70 italic'>
         {categories.map((item, index) => (
           <li key={index}>
             <NavLink
@@ -24,7 +24,7 @@ const NavBar = () => {
           </li>
         ))}
       </ul>
-      <ul className='text-white/70 flex flex-col font-medium text-sm lg:text-base'>
+      <ul className='text-white/70 flex flex-col font-medium  lg:text-base'>
         {menu.map((item, index) => (
           <li key={index + 12}>
             <NavLink
