@@ -8,8 +8,8 @@ const Amigos = () => {
   if (loading) return <Loader />
 
   return (
-    <section className='fade-in flex flex-col gap-y-6 text-center max-w-2xl m-auto'>
-      <div>
+    <section className='fade-in flex flex-col gap-y-12 max-w-2xl m-auto'>
+      <div className='text-center '>
         <div className='text-primary text-xl mb-2'>
           <h1 className='font-bold'>Colaboradores</h1>
         </div>
@@ -19,7 +19,7 @@ const Amigos = () => {
         </p>
       </div>
 
-      <div className='grid grid-cols-3 lg:grid-cols-5 gap-6 mb-6'>
+      <div className='grid grid-cols-2 gap-3 lg:gap-6'>
         {data.map((item, index) => (
           <Item
             key={index}
@@ -28,7 +28,7 @@ const Amigos = () => {
         ))}
       </div>
 
-      <p className='text-sm'>
+      <p className='text-sm text-center'>
         📢 Comunicate al{' '}
         <a
           href='https://wa.me/5491130171475'

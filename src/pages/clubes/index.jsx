@@ -12,7 +12,7 @@ const ClubesContainer = () => {
     <section className='fade-in flex flex-col gap-y-6'>
       <div className='text-sm text-center flex flex-col gap-y-3 items-center'>
         <div className='avatar'>
-          <div className='w-28 rounded-full'>
+          <div className='w-24 rounded-full'>
             <img
               src={data[0].image}
               alt={data[0].name}

@@ -22,7 +22,8 @@ const Reglamento = () => {
       title: 'Modalidad de juego',
       text: `En todas las categorías se jugará 1 single y 2 dobles.
       Todos los partidos se disputarán al mejor de 3 sets con tie break. El tercer set será supertie break a 10
-      puntos con diferencia de dos.`
+      puntos con diferencia de dos.
+      Los 3 encuentros deberán disputarse en simultaneo comenzando al mismo tiempo, salvo clubes con 2 canchas (ver el reglamento). `
     },
     {
       title: 'Puntuación',
@@ -47,14 +48,15 @@ const Reglamento = () => {
     },
     {
       title: 'Mala formación',
-      text: `El equipo que incurra en ella, perderá la fecha por 6-0 6-0 en todos los parciales.`
+      text: `En caso de incurrir en una mala formación de las parejas de dobles, los puntos perdidos serán exclusivamente los de los paciales involucrados (doble 1 y doble 2). El partido de single no se verá afectado por esta sanción, por lo que se mantendrá el resultado jugado en cancha.`
     },
     {
       title: 'Días y Horarios',
-      text: `Las categorías de Damas jugarán los días sábados y domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser los sábados entre las 13 y las 17 hs. y los domingos entre las 9 y las 18 hs.
-      La categoría tercera +45 jugarán los días sábados en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 13 y las 18 hs. 
-      El resto de las categorías jugarán los días domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 9 y las 18 hs.
-      Los horarios deben informarse por el capitán del equipo local en el chat de capitanes de WhatsApp antes de las 12:00 hs. del jueves de la semana correspondiente, de lo contrario se procederá a la quita de 1 punto de la serie al equipo local, sumándose 1 punto por cada día de atraso.`
+      text: `Las categorías de Damas jugarán los días sábados y domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser los sábados entre las 13 y las 17 hs. y los domingos entre las 9 y las 17 hs.
+      La categoría tercera +45 jugarán los días sábados en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 13 y las 17 hs. 
+      El resto de las categorías jugarán los días domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 9 y las 17 hs.
+
+      Los horarios deben informarse por el capitán del equipo local en el chat de capitanes de WhatsApp antes de las 17:00 hs. del miércoles de la semana correspondiente, de lo contrario se procederá a la quita de 1 punto de la serie al equipo local, sumándose 1 punto por cada día de atraso.`
     },
     {
       title: 'Lista de buena fe',
@@ -103,7 +105,6 @@ const Reglamento = () => {
       title: 'Feriados largos',
       text: `Queda a criterio de la organización la programación de partidos en dichos días.`
     },
-
     {
       title: 'En caso de lluvia',
       text: `El equipo local deberá avisar como mínimo dos horas antes del horario del partido al chat de capitanes de WhatsApp que sus canchas están en condiciones para jugar. Pasado este límite, el equipo visitante no está en la obligación de aceptar ir a jugar.
@@ -167,7 +168,8 @@ const Reglamento = () => {
     {
       title: 'Clubes con 2 canchas',
       text: `En caso de disputarse una serie en un club con  dos canchas, cada jugador solo podrá disputar un encuentro en una misma serie. La serie se desarrollará en dos tandas que deben jugarse una a continuación de la otra, sin excepcion. La segunda tanda deberá comenzar no despues de las 17hs.
-      Siempre debe programarse la serie con la disputa de ambos dobles juntos, sea en la primera o segunda tanda de la serie, de esta manera evitando posibles WO de doble 1 de ultimo momento, de esa  manera anulando la serie. `
+
+      Siempre debe programarse la serie evitando disputar en primer turno el doble 2 sin estar acompañado del doble 1, de esta manera evitando posibles WO de doble 1 de ultimo momento, que de esa manera anularía la serie. `
     },
     {
       title: 'Ascenso y descenso voluntario de equipos',
@@ -184,7 +186,7 @@ const Reglamento = () => {
     },
     {
       title: 'Ascensos de jugadores',
-      text: `La organización ostenta el legítimo derecho de ascender a cualquier jugador cuyo nivel sobrepase ampliamente la categoría correspondiente, así como a aquellos que posean registros de haber participado y/o ganado torneos en categorías considerablemente superiores en el tiempo reciente, hasta dos años, con la quita de puntos de la serie en reclamo.`
+      text: `La organización ostenta el legítimo derecho de ascender a cualquier jugador cuyo nivel sobrepase ampliamente la categoría correspondiente, así como a aquellos que posean registros de haber participado y/o ganado torneos en categorías considerablemente superiores en el tiempo reciente, hasta dos años, con la posible quita de puntos de la serie en reclamo.`
     },
 
     {
@@ -228,7 +230,7 @@ const Reglamento = () => {
       <div className='text-center text-[1.15rem] lg:text-xl'>
         <h1 className='font-bold text-primary'>Reglamento IML Tenis</h1>
         <h2 className='font-bold text-primary'>Clausura 2024</h2>
-        <span className='block opacity-70 text-sm mt-3'>Ultima actualización 22 de Mayo 2024.</span>
+        <span className='block opacity-70 text-sm mt-3'>Ultima actualización 10 de Septiembre 2024.</span>
       </div>
       <div>
         <Buscar

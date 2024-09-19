@@ -40,13 +40,11 @@ input::placeholder {
 table thead tr {
   border: none;
 }
-table thead tr th {
-  padding-bottom: 0 !important;
-}
 table tbody tr td,
 table thead tr th {
   white-space: nowrap;
   padding-left: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
 }
 table tbody tr {
   border: 0;
@@ -56,11 +54,22 @@ input:-webkit-autofill {
   color: white;
 }
 .italic {
-  font-size: 1.125rem;
+  font-size: 1.12rem;
+}
+.text-xl {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+.text-7xl {
+  font-size: 4.1rem;
+  line-height: 1;
 }
 @media screen and (max-width: 768px) {
   .italic {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.1rem;
+  }
+  .text-xl {
+    font-size: 1.1rem;
+    line-height: 1.25;
   }
 }

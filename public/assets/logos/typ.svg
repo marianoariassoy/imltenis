@@ -3,11 +3,11 @@
   <defs>
     <style>
       .uuid-902dcbee-47e4-48cb-bcd3-797267d2b846, .uuid-376d1e7d-337e-45f3-9a26-899b0fe8038f {
-        fill: #9d9c9c;
+        fill: #FFFFFF;
       }
 
       .uuid-376d1e7d-337e-45f3-9a26-899b0fe8038f {
-        stroke: #9d9c9c;
+        stroke: #FFFFFF;
         stroke-miterlimit: 10;
       }
     </style>

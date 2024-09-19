@@ -26,33 +26,33 @@ const Teams = () => {
     <section className='fade-in flex flex-col gap-y-6'>
       <div className='flex flex-col gap-y-3 items-center'>
         <div className='avatar'>
-          <div className='w-28 rounded-full'>
+          <div className='w-24 rounded-full'>
             <Link
-              to={`/clubes/${data[0].club_id}`}
+              to={`/clubes/${data.club_id}`}
               className='hover:opacity-70 transition-all'
             >
               <Image
-                src={data[0].image}
-                alt={data[0].name}
+                src={data.image}
+                alt={data.name}
               />
             </Link>
           </div>
         </div>
         <div className='text-center'>
-          <h1 className='italic text-primary'>{data[0].name}</h1>
+          <h1 className='font-bold text-xl text-primary'>{data.name}</h1>
           <h2>
             <Link
-              to={`/torneos/${data[0].tournament_id}`}
+              to={`/torneos/${data.tournament_id}`}
               className='font-medium opacity-70 hover:underline text-sm'
             >
-              {data[0].tournament_name}
+              {data.tournament_name}
             </Link>
           </h2>
         </div>
 
         <div className='flex justify-center gap-x-3 items-center text-sm mb-3'>
           <a
-            href={`https://wa.me/${data[0].captain_phone}`}
+            href={`https://wa.me/${data.captain_phone}`}
             target='_blank'
             className='flex gap-x-1 font-medium items-center text-primary link-hover'
           >
@@ -60,7 +60,7 @@ const Teams = () => {
             WhatsApp
           </a>
           <a
-            href={data[0].googlemaplink}
+            href={data.googlemaplink}
             target='_blank'
             className='flex gap-x-1 font-medium items-center text-primary link-hover'
           >
@@ -72,7 +72,7 @@ const Teams = () => {
         <div className='text-center'>
           <h1 className='text-primary font-bold'>Lista de buena fe</h1>
           <h2 className='opacity-70 text-sm'>
-            Capitán: <span className='font-bold'>{data[0].captain_name}</span>
+            Capitán: <span className='font-bold'>{data.captain_name}</span>
           </h2>
         </div>
       </div>
@@ -82,7 +82,7 @@ const Teams = () => {
 
       <Helmet>
         <title>
-          IML Tenis {data[0].name} {data[0].tournament_name}
+          IML Tenis {data.name} {data.tournament_name}
         </title>
       </Helmet>
     </section>

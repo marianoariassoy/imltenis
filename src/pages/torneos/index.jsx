@@ -7,15 +7,23 @@ import GroupsContainer from './GroupsContainer'
 import Champion from './Champion'
 
 const TournamentsContainer = () => {
+  const { id } = useParams()
+  const { data, loading } = useFetch(`/tournaments/${id}`)
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     })
+
+    if (+id === 45) {
+      document.documentElement.setAttribute('data-theme', 'light')
+    }
+    return () => {
+      document.documentElement.setAttribute('data-theme', 'dark')
+    }
   }, [])
 
-  const { id } = useParams()
-  const { data, loading } = useFetch(`/tournaments/${id}`)
   if (loading) return <Loader />
   if (!data) return null
 
@@ -29,12 +37,12 @@ const TournamentsContainer = () => {
     champion_name: data[0].team_champion,
     champion_image: data[0].team_champion_image
   }
-
   return (
-    <section className='fade-in flex flex-col gap-y-3'>
-      <div className='text-center text-primary mb-3'>
-        <h1 className='flex flex-col lg:text-xl'>
-          <span className='font-black'>{info.tournament}</span>
+    <section className='fade-in flex flex-col gap-y-6'>
+      <div className='flex flex-col gap-y-1 text-center text-primary text-xl'>
+        <h1>
+          <span className='font-bold'>{info.tournament}</span>
+          {'  '}
           <span className='font-medium'>{info.season}</span>
         </h1>
         <span className='text-2xl'>🏆</span>

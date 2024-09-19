@@ -33,7 +33,7 @@ const JugadoresContainer = () => {
     <section className='fade-in flex flex-col gap-y-6'>
       <div className='items-center flex flex-col gap-y-3'>
         <div className='avatar'>
-          <div className='w-28 rounded-full'>
+          <div className='w-24 rounded-full'>
             <Image
               src={info.image}
               alt={info.name}

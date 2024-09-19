@@ -16,6 +16,13 @@ module.exports = {
           accent: '#f34643',
           'base-100': '#1c1c1c',
           'base-300': '#252525'
+        },
+        light: {
+          'base-content': '#FFF',
+          primary: '#FFF',
+          accent: '#FFF',
+          'base-100': '#0d7350',
+          'base-300': '#0d7350'
         }
       }
     ]

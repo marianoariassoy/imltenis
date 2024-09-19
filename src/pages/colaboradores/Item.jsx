@@ -1,19 +1,26 @@
 import React from 'react'
-import Image from '../../components/Image'
+import { Instagram } from '../../components/icons'
 
 const Item = ({ item }) => {
   return (
-    <article className='max-w-xs'>
-      <a
-        href={item.url}
-        target='_blank'
-        className='rounded-full overflow-hidden block hover:opacity-70'
-      >
-        <Image
-          src={item.image}
-          alt={item.title}
-        />
-      </a>
+    <article className='flex flex-col items-start gap-y-1 justify-start text-sm'>
+      <div>
+        <h2 className='text-primary font-bold'>{item.title}</h2>
+        <h3>{item.text}</h3>
+      </div>
+
+      <div>
+        {item.url && (
+          <a
+            href={item.url}
+            target='_blank'
+            rel='noreferrer'
+            className='text-primary hover:opacity-70 text-xs'
+          >
+            <Instagram />
+          </a>
+        )}
+      </div>
     </article>
   )
 }

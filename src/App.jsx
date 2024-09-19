@@ -5,7 +5,7 @@ import Welcome from './pages/home'
 import Tournaments from './pages/torneos'
 import Teams from './pages/equipos'
 import Series from './pages/series'
-import Calendar from './pages/torneos/Calendar'
+import SeriesUpcoming from './pages/torneos/SeriesUpcoming'
 import Clubes from './pages/clubes'
 import JugadoresProfile from './pages/jugadores/Perfil'
 
@@ -15,9 +15,11 @@ import RankingClubes from './pages/clubes/Ranking'
 
 import Jugadores from './pages/jugadores'
 import TorneosAnteriores from './pages/torneos-anteriores'
-// import Colaboradores from './pages/colaboradores'
+import Colaboradores from './pages/colaboradores'
 import Reglamento from './pages/reglamento'
 import Nosotros from './pages/nosotros'
+import Shop from './pages/shop'
+import ShopDetails from './pages/shop/Details'
 
 import Presentacion from './pages/presentacion'
 import Soon from './pages/Soon'
@@ -49,10 +51,7 @@ const App = () => {
             path='/torneos/:id'
             element={<Tournaments />}
           />
-          <Route
-            path='/torneos/series/:id'
-            element={<Calendar />}
-          />
+
           <Route
             path='/clubes/:id'
             element={<Clubes />}
@@ -68,6 +67,10 @@ const App = () => {
           <Route
             path='/series/:id'
             element={<Series />}
+          />
+          <Route
+            path='/calendario'
+            element={<SeriesUpcoming />}
           />
           {/* <Route
             path='/ranking-temporada'
@@ -89,13 +92,21 @@ const App = () => {
             path='/jugadores'
             element={<Jugadores />}
           />
-          {/* <Route
+          <Route
             path='/colaboradores'
             element={<Colaboradores />}
-          /> */}
+          />
           <Route
             path='/reglamento'
             element={<Reglamento />}
+          />
+          <Route
+            path='/shop'
+            element={<Shop />}
+          />
+          <Route
+            path='/shop/:id'
+            element={<ShopDetails />}
           />
           <Route
             path='/nosotros'

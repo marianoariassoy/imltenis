@@ -27,7 +27,8 @@ const GroupsStage1 = ({ groups }) => {
             </div>
           ))}
         </div>
-        <span className='font-medium opacity-70 text-sm lg:text-base'>Posiciones</span> 🔥
+
+        <span className='font-medium opacity-70 text-sm lg:text-base '>Posiciones</span>
       </div>
 
       {arrayReverse.map((item, index) => (

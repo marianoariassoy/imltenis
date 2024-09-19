@@ -43,7 +43,7 @@ const index = () => {
   return (
     <section>
       <div className='flex flex-col gap-y-6'>
-        <h1 className='text-center text-primary font-bold text-[1.15rem] lg:text-xl'>¡Hola! 👋</h1>
+        {/* <h1 className='text-center text-primary font-bold text-[1.15rem] lg:text-xl'>¡Hola! 👋</h1> */}
 
         <div className='w-full max-w-md m-auto'>
           {error && <Messages text={error} />}

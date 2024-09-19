@@ -23,7 +23,7 @@ const Welcome = () => {
           className='cursor-pointer mt-10 text-primary flex flex-col gap-y-3'
           onClick={openMenu}
         >
-          <h1 className='text-6xl lg:text-8xl font-black flex flex-col'>
+          <h1 className='text-7xl lg:text-8xl font-black flex flex-col'>
             <span>Torneo</span>
             <span>Clausura</span>
             <span>
@@ -33,13 +33,13 @@ const Welcome = () => {
         </div>
       </div>
 
-      <div className='fade-in-slow fixed h-screen w-screen left-0 top-0 -z-10 bg-base-300'>
+      <div className='fade-in-slow fixed h-screen w-screen left-0 top-0 -z-10'>
         <video
           autoPlay
           playsInline
           muted
           loop
-          className='opacity-60 h-full w-full object-cover'
+          className='opacity-40 h-full w-full object-cover'
         >
           <source
             src='./assets/videos/video.webm'

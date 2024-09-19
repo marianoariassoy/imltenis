@@ -24,6 +24,10 @@ const TeamsPlayers = ({ id }) => {
     {
       name: 'Dif.',
       value: 'Diferencia de puntos'
+    },
+    {
+      name: 'Edad',
+      value: ''
     }
   ]
 
@@ -50,6 +54,7 @@ const TeamsPlayers = ({ id }) => {
                 <td>{item.series_total}</td>
                 <td>{item.series_won_total}</td>
                 <td>{item.series_dif}</td>
+                <td>{item.age > 10 ? item.age : ''}</td>
               </tr>
             ))}
           </tbody>

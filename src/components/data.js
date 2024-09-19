@@ -8,18 +8,20 @@ export const categories = [
   { name: 'Cuarta Libre', url: '/torneos/43' },
   { name: 'Quinta Libre', url: '/torneos/44' },
   { name: 'Tercera +45', url: '/torneos/39' },
-  { name: 'Juniors', url: '/soon' }
+  { name: 'Sub 14 Tennis Site', url: '/torneos/45' }
 ]
 
 export const menu = [
   // { name: 'Ranking Apertura 2024', url: '/ranking' },
   { name: 'Ranking Headshoes', url: '/ranking-headshoes' },
   { name: 'Ranking de Clubes', url: '/ranking-clubes' },
-  { name: 'Torneos Anteriores', url: '/torneos-anteriores' },
+  { name: 'Calendario', url: '/calendario' },
   { name: 'Jugadores', url: '/jugadores' },
+  { name: 'Torneos Anteriores', url: '/torneos-anteriores' },
   { name: 'Reglamento', url: '/reglamento' },
-  { name: 'Login', url: '/usuarios/login' },
-  { name: 'Nosotros', url: '/nosotros' }
+  { name: 'Colaboradores', url: '/colaboradores' },
+  { name: 'Nosotros', url: '/nosotros' },
+  { name: 'Login', url: '/usuarios/login' }
 ]
 
 export const rankingOptions = [
@@ -58,6 +60,10 @@ export const rankingOptions = [
   {
     name: 'Tercera +45',
     category: 7
+  },
+  {
+    name: 'Juniors Sub 14',
+    category: 10
   }
 ]
 
@@ -79,3 +85,46 @@ export const years = []
 for (let i = 1930; i <= 2020; i++) {
   years.push(i)
 }
+
+export const products = [
+  {
+    id: 1,
+    title: 'Mate',
+    image:
+      'https://images.pexels.com/photos/28098015/pexels-photo-28098015/free-photo-of-ciudad-restaurante-acera-relajante.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+    price: 10000,
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  },
+  {
+    id: 2,
+    title: 'Gorrito Bennie',
+    image:
+      'https://images.pexels.com/photos/28098015/pexels-photo-28098015/free-photo-of-ciudad-restaurante-acera-relajante.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+    price: 7000,
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  },
+  {
+    id: 3,
+    title: 'Gorra Champions',
+    image:
+      'https://images.pexels.com/photos/28098015/pexels-photo-28098015/free-photo-of-ciudad-restaurante-acera-relajante.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+    price: 7000,
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  },
+  {
+    id: 4,
+    title: 'Gorra',
+    image:
+      'https://images.pexels.com/photos/28098015/pexels-photo-28098015/free-photo-of-ciudad-restaurante-acera-relajante.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+    price: 7000,
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  },
+  {
+    id: 4,
+    title: 'Piluso',
+    image:
+      'https://images.pexels.com/photos/28098015/pexels-photo-28098015/free-photo-of-ciudad-restaurante-acera-relajante.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+    price: 7000,
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  }
+]

@@ -8,7 +8,6 @@ const Footer = () => {
       url: 'https://www.instagram.com/headshoesargentina/',
       image: '/assets/logos/head.svg'
     },
-
     {
       alt: 'Logo de Kirschbaum',
       url: 'https://www.kirschbaumarg.com/',
@@ -20,9 +19,9 @@ const Footer = () => {
       image: '/assets/logos/addnice.svg'
     },
     {
-      alt: 'Logo de QSports',
-      url: 'https://www.qsports.shop/',
-      image: '/assets/logos/qsports.svg'
+      alt: 'Logo Mito Gafas',
+      url: 'https://www.instagram.com/mitogafas/',
+      image: '/assets/logos/mito.svg'
     },
     {
       alt: 'Logo de Yuka',
@@ -48,8 +47,8 @@ const Footer = () => {
   ]
 
   return (
-    <div className='p-6 opacity-60'>
-      <div className='max-w-lg lg:max-w-3xl gap-2 m-auto grid grid-cols-4 lg:grid-cols-8 items-center justify-center mb-6 lg:mb-2'>
+    <div className='p-6 '>
+      <div className='max-w-lg lg:max-w-3xl gap-2 m-auto grid grid-cols-4 lg:grid-cols-8 items-center justify-center mb-8 lg:mb-2 opacity-40'>
         {logos.map((logo, index) => (
           <div
             key={index}
