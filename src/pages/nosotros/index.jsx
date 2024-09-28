@@ -22,7 +22,7 @@ const Nosotros = () => {
             Mariano Arias
           </a>
           <br />
-          <span>Comercial:</span> Anabel Segovia <br />
+          <span>Comercial:</span> Lorena Chañal <br />
           <span>Legales: </span>
           <a
             href='#'
@@ -46,8 +46,8 @@ const Nosotros = () => {
         </div>
         <div className='[&>span]:font-bold [&>span]:text-primary'>
           <span>IML Weekend:</span> Lorena Chañal, Adrián Micheli. <br />
-          <span>IML Juniors:</span> Marcos Velazquez
-          {/* <span>IML Circuito:</span> Jonatan Polvora */}
+          <span>IML Juniors:</span> Marcos Velazquez <br />
+          <span>IML Circuito:</span> Jonatan Polvora
         </div>
       </div>
 
