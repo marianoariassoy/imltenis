@@ -4,9 +4,9 @@ import Image from '../../components/Image'
 const TitleRow = ({ item }) => {
   return (
     <div className='flex flex-col lg:flex-row gap-2'>
-      <article className='flex items-center gap-x-2'>
+      <article className='flex gap-x-3'>
         <div className='avatar'>
-          <div className='w-6 h-6 rounded-full overflow-hidden'>
+          <div className='w-7 h-7 rounded-full overflow-hidden'>
             <Image
               src={item.player1_image}
               alt={item.player1_name}
@@ -19,12 +19,10 @@ const TitleRow = ({ item }) => {
         >
           {item.player1_name}
         </Link>
-        y
       </article>
-
-      <article className='flex items-center gap-x-2'>
+      <article className='flex gap-x-3'>
         <div className='avatar'>
-          <div className='w-6 h-6 rounded-full overflow-hidden'>
+          <div className='w-7 h-7 rounded-full overflow-hidden'>
             <Image
               src={item.player2_image}
               alt={item.player2_name}

@@ -11,7 +11,7 @@ const Tournament = () => {
   if (loading) return <Loader />
 
   return (
-    <section className='fade-in flex flex-col gap-y-6'>
+    <section className='fade-in flex flex-col gap-y-6 max-w-2xl m-auto'>
       <header className='flex flex-col text-center gap-y-3'>
         <span className='font-bold text-xl text-primary'>{data.title}</span>
         <div className='flex flex-col font-medium text-sm'>

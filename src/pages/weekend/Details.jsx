@@ -11,7 +11,11 @@ const Details = ({ id_tournament, description }) => {
   return (
     <section>
       <Playoffs data={data} />
-      {description && <div className='text-center text-sm py-3 mb-3'>🚀 {description}</div>}
+      {description && (
+        <div className='text-center text-sm py-3 mb-3 '>
+          🚀 <span className='opacity-70'>{description}</span>
+        </div>
+      )}
       <Groups data={data} />
 
       {data.length < 1 && (

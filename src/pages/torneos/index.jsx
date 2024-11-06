@@ -40,8 +40,10 @@ const TournamentsContainer = () => {
   return (
     <section className='fade-in flex flex-col gap-y-6'>
       <header className='flex flex-col text-center text-primary text-xl'>
-        <span className='font-bold'>{info.tournament}</span>
-        <span className='font-medium'>{info.season}</span>
+        <div className='flex gap-x-2 justify-center items-center'>
+          <span className='font-bold'>{info.tournament}</span>
+          <span className='font-medium'>{info.season}</span>
+        </div>
         <span className='text-2xl'>🏆</span>
       </header>
 
