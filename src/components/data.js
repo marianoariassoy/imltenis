@@ -20,6 +20,7 @@ export const menu = [
   { name: 'Torneos Anteriores', url: '/torneos-anteriores' },
   { name: 'Reglamento', url: '/reglamento' },
   { name: 'Colaboradores', url: '/colaboradores' },
+  { name: 'IML Weekend', url: '/weekend' },
   { name: 'Nosotros', url: '/nosotros' },
   { name: 'Login', url: '/usuarios/login' }
 ]

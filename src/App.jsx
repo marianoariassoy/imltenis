@@ -9,7 +9,6 @@ import SeriesUpcoming from './pages/torneos/SeriesUpcoming'
 import Clubes from './pages/clubes'
 import JugadoresProfile from './pages/jugadores/Perfil'
 
-// import RankingTemporada from './pages/jugadores/RankingTemporada'
 import RankingJugadores from './pages/jugadores/RankingTemporada'
 import RankingClubes from './pages/clubes/Ranking'
 
@@ -22,8 +21,10 @@ import Shop from './pages/shop'
 import ShopDetails from './pages/shop/Details'
 
 import Presentacion from './pages/presentacion'
-import Soon from './pages/Soon'
 import PageNotFound from './pages/PageNotFound'
+
+import Weekend from './pages/weekend'
+import WeekendTournament from './pages/weekend/Tournament'
 
 import UsersLogin from './pages/users/Login'
 import UsersRegistro from './pages/users/Registro'
@@ -72,10 +73,7 @@ const App = () => {
             path='/calendario'
             element={<SeriesUpcoming />}
           />
-          {/* <Route
-            path='/ranking-temporada'
-            element={<RankingTemporada />}
-          /> */}
+
           <Route
             path='/ranking-headshoes'
             element={<RankingJugadores />}
@@ -142,9 +140,14 @@ const App = () => {
             element={<UsersRestablecer />}
           />
           <Route
-            path='/soon'
-            element={<Soon />}
+            path='/weekend'
+            element={<Weekend />}
           />
+          <Route
+            path='/weekend/torneos/:id'
+            element={<WeekendTournament />}
+          />
+
           <Route
             path='*'
             element={<PageNotFound />}

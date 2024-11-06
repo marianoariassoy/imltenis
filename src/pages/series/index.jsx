@@ -14,47 +14,47 @@ const Series = () => {
   return (
     <section className='fade-in flex flex-col gap-y-6'>
       <div className='text-center'>
-        <h1 className='font-bold text-primary lg:text-xl'>{data[0].date + ' ' + data[0].hour} hs.</h1>
+        <h1 className='font-bold text-primary lg:text-xl'>{data.date + ' ' + data.hour} hs.</h1>
         <Link
-          to={`/torneos/${data[0].tournament_id}`}
+          to={`/torneos/${data.tournament_id}`}
           className='link-hover opacity-70'
         >
-          {data[0].tournament_name}
+          {data.tournament_name}
         </Link>
       </div>
 
       <div className='flex justify-center mt-6'>
         <div className='flex text-center w-full max-w-lg'>
           <TeamItem
-            id={data[0].home_id}
-            name={data[0].home_name}
-            image={data[0].home_image}
+            id={data.home_id}
+            name={data.home_name}
+            image={data.home_image}
             type='Local'
           />
           <div className='w-1/5 flex items-center justify-center'>
-            {data[0].winner > 0 ? (
+            {data.winner > 0 ? (
               <h1 className='text-xl font-semibold'>
                 Score
                 <br />
-                {data[0].score}
+                {data.score}
               </h1>
             ) : (
               <h1 className='text-xl font-semibold'>Vs.</h1>
             )}
           </div>
           <TeamItem
-            id={data[0].away_id}
-            name={data[0].away_name}
-            image={data[0].away_image}
+            id={data.away_id}
+            name={data.away_name}
+            image={data.away_image}
             type='Visitante'
           />
         </div>
       </div>
 
-      {data[0].winner > 0 && <Matches id={id} />}
+      {data.winner > 0 && <Matches id={id} />}
 
       <Helmet>
-        <title>IML Tenis {data[0].date + ' ' + data[0].hour}</title>
+        <title>IML Tenis {data.date + ' ' + data.hour}</title>
       </Helmet>
     </section>
   )

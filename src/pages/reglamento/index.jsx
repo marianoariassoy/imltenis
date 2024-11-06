@@ -188,10 +188,19 @@ const Reglamento = () => {
       title: 'Ascensos de jugadores',
       text: `La organización ostenta el legítimo derecho de ascender a cualquier jugador cuyo nivel sobrepase ampliamente la categoría correspondiente, así como a aquellos que posean registros de haber participado y/o ganado torneos en categorías considerablemente superiores en el tiempo reciente, hasta dos años, con la posible quita de puntos de la serie en reclamo.`
     },
-
     {
       title: 'Playoffs',
       text: `En estas estapas solo podrán participar los jugadores que hayan disputado al menos una serie en instancias previas en la categoría corresponiente en el actual torneo, a excepción de la categoría Primera Libre, donde esta regla no se aplicará.`
+    },
+    {
+      title: 'Regla de W.O. en las últimas fechas del torneo',
+      text: `Para mantener la equidad y la competitividad en las últimas fechas del torneo, se ha implementado la siguiente regla respecto a los walkovers (W.O.) en las ultimas cuatro fechas del torneo:
+
+Si un equipo da W.O. completo en sus 3 partidos a un equipo que está peleando por el torneo o una posición de clasificación, y esto afecta a otro equipo que también está en la contienda por el título o la posible clasificación a un reducido o un play off, este W.O. no se registrará como 6-0/6-0 en sus 3 partidos.
+En su lugar, se copiará el resultado obtenido por el equipo que dio el W.O. en los partidos previos contra el equipo afectado.
+Si hay más equipos afectados, se copiará el mismo resultado para todos, tomando como referencia el resultado más holgado de las series disputadas.
+
+El Objetivo de esta medida busca asegurar que los W.O. no distorsionen la competencia y que los resultados reflejen de manera justa el desempeño de los equipos en el torneo.`
     },
     {
       title: 'Penalizaciones',
@@ -230,7 +239,7 @@ const Reglamento = () => {
       <div className='text-center text-[1.15rem] lg:text-xl'>
         <h1 className='font-bold text-primary'>Reglamento IML Tenis</h1>
         <h2 className='font-bold text-primary'>Clausura 2024</h2>
-        <span className='block opacity-70 text-sm mt-3'>Ultima actualización 10 de Septiembre 2024.</span>
+        <span className='block opacity-70 text-sm mt-3'>Ultima actualización 4 de Octubre 2024.</span>
       </div>
       <div>
         <Buscar

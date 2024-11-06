@@ -39,14 +39,11 @@ const TournamentsContainer = () => {
   }
   return (
     <section className='fade-in flex flex-col gap-y-6'>
-      <div className='flex flex-col gap-y-1 text-center text-primary text-xl'>
-        <h1>
-          <span className='font-bold'>{info.tournament}</span>
-          {'  '}
-          <span className='font-medium'>{info.season}</span>
-        </h1>
+      <header className='flex flex-col text-center text-primary text-xl'>
+        <span className='font-bold'>{info.tournament}</span>
+        <span className='font-medium'>{info.season}</span>
         <span className='text-2xl'>🏆</span>
-      </div>
+      </header>
 
       {info.champion && (
         <Champion
