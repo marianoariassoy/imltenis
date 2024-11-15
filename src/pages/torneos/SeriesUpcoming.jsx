@@ -3,6 +3,7 @@ import { useState } from 'react'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import FixtureUpcoming from './FixtureUpcoming'
+import Header from '../../components/Header'
 
 const TournamentsCalendar = () => {
   const { data, loading } = useFetch(`/series/upcoming`)
@@ -24,7 +25,7 @@ const TournamentsCalendar = () => {
 
   return (
     <section className='fade-in flex flex-col gap-y-6'>
-      <h1 className='text-center text-primary text-xl font-bold'>Próximas Series ({filteredData.length})</h1>
+      <Header title={`Próximas Series (${filteredData.length})`} />
 
       <input
         type='text'

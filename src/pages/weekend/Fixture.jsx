@@ -16,7 +16,7 @@ const Fixture = ({ group_id, type }) => {
         {data.map(item => (
           <div
             key={item.id}
-            className='flex justify-between text-sm'
+            className='flex justify-between items-center text-sm'
           >
             <div className={`flex-1 pr-4 py-3 ${item.winner === item.partner1_id ? '' : 'opacity-60'}`}>
               <PlayersFixture

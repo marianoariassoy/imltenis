@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import Loader from '../../components/Loader'
 import useFetch from '../../hooks/useFetch'
 import TitleRow from '../../components/TitleRow'
+import Header from '../../components/Header'
 
 const index = () => {
   const { data, loading } = useFetch(`/players`)
@@ -20,10 +21,10 @@ const index = () => {
 
   return (
     <section className='fade-in flex flex-col gap-y-6 max-w-md m-auto'>
-      <div className='text-center text-[1.15rem] lg:text-xl'>
-        <h1 className='font-bold text-primary'>Jugadores</h1>
-        🧑👩
-      </div>
+      <Header
+        title='Jugadores'
+        emoji='🧑👩'
+      />
 
       <input
         type='text'

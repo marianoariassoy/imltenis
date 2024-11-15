@@ -54,22 +54,5 @@ input:-webkit-autofill {
   color: white;
 }
 .italic {
-  font-size: 1.12rem;
-}
-.text-xl {
-  font-size: 1.2rem;
-  line-height: 1.4;
-}
-.text-7xl {
-  font-size: 4.1rem;
-  line-height: 1;
-}
-@media screen and (max-width: 768px) {
-  .italic {
-    font-size: 1.1rem;
-  }
-  .text-xl {
-    font-size: 1.1rem;
-    line-height: 1.25;
-  }
+  font-size: 1.05rem;
 }

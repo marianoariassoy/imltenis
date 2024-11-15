@@ -3,7 +3,7 @@ import Image from '../../components/Image'
 
 const TitleRow = ({ player1_id, player2_id, player1_name, player2_name, player1_image, player2_image }) => {
   return (
-    <div className='flex flex-col gap-2'>
+    <div className='flex flex-col w-full gap-y-2 max-w-[14rem]'>
       <article className='flex items-center gap-x-3'>
         <div className='avatar'>
           <div className='w-7 h-7 rounded-full overflow-hidden'>

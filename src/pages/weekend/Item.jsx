@@ -4,11 +4,11 @@ const Item = ({ data }) => {
   return (
     <Link
       to={`/weekend/torneos/${data.id}`}
-      className='link-hover flex flex-col items-center'
+      className='link-hover flex flex-col items-center text-sm'
     >
       <span className='text-primary font-bold'>{data.title}</span>
-      <span className='font-medium text-sm'>
-        📅 {data.date} {data.hour}
+      <span className='font-medium'>
+        {data.date} {data.hour}
       </span>
     </Link>
   )

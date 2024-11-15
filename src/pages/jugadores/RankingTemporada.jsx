@@ -6,6 +6,7 @@ import useFetch from '../../hooks/useFetch'
 import { rankingOptions } from '../../components/data'
 import Labels from '../../components/Labels'
 import TitleRow from '../../components/TitleRow'
+import Header from '../../components/Header'
 
 const JugadoresRanking = () => {
   const { data, loading } = useFetch(`/players/ranking/4`)
@@ -44,13 +45,13 @@ const JugadoresRanking = () => {
   ]
 
   return (
-    <section className='fade-in flex flex-col gap-y-3'>
-      <div className='text-center text-[1.15rem] lg:text-xl mb-3'>
-        <h1 className='font-bold text-primary'>Ranking Headshoes</h1>
-        <h2 className='font-medium opacity-70 text-base'>Clausura 2024</h2>
-      </div>
+    <section className='fade-in flex flex-col gap-y-6'>
+      <Header
+        title='Ranking Headshoes'
+        description='Clausura 2024'
+      />
 
-      <div className='row flex gap-3 justify-center text-sm flex-wrap max-w-xl m-auto lg:mb-3'>
+      <div className='row flex gap-3 justify-center text-sm flex-wrap max-w-xl m-auto'>
         {rankingOptions.map(item => (
           <button
             key={item.category}
@@ -113,7 +114,7 @@ const JugadoresRanking = () => {
       )}
 
       <Helmet>
-        <title>IML Tenis Ranking de Jugadores UrbanKicks</title>
+        <title>IML Tenis Ranking de Jugadores Headshoes</title>
       </Helmet>
     </section>
   )

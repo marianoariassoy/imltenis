@@ -7,7 +7,7 @@ const Groups = ({ data }) => {
     <section className='flex flex-col gap-y-3'>
       {dataFiltered.map((item, index) => (
         <div key={index}>
-          <h2 className='italic text-primary text-center mb-3'>{item.title}</h2>
+          <h2 className='italic text-primary text-center'>{item.title}</h2>
           <GroupsItem data={item} />
         </div>
       ))}

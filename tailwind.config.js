@@ -13,14 +13,12 @@ module.exports = {
         dark: {
           'base-content': '#8c8c8c',
           primary: '#f34643',
-          accent: '#f34643',
-          'base-100': '#1c1c1c',
+          'base-100': '#212121',
           'base-300': '#252525'
         },
         light: {
           'base-content': '#FFF',
           primary: '#FFF',
-          accent: '#FFF',
           'base-100': '#0d7350',
           'base-300': '#0d7350'
         }

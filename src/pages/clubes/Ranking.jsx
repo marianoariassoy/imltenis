@@ -3,6 +3,7 @@ import Loader from '../../components/Loader'
 import useFetch from '../../hooks/useFetch'
 import Labels from '../../components/Labels'
 import TitleRow from '../../components/TitleRow'
+import Header from '../../components/Header'
 
 const ClubesRanking = () => {
   const { data, loading } = useFetch(`/clubes/ranking/2024`)
@@ -29,11 +30,10 @@ const ClubesRanking = () => {
 
   return (
     <section className='fade-in flex flex-col gap-y-3'>
-      <div className='text-center text-[1.15rem] lg:text-xl'>
-        <h1 className='font-bold text-primary'>Ranking de Clubes</h1>
-        <h2 className='font-medium opacity-70'>2024</h2>
-        <span className='text-2xl'>🥇</span>
-      </div>
+      <Header
+        title='Ranking de Clubes'
+        description='Temporada 2024'
+      />
 
       <div className='overflow-x-auto text-sm'>
         <table className='table w-full'>

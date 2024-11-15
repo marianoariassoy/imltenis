@@ -5,6 +5,7 @@ import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import GroupsContainer from './GroupsContainer'
 import Champion from './Champion'
+import Header from '../../components/Header'
 
 const TournamentsContainer = () => {
   const { id } = useParams()
@@ -39,13 +40,11 @@ const TournamentsContainer = () => {
   }
   return (
     <section className='fade-in flex flex-col gap-y-6'>
-      <header className='flex flex-col text-center text-primary text-xl'>
-        <div className='flex gap-x-2 justify-center items-center'>
-          <span className='font-bold'>{info.tournament}</span>
-          <span className='font-medium'>{info.season}</span>
-        </div>
-        <span className='text-2xl'>🏆</span>
-      </header>
+      <Header
+        title={info.tournament}
+        subtitle={info.season}
+        emoji='🏆'
+      />
 
       {info.champion && (
         <Champion
