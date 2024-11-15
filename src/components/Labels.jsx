@@ -1,6 +1,6 @@
 const Labels = ({ labels }) => {
   return (
-    <ul className='flex gap-x-2 justify-center text-sm opacity-50 flex-wrap '>
+    <ul className='flex gap-x-2 justify-center opacity-50 flex-wrap text-xs lg:text-sm'>
       {labels
         .filter(item => item.value)
         .map((item, index) => (

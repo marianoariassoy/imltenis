@@ -3,10 +3,10 @@ import Image from '../../components/Image'
 
 const TitleRow = ({ item }) => {
   return (
-    <div className='flex items-center flex-row gap-y-2 gap-x-3'>
+    <div className='flex items-center flex-row gap-y-2 gap-x-3 lg:gap-x-5'>
       <article className='flex items-center gap-x-2'>
         <div className='avatar'>
-          <div className='w-7 lg:w-10 rounded-full overflow-hidden'>
+          <div className='w-8 lg:w-10 rounded-full overflow-hidden'>
             <Image
               src={item.player1_image}
               alt={item.player1_name}
@@ -22,7 +22,7 @@ const TitleRow = ({ item }) => {
       </article>
       <article className='flex items-center gap-x-2'>
         <div className='avatar'>
-          <div className='w-7 lg:w-10 rounded-full overflow-hidden'>
+          <div className='w-8 lg:w-10 rounded-full overflow-hidden'>
             <Image
               src={item.player2_image}
               alt={item.player2_name}

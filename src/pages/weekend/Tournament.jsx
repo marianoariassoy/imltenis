@@ -12,10 +12,10 @@ const Tournament = () => {
   if (loading) return <Loader />
 
   return (
-    <section className='fade-in flex flex-col gap-y-6 max-w-2xl m-auto'>
+    <section className='fade-in flex flex-col gap-y-6 max-w-3xl m-auto'>
       <Header
         title={data.title}
-        description={`📅 ${data.date} ${data.hour}`}
+        description={`🕜 ${data.date} ${data.hour}`}
       />
 
       {data.champion ? <Champion id={data.champion} /> : ''}

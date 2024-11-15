@@ -9,16 +9,18 @@ const Fixture = ({ group_id, type }) => {
   if (!data) return null
 
   return (
-    <section className='fade-in'>
-      {type !== 2 && <h1 className='italic text-primary text-center mb-3'>Fixture</h1>}
+    <section className='fade-in mb-4'>
+      {type !== 2 && <h1 className='italic text-primary text-center mb-6'>Orden de juego</h1>}
 
-      <div className='overflow-x-auto mt-3'>
+      <div className='w-full overflow-x-auto mt-3 flex flex-col  gap-y-3'>
         {data.map(item => (
           <div
             key={item.id}
-            className='flex justify-between items-center text-sm'
+            className='flex justify-between items-start text-sm'
           >
-            <div className={`flex-1 pr-4 py-3 ${item.winner === item.partner1_id ? '' : 'opacity-60'}`}>
+            <div className={`flex-1 flex gap-x-3 ${item.winner === item.partner1_id ? 'text-primary' : 'opacity-70'}`}>
+              {item.num ? <span className='font-medium'>{item.num}.</span> : ''}
+
               <PlayersFixture
                 player1_id={item.player1_id}
                 player2_id={item.player2_id}
@@ -28,20 +30,19 @@ const Fixture = ({ group_id, type }) => {
                 player2_image={item.player2_image}
               />
             </div>
-            <div className='text-center opacity-70 px-2 py-3'>
+            <div className='text-center opacity-70 px-4'>
               {item.winner ? (
                 <div className='font-bold flex flex-col'>
-                  <span className=''>Score</span>
                   <span>
                     {item.set1home}-{item.set1away}
                   </span>
                 </div>
               ) : (
-                '-'
+                <span className='font-medium'>vs.</span>
               )}
             </div>
             <div
-              className={`flex-1 flex justify-end pl-4 py-3 ${item.winner === item.partner2_id ? '' : 'opacity-60'}`}
+              className={`flex-1 flex justify-end ${item.winner === item.partner2_id ? 'text-primary' : 'opacity-70'}`}
             >
               <PlayersFixture
                 player1_id={item.player3_id}

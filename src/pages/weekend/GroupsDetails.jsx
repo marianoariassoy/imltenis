@@ -9,7 +9,7 @@ const TournamentsGroup = ({ group }) => {
 
   const labels = [
     {
-      name: 'Jugadores',
+      name: 'Posición y jugadores',
       value: ''
     },
     {
@@ -47,7 +47,8 @@ const TournamentsGroup = ({ group }) => {
                 key={item.id}
                 className={`${index < group.winners ? 'text-primary' : ''}`}
               >
-                <td>
+                <td className='flex gap-x-3 items-center'>
+                  <span className='font-medium'> {index + 1}.</span>
                   <Players item={item} />
                 </td>
                 <td className='align-top'>
