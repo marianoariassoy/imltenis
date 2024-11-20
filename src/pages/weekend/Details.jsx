@@ -15,8 +15,8 @@ const Details = ({ id_tournament, description }) => {
       <Groups data={data} />
 
       {description && (
-        <div className='text-center text-sm mt-6'>
-          🚀 <span className='opacity-70'> {description}</span>
+        <div className='text-center mt-6'>
+          🚀 <span className='opacity-70 text-sm lg:text-sm'> {description}</span>
         </div>
       )}
 

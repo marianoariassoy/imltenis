@@ -18,7 +18,7 @@ const Fixture = ({ group_id, type }) => {
             key={item.id}
             className='flex justify-between items-start text-sm'
           >
-            <div className={`flex-1 flex gap-x-3 ${item.winner === item.partner1_id ? 'text-primary' : 'opacity-70'}`}>
+            <div className={`flex-1 flex gap-x-3 ${item.winner === item.partner1_id ? 'text-primary' : ''}`}>
               {item.num ? <span className='font-medium'>{item.num}.</span> : ''}
 
               <PlayersFixture
@@ -41,9 +41,7 @@ const Fixture = ({ group_id, type }) => {
                 <span className='font-medium'>vs.</span>
               )}
             </div>
-            <div
-              className={`flex-1 flex justify-end ${item.winner === item.partner2_id ? 'text-primary' : 'opacity-70'}`}
-            >
+            <div className={`flex-1 flex justify-end ${item.winner === item.partner2_id ? 'text-primary' : ''}`}>
               <PlayersFixture
                 player1_id={item.player3_id}
                 player2_id={item.player4_id}

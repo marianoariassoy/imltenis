@@ -6,7 +6,7 @@ const Playoffs = ({ playoffs }) => {
       className='text-center mb-3'
       key={index}
     >
-      <h1 className='italic mb-1 text-primary'>{item.name}</h1>
+      <h1 className='italic text-primary mb-3'>{item.name}</h1>
       <FixtureContainer
         group_id={item.id}
         type={item.type}
