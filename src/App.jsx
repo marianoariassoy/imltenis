@@ -9,16 +9,15 @@ import SeriesUpcoming from './pages/torneos/SeriesUpcoming'
 import Clubes from './pages/clubes'
 import JugadoresProfile from './pages/jugadores/Perfil'
 
-import RankingJugadores from './pages/jugadores/RankingTemporada'
-import RankingClubes from './pages/clubes/Ranking'
+import RankingJugadores from './pages/rankings/Jugadores'
+import RankingClubes from './pages/rankings/Clubes'
+import RankingChampions from './pages/rankings/Champions'
 
 import Jugadores from './pages/jugadores'
 import TorneosAnteriores from './pages/torneos-anteriores'
 import Colaboradores from './pages/colaboradores'
 import Reglamento from './pages/reglamento'
 import Nosotros from './pages/nosotros'
-import Shop from './pages/shop'
-import ShopDetails from './pages/shop/Details'
 
 import Presentacion from './pages/presentacion'
 import PageNotFound from './pages/PageNotFound'
@@ -57,6 +56,7 @@ const App = () => {
             path='/clubes/:id'
             element={<Clubes />}
           />
+
           <Route
             path='/equipos/:id'
             element={<Teams />}
@@ -75,12 +75,16 @@ const App = () => {
           />
 
           <Route
-            path='/ranking-headshoes'
+            path='/rankings/jugadores'
             element={<RankingJugadores />}
           />
           <Route
-            path='/ranking-clubes'
+            path='/rankings/clubes'
             element={<RankingClubes />}
+          />
+          <Route
+            path='/rankings/champions'
+            element={<RankingChampions />}
           />
           <Route
             path='/torneos-anteriores'
@@ -98,14 +102,7 @@ const App = () => {
             path='/reglamento'
             element={<Reglamento />}
           />
-          <Route
-            path='/shop'
-            element={<Shop />}
-          />
-          <Route
-            path='/shop/:id'
-            element={<ShopDetails />}
-          />
+
           <Route
             path='/nosotros'
             element={<Nosotros />}

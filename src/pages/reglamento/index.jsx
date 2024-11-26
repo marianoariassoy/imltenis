@@ -172,18 +172,19 @@ const Reglamento = () => {
       Siempre debe programarse la serie evitando disputar en primer turno el doble 2 sin estar acompañado del doble 1, de esta manera evitando posibles WO de doble 1 de ultimo momento, que de esa manera anularía la serie. `
     },
     {
-      title: 'Ascenso y descenso de equipos',
-      text: `Cualquier equipo tiene el derecho de ascender o descender de cualquier categoría de forma voluntaria al inicio del torneo. No existe ninguna restricción para los jugadores en el caso de ascenso de un equipo.
-      En el caso de descenso de un equipo solo podrán disputar un categoría un nivel inmediatamente inferior los
-      jugadores que hayan terminado el ultimo torneo disputado con una diferencia de -2 o inferior.
-      Los equipos que hayan terminado en ultimo lugar en sus respectivos grupos tendrán derecho de descender a una categoría inmediatamente inferior con todos los jugadores que hayan finalizado el torneo con una diferencia de +3 o inferior.`
-    },
-    {
-      title: 'Ascenso de equipos mediante resultado',
+      title: 'Ascenso de equipos',
       text: `El sistema de ascenso será personalizado para cada categoría, adaptándose a la cantidad de equipos y al formato de competencia específico. Este enfoque garantiza una experiencia de torneo más justa y equitativa, reflejando las necesidades únicas de cada categoría y promoviendo un ambiente competitivo saludable para todos.
 
-      Para los equipos ascendidos se requerirá la participación obligatoría de todos los jugadores con excepción de los jugadores que no hayan conseguido ningún triunfo, para estos el ascenso será optativo.
+      Los equipos ascendidos se requerirá la participación obligatoría de todos los jugadores con excepción de los jugadores que no hayan conseguido ningún triunfo, para estos el ascenso será optativo.
     `
+    },
+    {
+      title: 'Descenso de equipos',
+      text: `Los equipos que hayan terminado en ultimo lugar en sus respectivos grupos tendrán derecho de descender a una categoría inmediatamente inferior con todos sus jugadores, con excepción de los jugadores  que hayan finalizado el torneo con una diferencia de partidos ganados +5 o superior.`
+    },
+    {
+      title: 'Descenso de jugadores',
+      text: `Un jugador podrá descender a una categoría inmediatamente inferior de forma voluntaria al inicio del torneo cuando su diferencia de partidos ganados sea -3 o inferior`
     },
     {
       title: 'Ascensos de jugadores',
@@ -230,7 +231,7 @@ const Reglamento = () => {
       <div className='text-center text-[1.15rem] lg:text-xl'>
         <h1 className='font-bold text-primary'>Reglamento IML Tenis</h1>
         <h2 className='font-bold text-primary'>Clausura 2024</h2>
-        <span className='block opacity-70 text-sm mt-3'>Ultima actualización 4 de Octubre 2024.</span>
+        <span className='block opacity-70 text-sm mt-3'>Ultima actualización 4 de Noviembre 2024.</span>
       </div>
       <div>
         <Buscar

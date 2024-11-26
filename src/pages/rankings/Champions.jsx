@@ -5,8 +5,8 @@ import Labels from '../../components/Labels'
 import TitleRow from '../../components/TitleRow'
 import Header from '../../components/Header'
 
-const ClubesRanking = () => {
-  const { data, loading } = useFetch(`/clubes/ranking/2024`)
+const Champions = () => {
+  const { data, loading } = useFetch(`/clubes/champions`)
   if (loading) return <Loader />
 
   const labels = [
@@ -15,24 +15,29 @@ const ClubesRanking = () => {
       value: ''
     },
     {
-      name: 'Pts.',
-      value: 'Puntos (Parciales ganados)'
+      name: 'Oro',
+      value: 'Copas de oro'
     },
     {
-      name: 'SG',
-      value: 'Series ganadas'
+      name: 'Plata',
+      value: 'Copas de plata'
     },
     {
-      name: 'SJ',
-      value: 'Series jugadas'
+      name: 'SC',
+      value: 'Supercopas'
+    },
+    {
+      name: 'Finales',
+      value: 'Finales disputadas'
     }
   ]
 
   return (
     <section className='fade-in flex flex-col gap-y-3'>
       <Header
-        title='Ranking de Clubes'
-        description='Temporada 2024'
+        title='Ranking de Campeones'
+        description=''
+        emoji='🏅'
       />
 
       <div className='overflow-x-auto text-sm'>
@@ -56,11 +61,11 @@ const ClubesRanking = () => {
                   title={item.name}
                   link={`/clubes/${item.id}`}
                 />
-                <td>
-                  <span className='font-bold'>{item.matches_won}</span>
-                </td>
-                <td>{item.series_won}</td>
-                <td>{item.series_total}</td>
+
+                <td>{item.gold}</td>
+                <td>{item.silver}</td>
+                <td>{item.supercopa}</td>
+                <td>{item.finals}</td>
               </tr>
             ))}
           </tbody>
@@ -70,10 +75,10 @@ const ClubesRanking = () => {
       <Labels labels={labels} />
 
       <Helmet>
-        <title>IML Tenis Ranking de Clubes</title>
+        <title>IML Tenis Ranking de Campeones</title>
       </Helmet>
     </section>
   )
 }
 
-export default ClubesRanking
+export default Champions

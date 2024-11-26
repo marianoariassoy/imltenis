@@ -13,8 +13,9 @@ export const categories = [
 
 export const menu = [
   // { name: 'Ranking Apertura 2024', url: '/ranking' },
-  { name: 'Ranking Headshoes', url: '/ranking-headshoes' },
-  { name: 'Ranking de Clubes', url: '/ranking-clubes' },
+  { name: 'Ranking Headshoes', url: '/rankings/jugadores' },
+  { name: 'Ranking de Clubes', url: '/rankings/clubes' },
+  { name: 'Ranking de Campeones', url: '/rankings/champions' },
   { name: 'Orden de juego', url: '/calendario' },
   { name: 'Jugadores', url: '/jugadores' },
   { name: 'Torneos Anteriores', url: '/torneos-anteriores' },
