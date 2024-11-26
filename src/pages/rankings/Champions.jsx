@@ -59,7 +59,7 @@ const Champions = () => {
                   num={index + 1}
                   image={item.image}
                   title={item.name}
-                  link={`/clubes/${item.id}`}
+                  link={`/clubes/${item.club_id}`}
                 />
 
                 <td>{item.gold}</td>
